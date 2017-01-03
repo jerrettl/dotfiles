@@ -10,9 +10,9 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 set background=dark
-"colorscheme solarized
+colorscheme solarized
 let g:solarized_termcolors=256
-"let &t_Co=256
+let &t_Co=256
 
 set tabstop=2
 set backspace=indent,eol,start
