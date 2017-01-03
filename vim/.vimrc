@@ -1,19 +1,27 @@
-execute pathogen#infect()
-
+" Vundle
 set nocompatible
-syntax on
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'flazz/vim-colorschemes'
+
+call vundle#end()
 filetype plugin indent on
+
+
+"Basics
+syntax on
 set mouse=a
 let mapleader=","
-
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
-set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
-let &t_Co=256
-
 set tabstop=2
 set backspace=indent,eol,start
 set autoindent
@@ -32,10 +40,20 @@ set noerrorbells
 set nobackup
 set noswapfile
 set wildmenu
-set clipboard=unnamedplus
+set clipboard=unnamed
 set pastetoggle=<F2>
 
 
+" Theming
+" set background=dark
+colorscheme 256-grayvim
+" let g:solarized_termcolors=256
+" let &t_Co=256
+
+
+" Mappings
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nmap ; :
 nmap <up> gk
 nmap <down> gj
@@ -43,36 +61,32 @@ nmap <silent> ,/ :nohlsearch<CR>
 nmap J gj
 nmap K gk
 nmap <C-d> :sh<cr>
-" If the current buffer has never been saved, it will have no name,
-" call the file browser to save it, otherwise just save it.
-"command -nargs=0 -bar Update if &modified
-"			\|	if empty(bufname('%'))
-"			\|		browse confirm write
-"			\|	else
-"			\|		confirm write
-"			\|	endif
-"			\|endif
-"nnoremap <silent> <C-S> :<C-u>Update<CR>
 nmap <C-g> :%s/\s\+$//<cr>
+nmap <C-n> :set relativenumber<CR>
+nmap <C-m> :set number<CR>
 
 cmap w!! w !sudo tee % >/dev/null
 cmap Q q
 
-"imap <C-s> <C-o>:s<CR>
-"imap <C-n> :set relativenumber<CR>
-"imap <C-m> :set number<CR>
-"imap <C-s> <C-o> :Update<CR>
 imap jk <esc>
 
-"What am I doing just give me Ctrl-S saving
-noremap <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
+" Ctrl-S saving
+nmap <C-S> :update<CR>
+vmap <C-S> <C-C>:update<CR>
+imap <C-S> <C-O>:update<CR>
+
+
+" Plugin Configurations
 
 " Airline
 let g:airline#extensions#synastic#enables = 1
 set laststatus=2
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'powerlineish'
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+let g:airline_symbols.maxlinenr = ''
 
 
 " Neocomplete
@@ -88,9 +102,20 @@ if !exists('g:neocomplete#keyword_patterns')
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
-
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
