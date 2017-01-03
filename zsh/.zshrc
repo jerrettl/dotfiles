@@ -58,6 +58,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
+export EDITOR=/usr/bin/nano
+export BROWSER=/usr/bin/palemoon
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -83,3 +86,18 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias cp="cp -i"                          # confirm before overwriting something
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias np='nano -w PKGBUILD'
+alias more=less
+alias dotfiles='cd ~/Documents/dotfiles'
+alias con='nano $HOME/.i3/config'
+alias comp='nano $HOME/.config/compton.conf'
+alias fixit='sudo rm -f /var/lib/pacman/db.lck'
+alias inst='sudo pacman -S'
+alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias mirrors='sudo pacman-mirrors -g'
+alias printer='system-config-printer'
+alias update='yaourt -Syua'
