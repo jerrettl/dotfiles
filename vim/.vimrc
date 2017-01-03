@@ -72,7 +72,7 @@ inoremap <C-S> <C-O>:update<CR>
 " Airline
 let g:airline#extensions#synastic#enables = 1
 set laststatus=2
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 
 
 " Neocomplete
