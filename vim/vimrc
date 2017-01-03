@@ -46,7 +46,7 @@ set pastetoggle=<F2>
 
 " Theming
 " set background=dark
-colorscheme 256-grayvim
+" colorscheme 256-grayvim
 " let g:solarized_termcolors=256
 " let &t_Co=256
 
