@@ -1,3 +1,5 @@
+" Location: ~/.vimrc
+
 " Vundle
 set nocompatible
 filetype off

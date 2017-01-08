@@ -1,5 +1,5 @@
 # See "man i3status" for documentation.
-
+# Location: ~/.i3status.conf
 # UTF-8 test - the following line should contain a sharp s:
 # ß
 
