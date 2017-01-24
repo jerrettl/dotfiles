@@ -4,7 +4,6 @@
 
 URxvt*background: black
 URxvt*foreground: white
-! URxvt.font: xft:monospace:size=10
 URxvt.font: xft:Pragmata Pro:size=10, \
 						xft:unifont:style=Medium:antialias=false, \
 						xft:Noto Sans Ethiopic:style=Regular
