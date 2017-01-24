@@ -157,7 +157,7 @@ bar {
         status_command i3status
 }
 
-bindsym $mod+Shift+Ctrl+1 exec xrandr --output VGA-0 --primary --mode 1280x1024 --pos 0x0 --rotate normal --output S-video --off --output DVI-0 --off
-bindsym $mod+Shift+Ctrl+2 exec xrandr --output VGA-0 --primary --mode 1280x1024 --pos 0x0 --rotate normal --output S-video --left-of DVI-0 --off --output DVI-0 --mode 1280x1024 --pos 1280x0 --rotate normal
-exec xrandr --output VGA-0 --primary --mode 1280x1024 --pos 0x0 --rotate normal --output S-video --off --output DVI-0 --off
+#bindsym $mod+Shift+Ctrl+1 exec xrandr --output VGA-0 --primary --mode 1280x1024 --pos 0x0 --rotate normal --output S-video --off --output DVI-0 --off
+#bindsym $mod+Shift+Ctrl+2 exec xrandr --output VGA-0 --primary --mode 1280x1024 --pos 0x0 --rotate normal --output S-video --left-of DVI-0 --off --output DVI-0 --mode 1280x1024 --pos 1280x0 --rotate normal
+#exec xrandr --output VGA-0 --primary --mode 1280x1024 --pos 0x0 --rotate normal --output S-video --off --output DVI-0 --off
 
