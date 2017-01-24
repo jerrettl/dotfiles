@@ -31,6 +31,8 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 export EDITOR=/usr/bin/nano
 export BROWSER=/usr/bin/palemoon
 
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
+
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
