@@ -277,7 +277,7 @@ DocumentRoot "/srv/http"
     # Controls who can get stuff from this server.
     #
 
-    ErrorDocument 404 /index.html
+    ErrorDocument 404 /error-documents/404.html
     ErrorDocument 403 /error-documents/403.html
     Require all granted
 </Directory>
