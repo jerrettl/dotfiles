@@ -150,11 +150,11 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #1c1f25
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+set $bg-color 	         #444444
+set $inactive-bg-color   #2d2d2d
+set $text-color          #ffffff
+set $inactive-text-color #999999
+set $urgent-bg-color     #d64937
 
 # window colors
 #                       border              background         text                 indicator
