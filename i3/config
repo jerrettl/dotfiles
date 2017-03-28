@@ -35,13 +35,13 @@ smart_gaps on
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt 
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec --no-startup-id rofi -show run -font 'SFNS Display 13'
+bindsym $mod+d exec --no-startup-id rofi -show run -font 'SFNS Display 13' -fullscreen -fake-transparency -hide-scrollbar
 bindsym $mod+z exec morc_menu
 
 # change focus
