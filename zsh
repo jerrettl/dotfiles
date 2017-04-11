@@ -4,7 +4,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/jerrett/.oh-my-zsh
+export ZSH=/home/jerrett/.oh-my-zsh
 export TERM="xterm-256color"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -21,6 +21,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+autoload zmv
 
 source $ZSH/oh-my-zsh.sh
 
@@ -65,3 +66,5 @@ alias update='yaourt -Syua'
 alias cls='clear'
 alias www='cd /srv/http'
 alias gst='git status -uno'
+alias tv='cd /media/usb0/Files/Documents/tv'
+alias movies='cd /media/usb0/Files/Documents/movies'
