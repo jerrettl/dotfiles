@@ -9,11 +9,12 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'scrooloose/syntastic'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-latex/vim-latex'
 
 call vundle#end()
 filetype plugin indent on
@@ -43,6 +44,7 @@ set noswapfile
 set wildmenu
 set clipboard=unnamed
 set pastetoggle=<F2>
+set linebreak
 
 
 " Theming
@@ -64,12 +66,13 @@ nmap K gk
 nmap <C-d> :sh<cr>
 nmap <C-g> :%s/\s\+$//<cr>
 nmap <C-n> :set relativenumber<CR>
-nmap <C-m> :set number<CR>
+nmap <C-m> :set norelativenumber<CR>
 
 cmap w!! w !sudo tee % >/dev/null
 cmap Q q
 
 imap jk <esc>
+imap <C-a> <esc>jA
 
 " Ctrl-S saving
 nmap <C-S> :update<CR>
@@ -117,7 +120,16 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {
+		\ "mode": "passive",
+		\ "active_filetypes": [],
+		\ "passive_filetypes": [] }
 
-
+" latex-suite
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_CompileRule_pdf='pdflatex -interaction=nonstopmode $*'
+let g:Tex_ViewRule_pdf='zathura'

@@ -114,7 +114,7 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # lock i3
-bindsym $mod+q exec i3lock
+bindsym $mod+q exec i3lock -i ~/Documents/Lock\ Screen.png
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -176,3 +176,7 @@ bar {
 #exec xrandr --output VGA-0 --primary --mode 1280x1024 --pos 0x0 --rotate normal --output S-video --off --output DVI-0 --off
 
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpaper.png
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 2dB+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 2dB- unmute
+bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
