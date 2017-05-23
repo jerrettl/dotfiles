@@ -49,6 +49,13 @@ POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
 # export ARCHFLAGS="-arch x86_64"
 
 # Aliases
+
+
+if [ -f ~/Documents/aliases ]; then
+    . ~/Documents/aliases
+fi
+
+
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
@@ -77,3 +84,4 @@ alias mnttv='sshfs jerrett@192.168.1.11:/media/usb0/Files/Documents/tv ~/mnt -C 
 alias umntssh='fusermount -u ~/mnt'
 alias umntusb='sudo umount ~/mnt'
 alias zath='zathura'
+alias working='cd ~/Documents/school/working'

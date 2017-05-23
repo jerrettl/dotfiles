@@ -39,6 +39,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show run -font 'SFNS Display 13' -fullscreen -fake-transparency -hide-scrollbar
 bindsym $mod+z exec morc_menu
 
+# Shortcut applications
+bindsym $mod+F1 exec qutebrowser
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -156,7 +159,8 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        # status_command i3status
+        status_command i3blocks
 }
 
 #bindsym $mod+Shift+Ctrl+1 exec xrandr --output VGA-0 --primary --mode 1280x1024 --pos 0x0 --rotate normal --output S-video --off --output DVI-0 --off
@@ -165,6 +169,7 @@ bar {
 
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpaper.png
 exec_always --no-startup-id volumeicon
+#exec_always --no-startup-id pkill volumeicon
 exec_always --no-startup-id nm-applet
 
 #bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 2\%+ unmute
