@@ -171,6 +171,7 @@ exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpaper.png
 exec_always --no-startup-id volumeicon
 #exec_always --no-startup-id pkill volumeicon
 exec_always --no-startup-id nm-applet
+exec_always --no-startup-id xdotool mousemove_relative -- -10000 10000
 
 #bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 2\%+ unmute
 #bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 2\%- unmute
