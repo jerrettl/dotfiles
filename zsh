@@ -80,7 +80,6 @@ alias zrc='vim ~/.zshrc'
 alias vrc='vim ~/.vimrc'
 alias doc='cd ~/Documents'
 alias dow='cd ~/Downloads'
-<<<<<<< HEAD
 alias mnttv='sshfs jerrett@192.168.1.11:/media/usb0/Files/Documents/tv ~/mnt -C -p 21999'
 alias umntssh='fusermount -u ~/mnt'
 alias umntusb='sudo umount ~/mnt'
@@ -92,4 +91,3 @@ PERL_LOCAL_LIB_ROOT="/home/jerrett/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB
 PERL_MB_OPT="--install_base \"/home/jerrett/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jerrett/perl5"; export PERL_MM_OPT;
 =======
->>>>>>> 494a7f4f69b2e787285e032cbedc77fb619d57c5
