@@ -61,8 +61,8 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent or child container
-bindsym $mod+a focus parent
-bindsym $mod+s focus child
+#bindsym $mod+a focus parent
+#bindsym $mod+s focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -87,6 +87,9 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
 
 # resize windows
 bindsym $mod+r mode "resize"
@@ -145,3 +148,7 @@ bindsym $mod+Prior exec xdotool click 4
 bindsym $mod+Next exec xdotool click 5
 
 bindsym $mod+Ctrl+0 exec --no-startup-id xdotool mousemove_relative -- -10000 10000
+
+# Compton toggle
+bindsym $mod+F7 exec --no-startup-id pkill compton
+bindsym $mod+F8 exec --no-startup-id compton -b
