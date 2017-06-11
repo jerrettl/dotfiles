@@ -179,6 +179,10 @@ exec_always --no-startup-id xdotool mousemove_relative -- -10000 10000
 #bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 2\%- unmute
 #bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 
+bindsym $mod+Ctrl+Prior exec --no-startup-id amixer -q set Master 2\%+ unmute
+bindsym $mod+Ctrl+Next exec --no-startup-id amixer -q set Master 2\%- unmute
+#bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+
 bindsym $mod+Left exec xdotool mousemove_relative -- -15 0
 bindsym $mod+Down exec xdotool mousemove_relative 0 15
 bindsym $mod+Up exec xdotool mousemove_relative -- 0 -15
