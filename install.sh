@@ -8,3 +8,8 @@ ln -s ~/dotfiles/.vim ~/.vim
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.zshrc ~/.zshrc
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+git config --global user.email "jerrett7@gmail.com"
+git config --global user.name "Jerrett Longworth"
