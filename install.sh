@@ -1,5 +1,10 @@
 #!/bin/bash
 
+curl -s https://gist.githubusercontent.com/Tadly/0e65d30f279a34c33e9b/raw/pacaur_install.sh | bash
+
+pacaur -Syyu
+pacaur -S git i3 i3-bars vim npm
+
 ln -s ~/dotfiles/.compton.conf ~/.compton.conf
 ln -s ~/dotfiles/.config/i3/config ~/.config/i3/config
 ln -s ~/dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
