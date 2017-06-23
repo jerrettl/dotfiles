@@ -3,7 +3,7 @@
 curl -s https://gist.githubusercontent.com/Tadly/0e65d30f279a34c33e9b/raw/pacaur_install.sh | bash
 
 pacaur -Syyu
-pacaur -S git i3 i3-bars i3lock-color-git vim npm
+pacaur -S git i3 i3-bars i3lock-color-git vim npm tree
 
 ln -s ~/dotfiles/.compton.conf ~/.compton.conf
 ln -s ~/dotfiles/.config/i3/config ~/.config/i3/config
