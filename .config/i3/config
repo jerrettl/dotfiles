@@ -29,6 +29,7 @@ bindsym $mod+F1 exec bash ~/dotfiles/scripts/firefox.sh
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpaper.png
 exec_always --no-startup-id volumeicon
 exec_always --no-startup-id nm-applet
+exec_always --no-startup-id system-config-printer-applet
 exec_always --no-startup-id xdotool mousemove_relative -- -10000 10000
 
 # change focus
