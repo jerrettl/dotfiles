@@ -154,3 +154,6 @@ bindsym $mod+Ctrl+0 exec --no-startup-id xdotool mousemove_relative -- -10000 10
 # Compton toggle
 bindsym $mod+F7 exec --no-startup-id pkill compton
 bindsym $mod+F8 exec --no-startup-id compton -b
+
+# Floating window exceptions
+for_window [class="Steam" instance="Steam" title="Friends"] floating enable
