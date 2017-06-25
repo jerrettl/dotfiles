@@ -3,7 +3,7 @@
 curl -s https://gist.githubusercontent.com/Tadly/0e65d30f279a34c33e9b/raw/pacaur_install.sh | bash
 
 pacaur -Syyu
-pacaur -S --needed git i3-wm i3blocks vim npm tree xorg-xrdb tmux compton zsh
+pacaur -S --needed git i3-wm i3blocks vim npm tree xorg-xrdb tmux compton zsh calc
 
 ln -sf ~/dotfiles/.compton.conf ~/.compton.conf
 ln -sf ~/dotfiles/.config/i3/config ~/.config/i3/config
