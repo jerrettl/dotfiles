@@ -1,7 +1,1 @@
-.vim/bundle/Vundle.vim
-.vim/bundle/syntastic
-.vim/bundle/vim-airline
-.vim/bundle/vim-airline-themes
-.vim/bundle/vim-colors-solarized
-.vim/bundle/vim-colorschemes
-.vim/bundle/vim-latex
+.vim/bundle/*
