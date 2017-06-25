@@ -74,6 +74,8 @@ cmap Q q
 imap jk <esc>
 imap <C-a> <esc>jA
 
+vnoremap <F2> d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
+
 " Ctrl-S saving
 nmap <C-S> :update<CR>
 vmap <C-S> <C-C>:update<CR>
