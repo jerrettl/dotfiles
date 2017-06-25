@@ -1,9 +1,10 @@
 #!/bin/bash
 
+sudo pacman -S --needed curl
 curl -s https://gist.githubusercontent.com/Tadly/0e65d30f279a34c33e9b/raw/pacaur_install.sh | bash
 
 pacaur -Syyu
-pacaur -S --needed calc compton curl git i3-wm i3blocks npm ranger tmux tree vim xorg-xrdb youtube-dl zathura zsh
+pacaur -S --needed calc compton git i3-wm i3blocks npm ranger tmux tree vim xorg-xrdb youtube-dl zathura zsh
 
 ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
 ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
