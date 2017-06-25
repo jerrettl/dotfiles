@@ -9,7 +9,7 @@ ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
 ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
 ln -sfv ~/dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
 ln -sfv ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -sfv ~/dotfiles/.vim ~/.vim
+ln -sfv ~/dotfiles/.vim/ ~/.vim
 ln -sfv ~/dotfiles/.vimrc ~/.vimrc
 ln -sfv ~/dotfiles/.Xresources ~/.Xresources
 ln -sfv ~/dotfiles/.zshrc ~/.zshrc
