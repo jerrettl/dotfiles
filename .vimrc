@@ -1,9 +1,9 @@
 " Location: ~/.vimrc
 
-" Vundle
 set nocompatible
 filetype off
 
+" Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -20,7 +20,7 @@ call vundle#end()
 filetype plugin indent on
 
 
-"Basics
+" Basics
 syntax on
 set mouse=a
 let mapleader=","
@@ -74,7 +74,8 @@ cmap Q q
 imap jk <esc>
 imap <C-a> <esc>jA
 
-vnoremap <F2> d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
+" Nifty alphabetize shortcut
+vnoremap <F3> d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
 
 " Ctrl-S saving
 nmap <C-S> :update<CR>
