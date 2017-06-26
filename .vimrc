@@ -15,6 +15,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-latex/vim-latex'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
@@ -67,6 +69,7 @@ nmap <C-d> :sh<cr>
 nmap <C-g> :%s/\s\+$//<cr>
 nmap <C-n> :set relativenumber<CR>
 nmap <C-m> :set norelativenumber<CR>
+nmap <F4> :NERDTreeToggle<CR>
 
 cmap w!! w !sudo tee % >/dev/null
 cmap Q q
