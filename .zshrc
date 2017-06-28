@@ -33,10 +33,13 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 export EDITOR=/usr/bin/vim
 export BROWSER=/usr/bin/firefox
 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context root_indicator dir rbenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(history time)
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
 POWERLEVEL9K_DIR_HOME_FOREGROUND='white'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
+POWERLEVEL9K_ROOT_INDICATOR_FOREGROUND='black'
+POWERLEVEL9K_ROOT_INDICATOR_BACKGROUND='yellow'
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -84,6 +87,7 @@ alias mnttv='sshfs jerrett@192.168.1.11:/media/usb0/Files/Documents/tv ~/mnt -C 
 alias umntssh='fusermount -u ~/mnt'
 alias umntusb='sudo umount ~/mnt'
 alias zath='zathura'
+alias su='sudo -Es'
 
 PATH="/home/jerrett/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/jerrett/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
