@@ -20,7 +20,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git vi-mode)
 autoload zmv
 
 source $ZSH/oh-my-zsh.sh
@@ -33,13 +33,17 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 export EDITOR=/usr/bin/vim
 export BROWSER=/usr/bin/firefox
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context root_indicator dir rbenv vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context root_indicator dir rbenv vcs vi_mode)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(history time)
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
 POWERLEVEL9K_DIR_HOME_FOREGROUND='white'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
 POWERLEVEL9K_ROOT_INDICATOR_FOREGROUND='black'
 POWERLEVEL9K_ROOT_INDICATOR_BACKGROUND='yellow'
+POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND='112'
+POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND='022'
+POWERLEVEL9K_VI_MODE_INSERT_BACKGROUND='white'
+POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND='027'
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
