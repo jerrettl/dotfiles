@@ -4,7 +4,7 @@ sudo pacman -S --needed curl
 curl -s https://gist.githubusercontent.com/Tadly/0e65d30f279a34c33e9b/raw/pacaur_install.sh | bash
 
 pacaur -Syyu
-pacaur -S --needed bdf-unifont calc compton git i3-wm i3blocks libotf lightdm lightdm-gtk-greeter npm ranger rofi rxvt-unicode system-san-francisco-font-git tmux tree ttf-droid ttf-ms-fonts ttf-roboto vim volumeicon xdotool xorg-server xorg-xrdb youtube-dl zathura zathura-pdf-poppler zsh
+pacaur -S --needed bdf-unifont calc compton firefox git i3-wm i3blocks libotf lightdm lightdm-gtk-greeter npm ranger rofi rxvt-unicode system-san-francisco-font-git tmux tree ttf-droid ttf-ms-fonts ttf-roboto vim volumeicon xdotool xorg-server xorg-xrdb youtube-dl zathura zathura-pdf-poppler zsh
 
 ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
 ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
