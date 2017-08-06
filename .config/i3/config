@@ -40,7 +40,7 @@ mode "$mode_system" {
 }
 
 # Shortcut applications
-bindsym $mod+F1 exec bash ~/dotfiles/scripts/firefox.sh
+bindsym $mod+F1 exec firefox
 
 # On startup
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpaper.png
