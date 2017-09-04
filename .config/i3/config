@@ -164,8 +164,10 @@ bar {
 }
 
 # Poor Man's volume control
-bindsym $mod+Ctrl+Prior exec --no-startup-id amixer -q set Master 2\%+ unmute
 bindsym $mod+Ctrl+Next exec --no-startup-id amixer -q set Master 2\%- unmute
+bindsym $mod+Ctrl+Prior exec --no-startup-id amixer -q set Master 2\%+ unmute
+bindsym Scroll_Lock exec --no-startup-id xdotool keyup Scroll_Lock && xdotool key XF86AudioLowerVolume
+bindsym Pause exec --no-startup-id xdotool keyup Pause && xdotool key XF86AudioRaiseVolume
 #bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 
 # Poor Man's mouse control
