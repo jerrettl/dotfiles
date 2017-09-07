@@ -163,6 +163,17 @@ bar {
         status_command i3blocks
 }
 
+# Gaps
+gaps inner 8
+gaps outer 8
+
+bindsym $mod+U gaps inner all set 0; gaps outer all set 0
+bindsym $mod+I gaps inner all set 8; gaps outer all set 8
+bindsym $mod+O gaps inner all minus 4; gaps outer all minus 4
+bindsym $mod+P gaps inner all plus 4; gaps outer all plus 4
+
+
+
 # Poor Man's volume control
 bindsym $mod+Ctrl+Next exec --no-startup-id amixer -q set Master 2\%- unmute
 bindsym $mod+Ctrl+Prior exec --no-startup-id amixer -q set Master 2\%+ unmute
