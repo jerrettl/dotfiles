@@ -87,8 +87,8 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent or child container
-#bindsym $mod+a focus parent
-#bindsym $mod+s focus child
+bindsym $mod+a focus parent
+bindsym $mod+z focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -167,10 +167,10 @@ bar {
 gaps inner 8
 gaps outer 8
 
-bindsym $mod+U gaps inner all set 0; gaps outer all set 0
-bindsym $mod+I gaps inner all set 8; gaps outer all set 8
-bindsym $mod+O gaps inner all minus 4; gaps outer all minus 4
-bindsym $mod+P gaps inner all plus 4; gaps outer all plus 4
+bindsym $mod+U gaps inner current set 0; gaps outer all set 0
+bindsym $mod+I gaps inner current set 8; gaps outer all set 8
+bindsym $mod+O gaps inner current minus 4; gaps outer all minus 4
+bindsym $mod+P gaps inner current plus 4; gaps outer all plus 4
 
 
 
@@ -207,3 +207,5 @@ bindsym $mod+F8 exec --no-startup-id compton -b
 # Floating window exceptions
 for_window [class="Steam" instance="Steam" title="Friends"] floating enable
 
+# i3-gaps fix
+for_window [class="^.*"] border pixel 0
