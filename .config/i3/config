@@ -14,8 +14,9 @@ font pango:SFNS Display 10
 # Use Mouse+$mod to drag windows
 floating_modifier $mod
 
+set $terminal urxvt
 # The basics
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show run -font 'SFNS Display 13' -fullscreen -fake-transparency -hide-scrollbar
 # bindsym $mod+q exec i3lock -i ~/Documents/Lock\ Screen.png
@@ -49,6 +50,7 @@ bindsym $mod+minus scratchpad show
 
 # Shortcut applications
 bindsym $mod+F1 exec firefox
+bindsym $mod+F2 exec $terminal -e pacaur -Syyu
 
 # On startup
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpaper.png
