@@ -208,6 +208,7 @@ bindsym $mod+F8 exec --no-startup-id compton -b
 
 # Floating window exceptions
 for_window [class="Steam" instance="Steam" title="Friends"] floating enable
+for_window [class="Steam" instance="Steam" title="Steam Guard - Computer Authorization Required"] floating enable
 
 # i3-gaps fix
 for_window [class="^.*"] border pixel 0
