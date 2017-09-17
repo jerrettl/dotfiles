@@ -212,4 +212,5 @@ for_window [class="Steam" instance="Steam" title="Steam Guard - Computer Authori
 for_window [class="Firefox" title="About Mozilla Firefox"] floating enable
 
 # i3-gaps fix
-for_window [class="^.*"] border pixel 0
+# for_window [class="^.*"] border pixel 0
+new_window pixel 2
