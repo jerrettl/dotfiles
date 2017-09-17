@@ -58,6 +58,7 @@ exec_always --no-startup-id volumeicon
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id system-config-printer-applet
 exec_always --no-startup-id xdotool mousemove_relative -- -10000 10000
+exec_always --no-startup-id caffeine
 
 # change focus
 bindsym $mod+h focus left
