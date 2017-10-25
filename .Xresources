@@ -15,11 +15,11 @@ URxvt.keysym.KP_Home: \033[1~
 URxvt.keysym.KP_End:  \033[4~
 
 
-! Rofi
-rofi.width: 60
-rofi.lines: 20
-! to reenable the bg color 00 --> 99
-rofi.color-window: #000e4784,#ff000000,#ffffffff
-rofi.padding: 200
-rofi.color-normal: #ffffff,#000000,#ffffff,#333333,#ffffff
-rofi.separator-style: none
+!! Rofi
+!rofi.width: 60
+!rofi.lines: 20
+!! to reenable the bg color 00 --> 99
+!rofi.color-window: #000e4784,#ff000000,#ffffffff
+!rofi.padding: 200
+!rofi.color-normal: #ffffff,#000000,#ffffff,#333333,#ffffff
+!rofi.separator-style: none

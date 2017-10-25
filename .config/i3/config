@@ -18,7 +18,7 @@ set $terminal urxvt
 # The basics
 bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec --no-startup-id rofi -show run -font 'SFNS Display 13' -fullscreen -fake-transparency -hide-scrollbar
+bindsym $mod+d exec --no-startup-id rofi -show run -font 'SFNS Display 13' -hide-scrollbar -matching fuzzy
 # bindsym $mod+q exec i3lock -i ~/Documents/Lock\ Screen.png
 bindsym $mod+q exec lock -f SFNS-Display
 bindsym $mod+Shift+r exec --no-startup-id bash ~/dotfiles/scripts/restart-i3.sh
