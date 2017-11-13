@@ -54,6 +54,7 @@ bindsym Print exec scrot
 # Shortcut applications
 bindsym $mod+F1 exec firefox
 bindsym $mod+F2 exec $terminal -e pacaur -Syyu
+bindsym $mod+F3 exec pcmanfm
 
 # On startup
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpaper.png
