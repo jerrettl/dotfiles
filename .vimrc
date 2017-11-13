@@ -17,6 +17,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-latex/vim-latex'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()
 filetype plugin indent on
