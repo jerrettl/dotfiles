@@ -75,7 +75,7 @@ nmap <C-d> :sh<cr>
 nmap <C-g> :%s/\s\+$//<cr>
 nmap <C-n> :set relativenumber<CR>
 nmap <C-m> :set norelativenumber<CR>
-nmap <F4> :NERDTreeToggle<CR>
+nmap <F10> :NERDTreeToggle<CR>
 
 cmap w!! w !sudo tee % >/dev/null
 cmap Q q
