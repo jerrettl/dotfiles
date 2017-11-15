@@ -52,6 +52,9 @@ set pastetoggle=<F2>
 set linebreak
 
 
+" Advanced
+set omnifunc=htmlcomplete#CompleteTags
+
 " Theming
 " set background=dark
 " colorscheme 256-grayvim
