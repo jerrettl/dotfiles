@@ -18,6 +18,8 @@ Plugin 'vim-latex/vim-latex'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mattn/emmet-vim'
+Plugin 'alvan/vim-closetag'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 filetype plugin indent on
