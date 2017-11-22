@@ -155,7 +155,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-set $bg-color 	         #444444
+set $bg-color 	         #ff5454
 set $inactive-bg-color   #2d2d2d
 set $text-color          #ffffff
 set $inactive-text-color #999999
@@ -220,4 +220,4 @@ for_window [class="Firefox" title="About Mozilla Firefox"] floating enable
 
 # i3-gaps fix
 # for_window [class="^.*"] border pixel 0
-new_window pixel 2
+new_window pixel 1
