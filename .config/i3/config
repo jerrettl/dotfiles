@@ -47,6 +47,8 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
+# Blink active window
+bindsym $mod+Tab exec ~/dotfiles/scripts/flash_win.sh
 
 # Screenshot
 bindsym Print exec scrot
