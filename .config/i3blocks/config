@@ -28,6 +28,12 @@ command=/usr/lib/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+# Spotify icon \uF1BC
+[spotify]
+command=~/dotfiles/scripts/spotify.py
+markup=pango
+interval=5
+
 # Volume indicator
 #
 # The first parameter sets the step (and units to display)
