@@ -94,6 +94,7 @@ alias umntssh='fusermount -u ~/mnt'
 alias umntusb='sudo umount ~/mnt'
 alias zath='zathura'
 alias su='sudo -Es'
+alias dotu='dotf && git pull && cd'
 
 PATH="/home/jerrett/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/jerrett/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
