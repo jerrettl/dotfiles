@@ -1,8 +1,9 @@
 #!/bin/bash
 
-#Flashes the active window.
+# Flashes the active window.
 
-#Requires transset-df and a composite manager, like xcompmgr.
+# Requires transset-df and a composite manager, like xcompmgr.
+# In this case, we're using compton.
 
 transset-df -a -m 0
 sleep .3
