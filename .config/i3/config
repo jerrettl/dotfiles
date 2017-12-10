@@ -77,6 +77,7 @@ bindsym $mod+Shift+h move left 20px
 bindsym $mod+Shift+j move down 20px
 bindsym $mod+Shift+k move up 20px
 bindsym $mod+Shift+l move right 20px
+bindsym $mod+c move position center
 
 # resize focused window
 bindsym $mod+Ctrl+h resize shrink width 20 px
