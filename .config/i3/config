@@ -179,10 +179,10 @@ bar {
 gaps inner 8
 gaps outer 8
 
-bindsym $mod+U gaps inner current minus 4; gaps outer all minus 4
-bindsym $mod+I gaps inner current plus 4; gaps outer all plus 4
-bindsym $mod+O gaps inner current set 0; gaps outer all set 0
-bindsym $mod+P gaps inner current set 8; gaps outer all set 8
+bindsym $mod+U gaps inner current minus 4; gaps outer current minus 4
+bindsym $mod+I gaps inner current plus 4; gaps outer current plus 4
+bindsym $mod+O gaps inner current set 0; gaps outer current set 0
+bindsym $mod+P gaps inner current set 8; gaps outer current set 8
 
 
 
