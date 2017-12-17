@@ -7,6 +7,7 @@ global:
     q: quit
     w: session-save
     wq: quit --save
+  url.default_page: https://start.duckduckgo.com/?kae=t&kaj=u&k5=2&kp=-2&kk=1&kak=-1&kaq=-1&kd=1&kc=-1&k1=-1&kap=-1&kao=-1&kax=-1&kf=fw&kt=u&kaa=50f148&k9=afffaf&ka=u
   url.searchengines:
-    DEFAULT: https://duckduckgo.com/?q={}
+    DEFAULT: https://duckduckgo.com/?q={}&kae=t&kaj=u&k5=2&kp=-2&kk=1&kak=-1&kaq=-1&kd=1&kc=-1&k1=-1&kap=-1&kao=-1&kax=-1&kf=fw&kt=u&kaa=50f148&k9=afffaf&ka=u
     g: https://google.com/search?q={}

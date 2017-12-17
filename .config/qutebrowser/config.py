@@ -32,6 +32,11 @@ c.scrolling.bar = True
 # Type: Bool
 c.scrolling.smooth = False
 
+# The page to open if :open -t/-b/-w is used without URL. Use
+# `about:blank` for a blank page.
+# Type: FuzzyUrl
+c.url.default_page = 'https://start.duckduckgo.com/?kae=t&kaj=u&k5=2&kp=-2&kk=1&kak=-1&kaq=-1&kd=1&kc=-1&k1=-1&kap=-1&kao=-1&kax=-1&kf=fw&kt=u&kaa=50f148&k9=afffaf&ka=u'
+
 # Definitions of search engines which can be used via the address bar.
 # Maps a searchengine name (such as `DEFAULT`, or `ddg`) to a URL with a
 # `{}` placeholder. The placeholder will be replaced by the search term,
@@ -41,4 +46,4 @@ c.scrolling.smooth = False
 # used by prepending the search engine name to the search term, e.g.
 # `:open google qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'g': 'https://google.com/search?q={}'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}&kae=t&kaj=u&k5=2&kp=-2&kk=1&kak=-1&kaq=-1&kd=1&kc=-1&k1=-1&kap=-1&kao=-1&kax=-1&kf=fw&kt=u&kaa=50f148&k9=afffaf&ka=u', 'g': 'https://google.com/search?q={}'}
