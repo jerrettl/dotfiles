@@ -81,7 +81,7 @@ cmap w!! w !sudo tee % >/dev/null
 cmap Q q
 
 imap jk <esc>
-imap kj <esc>
+imap hj <esc>
 imap <C-a> <esc>jA
 
 " Nifty alphabetize shortcut
