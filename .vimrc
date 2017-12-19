@@ -20,6 +20,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'mattn/emmet-vim'
 Plugin 'alvan/vim-closetag'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/goyo.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -147,3 +148,8 @@ let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_CompileRule_pdf='pdflatex -interaction=nonstopmode $*'
 let g:Tex_ViewRule_pdf='zathura'
 map <f3> <esc>:w<cr><leader>ll
+
+
+" Goyo
+nmap <F12> :Goyo<cr>
+imap <F12> <C-o>:Goyo<cr>
