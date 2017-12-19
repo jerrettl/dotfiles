@@ -103,3 +103,5 @@ PERL_MB_OPT="--install_base \"/home/jerrett/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jerrett/perl5"; export PERL_MM_OPT;
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
