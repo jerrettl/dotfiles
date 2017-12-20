@@ -27,9 +27,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
 pacaur -S --needed awk i3lock-color-git imagemagick
-git clone https://github.com/meskarune/i3lock-fancy
-sudo cp -rfv i3lock-fancy/icons /usr/local/bin
-sudo cp -fv i3lock-fancy/lock /usr/local/bin
-rm -rfv i3lock-fancy
 
 sudo npm install -g castnow npm
