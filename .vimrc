@@ -155,3 +155,9 @@ map <f3> <esc>:w<cr><leader>ll
 " Goyo
 nmap <F12> :Goyo<cr>
 imap <F12> <C-o>:Goyo<cr>
+
+
+" YouCompleteMe
+let g:ycm_filetype_blacklist = {
+		\ 'tex' : 1
+		\}
