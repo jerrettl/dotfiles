@@ -47,3 +47,7 @@ c.url.default_page = 'https://start.duckduckgo.com/?kae=t&kaj=u&k5=2&kp=-2&kk=1&
 # `:open google qutebrowser`.
 # Type: Dict
 c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}&kae=t&kaj=u&k5=2&kp=-2&kk=1&kak=-1&kaq=-1&kd=1&kc=-1&k1=-1&kap=-1&kao=-1&kax=-1&kf=fw&kt=u&kaa=50f148&k9=afffaf&ka=u', 'g': 'https://google.com/search?q={}'}
+
+# The page(s) to open at the start.
+# Type: FuzzyUrl
+c.url.start_pages = 'https://start.duckduckgo.com/?kae=t&kaj=u&k5=2&kp=-2&kk=1&kak=-1&kaq=-1&kd=1&kc=-1&k1=-1&kap=-1&kao=-1&kax=-1&kf=fw&kt=u&kaa=50f148&k9=afffaf&ka=u'
