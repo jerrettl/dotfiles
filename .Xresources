@@ -1,6 +1,6 @@
 ! Location: ~/.Xresources
 
-! UXTerm
+! URxvt
 
 URxvt*background: black
 URxvt*foreground: white
@@ -13,6 +13,14 @@ URxvt.keysym.Home: \033[1~
 URxvt.keysym.End: \033[4~
 URxvt.keysym.KP_Home: \033[1~
 URxvt.keysym.KP_End:  \033[4~
+
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
+URxvt.url-select.launcher:  qutebrowser
+URxvt.url-select.underline: true
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
+
 
 
 !! Rofi
