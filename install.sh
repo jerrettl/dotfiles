@@ -11,6 +11,7 @@ ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
 ln -sfv ~/dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
 ln -sfv ~/dotfiles/.config/qutebrowser/ ~/.config/qutebrowser
 ln -sfv ~/dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
+ln -sfv ~/dotfiles/.config/ranger/scope.sh ~/.config/ranger/scope.sh
 ln -sfv ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi
 ln -sfv ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sfv ~/dotfiles/.vim/ ~/.vim
