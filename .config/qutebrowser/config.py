@@ -53,3 +53,20 @@ c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}&kae=t&kaj=u&k5=2
 # The page(s) to open at the start.
 # Type: FuzzyUrl
 c.url.start_pages = 'https://start.duckduckgo.com/?kae=t&kaj=u&k5=2&kp=-2&kk=1&kak=-1&kaq=-1&kd=1&kc=-1&k1=-1&kap=-1&kao=-1&kax=-1&kf=fw&kt=u&kaa=50f148&k9=afffaf&ka=u'
+
+
+
+# List of URLs of lists which contain hosts to block.
+# The file can be in one of the following formats:
+#  - An /etc/hosts-like file
+#  - One host per line
+#  - A zip-file of any of the above, with either only one file, or a file named hosts (with any extension).
+#  Type: List of Url
+
+c.content.host_blocking.lists = ["https://www.malwaredomainlist.com/hostslist/hosts.txt",
+        "http://someonewhocares.org/hosts/hosts",
+        "http://winhelp2002.mvps.org/hosts.zip",
+        "http://malwaredomains.lehigh.edu/files/justdomains.zip",
+        "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext",
+        "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
+        ]
