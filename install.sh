@@ -4,11 +4,7 @@ sudo pacman -S --needed curl
 curl -s https://gist.githubusercontent.com/Tadly/0e65d30f279a34c33e9b/raw/pacaur_install.sh | bash
 
 pacaur -Syyu
-<<<<<<< HEAD
-pacaur -S --needed bdf-unifont calc caffeine-ng compton feh firefox git gvim i3-gaps i3blocks keepass libotf lightdm lightdm-gtk-greeter msmtp neomutt npm offlineimap pango qt5-webengine-widevine qutebrowser ranger rofi rxvt-unicode-pixbuf scrot system-san-francisco-font-git tmux tree ttf-droid ttf-ms-fonts ttf-roboto unzip urxvt-perls volumeicon w3m xdotool xorg-server xorg-xrdb youtube-dl zathura zathura-pdf-poppler zip zsh zsh-autosuggestions
-=======
-pacaur -S --needed bdf-unifont calc caffeine-ng compton feh firefox git gvim i3-gaps i3blocks keepass libotf lightdm lightdm-gtk-greeter npm numlockx pango qt5-webengine-widevine qutebrowser ranger rofi rxvt-unicode-pixbuf scrot system-san-francisco-font-git tmux tree ttf-droid ttf-ms-fonts ttf-roboto unzip urxvt-perls volumeicon w3m xdotool xorg-server xorg-xrdb youtube-dl zathura zathura-pdf-poppler zip zsh zsh-autosuggestions
->>>>>>> 2d37885f71258fca75d8cecb402d24d3f03a6906
+pacaur -S --needed bdf-unifont calc caffeine-ng compton feh firefox git gvim i3-gaps i3blocks keepass libotf lightdm lightdm-gtk-greeter msmtp neomutt npm numlockx offlineimap pango qt5-webengine-widevine qutebrowser ranger rofi rxvt-unicode-pixbuf scrot system-san-francisco-font-git tmux tree ttf-droid ttf-ms-fonts ttf-roboto unzip urxvt-perls volumeicon w3m xdotool xorg-server xorg-xrdb youtube-dl zathura zathura-pdf-poppler zip zsh zsh-autosuggestions
 
 ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
 ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
