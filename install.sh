@@ -13,15 +13,15 @@ ln -sfv ~/dotfiles/.config/qutebrowser/ ~/.config/qutebrowser
 ln -sfv ~/dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -sfv ~/dotfiles/.config/ranger/scope.sh ~/.config/ranger/scope.sh
 ln -sfv ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi
-cp -fv ~/dotfiles/.msmtprc-example ~/dotfiles/.msmtprc
+cp -nv ~/dotfiles/.msmtprc-example ~/dotfiles/.msmtprc
 mkdir ~/.neomutt
 ln -sfv ~/dotfiles/.neomutt/colors ~/.neomutt/colors
 ln -sfv ~/dotfiles/.neomutt/macros ~/.neomutt/macros
 ln -sfv ~/dotfiles/.neomutt/mailcap ~/.neomutt/mailcap
 ln -sfv ~/dotfiles/.neomutt/neomuttrc ~/.neomutt/neomuttrc
-cp -fv ~/dotfiles/.neomutt/user1-example ~/.neomutt/user1
+cp -nv ~/dotfiles/.neomutt/user1-example ~/.neomutt/user1
 ln -sfv ~/dotfiles/.offlineimap.py ~/.offlineimap.py
-cp -fv ~/dotfiles/.offlineimaprc-example ~/.offlineimaprc
+cp -nv ~/dotfiles/.offlineimaprc-example ~/.offlineimaprc
 ln -sfv ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sfv ~/dotfiles/.vim/ ~/.vim
 ln -sfv ~/dotfiles/.vimrc ~/.vimrc
