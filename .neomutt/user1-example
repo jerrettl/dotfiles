@@ -1,0 +1,13 @@
+# vim:filetype=neomuttrc
+
+set mbox_type = Maildir
+set realname = "<name1>"
+set imap_user = "<email1>@gmail.com"
+set from = "<email1>@gmail.com"
+#set sendmail = "/usr/bin/msmtp -a <account1>"
+set sendmail = "~/.msmtp/msmtp-enqueue.sh -a <account1>"
+#set smtp_url = "smtp://<email1>@smtp.gmail.com:587/"
+set folder = "~/.mail/<dir1>"
+set header_cache = ~/.neomutt/<account1>/cache/headers
+set message_cachedir = ~/.neomutt/<account1>/cache/bodies
+set certificate_file = ~/.neomutt/<account1>/certificates

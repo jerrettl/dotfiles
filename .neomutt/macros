@@ -1,0 +1,56 @@
+# vim:filetype=neomuttrc
+
+# Keybindings and macros
+# ----------------------
+
+# alias   - alias menu displaying suggested aliases
+# browser - file/directory browser
+# editor  - single line editor for 'To:', 'Subject:' prompts.
+# index   - the main menu showing messages in a folder
+# pager   - where the contents of the message are displayed
+# query   - menu displaying results of query command
+
+bind index,pager g noop
+bind index <esc>V noop
+bind index <esc>v noop
+bind index \Cn noop
+bind index \Cp noop
+
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index gy "<change-folder>=YouTube<enter>" "Go to youtube label"
+
+bind alias,index,browser,query G last-entry
+bind pager G bottom
+
+bind alias,index,browser,query gg first-entry
+bind pager gg top
+
+macro pager j "<next-line><next-line><next-line><next-line>"
+macro pager k "<previous-line><previous-line><previous-line><previous-line>"
+
+bind index r read-subthread
+
+bind alias,index,pager,browser,query \Cd half-down
+bind alias,index,pager,browser,query \Cu half-up
+
+bind index <esc><space> collapse-all
+bind index <space> collapse-thread
+
+bind index n search-next
+bind index p search-opposite
+
+bind index { previous-thread
+bind pager { half-up
+
+bind index } next-thread
+bind pager } half-down
+
+bind index,pager A create-alias
+bind index,pager a group-reply
+
+# Skip trash when deleting with the delete key.
+#bind index,pager <delete> purge-message
+
+# Readline-like history browsing using up/down keys.
+bind editor <up> history-up
+bind editor <down> history-down

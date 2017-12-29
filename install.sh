@@ -4,7 +4,7 @@ sudo pacman -S --needed curl
 curl -s https://gist.githubusercontent.com/Tadly/0e65d30f279a34c33e9b/raw/pacaur_install.sh | bash
 
 pacaur -Syyu
-pacaur -S --needed bdf-unifont calc caffeine-ng compton feh firefox git gvim i3-gaps i3blocks keepass libotf lightdm lightdm-gtk-greeter npm pango qt5-webengine-widevine qutebrowser ranger rofi rxvt-unicode-pixbuf scrot system-san-francisco-font-git tmux tree ttf-droid ttf-ms-fonts ttf-roboto unzip urxvt-perls volumeicon w3m xdotool xorg-server xorg-xrdb youtube-dl zathura zathura-pdf-poppler zip zsh zsh-autosuggestions
+pacaur -S --needed bdf-unifont calc caffeine-ng compton feh firefox git gvim i3-gaps i3blocks keepass libotf lightdm lightdm-gtk-greeter msmtp neomutt npm offlineimap pango qt5-webengine-widevine qutebrowser ranger rofi rxvt-unicode-pixbuf scrot system-san-francisco-font-git tmux tree ttf-droid ttf-ms-fonts ttf-roboto unzip urxvt-perls volumeicon w3m xdotool xorg-server xorg-xrdb youtube-dl zathura zathura-pdf-poppler zip zsh zsh-autosuggestions
 
 ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
 ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
@@ -13,6 +13,14 @@ ln -sfv ~/dotfiles/.config/qutebrowser/ ~/.config/qutebrowser
 ln -sfv ~/dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -sfv ~/dotfiles/.config/ranger/scope.sh ~/.config/ranger/scope.sh
 ln -sfv ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi
+cp -fv ~/dotfiles/.msmtprc-example ~/dotfiles/.msmtprc
+mkdir ~/.neomutt
+ln -sfv ~/dotfiles/.neomutt/colors ~/.neomutt/colors
+ln -sfv ~/dotfiles/.neomutt/macros ~/.neomutt/macros
+ln -sfv ~/dotfiles/.neomutt/neomuttrc ~/.neomutt/neomuttrc
+cp -fv ~/dotfiles/.neomutt/user1-example ~/.neomutt/user1
+ln -sfv ~/dotfiles/.offlineimap.py ~/.offlineimap.py
+cp -fv ~/dotfiles/.offlineimaprc-example ~/.offlineimaprc
 ln -sfv ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sfv ~/dotfiles/.vim/ ~/.vim
 ln -sfv ~/dotfiles/.vimrc ~/.vimrc

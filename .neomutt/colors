@@ -1,0 +1,6 @@
+# vim:filetype=neomuttrc
+
+# COLOR
+color index_author cyan default '.*'
+color index_date magenta default
+color index_size yellow default

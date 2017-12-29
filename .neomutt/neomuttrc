@@ -1,0 +1,23 @@
+source "~/.neomutt/macros"
+source "~/.neomutt/colors"
+
+source "~/.neomutt/user1"
+
+set spoolfile = "+INBOX"
+set record = /dev/null
+set mbox = "+[Gmail].All Mail"
+set postponed = "+[Gmail].Drafts"
+set trash = "+[Gmail].Bin"
+
+set sleep_time = 0
+
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+set sort = "threads"
+set sort_aux = "reverse-date"
+
+set mailcap_path = "~/.neomutt/mailcap"
+auto_view text_html
+alternative_order text/plain text/html
+
