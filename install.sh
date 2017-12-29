@@ -17,6 +17,7 @@ cp -fv ~/dotfiles/.msmtprc-example ~/dotfiles/.msmtprc
 mkdir ~/.neomutt
 ln -sfv ~/dotfiles/.neomutt/colors ~/.neomutt/colors
 ln -sfv ~/dotfiles/.neomutt/macros ~/.neomutt/macros
+ln -sfv ~/dotfiles/.neomutt/mailcap ~/.neomutt/mailcap
 ln -sfv ~/dotfiles/.neomutt/neomuttrc ~/.neomutt/neomuttrc
 cp -fv ~/dotfiles/.neomutt/user1-example ~/.neomutt/user1
 ln -sfv ~/dotfiles/.offlineimap.py ~/.offlineimap.py
