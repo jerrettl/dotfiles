@@ -47,40 +47,10 @@ if [ -f ~/Documents/aliases ]; then
     . ~/Documents/aliases
 fi
 
+if [ -f ~/dotfiles/aliases ]; then
+    . ~/dotfiles/aliases
+fi
 
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias np='nano -w PKGBUILD'
-alias more=less
-alias dotf='cd ~/dotfiles'
-alias con='vim $HOME/.i3/config'
-alias comp='vim $HOME/.config/compton.conf'
-alias fixit='sudo rm -f /var/lib/pacman/db.lck'
-alias inst='sudo pacman -S'
-alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias mirrors='sudo pacman-mirrors -g'
-alias printer='system-config-printer'
-alias update='pacaur -Syyu'
-alias cls='clear'
-alias www='cd /srv/http'
-alias gst='git status -uno'
-alias tv='cd /media/usb0/Files/Documents/tv'
-alias movies='cd /media/usb0/Files/Documents/movies'
-alias usb0='cd /media/usb0'
-alias usb1='cd /media/usb1'
-alias zrc='vim ~/.zshrc'
-alias vrc='vim ~/.vimrc'
-alias i3rc='vim ~/.config/i3/config'
-alias doc='cd ~/Documents'
-alias dow='cd ~/Downloads'
-alias mnttv='sshfs jerrett@192.168.1.11:/media/usb0/Files/Documents/tv ~/mnt -C -p 21999'
-alias umntssh='fusermount -u ~/mnt'
-alias umntusb='sudo umount ~/mnt'
-alias zath='zathura'
-alias su='sudo -Es'
-alias dotu='dotf && git pull && cd'
 
 ## ==== Perl
 #PATH="/home/jerrett/perl5/bin${PATH:+:${PATH}}"; export PATH;
