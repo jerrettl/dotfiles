@@ -13,6 +13,8 @@ ln -sfv ~/dotfiles/.config/qutebrowser/ ~/.config/qutebrowser
 ln -sfv ~/dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -sfv ~/dotfiles/.config/ranger/scope.sh ~/.config/ranger/scope.sh
 ln -sfv ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi
+rm -f ~/msmtp
+ln -sfv ~/dotfiles/.msmtp/ ~/.msmtp
 cp -nv ~/dotfiles/.msmtprc-example ~/dotfiles/.msmtprc
 mkdir ~/.neomutt
 ln -sfv ~/dotfiles/.neomutt/colors ~/.neomutt/colors
