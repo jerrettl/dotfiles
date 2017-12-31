@@ -25,6 +25,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'hrother/offlineimaprc.vim'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 call vundle#end()
 filetype plugin indent on
