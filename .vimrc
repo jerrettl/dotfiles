@@ -24,12 +24,14 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'hrother/offlineimaprc.vim'
+Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 filetype plugin indent on
 
 
 " Basics
+set encoding=utf8
 syntax on
 set mouse=a
 let mapleader=","
@@ -54,6 +56,7 @@ set wildmenu
 set clipboard=unnamed
 set pastetoggle=<F2>
 set linebreak
+set noshowmode
 
 
 " Advanced

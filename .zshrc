@@ -21,6 +21,7 @@ export EDITOR=/usr/bin/vim
 
 
 # ==== Powerlevel9k
+POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context root_indicator dir vi_mode newline rbenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(history time)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=false

@@ -4,9 +4,7 @@
 
 URxvt*background: black
 URxvt*foreground: white
-URxvt.font: xft:Pragmata Pro:size=10, \
-            xft:unifont:style=Medium:antialias=false, \
-            xft:Noto Sans Ethiopic:style=Regular
+URxvt.font: xft:PragmataProMono Nerd Font Mono:size=10
 URxvt.scrollBar: false
 URxvt.letterSpace: -1
 URxvt.keysym.Home: \033[1~
