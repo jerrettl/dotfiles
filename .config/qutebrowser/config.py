@@ -16,6 +16,11 @@ c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'}
 # Type: ShellCommand
 c.editor.command = ['urxvt', '-e', 'vim', '-f', '{}']
 
+# Default monospace fonts. Whenever "monospace" is used ina font setting,
+# it's replaced with the fonts listed here.
+# Type: Font
+c.fonts.monospace = "PragmataProMono Nerd Font Mono"
+
 # Additional arguments to pass to Qt, without leading `--`. With
 # QtWebEngine, some Chromium arguments (see
 # https://peter.sh/experiments/chromium-command-line-switches/ for a
