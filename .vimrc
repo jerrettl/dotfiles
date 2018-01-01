@@ -145,9 +145,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {
-		\ "mode": "passive",
-		\ "active_filetypes": [],
-		\ "passive_filetypes": [] }
+			\ "mode": "passive",
+			\ "active_filetypes": [],
+			\ "passive_filetypes": [] }
 
 " latex-suite
 set grepprg=grep\ -nH\ $*
@@ -165,5 +165,30 @@ imap <F12> <C-o>:Goyo<cr>
 
 " YouCompleteMe
 let g:ycm_filetype_blacklist = {
-		\ 'tex' : 1
-		\}
+			\ 'tex' : 1
+			\}
+
+" NERDTree
+function! NERDTreeQuit()
+	redir => buffersoutput
+	silent buffers
+	redir END
+	"                     1BufNo  2Mods.     3File           4LineNo
+	let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
+	let windowfound = 0
+
+	for bline in split(buffersoutput, "\n")
+		let m = matchlist(bline, pattern)
+
+		if (len(m) > 0)
+			if (m[2] =~ '..a..')
+				let windowfound = 1
+			endif
+		endif
+	endfor
+
+	if (!windowfound)
+		quitall
+	endif
+endfunction
+autocmd WinEnter * call NERDTreeQuit()
