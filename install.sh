@@ -37,7 +37,8 @@ ln -sfv ~/dotfiles/.Xresources ~/.Xresources
 ln -sfv ~/dotfiles/.zshrc ~/.zshrc
 xrdb ~/.Xresources
 
-git config --global commit.gpgsign true
+git config --global user.email "jerrett7@gmail.com"
+git config --global user.name "Jerrett Longworth"
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
