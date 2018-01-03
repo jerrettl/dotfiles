@@ -55,7 +55,7 @@ set noerrorbells
 set nobackup
 set noswapfile
 set wildmenu
-set clipboard=unnamed
+set clipboard=unnamedplus
 set pastetoggle=<F2>
 set linebreak
 set noshowmode
