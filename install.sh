@@ -9,6 +9,12 @@ pacaur -S --needed bdf-unifont calc caffeine-ng compton feh firefox git gvim i3-
 ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
 ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
 ln -sfv ~/dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
+mkdir ~/.config/pianobar
+if [ ! -f ~/.config/pianobar/ctl ]; then
+mkfifo ~/.config/pianobar/ctl
+fi
+touch ~/.config/pianobar/nowplaying
+ln -sfv ~/dotfiles/.config/pianobar/config ~/.config/pianobar/config
 ln -sfv ~/dotfiles/.config/qutebrowser/ ~/.config/qutebrowser
 ln -sfv ~/dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -sfv ~/dotfiles/.config/ranger/scope.sh ~/.config/ranger/scope.sh

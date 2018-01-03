@@ -230,14 +230,26 @@ for_window [class="Firefox" title="About Mozilla Firefox"] floating enable
 new_window pixel 1
 
 
-# Media control bindings (Literally just spotify right now)
-bindsym $mod+M exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+# Music mode
+set $music_mode Select a music player: (P)ianobar or (S)potify
+bindsym $mod+Shift+m mode "$music_mode"
+bindsym $mod+Shift+p mode "$music_mode"
 
-bindsym $mod+N exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+mode "$music_mode" {
+	bindsym p exec --no-startup-id echo -n "pianobar" > ~/.musicmode, mode "default"
+	bindsym s exec --no-startup-id echo -n "spotify" > ~/.musicmode, mode "default"
 
-bindsym $mod+B exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
 
-#bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+# Media control bindings
+bindsym $mod+M exec "~/dotfiles/scripts/music-control.sh playpause"
+bindsym XF86AudioPlay exec "~/dotfiles/scripts/music-control.sh playpause"
+
+bindsym $mod+N exec "~/dotfiles/scripts/music-control.sh next"
+bindsym XF86AudioNext exec "~/dotfiles/scripts/music-control.sh next"
+
+bindsym $mod+B exec "~/dotfiles/scripts/music-control.sh back"
+bindsym XF86AudioPrev exec "~/dotfiles/scripts/music-control.sh back"
+

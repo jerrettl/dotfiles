@@ -28,6 +28,12 @@ command=/usr/lib/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+
+[pianobar]
+command=~/dotfiles/scripts/pianobar-relay.sh
+markup=pango
+interval=5
+
 # Spotify icon \uF1BC
 [spotify]
 command=~/dotfiles/scripts/spotify.py
