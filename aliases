@@ -12,6 +12,7 @@ alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color
 alias more=less
 alias su='sudo -Es'
 alias update='pacaur -Syyu'
+alias yt='~/dotfiles/scripts/youtube.sh'
 
 # ==== Common Directories
 alias doc='cd ~/Documents && l'
