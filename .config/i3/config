@@ -53,6 +53,7 @@ bindsym $mod+Tab exec ~/dotfiles/scripts/flash_win.sh
 
 # Screenshot
 bindsym Print exec scrot -e 'mv $f ~/Pictures/'
+bindsym Shift+Print exec flameshot gui
 
 # Shortcut applications
 bindsym $mod+F1 exec qutebrowser

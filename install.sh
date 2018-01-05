@@ -18,6 +18,7 @@ pacaur -Syyu --needed \
 	compton \
 	feh \
 	firefox \
+	flameshot \
 	git \
 	gvim \
 	i3-gaps \
