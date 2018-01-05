@@ -17,7 +17,7 @@ alias yt='~/dotfiles/scripts/youtube.sh'
 # ==== Common Directories
 alias doc='cd ~/Documents && l'
 alias dow='cd ~/Downloads && l'
-alias dotf='cd ~/dotfiles'
+alias dotf='cd ~/dotfiles && gstu'
 alias dotu='dotf && git pull && cd'
 
 # ==== Config files
