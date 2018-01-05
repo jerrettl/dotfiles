@@ -59,6 +59,8 @@ set clipboard=unnamedplus
 set pastetoggle=<F2>
 set linebreak
 set noshowmode
+"set guifont=PragmataProMono\ Nerd\ Font\ Mono\ 11
+set guifont=PragmataProMono_Nerd_Font_Mono:h10:w5
 
 
 " Advanced
