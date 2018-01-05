@@ -66,6 +66,9 @@ set guifont=PragmataProMono_Nerd_Font_Mono:h10:w5
 " Advanced
 set omnifunc=htmlcomplete#CompleteTags
 
+" Auto refresh aliases
+autocmd BufWritePost ~/dotfiles/aliases/folders,~/dotfiles/aliases/configs !python ~/dotfiles/scripts/shortcuts.py
+
 " Theming
 " set background=dark
 " colorscheme 256-grayvim

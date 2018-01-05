@@ -51,8 +51,8 @@ if [ -f ~/Documents/aliases ]; then
     . ~/Documents/aliases
 fi
 
-if [ -f ~/dotfiles/aliases ]; then
-    . ~/dotfiles/aliases
+if [ -f ~/dotfiles/aliases/zsh-aliases ]; then
+    . ~/dotfiles/aliases/zsh-aliases
 fi
 
 

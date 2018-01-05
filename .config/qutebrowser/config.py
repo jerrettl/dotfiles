@@ -76,3 +76,19 @@ c.content.host_blocking.lists = ["https://www.malwaredomainlist.com/hostslist/ho
         "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext",
         "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
         ]
+
+# DO NOT DELETE LMAO
+config.bind(';doc', 'set downloads.location.directory ~/Documents ;; hint links download')
+config.bind(';dow', 'set downloads.location.directory ~/Downloads ;; hint links download')
+config.bind(';dotf', 'set downloads.location.directory ~/dotfiles ;; hint links download')
+config.bind(';www', 'set downloads.location.directory /srv/http ;; hint links download')
+config.bind(';tv', 'set downloads.location.directory /media/usb0/Files/Documents/tv ;; hint links download')
+config.bind(';movies', 'set downloads.location.directory /media/usb0/Files/Documents/movies ;; hint links download')
+config.bind(';usb0', 'set downloads.location.directory /media/usb0 ;; hint links download')
+config.bind(';usb1', 'set downloads.location.directory /media/usb1 ;; hint links download')
+config.bind(';d', 'set downloads.location.directory ~/Documents ;; hint links download')
+config.bind(';D', 'set downloads.location.directory ~/Downloads ;; hint links download')
+config.bind(';m', 'set downloads.location.directory ~/Music ;; hint links download')
+config.bind(';pp', 'set downloads.location.directory ~/Pictures ;; hint links download')
+config.bind(';vv', 'set downloads.location.directory ~/Videos ;; hint links download')
+# DO NOT DELETE LMAO
