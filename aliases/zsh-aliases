@@ -13,6 +13,7 @@ alias more=less
 alias su='sudo -Es'
 alias update='pacaur -Syyu'
 alias yt='~/dotfiles/scripts/youtube.sh'
+alias bashbot='cd ~/Documents/telegram-bot-bash/ && ./bashbot.sh start'
 
 # ==== Common Directories
 alias dotf='cd ~/dotfiles && gstu'
