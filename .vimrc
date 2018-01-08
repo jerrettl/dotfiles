@@ -68,6 +68,7 @@ set omnifunc=htmlcomplete#CompleteTags
 
 " Auto refresh aliases
 autocmd BufWritePost ~/dotfiles/aliases/folders,~/dotfiles/aliases/configs !python ~/dotfiles/scripts/shortcuts.py
+autocmd BufWritePost ~/.Xresources,~/dotfiles/.Xresources !xrdb ~/.Xresources
 
 " Theming
 " set background=dark
