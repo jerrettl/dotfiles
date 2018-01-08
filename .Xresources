@@ -2,8 +2,9 @@
 
 ! URxvt
 
-URxvt*background: black
-URxvt*foreground: white
+URxvt*background: #151515
+!URxvt*foreground: #a1b0b8
+URxvt*foreground: #f5f5f5
 URxvt.font: xft:PragmataProMono Nerd Font Mono:size=10
 URxvt.scrollBar: false
 URxvt.letterSpace: -1
@@ -20,7 +21,32 @@ URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
 
-
+! Black + DarkGrey
+!*color0:  #252525
+*color0:  #151515
+*color8:  #555753
+! DarkRed + Red
+*color1:  #ff443e
+*color9:  #ff8d8d
+! DarkGreen + Green
+!*color2:  #c3d82c
+*color2:  #6dd82c
+*color10: #c8e7a8
+! DarkYellow + Yellow
+*color3:  #ffc135
+*color11: #ffc123
+! DarkBlue + Blue
+*color4:  #42a5f5
+*color12: #3465a4
+! DarkMagenta + Magenta
+*color5:  #d81b60
+*color13: #f57900
+!DarkCyan + Cyan (both not tango)
+*color6:  #00acc1
+*color14: #46a4ff
+! LightGrey + White
+*color7:  #f5f5f5
+*color15: #ffffff
 
 !! Rofi
 !rofi.width: 60
