@@ -59,8 +59,11 @@ set clipboard=unnamedplus
 set pastetoggle=<F2>
 set linebreak
 set noshowmode
+set noesckeys
 "set guifont=PragmataProMono\ Nerd\ Font\ Mono\ 11
 set guifont=PragmataProMono_Nerd_Font_Mono:h10:w5
+
+set timeoutlen=100 ttimeoutlen=0
 
 
 " Advanced
@@ -96,7 +99,7 @@ cmap w!! w !sudo tee % >/dev/null
 cmap Q q
 
 imap jk <esc>
-imap hj <esc>
+imap kj <esc>
 imap <C-a> <esc>jA
 
 " Nifty alphabetize shortcut
