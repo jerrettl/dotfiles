@@ -29,12 +29,18 @@ pacaur -Syyu --needed \
 	libotf \
 	lightdm \
 	lightdm-gtk-greeter \
+	lxappearance \
 	msmtp \
 	neomutt \
+	networkmanager \
+	network-manager-applet \
+	notify-osd \
 	npm \
 	numlockx \
 	offlineimap \
+	osx-arc-white \
 	pango \
+	paper-icon-theme-git \
 	qt5-webengine-widevine \
 	qutebrowser \
 	ranger \
@@ -61,6 +67,10 @@ pacaur -Syyu --needed \
 	zip \
 	zsh \
 	zsh-autosuggestions
+
+
+# texlive-most
+# vim-live-latex-preview
 
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
