@@ -63,18 +63,31 @@ pacaur -Syyu --needed \
 	zsh-autosuggestions
 
 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+cd ~/.oh-my-zsh/custom/themes/powerlevel9k
+git pull
+cd ~
+
 echo "Creating symlinks..."
 ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
+mkdir -pv ~/.config/i3
 ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
+mkdir -pv ~/.config/i3blocks
 ln -sfv ~/dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
 mkdir ~/.config/pianobar
 mkfifo ~/.config/pianobar/ctl
 touch ~/.config/pianobar/nowplaying
 ln -sfv ~/dotfiles/.config/pianobar/config ~/.config/pianobar/config
-rm -f ~/.config/qutebrowser
-ln -sfv ~/dotfiles/.config/qutebrowser/ ~/.config/qutebrowser
+rm -rf ~/.config/qutebrowser
+mkdir -pv ~/.config/qutebrowser/
+ln -sfv ~/dotfiles/.config/qutebrowser/* ~/.config/qutebrowser
+mkdir -pv ~/.config/ranger
 ln -sfv ~/dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -sfv ~/dotfiles/.config/ranger/scope.sh ~/.config/ranger/scope.sh
+mkdir -pv ~/.config/rofi
 ln -sfv ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi
 rm -f ~/.msmtp
 ln -sfv ~/dotfiles/.msmtp/ ~/.msmtp
@@ -94,13 +107,5 @@ ln -sfv ~/dotfiles/.vimrc ~/.vimrc
 ln -sfv ~/dotfiles/.Xresources ~/.Xresources
 ln -sfv ~/dotfiles/.zshrc ~/.zshrc
 xrdb ~/.Xresources
-
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-cd ~/.oh-my-zsh/custom/themes/powerlevel9k
-git pull
-cd ~
 
 sudo npm install -g npm
