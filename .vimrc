@@ -91,14 +91,15 @@ nmap J gj
 nmap K gk
 nmap <C-d> :sh<cr>
 nmap <C-g> :%s/\s\+$//<cr>
-nmap <C-n> :set relativenumber<CR>
-nmap <C-m> :set norelativenumber<CR>
+nmap <C-n> :set norelativenumber<CR>
+nmap <C-m> :set relativenumber<CR>
 nmap <F10> :NERDTreeToggle<CR>
 
 cmap w!! w !sudo tee % >/dev/null
 cmap Q q
 
 imap jk <esc>
+imap JK <esc>
 imap kj <esc>
 imap <C-a> <esc>jA
 
@@ -164,7 +165,8 @@ let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_CompileRule_pdf='pdflatex -interaction=nonstopmode $*'
 let g:Tex_ViewRule_pdf='zathura'
-map <f3> <esc>:w<cr><leader>ll
+map <f3> <esc>:w<cr><leader>ll<CR>
+imap <C-I> <Plug>Tex_InsertItemOnThisLine
 
 
 " Goyo
