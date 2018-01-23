@@ -9,9 +9,9 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'vim-syntastic/syntastic'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'vim-syntastic/syntastic'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'altercation/vim-colors-solarized'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-latex/vim-latex'
@@ -58,7 +58,7 @@ set wildmenu
 set clipboard=unnamedplus
 set pastetoggle=<F2>
 set linebreak
-set noshowmode
+"set noshowmode
 set noesckeys
 "set guifont=PragmataProMono\ Nerd\ Font\ Mono\ 11
 set guifont=PragmataProMono_Nerd_Font_Mono:h10:w5
@@ -114,15 +114,15 @@ imap <C-S> <C-O>:update<CR>
 " Plugin Configurations
 
 " Airline
-let g:airline#extensions#synastic#enables = 1
-set laststatus=2
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'powerlineish'
-if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-endif
-let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.whitespace = ''
+"let g:airline#extensions#synastic#enables = 1
+"set laststatus=2
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme = 'powerlineish'
+"if !exists('g:airline_symbols')
+"	let g:airline_symbols = {}
+"endif
+"let g:airline_symbols.maxlinenr = ''
+"let g:airline_symbols.whitespace = ''
 
 
 " Neocomplete
@@ -146,17 +146,17 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = {
-			\ "mode": "passive",
-			\ "active_filetypes": [],
-			\ "passive_filetypes": [] }
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 0
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_mode_map = {
+"			\ "mode": "passive",
+"			\ "active_filetypes": [],
+"			\ "passive_filetypes": [] }
 
 " latex-suite
 set grepprg=grep\ -nH\ $*
