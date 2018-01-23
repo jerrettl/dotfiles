@@ -63,7 +63,7 @@ set noesckeys
 "set guifont=PragmataProMono\ Nerd\ Font\ Mono\ 11
 set guifont=PragmataProMono_Nerd_Font_Mono:h10:w5
 
-set timeoutlen=100 ttimeoutlen=0
+set timeoutlen=250 ttimeoutlen=0
 
 
 " Advanced
