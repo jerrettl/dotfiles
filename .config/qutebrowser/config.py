@@ -96,6 +96,7 @@ config.bind(';D', 'set downloads.location.directory ~/Downloads ;; hint links do
 config.bind(';m', 'set downloads.location.directory ~/Music ;; hint links download')
 config.bind(';pp', 'set downloads.location.directory ~/Pictures ;; hint links download')
 config.bind(';vv', 'set downloads.location.directory ~/Videos ;; hint links download')
+config.bind(';sch', 'set downloads.location.directory ~/Documents/school ;; hint links download')
 # DO NOT DELETE LMAO
 
 config.bind('m', 'spawn mpv {url}')
