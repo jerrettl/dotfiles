@@ -175,7 +175,7 @@ let g:Tex_IgnoredWarnings='"Underfull\n".
     \"Package gensymb Warning: Not defining\n".'
 let g:Tex_IgnoreLevel=8
 map <f3> <esc>:w<cr><leader>ll<CR>
-"imap <C-I> <Plug>Tex_InsertItemOnThisLine
+imap <M-i> <Plug>Tex_InsertItemOnThisLine
 
 
 " Goyo
