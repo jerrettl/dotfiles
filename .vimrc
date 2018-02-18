@@ -34,6 +34,7 @@ filetype plugin indent on
 
 " Basics
 set encoding=utf8
+set termencoding=latin1
 syntax on
 set mouse=a
 let mapleader=","

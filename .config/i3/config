@@ -14,7 +14,7 @@ font pango:SFNS Display 10
 # Use Mouse+$mod to drag windows
 floating_modifier $mod
 
-set $terminal urxvt
+set $terminal urxvt --meta8
 set $lock i3lock -B 10 --ringcolor=ccccccff --insidecolor=ffffff00 --keyhlcolor=3333ccff --bshlcolor=cc3333ff --ringvercolor=ccccccff --insidevercolor=00000000 --textcolor=ffffffff --linecolor=00000000 --separatorcolor=00000000 --timecolor=ffffffff
 
 # The basics
@@ -71,6 +71,7 @@ exec_always --no-startup-id caffeine
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id ~/dotfiles/scripts/numlockx.sh
 exec_always --no-startup-id udiskie -ANs
+exec_always --no-startup-id ~/dotfiles/scripts/urxvt-alt.sh
 
 # change focus
 bindsym $mod+h focus left
