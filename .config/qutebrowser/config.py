@@ -59,7 +59,8 @@ c.url.default_page = 'https://start.duckduckgo.com/?kae=t&kaj=u&k5=2&kp=-2&kk=1&
 c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}&kae=t&kaj=u&k5=2&kp=-2&kk=1&kak=-1&kaq=-1&kd=1&kc=-1&k1=-1&kap=-1&kao=-1&kax=-1&kf=fw&kt=u&kaa=50f148&k9=afffaf&ka=u',
         'g': 'https://google.com/search?q={}',
         'aur': 'https://aur.archlinux.org/packages/?O=0&SeB=nd&K={}&outdated=&SB=n&SO=a&PP=50&do_Search=Go',
-        'arch': 'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&go=Go'}
+        'arch': 'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&go=Go',
+        'gs': 'https://google.com/search?q={} site:.edu OR site:.org OR site:.net OR site:.gov -site:wikipedia'}
 
 # The page(s) to open at the start.
 # Type: FuzzyUrl
