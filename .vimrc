@@ -90,7 +90,6 @@ nmap <down> gj
 nmap <silent> ,/ :nohlsearch<CR>
 nmap J gj
 nmap K gk
-nmap <C-d> :sh<cr>
 nmap <C-g> :%s/\s\+$//<cr>
 nmap <C-n> :set norelativenumber<CR>
 nmap <C-m> :set relativenumber<CR>
