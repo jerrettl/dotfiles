@@ -26,6 +26,8 @@ helvetica = "9pt Helvetica Neue"
 c.fonts.completion.category = "bold " + helvetica
 c.fonts.completion.entry = c.fonts.downloads = c.fonts.hints = c.fonts.keyhint = c.fonts.messages.error = c.fonts.messages.info = c.fonts.messages.warning = c.fonts.prompts = c.fonts.statusbar = c.fonts.tabs = helvetica
 
+c.hints.uppercase = True
+
 # Additional arguments to pass to Qt, without leading `--`. With
 # QtWebEngine, some Chromium arguments (see
 # https://peter.sh/experiments/chromium-command-line-switches/ for a
