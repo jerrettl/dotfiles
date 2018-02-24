@@ -16,6 +16,7 @@ pacaur -Syyu --needed \
 	calc \
 	caffeine-ng \
 	compton \
+	dunst \
 	feh \
 	firefox \
 	flameshot \
@@ -26,6 +27,7 @@ pacaur -Syyu --needed \
 	i3lock-color-git \
 	imagemagick \
 	keepass \
+	libnotify \
 	libotf \
 	lightdm \
 	lightdm-gtk-greeter \
@@ -34,7 +36,6 @@ pacaur -Syyu --needed \
 	neomutt \
 	networkmanager \
 	network-manager-applet \
-	notify-osd \
 	npm \
 	numlockx \
 	offlineimap \
@@ -83,6 +84,8 @@ cd ~
 
 echo "Creating symlinks..."
 ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
+mkdir -pv ~/.config/dunst
+ln -sfv ~/dotfiles/.config/dunst/dunstrc ~/.config/dunst/dunstrc
 mkdir -pv ~/.config/i3
 ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
 mkdir -pv ~/.config/i3blocks
