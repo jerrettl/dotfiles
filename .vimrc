@@ -27,6 +27,7 @@ Plugin 'hrother/offlineimaprc.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'itchyny/lightline.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -59,10 +60,11 @@ set wildmenu
 set clipboard=unnamedplus
 set pastetoggle=<F2>
 set linebreak
-"set noshowmode
+set noshowmode
 set noesckeys
 "set guifont=PragmataProMono\ Nerd\ Font\ Mono\ 11
 set guifont=PragmataProMono_Nerd_Font_Mono:h10:w5
+set laststatus=2
 
 set timeoutlen=250 ttimeoutlen=0
 
