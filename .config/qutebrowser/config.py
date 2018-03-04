@@ -11,6 +11,15 @@
 # Type: Dict
 c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'}
 
+c.colors.statusbar.command.bg = "white"
+c.colors.statusbar.command.fg = "black"
+c.colors.statusbar.insert.bg = "#59bdf7"
+c.colors.statusbar.insert.fg = "black"
+c.colors.statusbar.normal.fg = "black"
+c.colors.statusbar.normal.bg = "white"
+c.colors.statusbar.url.fg = "black"
+c.colors.statusbar.url.success.https.fg = "black"
+
 # The editor (and arguments) to use for the `open-editor` command. `{}`
 # gets replaced by the filename of the file to be edited.
 # Type: ShellCommand
