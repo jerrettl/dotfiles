@@ -58,7 +58,7 @@ bindsym Shift+Print exec flameshot gui
 bindsym $mod+F1 exec qutebrowser
 bindsym $mod+F2 exec $terminal -e pacaur -Syyu --noconfirm --noedit
 bindsym $mod+Shift+F2 exec $terminal -e bash -c "cd ~/dotfiles && git pull && sleep 5"
-bindsym $mod+F3 exec $terminal -e ranger
+bindsym $mod+F3 exec $terminal ranger
 
 # On startup
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpaper.png
