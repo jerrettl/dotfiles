@@ -46,6 +46,8 @@ c.scrolling.smooth = False
 
 c.tabs.background = True
 
+c.tabs.show = 'multiple'
+
 # The page to open if :open -t/-b/-w is used without URL. Use
 # `about:blank` for a blank page.
 # Type: FuzzyUrl
