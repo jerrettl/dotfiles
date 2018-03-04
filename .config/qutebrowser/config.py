@@ -44,7 +44,7 @@ c.scrolling.bar = True
 # Type: Bool
 c.scrolling.smooth = False
 
-c.tabs.background = True
+c.tabs.background = False
 
 c.tabs.show = 'multiple'
 
