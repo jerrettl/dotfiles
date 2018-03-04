@@ -35,7 +35,7 @@ filetype plugin indent on
 
 " Basics
 set encoding=utf8
-set termencoding=latin1
+"set termencoding=latin1
 syntax on
 set mouse=a
 let mapleader=","
@@ -178,6 +178,7 @@ let g:Tex_IgnoredWarnings='"Underfull\n".
 let g:Tex_IgnoreLevel=8
 map <f3> <esc>:w<cr><leader>ll<CR>
 imap <M-i> <Plug>Tex_InsertItemOnThisLine
+imap <C-i> <Plug>Tex_InsertItemOnThisLine
 
 
 " Goyo

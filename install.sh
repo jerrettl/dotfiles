@@ -27,6 +27,7 @@ pacaur -Syyu --needed \
 	i3lock-color-git \
 	imagemagick \
 	keepass \
+	kitty-git \
 	libnotify \
 	libotf \
 	lightdm \
@@ -90,6 +91,8 @@ mkdir -pv ~/.config/i3
 ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
 mkdir -pv ~/.config/i3blocks
 ln -sfv ~/dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
+mkdir ~/.config/kitty
+ln -sfv ~/dotfiles/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 mkdir ~/.config/pianobar
 mkfifo ~/.config/pianobar/ctl
 touch ~/.config/pianobar/nowplaying
