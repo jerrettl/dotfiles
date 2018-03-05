@@ -81,6 +81,7 @@ autocmd BufWritePost ~/.Xresources,~/dotfiles/.Xresources !xrdb ~/.Xresources
 " colorscheme 256-grayvim
 " let g:solarized_termcolors=256
 " let &t_Co=256
+hi search cterm=NONE ctermfg=black ctermbg=yellow
 
 
 " Mappings
