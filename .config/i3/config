@@ -153,12 +153,12 @@ bindsym $mod+Shift+Ctrl+0 move container to workspace 10; workspace 10
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
-set $bg-color 	         #1b9bf8
+set $bg-color 	         #ffffff
 set $inactive-bg-color   #2d2d2d
-set $text-color          #ffffff
+set $text-color          #000000
 set $inactive-text-color #999999
 set $urgent-bg-color     #d64937
-set $indicator           #dddddd
+set $indicator           #999999
 
 # window colors
 #                       border              background         text                 indicator
