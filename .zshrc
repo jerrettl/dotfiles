@@ -1,7 +1,7 @@
 # Location: ~/.zshrc
 
 export ZSH=/home/jerrett/.oh-my-zsh
-[ -z "$TMUX" ] && export TERM="xterm-256color"
+#[ -z "$TMUX" ] && export TERM="xterm-256color"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Default plugins at ~/.oh-my-zsh/plugins/
