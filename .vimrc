@@ -64,6 +64,7 @@ set noesckeys
 "set guifont=PragmataProMono\ Nerd\ Font\ Mono\ 11
 set guifont=PragmataProMono_Nerd_Font_Mono:h10:w5
 set laststatus=2
+set shell=/bin/bash
 
 set timeoutlen=250 ttimeoutlen=0
 
