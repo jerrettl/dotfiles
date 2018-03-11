@@ -19,6 +19,7 @@ pacaur -Syyu --needed \
 	dunst \
 	feh \
 	firefox \
+	fish \
 	flameshot \
 	git \
 	gvim \
@@ -87,6 +88,8 @@ echo "Creating symlinks..."
 ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
 mkdir -pv ~/.config/dunst
 ln -sfv ~/dotfiles/.config/dunst/dunstrc ~/.config/dunst/dunstrc
+mkdir -pv ~/.config/fish
+ln -sfv ~/dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
 mkdir -pv ~/.config/i3
 ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
 mkdir -pv ~/.config/i3blocks
