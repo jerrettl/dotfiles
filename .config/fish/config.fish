@@ -9,13 +9,15 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias gst='git status -uno'
 alias gstu='git status -uall'
-alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias l='ls -al --color=auto -F'
+alias la='ls -al --color=auto -F'
+alias ll='ls -l --color=auto -F'
 alias more=less
 alias su='sudo -Es'
 alias update='pacaur -Syyu'
 alias yt='~/dotfiles/scripts/youtube.sh'
 alias bashbot='cd ~/Documents/telegram-bot-bash/; and ./bashbot.sh start'
+alias gd='git diff'
 
 # ==== Common Directories
 alias dotf='cd ~/dotfiles; and gstu'
