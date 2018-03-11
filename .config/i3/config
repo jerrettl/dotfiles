@@ -15,7 +15,7 @@ font pango:SFNS Display 10
 floating_modifier $mod
 
 set $terminal urxvt
-set $lock i3lock -B 10 --ringcolor=ccccccff --insidecolor=ffffff00 --keyhlcolor=3333ccff --bshlcolor=cc3333ff --ringvercolor=ccccccff --insidevercolor=00000000 --textcolor=ffffffff --linecolor=00000000 --separatorcolor=00000000 --timecolor=ffffffff
+set $lock i3lock -B 10 --ringcolor=ccccccff --insidecolor=ffffff00 --keyhlcolor=3333ccff --bshlcolor=cc3333ff --ringvercolor=ccccccff --insidevercolor=00000000 --verifcolor=ffffffff --wrongcolor=ffffffff --linecolor=00000000 --separatorcolor=00000000 --timecolor=ffffffff
 
 # The basics
 bindsym $mod+Return exec $terminal
