@@ -12,7 +12,9 @@ URxvt.keysym.Home: \033[1~
 URxvt.keysym.End: \033[4~
 URxvt.keysym.KP_Home: \033[1~
 URxvt.keysym.KP_End:  \033[4~
-URxvt.meta8: true
+URxvt.keysym.M-Up: \033[1;3A
+URxvt.keysym.M-Down: \033[1;3B
+! URxvt.meta8: true
 
 URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
 URxvt.url-select.launcher:  qutebrowser
@@ -22,30 +24,30 @@ URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
 
-! Black + DarkGrey
+! black + darkgrey
 !*color0:  #252525
 *color0:  #090909
 *color8:  #555753
-! DarkRed + Red
+! darkred + red
 *color1:  #ff443e
 *color9:  #ff8d8d
-! DarkGreen + Green
+! darkgreen + green
 !*color2:  #c3d82c
 *color2:  #6dd82c
 *color10: #c8e7a8
-! DarkYellow + Yellow
+! darkyellow + yellow
 *color3:  #ffd740
 *color11: #ffc135
-! DarkBlue + Blue
+! darkblue + blue
 *color4:  #42a5f5
 *color12: #3465a4
-! DarkMagenta + Magenta
+! darkmagenta + magenta
 *color5:  #d81b60
 *color13: #f57900
-!DarkCyan + Cyan (both not tango)
+!darkcyan + cyan (both not tango)
 *color6:  #00acc1
 *color14: #46a4ff
-! LightGrey + White
+! lightgrey + white
 *color7:  #f5f5f5
 *color15: #ffffff
 
