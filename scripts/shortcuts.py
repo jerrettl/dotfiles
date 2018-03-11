@@ -8,16 +8,17 @@ from re import sub
 from re import compile
 
 
-# fishshortcuts = ""
 qute_shortcuts = ""
 ranger_shortcuts = ""
 zsh_shortcuts = ""
+fish_shortcuts = ""
 
 home = str(Path.home()) + "/"
 
 ranger_location = home + ".config/ranger/rc.conf"
 zsh_location = home + "dotfiles/aliases/zsh-aliases"
 qute_location = home + ".config/qutebrowser/config.py"
+fish_location = home + ".config/fish/config.fish"
 
 
 # These are the labels that demarcate where the shortcuts
@@ -67,6 +68,19 @@ with open(home+"dotfiles/aliases/folders") as fold:
                            + "\n")
 
 
+        # fish shortcuts
+        if line[0] == 'dotf':
+            fish_shortcuts += ("alias " + line[0]
+                            + "=\"cd " + line[1]
+                            + "; and gstu\""
+                            + "\n")
+        else:
+            fish_shortcuts += ("alias " + line[0]
+                            + "=\"cd " + line[1]
+                            + "; and l\""
+                            + "\n")
+
+
 # Goes thru the config file file and adds the shortcuts to both
 # zsh_shortcuts and ranger.
 with open(home + "dotfiles/aliases/configs") as conf:
@@ -79,6 +93,12 @@ with open(home + "dotfiles/aliases/configs") as conf:
                            + "\n")
 
         ranger_shortcuts += ("map " + line[0] + " shell vim " + line[1] + "\n")
+
+
+        fish_shortcuts += ("alias " + line[0]
+                           + "=\"vim " + line[1]
+                           + "\""
+                           + "\n")
 
 
 def replaceInMarkers(text, shortcuts):
@@ -101,6 +121,7 @@ def main():
     writeShortcuts(ranger_location, ranger_shortcuts)
     writeShortcuts(zsh_location, zsh_shortcuts)
     writeShortcuts(qute_location, qute_shortcuts)
+    writeShortcuts(fish_location, fish_shortcuts)
 
 
 if __name__ == '__main__':
