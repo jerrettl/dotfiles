@@ -75,6 +75,7 @@ pacaur -Syyu --needed \
 # texlive-most
 # vim-live-latex-preview
 
+git config --global credential.helper 'cache --timeout=900'
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
