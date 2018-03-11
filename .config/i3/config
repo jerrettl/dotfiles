@@ -21,7 +21,7 @@ set $lock i3lock -B 10 --ringcolor=ccccccff --insidecolor=ffffff00 --keyhlcolor=
 bindsym $mod+Return exec $terminal
 bindsym $mod+q kill
 bindsym $mod+Shift+q exec $lock && sleep 1 && systemctl suspend
-bindsym $mod+d exec --no-startup-id rofi -show run -font 'SFNS Display 13' -hide-scrollbar -matching fuzzy
+bindsym $mod+d exec --no-startup-id rofi -show run -font 'SFNS Display 13' -hide-scrollbar
 bindsym $mod+Shift+r exec --no-startup-id bash ~/dotfiles/scripts/restart-i3.sh
 
 # Lock mode
