@@ -24,15 +24,16 @@ bindsym $mod+Shift+q exec $lock && sleep 1 && systemctl suspend
 bindsym $mod+d exec --no-startup-id rofi -show run -font 'SFNS Display 13' -hide-scrollbar
 bindsym $mod+Shift+r exec --no-startup-id bash ~/dotfiles/scripts/restart-i3.sh
 
+
 # Lock mode
 set $mode_system System (L) lock, (E) logout, (S) suspend, (H) hibernate, (R) reboot, (Shift+S) shutdown
 bindsym $mod+Shift+e mode "$mode_system"
 
 mode "$mode_system" {
-	bindsym l exec --no-startup-id $Locker, mode "default"
+	bindsym l exec --no-startup-id $lock, mode "default"
 	bindsym e exec --no-startup-id i3-msg exit, mode "default"
 	bindsym s exec --no-startup-id $lock && sleep 1 && systemctl suspend, mode "default"
-	bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+	bindsym h exec --no-startup-id $lock && systemctl hibernate, mode "default"
 	bindsym r exec --no-startup-id systemctl reboot, mode "default"
 	bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
