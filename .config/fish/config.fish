@@ -1,4 +1,7 @@
 # Fish config
+
+set fish_greeting ""
+
 # ==== Commands
 alias cls='clear'
 alias cp="cp -i"                          # confirm before overwriting something
