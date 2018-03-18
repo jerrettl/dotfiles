@@ -1,3 +1,4 @@
 .vim/bundle/*
+.vim/view/*
 .config/qutebrowser/qsettings/QtProject.conf
 .config/qutebrowser/autoconfig.yml
