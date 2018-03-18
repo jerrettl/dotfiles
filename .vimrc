@@ -68,7 +68,8 @@ set laststatus=2
 set shell=/bin/bash
 set display+=lastline
 
-set timeoutlen=250 ttimeoutlen=0
+autocmd InsertEnter * set timeoutlen=250 ttimeoutlen=0
+autocmd InsertLeave * set timeoutlen=1000 ttimeoutlen=0
 
 
 " Advanced
