@@ -104,6 +104,7 @@ nmap <C-m> :set relativenumber<CR>
 nmap <F10> :NERDTreeToggle<CR>
 nmap <silent> <leader>sp :set spell<cr>
 nmap <silent> <leader>nsp :set nospell<cr>
+nmap <C-l> :loadview<cr>
 
 cmap w!! w !sudo tee % >/dev/null
 cmap Q q
