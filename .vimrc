@@ -85,6 +85,8 @@ autocmd BufWritePost ~/.Xresources,~/dotfiles/.Xresources !xrdb ~/.Xresources
 " let g:solarized_termcolors=256
 " let &t_Co=256
 hi search cterm=NONE ctermfg=black ctermbg=yellow
+hi spellbad cterm=none ctermfg=white ctermbg=160 "dark red
+hi folded cterm=none ctermfg=7 ctermbg=17
 
 
 " Mappings
