@@ -29,6 +29,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'itchyny/lightline.vim'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'vim-scripts/indentpython.vim' " Correct python indentation
+Plugin 'nvie/vim-flake8' " PEP8 checking
+Plugin 'Yggdroot/indentLine' " Indent guides
+
 
 call vundle#end()
 filetype plugin indent on
@@ -249,3 +253,33 @@ let g:closetag_shortcut = '>'
 " Add > at current position without closing the current tag, default is ''
 "
 let g:closetag_close_shortcut = '<leader>>'
+
+
+
+" Make python /comfy/
+au BufNewFile,BufRead *.py
+      \ set tabstop=4 |
+      \ set softtabstop=4 |
+      \ set shiftwidth=4 |
+      \ set textwidth=79 |
+      \ set expandtab |
+      \ set autoindent |
+      \ set fileformat=unix
+
+let python_highlight_all=1
+
+" Python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+	project_base_dir = os.environ['VIRTUAL_ENV']
+	activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+	execfile(activate_this, dict(__file__=activate_this))
+EOF
+
+
+au BufNewFile,BufRead *.js, *.html, *.css
+      \ set tabstop=2 |
+      \ set softtabstop=2 |
+      \ set shiftwidth=2
