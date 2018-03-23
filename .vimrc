@@ -9,7 +9,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-"Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-syntastic/syntastic'
 "Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'altercation/vim-colors-solarized'
@@ -158,17 +158,17 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 
 " Syntastic
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 0
-"let g:syntastic_check_on_wq = 0
-"let g:syntastic_mode_map = {
-"			\ "mode": "passive",
-"			\ "active_filetypes": [],
-"			\ "passive_filetypes": [] }
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {
+			\ "mode": "passive",
+			\ "active_filetypes": [],
+			\ "passive_filetypes": [] }
 
 " latex-suite
 set grepprg=grep\ -nH\ $*
