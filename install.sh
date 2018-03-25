@@ -15,6 +15,7 @@ pacaur -Syyu --needed \
 	bdf-unifont \
 	calc \
 	caffeine-ng \
+	chromium \
 	compton \
 	dunst \
 	feh \
