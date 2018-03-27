@@ -71,4 +71,5 @@ alias cfmc="vim ~/.ncmpcpp/config"
 alias cfmpd="vim ~/.config/mpd/mpd.conf"
 alias cfM="vim ~/.config/mpd/mpd.conf"
 alias cfx="vim ~/.Xresources"
+alias xrc="vim ~/.Xresources"
 # DO NOT DELETE LMAO
