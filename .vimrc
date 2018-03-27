@@ -66,9 +66,17 @@ set clipboard=unnamedplus
 set pastetoggle=<F2>
 set linebreak
 set noshowmode
-set noesckeys
-"set guifont=PragmataProMono\ Nerd\ Font\ Mono\ 11
-set guifont=PragmataProMono_Nerd_Font_Mono:h10:w5
+if !has('nvim')
+	set noesckeys
+endif
+if has("win32")
+	set guifont=PragmataProMono_Nerd_Font_Mono:h10:w5
+else
+	if has("unix")
+		set guifont=PragmataProMono\ Nerd\ Font\ Mono\ 11
+	endif
+endif
+
 set laststatus=2
 set shell=/bin/bash
 set display+=lastline
