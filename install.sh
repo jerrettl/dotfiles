@@ -45,6 +45,8 @@ pacaur -Syyu --needed \
 	osx-arc-white \
 	pango \
 	paper-icon-theme-git \
+	python-pip \
+	python2-pip \
 	qt5-webengine-widevine \
 	qutebrowser \
 	ranger \
