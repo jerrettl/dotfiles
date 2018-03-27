@@ -5,9 +5,9 @@
 | Category 						| Application																	|
 | ------------------- | ------------------------------------------- |
 | Desktop Environment | `i3-gaps` + `i3blocks`											|
-| Terminal 						| `rxvt-unicode-pixbuf` 											|
-| Shell 							| `zsh` + [oh-my-zsh] (Theme: [powerlevel9k])	|
-| Web Browser 				| `qutebrowser`																|
+| Terminal Emulator		| `rxvt-unicode-pixbuf` 											|
+| Shell 							| `fish`                                     	|
+| Web Browser 				| `chromium`   																|
 | E-Mail 							| `neomutt` + `offlineimap` + `msmtp` 				|
 | Editor 							| `vim` 																			|
 
