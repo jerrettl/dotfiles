@@ -119,6 +119,7 @@ nmap <F10> :NERDTreeToggle<CR>
 nmap <silent> <leader>sp :set spell<cr>
 nmap <silent> <leader>nsp :set nospell<cr>
 nmap <leader><C-l> :loadview<cr>
+nmap ! :!
 
 " Window navigation
 nmap <C-h> <C-w>h
