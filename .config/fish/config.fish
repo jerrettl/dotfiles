@@ -18,6 +18,7 @@ alias update='pacaur -Syyu'
 alias yt='~/dotfiles/scripts/youtube.sh'
 alias bashbot='cd ~/Documents/telegram-bot-bash/; and ./bashbot.sh start'
 alias gd='git diff'
+alias v='vim'
 
 # ==== Common Directories
 alias dotf='cd ~/dotfiles; and gstu'
