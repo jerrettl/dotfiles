@@ -80,6 +80,7 @@ endif
 set laststatus=2
 set shell=/bin/bash
 set display+=lastline
+let g:BASH_Ctrl_j = 'off'
 
 autocmd InsertEnter * set timeoutlen=250 ttimeoutlen=0
 autocmd InsertLeave * set timeoutlen=1000 ttimeoutlen=0
