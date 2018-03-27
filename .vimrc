@@ -32,6 +32,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-scripts/indentpython.vim' " Correct python indentation
 Plugin 'nvie/vim-flake8' " PEP8 checking
 Plugin 'Yggdroot/indentLine' " Indent guides
+Plugin 'davidhalter/jedi-vim' " Python autocompletion
 
 
 call vundle#end()
