@@ -132,3 +132,5 @@ ln -sfv ~/dotfiles/.zshrc ~/.zshrc
 xrdb ~/.Xresources
 
 sudo npm install -g npm
+
+pip install --user flake8
