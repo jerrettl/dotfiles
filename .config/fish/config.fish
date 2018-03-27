@@ -24,6 +24,9 @@ alias v='vim'
 alias dotf='cd ~/dotfiles; and gstu'
 alias dotu='dotf; and git pull; and cd'
 
+alias gc='cd (find ~ 2>/dev/null | grep -s "grade-calculator\$" | cat); and gstu'
+alias gcv='gc; and vim grade-calculator.py'
+
 # ==== Mounting
 alias mnttv='sshfs jerrett@192.168.1.11:/media/usb0/Files/Documents/tv ~/mnt -C -p 21999'
 alias umntssh='fusermount -u ~/mnt'
