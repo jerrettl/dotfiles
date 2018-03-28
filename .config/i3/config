@@ -197,10 +197,10 @@ bindsym $mod+P gaps inner current set 8; gaps outer current set 8
 
 
 # Poor Man's volume control
-bindsym $mod+Ctrl+Next exec --no-startup-id amixer -q set Master 2\%- unmute
-bindsym $mod+Ctrl+Prior exec --no-startup-id amixer -q set Master 2\%+ unmute
-bindsym Scroll_Lock exec --no-startup-id xdotool keyup Scroll_Lock && xdotool key XF86AudioLowerVolume
-bindsym Pause exec --no-startup-id xdotool keyup Pause && xdotool key XF86AudioRaiseVolume
+bindsym Scroll_Lock exec --no-startup-id xdotool keyup Scroll_Lock && ~/dotfiles/scripts/volume.sh down
+bindsym Pause exec --no-startup-id xdotool keyup Pause && ~/dotfiles/scripts/volume.sh up
+bindsym XF86AuioLowerVolume exec --no-startup-id xdotool keyup XF86AuioLowerVolume && ~/dotfiles/scripts/volume.sh down
+bindsym XF86AudioRaiseVolume exec --no-startup-id xdotool keyup XF86AudioRaiseVolume && ~/dotfiles/scripts/volume.sh up
 #bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 
 # Poor Man's mouse control
