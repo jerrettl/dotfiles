@@ -53,6 +53,7 @@ pacaur -Syyu --needed \
 	rofi \
 	rxvt-unicode-pixbuf \
 	scrot \
+	shellcheck \
 	system-san-francisco-font-git \
 	tmux \
 	tree \
@@ -84,9 +85,9 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-cd ~/.oh-my-zsh/custom/themes/powerlevel9k
+cd ~/.oh-my-zsh/custom/themes/powerlevel9k || return
 git pull
-cd ~
+cd ~ || return
 
 echo "Creating symlinks..."
 ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
@@ -133,4 +134,6 @@ xrdb ~/.Xresources
 
 sudo npm install -g npm
 
-pip install --user flake8
+pip install --user flake8 \
+	bashate
+pip2 install --user bashate
