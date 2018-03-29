@@ -75,6 +75,7 @@ exec_always --no-startup-id udiskie -ANs
 exec_always --no-startup-id ~/dotfiles/scripts/urxvt-alt.sh
 exec_always --no-startup-id unclutter
 exec_always --no-startup-id dunst
+exec_always --no-startup-id setxkbmap -option compose:ralt
 
 # change focus
 bindsym $mod+h focus left
@@ -199,7 +200,7 @@ bindsym $mod+P gaps inner current set 8; gaps outer current set 8
 # Poor Man's volume control
 bindsym Scroll_Lock exec --no-startup-id xdotool keyup Scroll_Lock && ~/dotfiles/scripts/volume.sh down
 bindsym Pause exec --no-startup-id xdotool keyup Pause && ~/dotfiles/scripts/volume.sh up
-bindsym XF86AuioLowerVolume exec --no-startup-id xdotool keyup XF86AuioLowerVolume && ~/dotfiles/scripts/volume.sh down
+bindsym XF86AudioLowerVolume exec --no-startup-id xdotool keyup XF86AudioLowerVolume && ~/dotfiles/scripts/volume.sh down
 bindsym XF86AudioRaiseVolume exec --no-startup-id xdotool keyup XF86AudioRaiseVolume && ~/dotfiles/scripts/volume.sh up
 #bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 
