@@ -75,6 +75,7 @@ exec_always --no-startup-id udiskie -ANs
 exec_always --no-startup-id ~/dotfiles/scripts/urxvt-alt.sh
 exec_always --no-startup-id unclutter
 exec_always --no-startup-id dunst
+exec_always --no-startup-id setxkbmap -option compose:ralt
 
 # change focus
 bindsym $mod+h focus left
