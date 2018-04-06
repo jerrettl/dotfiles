@@ -134,6 +134,6 @@ xrdb ~/.Xresources
 
 sudo npm install -g npm
 
-pip install --user flake8 \
+pip3 install --user flake8 \
 	bashate
 pip2 install --user bashate
