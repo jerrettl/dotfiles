@@ -274,3 +274,5 @@ bindsym XF86AudioNext exec "~/dotfiles/scripts/music-control.sh next"
 bindsym $mod+B exec "~/dotfiles/scripts/music-control.sh back"
 bindsym XF86AudioPrev exec "~/dotfiles/scripts/music-control.sh back"
 
+# Chrome hacks
+bindsym Ctrl+grave exec --no-startup-id xdotool keyup grave && xdotool keyup ctrl && xdotool type $(cat ~/Documents/chrome-text.txt)
