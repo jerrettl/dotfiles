@@ -1,7 +1,6 @@
 #!/bin/bash
 
-pkill dunst
-dunst -history_length 1 -hide_duplicates_count true &
+xdotool key ctrl+shift+space
 
 if [ "$1" = "up" ]; then
 	amixer set Master 5%+
