@@ -61,6 +61,7 @@ pacaur -Syyu --needed \
 	ttf-droid \
 	ttf-ms-fonts \
 	ttf-roboto \
+	udevil \
 	udiskie \
 	unzip \
 	urxvt-perls \
