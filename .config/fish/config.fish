@@ -35,6 +35,9 @@ alias mnttv='sshfs jerrett@192.168.1.11:/media/usb0/Files/Documents/tv ~/mnt -C 
 alias umntssh='fusermount -u ~/mnt'
 alias umntusb='sudo umount ~/mnt'
 
+alias s='cd (find /media -maxdepth 1 | grep -i ssh)'
+alias umnts='udevil umount (find /media -maxdepth 1 | grep -i ssh)'
+
 
 # DO NOT DELETE LMAO
 alias doc="cd ~/Documents; and l"
@@ -51,6 +54,7 @@ alias m="cd ~/Music; and l"
 alias pp="cd ~/Pictures; and l"
 alias vv="cd ~/Videos; and l"
 alias sch="cd ~/Documents/school; and l"
+alias mm="cd /media; and l"
 alias zrc="vim ~/.zshrc"
 alias zshrc="vim ~/.zshrc"
 alias vrc="vim ~/.vimrc"
