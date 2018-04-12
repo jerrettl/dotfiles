@@ -17,6 +17,7 @@ pacaur -Syyu --needed \
 	caffeine-ng \
 	chromium \
 	compton \
+	dmenu \
 	dunst \
 	feh \
 	firefox \
