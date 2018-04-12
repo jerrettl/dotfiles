@@ -38,6 +38,7 @@ pacaur -Syyu --needed \
 	msmtp \
 	neomutt \
 	networkmanager \
+	networkmanager-dmenu-git \
 	network-manager-applet \
 	npm \
 	numlockx \
