@@ -1,6 +1,7 @@
 #!/bin/bash
 
-xdotool key ctrl+shift+space
+xdotool key ctrl+space
+xdotool key ctrl+space
 
 if [ "$1" = "up" ]; then
 	amixer set Master 5%+
