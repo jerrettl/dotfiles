@@ -1,42 +1,43 @@
 " Location: ~/.vimrc
 
 set nocompatible
-filetype off
 
-" Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+	  \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
-Plugin 'vim-syntastic/syntastic'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'altercation/vim-colors-solarized'
-"Plugin 'flazz/vim-colorschemes'
-Plugin 'vim-latex/vim-latex'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'mattn/emmet-vim'
-Plugin 'alvan/vim-closetag'
-"Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'junegunn/goyo.vim'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'hrother/offlineimaprc.vim'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'itchyny/lightline.vim'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'vim-scripts/indentpython.vim' " Correct python indentation
-Plugin 'nvie/vim-flake8' " PEP8 checking
-Plugin 'Yggdroot/indentLine' " Indent guides
-Plugin 'davidhalter/jedi-vim' " Python autocompletion
+Plug 'vim-syntastic/syntastic'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'altercation/vim-colors-solarized'
+"Plug 'flazz/vim-colorschemes'
+Plug 'vim-latex/vim-latex'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tpope/vim-fugitive'
+Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'alvan/vim-closetag'
+"Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/goyo.vim'
+"Plug 'Valloric/YouCompleteMe'
+Plug 'scrooloose/nerdcommenter'
+Plug 'hrother/offlineimaprc.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'itchyny/lightline.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'vim-scripts/indentpython.vim', { 'for': 'python' } " Correct python indentation
+Plug 'nvie/vim-flake8', { 'for': 'python' } " PEP8 checking
+Plug 'Yggdroot/indentLine' " Indent guides
+Plug 'davidhalter/jedi-vim', { 'for': 'python' } " Python autocompletion
 
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 
 " Basics
