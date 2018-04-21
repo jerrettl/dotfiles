@@ -38,6 +38,7 @@ pacaur -Syyu --needed \
 	lxappearance \
 	msmtp \
 	neomutt \
+	neovim \
 	networkmanager \
 	networkmanager-dmenu-git \
 	network-manager-applet \
@@ -104,6 +105,8 @@ mkdir -pv ~/.config/i3blocks
 ln -sfv ~/dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
 mkdir ~/.config/kitty
 ln -sfv ~/dotfiles/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
+rm -rf ~/.config/nvim
+ln -sfv ~/dotfiles/.config/nvim/ ~/.config/nvim
 mkdir ~/.config/pianobar
 mkfifo ~/.config/pianobar/ctl
 touch ~/.config/pianobar/nowplaying
