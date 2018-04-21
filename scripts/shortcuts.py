@@ -12,6 +12,7 @@ qute_shortcuts = ""
 ranger_shortcuts = ""
 zsh_shortcuts = ""
 fish_shortcuts = ""
+editor = "nvim"
 
 home = str(Path.home()) + "/"
 
@@ -85,18 +86,16 @@ with open(home+"dotfiles/aliases/folders") as fold:
 # zsh_shortcuts and ranger.
 with open(home + "dotfiles/aliases/configs") as conf:
     for line in csv.reader(conf, dialect="excel-tab"):
-        # fishshortcuts+=("alias "+line[0]+"=\"vim "+line[1]+"\"\n")
-        # fishshortcuts+=("abbr --add "+line[0]+" \"vim "+line[1]+"\"\n")
         zsh_shortcuts += ("alias " + line[0]
-                           + "=\"vim " + line[1]
+                           + "=\"" + editor + " " + line[1]
                            + "\""
                            + "\n")
 
-        ranger_shortcuts += ("map " + line[0] + " shell vim " + line[1] + "\n")
+        ranger_shortcuts += ("map " + line[0] + " shell " + editor + " " + line[1] + "\n")
 
 
         fish_shortcuts += ("alias " + line[0]
-                           + "=\"vim " + line[1]
+                           + "=\"" + editor + " " + line[1]
                            + "\""
                            + "\n")
 
