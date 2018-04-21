@@ -1,6 +1,7 @@
 # Fish config
 
 set fish_greeting ""
+set -Ux EDITOR nvim
 
 # ==== Commands
 alias cls='clear'
@@ -18,7 +19,7 @@ alias update='pacaur -Syyu'
 alias yt='~/dotfiles/scripts/youtube.sh'
 alias bashbot='cd ~/Documents/telegram-bot-bash/; and ./bashbot.sh start'
 alias gd='git diff'
-alias v='vim'
+alias v=$EDITOR
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push'
@@ -28,7 +29,11 @@ alias dotf='cd ~/dotfiles; and gstu'
 alias dotu='dotf; and git pull; and cd'
 
 alias gcc='cd (find ~ -maxdepth 4 2>/dev/null | grep -s "grade-calculator\$" | cat); and gstu'
-alias gcv='gcc; and vim grade-calculator.py'
+function gcv
+	gcc
+	eval $EDITOR grade-calculator.py
+end
+funcsave gcv
 
 # ==== Mounting
 alias mnttv='sshfs jerrett@192.168.1.11:/media/usb0/Files/Documents/tv ~/mnt -C -p 21999'
