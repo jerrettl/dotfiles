@@ -9,7 +9,7 @@
 | Shell 							| `fish`                                     	|
 | Web Browser 				| `chromium`   																|
 | E-Mail 							| `neomutt` + `offlineimap` + `msmtp` 				|
-| Editor 							| `vim` 																			|
+| Editor 							| `nvim`																			|
 
 
 ## Installation
@@ -18,7 +18,4 @@
 
 Before running `install.sh`, you should have this repository located in `~/dotfiles`. If not, your computer will explode! You have been warned.
 
-
-[oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
-[powerlevel9k]: https://github.com/bhilburn/powerlevel9k
 
