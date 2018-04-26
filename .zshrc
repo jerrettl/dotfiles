@@ -6,7 +6,7 @@ export ZSH=/home/jerrett/.oh-my-zsh
 
 # Default plugins at ~/.oh-my-zsh/plugins/
 # Custom plugins at ~/.oh-my-zsh/custom/plugins/
-plugins=(git vi-mode)
+plugins=(vi-mode)
 autoload zmv
 
 source $ZSH/oh-my-zsh.sh
