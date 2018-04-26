@@ -2,7 +2,7 @@
 
 export ZSH=/home/jerrett/.oh-my-zsh
 #[ -z "$TMUX" ] && export TERM="xterm-256color"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Default plugins at ~/.oh-my-zsh/plugins/
 # Custom plugins at ~/.oh-my-zsh/custom/plugins/
@@ -83,3 +83,4 @@ fi
 #export GOPATH=$HOME/.go
 #export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+PROMPT='%n@%m %F{green}%1~%f> '
