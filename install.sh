@@ -48,6 +48,7 @@ pacaur -Syyu --needed \
 	osx-arc-white \
 	pango \
 	paper-icon-theme-git \
+	pcmanfm \
 	python-pip \
 	python2-pip \
 	qt5-webengine-widevine \
