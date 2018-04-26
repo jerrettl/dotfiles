@@ -187,8 +187,8 @@ bar {
 }
 
 # Gaps
-gaps inner 8
-gaps outer 8
+gaps inner 0
+gaps outer 0
 
 bindsym $mod+U gaps inner current minus 4; gaps outer current minus 4
 bindsym $mod+I gaps inner current plus 4; gaps outer current plus 4
