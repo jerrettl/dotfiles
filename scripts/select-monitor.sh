@@ -20,6 +20,18 @@ elif [ "$hostname" == "inspiron-15-3537" ]; then
 	elif [ "$action" == "mirror" ]; then
 		xrandr --output eDP1 --rate 60 --mode 1280x720 --fb 1280x720 --panning 1280x720 --output HDMI1 --mode 1280x720 --same-as eDP1
 	fi
+
+elif [ "$hostname" == "dell-xps400" ]; then
+	if [ "$action" == "primary" ]; then
+		xrandr --output "VGA-0" --auto --output "DVI-0" --off
+	elif [ "$action" == "secondary" ]; then
+		xrandr --output "VGA-0" --off --output "DVI-0" --auto
+	elif [ "$action" == "mirror" ]; then
+		xrandr --output "VGA-0" --rate 60 --mode 1280x1024 --fb 1280x1024 --panning 1280x1024 --output "DVI-0" --mode 1280x1024 --same-as "VGA-0"
+	elif [ "$action" == "extend" ]; then
+		xrandr --output "VGA-0" --auto --output "DVI-0" --off
+		xrandr --output "VGA-0" --primary --mode 1280x1024 --pos 0x0 --rotate normal --output "DVI-0" --mode 1280x1024 --pos 1280x0 --rotate normal
+	fi
 fi
 
 feh --bg-fill ~/dotfiles/wallpaper.png

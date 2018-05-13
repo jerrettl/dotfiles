@@ -240,13 +240,14 @@ new_window pixel 1
 
 
 # Select display
-set $select_display Select a display mode: (P)rimary, (S)econdary, or (M)irror
+set $select_display Select a display mode: (P)rimary, (S)econdary, (M)irror, or (E)xtend
 bindsym $mod+F6 mode "$select_display"
 
 mode "$select_display" {
 	bindsym p exec --no-startup-id ~/dotfiles/scripts/select-monitor.sh primary, mode "default"
 	bindsym s exec --no-startup-id ~/dotfiles/scripts/select-monitor.sh secondary, mode "default"
 	bindsym m exec --no-startup-id ~/dotfiles/scripts/select-monitor.sh mirror, mode "default"
+	bindsym e exec --no-startup-id ~/dotfiles/scripts/select-monitor.sh extend, mode "default"
 
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
