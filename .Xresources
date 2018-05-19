@@ -39,6 +39,10 @@ URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 URxvt.keysym.M-s:           perl:keyboard-select:search
 
+! Disable "iso 14755 mode" and "keycap picture insert mode"
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
 ! Colors
 
 ! black + darkgrey
