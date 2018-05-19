@@ -35,6 +35,7 @@ Plug 'vim-scripts/indentpython.vim', { 'for': 'python' } " Correct python indent
 Plug 'nvie/vim-flake8', { 'for': 'python' } " PEP8 checking
 Plug 'Yggdroot/indentLine' " Indent guides
 Plug 'davidhalter/jedi-vim', { 'for': 'python' } " Python autocompletion
+Plug 'tpope/vim-unimpaired'
 
 
 call plug#end()
