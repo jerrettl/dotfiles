@@ -1,0 +1,13 @@
+* {
+	background-color: white;
+	text-color: black;
+	border-color: black;
+}
+
+window {
+	padding: 4px;
+}
+
+element selected {
+	background-color: #72a8ff;
+}
