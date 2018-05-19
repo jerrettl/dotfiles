@@ -31,7 +31,7 @@ alias dotu='dotf; and git pull; and cd'
 alias gcc='cd (find ~ -maxdepth 4 2>/dev/null | grep -s "grade-calculator\$" | cat); and gstu'
 function gcv
 	gcc
-	eval $EDITOR grade-calculator.py
+	eval $EDITOR grade_calculator.py
 end
 funcsave gcv
 
