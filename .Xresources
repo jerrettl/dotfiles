@@ -28,8 +28,6 @@ URxvt.keysym.End: \033[4~
 URxvt.keysym.KP_Home: \033[1~
 URxvt.keysym.KP_End:  \033[4~
 
-! URL and text selection
-URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
 URxvt.keysym.S-Up             : \033[1;2A
 URxvt.keysym.S-Down           : \033[1;2B
 URxvt.keysym.S-Right          : \033[1;2C
@@ -79,6 +77,9 @@ URxvt.keysym.M-C-S-Up         : \033[1;8A
 URxvt.keysym.M-C-S-Down       : \033[1;8B
 URxvt.keysym.M-C-S-Right      : \033[1;8C
 URxvt.keysym.M-C-S-Left       : \033[1;8D
+
+! URL, text selection, changing font
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,font-size
 URxvt.url-select.launcher:  chromium
 URxvt.url-select.underline: true
 URxvt.url-select.button:		1
