@@ -96,13 +96,11 @@ autocmd BufWritePost ~/dotfiles/aliases/folders,~/dotfiles/aliases/configs !pyth
 autocmd BufWritePost ~/.Xresources,~/dotfiles/.Xresources !xrdb ~/.Xresources
 
 " Theming
-" set background=dark
-" colorscheme 256-grayvim
-" let g:solarized_termcolors=256
 let &t_Co=256
 hi search cterm=NONE ctermfg=black ctermbg=yellow
 hi spellbad cterm=none ctermfg=white ctermbg=160 "dark red
 hi folded cterm=none ctermfg=7 ctermbg=17
+hi LineNr cterm=none ctermfg=251
 
 
 " Mappings
