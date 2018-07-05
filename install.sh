@@ -101,6 +101,7 @@ mkdir -pv ~/.config/dunst
 ln -sfv ~/dotfiles/.config/dunst/dunstrc ~/.config/dunst/dunstrc
 mkdir -pv ~/.config/fish
 ln -sfv ~/dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
+ln -sfv ~/dotfiles/.config/flake8 ~/.config/flake8
 mkdir -pv ~/.config/i3
 ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
 mkdir -pv ~/.config/i3blocks
