@@ -67,6 +67,7 @@ pacaur -Syyu --needed \
 	udevil \
 	udiskie \
 	unzip \
+	urlview \
 	urxvt-perls \
 	volumeicon \
 	w3m \
