@@ -54,3 +54,7 @@ bind index,pager a group-reply
 # Readline-like history browsing using up/down keys.
 bind editor <up> history-up
 bind editor <down> history-down
+
+# Opening urls with urlview
+macro index \cb |urlview\n
+macro pager \cb |urlview\n
