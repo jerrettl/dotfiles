@@ -17,6 +17,7 @@ type = Gmail
 remoteuser = <email1>@gmail.com
 remotepasseval = get_pass()
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+folderfilter = lambda foldername: foldername in ["INBOX", "[Gmail]/Bin"]
 
 
 [Repository <account1>-local]
