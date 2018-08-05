@@ -89,3 +89,4 @@ map cfmpd shell $EDITOR ~/.config/mpd/mpd.conf
 map cfM shell $EDITOR ~/.config/mpd/mpd.conf
 map cfx shell $EDITOR ~/.Xresources
 map xrc shell $EDITOR ~/.Xresources
+map brc shell $EDITOR ~/.bashrc

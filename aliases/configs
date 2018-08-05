@@ -25,3 +25,4 @@ cfmpd	~/.config/mpd/mpd.conf
 cfM	~/.config/mpd/mpd.conf
 cfx	~/.Xresources
 xrc	~/.Xresources
+brc ~/.bashrc
