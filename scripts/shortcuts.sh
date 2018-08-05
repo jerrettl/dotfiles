@@ -7,7 +7,7 @@ configs="$DOTFILES/aliases/configs"
 # Output locations
 bash_shortcuts="$DOTFILES/aliases/bash_autoaliases"
 ranger_shortcuts="$DOTFILES/aliases/ranger_autoaliases"
-qute_shortcuts="$DOTFILES/aliases/qute_autoaliases"
+qute_shortcuts="$HOME/.config/qutebrowser/qute_autoaliases"
 
 
 # Remove to make way for new

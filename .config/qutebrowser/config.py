@@ -6,7 +6,7 @@
 # Uncomment this to still load settings configured via autoconfig.yml
 # config.load_autoconfig()
 
-config.source('~/dotfiles/aliases/qute_autoaliases')
+config.source('qute_autoaliases')
 
 # Aliases for commands. The keys of the given dictionary are the
 # aliases, while the values are the commands they map to.
