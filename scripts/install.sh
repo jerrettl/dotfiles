@@ -14,7 +14,13 @@ fi
 
 
 echo "Installing user-specified packages..."
+i=0
+total=$(wc -l packages | awk '{print $1}')
 for line in $(sed "/^#/d" "packages"); do
+	i=$((i + 1))
+	tput bold
+	echo "($i/$total) $line"
+	tput sgr0
 	pacaur -S --needed --noconfirm --noedit "$line"
 done
 
