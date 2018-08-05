@@ -1,101 +1,31 @@
 #!/bin/bash
 
-echo "Installing pacaur requirements and upgrading all packages..."
-sudo pacman -Syyu --needed curl
+# Update packages
+sudo pacman -Syyu --noconfirm
+
+
+# Install pacaur
 if [ "$(pacman -Qi pacaur)" ]; then
 	echo "Pacaur installed, skipping..."
 else
-curl -s https://gist.githubusercontent.com/Tadly/0e65d30f279a34c33e9b/raw/pacaur_install.sh | bash
+	sudo pacman -S --needed curl
+	curl -s https://gist.githubusercontent.com/Tadly/0e65d30f279a34c33e9b/raw/pacaur_install.sh | bash
 fi
 
 
-echo "Installing user-required packages..."
-pacaur -Syyu --needed \
-	awk \
-	bdf-unifont \
-	calc \
-	caffeine-ng \
-	chromium \
-	compton \
-	dmenu \
-	dunst \
-	feh \
-	firefox \
-	fish \
-	flameshot \
-	git \
-	gvim \
-	i3-gaps \
-	i3blocks \
-	i3lock-color-git \
-	imagemagick \
-	keepass \
-	kitty-git \
-	libnotify \
-	libotf \
-	lightdm \
-	lightdm-gtk-greeter \
-	lxappearance \
-	msmtp \
-	neomutt \
-	neovim \
-	networkmanager \
-	networkmanager-dmenu-git \
-	network-manager-applet \
-	npm \
-	numlockx \
-	offlineimap \
-	osx-arc-white \
-	pango \
-	paper-icon-theme-git \
-	pcmanfm \
-	python-pip \
-	python2-pip \
-	qt5-webengine-widevine \
-	qutebrowser \
-	ranger \
-	rofi \
-	rxvt-unicode-pixbuf \
-	scrot \
-	shellcheck \
-	system-san-francisco-font-git \
-	tmux \
-	tree \
-	ttf-droid \
-	ttf-ms-fonts \
-	ttf-roboto \
-	udevil \
-	udiskie \
-	unzip \
-	urlview \
-	urxvt-perls \
-	volumeicon \
-	w3m \
-	xdotool \
-	xorg-server \
-	xorg-xrdb \
-	youtube-dl \
-	zathura \
-	zathura-pdf-poppler \
-	zip \
-	zsh \
-	zsh-autosuggestions
+echo "Installing user-specified packages..."
+for line in $(sed "/^#/d" "packages"); do
+	pacaur -S --needed --noconfirm --noedit "$line"
+done
 
 
-# texlive-most
-# vim-live-latex-preview
+# Configure git
+git config --global credential.helper 'cache --timeout=1500'
 
-git config --global credential.helper 'cache --timeout=900'
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-cd ~/.oh-my-zsh/custom/themes/powerlevel9k || return
-git pull
-cd ~ || return
-
+# Symlinks (disgusting)
 echo "Creating symlinks..."
+ln -sfv ~/dotfiles/.bashrc ~/.bashrc
 ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
 mkdir -pv ~/.config/dunst
 ln -sfv ~/dotfiles/.config/dunst/dunstrc ~/.config/dunst/dunstrc
@@ -146,8 +76,8 @@ ln -sfv ~/dotfiles/.Xresources ~/.Xresources
 ln -sfv ~/dotfiles/.zshrc ~/.zshrc
 xrdb ~/.Xresources
 
-sudo npm install -g npm
 
+# Get some linting for vim
 pip3 install --user flake8 \
 	bashate
 pip2 install --user bashate
