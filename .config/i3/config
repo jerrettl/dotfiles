@@ -203,7 +203,7 @@ bindsym Scroll_Lock exec --no-startup-id xdotool keyup Scroll_Lock && ~/dotfiles
 bindsym Pause exec --no-startup-id xdotool keyup Pause && ~/dotfiles/scripts/volume.sh up
 bindsym XF86AudioLowerVolume exec --no-startup-id xdotool keyup XF86AudioLowerVolume && ~/dotfiles/scripts/volume.sh down
 bindsym XF86AudioRaiseVolume exec --no-startup-id xdotool keyup XF86AudioRaiseVolume && ~/dotfiles/scripts/volume.sh up
-#bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+bindsym XF86AudioMute exec --no-startup-id xdotool keyup XF86AudioMute && ~/dotfiles/scripts/volume.sh toggle
 
 # Poor Man's mouse control
 bindsym $mod+Left exec xdotool mousemove_relative -- -15 0
