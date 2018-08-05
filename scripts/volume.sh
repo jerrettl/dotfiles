@@ -1,14 +1,25 @@
 #!/bin/bash
 
-xdotool key ctrl+space
-xdotool key ctrl+space
+getlevel() { amixer sget Master | grep -m1 "%" | cut -d '[' -f '2' | cut -d ']' -f 1 ;}
 
-if [ "$1" = "up" ]; then
-	amixer set Master 5%+
-elif [ "$1" = "down" ]; then
-	amixer set Master 5%-
+if [ "$1" = "level" ]; then
+	if [ -n "$(amixer sget Master | grep "off")" ]; then
+		echo "Muted"
+		exit
+	else
+		getlevel
+		exit
+	fi
 fi
 
-level=$(awk '/%/ {gsub(/[\[\]]/,""); print $5}' <(amixer sget Master))
-notify-send -c volume 'Volume' "$level"
+#xdotool key ctrl+space
+#xdotool key ctrl+space
 
+if [ "$1" = "up" ]; then
+	pactl -- set-sink-volume 0 +5%
+elif [ "$1" = "down" ]; then
+	pactl -- set-sink-volume 0 -5%
+fi
+
+pkill -RTMIN+1 i3blocks
+#notify-send -c volume 'Volume' "$(getlevel)"

@@ -163,3 +163,9 @@ interval=5
 #instance=NUM
 #interval=once
 #signal=11
+
+[volume-pulseaudio]
+label=Volume
+command=~/dotfiles/scripts/volume-pulseaudio.sh
+interval=once
+signal=1
