@@ -20,7 +20,7 @@ done
 
 
 # Configure git
-git config --global credential.helper 'cache --timeout=1500'
+#git config --global credential.helper 'cache --timeout=1500'
 
 
 # Symlinks (disgusting)
