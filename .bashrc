@@ -11,4 +11,4 @@ GREEN="\[$(tput setaf 2)\]"
 RESET="\[$(tput sgr0)\]"
 BOLD="\[$(tput bold)\]"
 
-export PS1="${BOLD}$(uname -n)${RESET} ${GREEN}$(pwd)${RESET}> "
+export PS1="${BOLD}$(uname -n)${RESET} ${GREEN}\$(pwd)${RESET}> "
