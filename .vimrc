@@ -92,7 +92,7 @@ autocmd InsertLeave * set timeoutlen=1000 ttimeoutlen=0
 set omnifunc=htmlcomplete#CompleteTags
 
 " Auto refresh aliases
-autocmd BufWritePost ~/dotfiles/aliases/folders,~/dotfiles/aliases/configs !python ~/dotfiles/scripts/shortcuts.py
+autocmd BufWritePost ~/dotfiles/aliases/folders,~/dotfiles/aliases/configs !bash ~/dotfiles/scripts/shortcuts.sh
 autocmd BufWritePost ~/.Xresources,~/dotfiles/.Xresources !xrdb ~/.Xresources
 
 " Theming

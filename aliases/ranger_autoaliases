@@ -1,0 +1,91 @@
+map gdoc cd ~/Documents
+map tdoc tab_new ~/Documents
+map mdoc shell mv %s ~/Documents
+map Ydoc shell cp -r %s ~/Documents
+map gdow cd ~/Downloads
+map tdow tab_new ~/Downloads
+map mdow shell mv %s ~/Downloads
+map Ydow shell cp -r %s ~/Downloads
+map gdotf cd ~/dotfiles
+map tdotf tab_new ~/dotfiles
+map mdotf shell mv %s ~/dotfiles
+map Ydotf shell cp -r %s ~/dotfiles
+map gwww cd /srv/http
+map twww tab_new /srv/http
+map mwww shell mv %s /srv/http
+map Ywww shell cp -r %s /srv/http
+map gtv cd /media/usb0/Files/Documents/tv
+map ttv tab_new /media/usb0/Files/Documents/tv
+map mtv shell mv %s /media/usb0/Files/Documents/tv
+map Ytv shell cp -r %s /media/usb0/Files/Documents/tv
+map gmovies cd /media/usb0/Files/Documents/movies
+map tmovies tab_new /media/usb0/Files/Documents/movies
+map mmovies shell mv %s /media/usb0/Files/Documents/movies
+map Ymovies shell cp -r %s /media/usb0/Files/Documents/movies
+map gusb0 cd /media/usb0
+map tusb0 tab_new /media/usb0
+map musb0 shell mv %s /media/usb0
+map Yusb0 shell cp -r %s /media/usb0
+map gusb1 cd /media/usb1
+map tusb1 tab_new /media/usb1
+map musb1 shell mv %s /media/usb1
+map Yusb1 shell cp -r %s /media/usb1
+map gd cd ~/Downloads
+map td tab_new ~/Downloads
+map md shell mv %s ~/Downloads
+map Yd shell cp -r %s ~/Downloads
+map gD cd ~/Documents
+map tD tab_new ~/Documents
+map mD shell mv %s ~/Documents
+map YD shell cp -r %s ~/Documents
+map gm cd ~/Music
+map tm tab_new ~/Music
+map mm shell mv %s ~/Music
+map Ym shell cp -r %s ~/Music
+map gpp cd ~/Pictures
+map tpp tab_new ~/Pictures
+map mpp shell mv %s ~/Pictures
+map Ypp shell cp -r %s ~/Pictures
+map gvv cd ~/Videos
+map tvv tab_new ~/Videos
+map mvv shell mv %s ~/Videos
+map Yvv shell cp -r %s ~/Videos
+map gsch cd ~/Documents/school
+map tsch tab_new ~/Documents/school
+map msch shell mv %s ~/Documents/school
+map Ysch shell cp -r %s ~/Documents/school
+map gmm cd /media
+map tmm tab_new /media
+map mmm shell mv %s /media
+map Ymm shell cp -r %s /media
+map gss cd ~/dotfiles/scripts
+map tss tab_new ~/dotfiles/scripts
+map mss shell mv %s ~/dotfiles/scripts
+map Yss shell cp -r %s ~/dotfiles/scripts
+map zrc shell $EDITOR ~/.zshrc
+map zshrc shell $EDITOR ~/.zshrc
+map vrc shell $EDITOR ~/.vimrc
+map vimrc shell $EDITOR ~/.vimrc
+map i3rc shell $EDITOR ~/.config/i3/config
+map cff shell $EDITOR $DOTFILES/aliases/folders
+map cfc shell $EDITOR $DOTFILES/aliases/configs
+map cfb shell $EDITOR ~/.bashrc
+map cfz shell $EDITOR ~/.zshrc
+map cfv shell $EDITOR ~/.vimrc
+map cfr shell $EDITOR ~/.config/ranger/rc.conf
+map cfi shell $EDITOR ~/.config/i3/config
+map cfq shell $EDITOR ~/.config/qutebrowser/config.py
+map cfm shell $EDITOR ~/.config/mutt/muttrc
+map cft shell $EDITOR ~/.config/termite/config
+map eb shell $EDITOR ~/Documents/LaTeX/uni.bib
+map cv shell $EDITOR ~/Documents/LaTeX/cv.tex
+map cfp shell $EDITOR ~/.config/polybar/config
+map cfd shell $EDITOR ~/.Xdefaults
+map cfn shell $EDITOR ~/.newsboat/urls
+map cfA shell $EDITOR ~/.asoundrc
+map cfmb shell $EDITOR ~/.ncmpcpp/bindings
+map cfmc shell $EDITOR ~/.ncmpcpp/config
+map cfmpd shell $EDITOR ~/.config/mpd/mpd.conf
+map cfM shell $EDITOR ~/.config/mpd/mpd.conf
+map cfx shell $EDITOR ~/.Xresources
+map xrc shell $EDITOR ~/.Xresources

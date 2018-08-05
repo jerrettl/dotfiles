@@ -3,8 +3,8 @@ zshrc	~/.zshrc
 vrc	~/.vimrc
 vimrc	~/.vimrc
 i3rc	~/.config/i3/config
-cff	~/.config/Scripts/folders
-cfc	~/.config/Scripts/configs
+cff	$DOTFILES/aliases/folders
+cfc	$DOTFILES/aliases/configs
 cfb	~/.bashrc
 cfz	~/.zshrc
 cfv	~/.vimrc

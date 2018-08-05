@@ -1,0 +1,31 @@
+# ==== Commands
+alias cls='clear'
+alias cp="cp -i"                          # confirm before overwriting something
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias gst='git status -uno'
+alias gstu='git status -uall'
+alias l='ls -al --color=auto -F'
+alias la='ls -al --color=auto -F'
+alias ll='ls -l --color=auto -F'
+alias more=less
+alias su='sudo -Es'
+alias update='pacaur -Syyu'
+alias yt='~/dotfiles/scripts/youtube.sh'
+alias gd='git diff'
+alias v='$EDITOR'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git push'
+
+# ==== Common Directories
+alias dotf='cd ~/dotfiles && gstu'
+alias dotu='dotf && git pull && cd'
+
+alias gcc='cd $(find ~ -maxdepth 4 2>/dev/null | grep -s "grade-calculator\$" | cat) && gstu'
+alias gcv='gcc && $EDITOR grade_calculator.py'
+
+# ==== Mounting
+alias mnttv='sshfs jerrett@192.168.1.11:/media/usb0/Files/Documents/tv ~/mnt -C -p 21999'
+alias umntssh='fusermount -u ~/mnt'
+alias umntusb='sudo umount ~/mnt'
