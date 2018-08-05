@@ -25,6 +25,7 @@ done
 
 # Symlinks (disgusting)
 echo "Creating symlinks..."
+ln -sfv ~/dotfiles/.bash_profile ~/.bash_profile
 ln -sfv ~/dotfiles/.bashrc ~/.bashrc
 ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
 mkdir -pv ~/.config/dunst
