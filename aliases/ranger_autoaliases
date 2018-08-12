@@ -62,6 +62,10 @@ map gss cd ~/dotfiles/scripts
 map tss tab_new ~/dotfiles/scripts
 map mss shell mv %s ~/dotfiles/scripts
 map Yss shell cp -r %s ~/dotfiles/scripts
+map gaa cd ~/dotfiles/aliases
+map taa tab_new ~/dotfiles/aliases
+map maa shell mv %s ~/dotfiles/aliases
+map Yaa shell cp -r %s ~/dotfiles/aliases
 map zrc shell $EDITOR ~/.zshrc
 map zshrc shell $EDITOR ~/.zshrc
 map vrc shell $EDITOR ~/.vimrc
