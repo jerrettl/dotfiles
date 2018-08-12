@@ -17,6 +17,8 @@ alias v='$EDITOR'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push'
+alias dv='d; v'
+alias Dv='D; v'
 
 # ==== Common Directories
 alias dotf='cd ~/dotfiles && gstu'
