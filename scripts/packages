@@ -1,3 +1,5 @@
+acpi
+alsa-utils
 awk
 bdf-unifont
 caffeine-ng
@@ -7,7 +9,6 @@ dmenu
 dunst
 feh
 firefox
-fish
 flameshot
 git
 i3-gaps
@@ -31,8 +32,11 @@ offlineimap
 osx-arc-white
 pango
 paper-icon-theme-git
+pavucontrol
 pcmanfm
 pkgfile
+pulseaudio
+pulseaudio-alsa
 python-pip
 python2-pip
 qutebrowser
@@ -52,6 +56,7 @@ unzip
 urlview
 urxvt-perls
 xdotool
+xterm
 xorg-server
 xorg-xrdb
 youtube-dl
