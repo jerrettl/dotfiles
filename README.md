@@ -6,7 +6,7 @@
 | ------------------- | ------------------------------------------- |
 | Desktop Environment | `i3-gaps` + `i3blocks`											|
 | Terminal Emulator		| `rxvt-unicode-pixbuf` 											|
-| Shell 							| `fish`                                     	|
+| Shell 							| `bash`                                     	|
 | Web Browser 				| `chromium`   																|
 | E-Mail 							| `neomutt` + `offlineimap` + `msmtp` 				|
 | Editor 							| `nvim`																			|
