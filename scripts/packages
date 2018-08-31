@@ -39,7 +39,9 @@ pcmanfm
 pkgfile
 pulseaudio
 pulseaudio-alsa
+python-neovim
 python-pip
+python2-neovim
 python2-pip
 qutebrowser
 ranger
