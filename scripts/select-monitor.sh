@@ -39,7 +39,7 @@ elif [ "$hostname" == "lg-gram" ]; then
 	elif [ "$action" == "secondary" ]; then
 		xrandr --output "eDP-1" --off --output "HDMI-1" --auto
 	elif [ "$action" == "mirror" ]; then
-		xrandr --output "eDP-1" --rate 60 --mode 1920x1080 --fb 1920x1080 --panning 1920x1080 --output "HDMI-1" --mode 1920x1080 --same-as eDP1
+		xrandr --output "eDP-1" --primary --mode 1920x1080 --output "HDMI-1" --mode 1920x1080 --same-as "eDP-1"
 	elif [ "$action" == "extend" ]; then
 		xrandr --output "eDP-1" --primary --mode 1920x1080 --pos 0x0 --rotate normal --output "HDMI-1" --mode 1920x1080 --pos 1920x0 --rotate normal
 	fi

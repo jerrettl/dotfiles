@@ -1,6 +1,13 @@
 ! Location: ~/.Xresources
 
-! URxvt
+! Machine specific exceptions
+
+#ifdef SRVR_lg_gram
+	Xft.dpi: 140
+	URxvt.font: xft:Pragmata Pro:pixelsize=24:antialias=true
+#else
+	URxvt.font: xft:PragmataProMono Nerd Font Mono:pixelsize=14:antialias=true
+#endif
 
 ! Font rendering
 Xft.antialias: 1
@@ -12,8 +19,7 @@ Xft.hintstyle: hintfull
 URxvt*background: #090909
 URxvt*foreground: #f5f5f5
 
-! Fonts
-URxvt.font: xft:PragmataProMono Nerd Font Mono:pixelsize=14:antialias=true
+! Bold fonts
 URxvt.allow_bold: true
 
 ! Remove scroll bar
