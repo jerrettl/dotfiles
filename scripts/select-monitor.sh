@@ -32,6 +32,17 @@ elif [ "$hostname" == "dell-xps400" ]; then
 		xrandr --output "VGA-0" --auto --output "DVI-0" --off
 		xrandr --output "VGA-0" --primary --mode 1280x1024 --pos 0x0 --rotate normal --output "DVI-0" --mode 1280x1024 --pos 1280x0 --rotate normal
 	fi
+
+elif [ "$hostname" == "lg-gram" ]; then
+	if [ "$action" == "primary" ]; then
+		xrandr --output "eDP-1" --auto --output "HDMI-1" --off
+	elif [ "$action" == "secondary" ]; then
+		xrandr --output "eDP-1" --off --output "HDMI-1" --auto
+	elif [ "$action" == "mirror" ]; then
+		xrandr --output "eDP-1" --rate 60 --mode 1920x1080 --fb 1920x1080 --panning 1920x1080 --output "HDMI-1" --mode 1920x1080 --same-as eDP1
+	elif [ "$action" == "extend" ]; then
+		xrandr --output "eDP-1" --primary --mode 1920x1080 --pos 0x0 --rotate normal --output "HDMI-1" --mode 1920x1080 --pos 1920x0 --rotate normal
+	fi
 fi
 
 feh --bg-fill ~/dotfiles/wallpaper.png
