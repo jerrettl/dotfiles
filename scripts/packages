@@ -1,4 +1,5 @@
 acpi
+adapta-gtk-theme
 alsa-utils
 awk
 bdf-unifont
@@ -30,7 +31,7 @@ networkmanager-dmenu-git
 network-manager-applet
 numlockx
 offlineimap
-osx-arc-white
+x-arc-white
 p7zip
 pango
 paper-icon-theme-git
