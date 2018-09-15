@@ -11,4 +11,7 @@ if [ "$hostname" == "lg-gram" ]; then
 	property=$(xinput list-props "$id" | grep -i 'libinput Accel Speed (' | cut -d "(" -f2 | cut -d ")" -f1)
 	accel="0.4"
 	xinput set-prop "$id" "$property" "$accel"
+
+	# Key press repeat timing
+	xset r rate 250 40
 fi
