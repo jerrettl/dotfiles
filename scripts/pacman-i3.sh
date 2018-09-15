@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Defined in cron as:
+# */30 * * * * ~/dotfiles/scripts/pacman-i3.sh
+
 update="pkill -RTMIN+2 i3blocks"
 
 case "$BLOCK_BUTTON" in
