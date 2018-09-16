@@ -21,5 +21,9 @@ sudo pacman -Sywu --noconfirm 2>&1 >/dev/null
 
 # ad3a00 - orange
 # 007018 - green
-echo "<span color='#ffffff' background='#007018'>  $number Updates  </span>"
+if [ "$number" == "1" ]; then
+	echo "<span color='#ffffff' background='#007018'>  $number Update  </span>"
+else
+	echo "<span color='#ffffff' background='#007018'>  $number Updates  </span>"
+fi
 $update
