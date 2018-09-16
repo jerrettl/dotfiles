@@ -7,10 +7,10 @@ export DOTFILES="$HOME/dotfiles"
 source /usr/share/doc/pkgfile/command-not-found.bash
 
 
-RED="$(tput setaf 1)"
-GREEN="$(tput setaf 2)"
-RESET="$(tput sgr0)"
-BOLD="$(tput bold)"
+RED="\[$(tput setaf 1)\]"
+GREEN="\[$(tput setaf 2)\]"
+RESET="\[$(tput sgr0)\]"
+BOLD="\[$(tput bold)\]"
 
 if [ "$(id -u)" -eq 0 ]; then
 	PS1="${BOLD}$(uname -n)${RESET} ${RED}\$(pwd | sed \"s|^$HOME|~|\")${RESET}> "
