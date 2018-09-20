@@ -14,4 +14,7 @@ if [ "$hostname" == "lg-gram" ]; then
 
 	# Key press repeat timing
 	xset r rate 250 40
+
+	# Check for updates
+	./pacman-i3.sh
 fi
