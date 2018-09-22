@@ -19,13 +19,13 @@ if [ "$number" == "0" ]; then exit; fi
 # If there are updates, download them to local storage
 sudo pacman -Sywu --noconfirm >/dev/null 2>&1
 
-# ad3a00 - orange
-# 007018 - green
 if [ "$number" == "1" ]; then
-	indicator=$(echo "$number Update")
+	indicator="$number Update"
 else
-	indicator=$(echo "$number Updates")
+	indicator="$number Updates"
 fi
 
+# ad3a00 - orange
+# 007018 - green
 echo "<span color='#ffffff' background='#007018'>  $indicator  </span>"
 $update
