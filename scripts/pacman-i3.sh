@@ -10,14 +10,14 @@ case "$BLOCK_BUTTON" in
 esac
 
 # This command does not need a password since an exception has been created for it in sudoers
-sudo pacman -Sy 2>&1 >/dev/null
+sudo pacman -Sy >/dev/null 2>&1
 
 # If there are no updates, stop
 number=$(pacman -Qu | wc -l)
 if [ "$number" == "0" ]; then exit; fi
 
 # If there are updates, download them to local storage
-sudo pacman -Sywu --noconfirm 2>&1 >/dev/null
+sudo pacman -Sywu --noconfirm >/dev/null 2>&1
 
 # ad3a00 - orange
 # 007018 - green
