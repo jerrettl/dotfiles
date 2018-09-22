@@ -14,7 +14,7 @@ sudo pacman -Sy >/dev/null 2>&1
 
 # If there are no updates, stop
 number=$(pacman -Qu | grep -vic ignore)
-if [ "$number" == "0" ]; then exit; fi
+if [ "$number" == "0" ]; then echo ""; $update; exit; fi
 
 # If there are updates, download them to local storage
 sudo pacman -Sywu --noconfirm >/dev/null 2>&1
