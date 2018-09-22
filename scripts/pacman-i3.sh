@@ -13,7 +13,7 @@ esac
 sudo pacman -Sy >/dev/null 2>&1
 
 # If there are no updates, stop
-number=$(pacman -Qu | wc -l)
+number=$(pacman -Qu | grep -vic ignore)
 if [ "$number" == "0" ]; then exit; fi
 
 # If there are updates, download them to local storage
