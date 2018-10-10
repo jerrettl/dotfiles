@@ -20,6 +20,8 @@ alias gca='git commit -am'
 alias gp='git push'
 alias dv='d; v'
 alias Dv='D; v'
+alias pacman='pacman --color=auto'
+alias spac='sudo pacman --color=auto'
 
 # ==== Common Directories
 alias dotf='cd ~/dotfiles && gstu'
