@@ -94,6 +94,7 @@ set omnifunc=htmlcomplete#CompleteTags
 " Auto refresh aliases
 autocmd BufWritePost ~/dotfiles/aliases/folders,~/dotfiles/aliases/configs !bash ~/dotfiles/scripts/shortcuts.sh
 autocmd BufWritePost ~/.Xresources,~/dotfiles/.Xresources !xrdb ~/.Xresources
+autocmd BufWritePost ~/.bashrc,~/dotfiles/aliases/aliases !bash source ~/.bashrc
 
 " Theming
 let &t_Co=256
