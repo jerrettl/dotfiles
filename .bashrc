@@ -17,3 +17,6 @@ if [ "$(id -u)" -eq 0 ]; then
 else
 	PS1="${BOLD}$(uname -n)${RESET} ${GREEN}\$(pwd | sed \"s|^$HOME|~|\")${RESET}> "
 fi
+
+# Change directory by typing its name
+shopt -s autocd
