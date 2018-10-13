@@ -45,4 +45,6 @@ elif [ "$hostname" == "lg-gram" ]; then
 	fi
 fi
 
+
+pkill -RTMIN+1 i3blocks # Volume
 feh --bg-fill ~/dotfiles/wallpaper.png
