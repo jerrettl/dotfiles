@@ -15,12 +15,14 @@ fi
 #xdotool key ctrl+space
 #xdotool key ctrl+space
 
+sink_number=$(pactl list sinks | awk 'NR==1 {print $2}' | cut -c 2-)
+
 if [ "$1" = "up" ]; then
-	pactl -- set-sink-volume 0 +5%
+	pactl -- set-sink-volume "$sink_number" +5%
 elif [ "$1" = "down" ]; then
-	pactl -- set-sink-volume 0 -5%
+	pactl -- set-sink-volume "$sink_number" -5%
 elif [ "$1" = "toggle" ]; then
-	pactl set-sink-mute 0 toggle
+	pactl set-sink-mute "$sink_number" toggle
 fi
 
 pkill -RTMIN+1 i3blocks
