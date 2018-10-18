@@ -20,3 +20,6 @@ fi
 
 # Change directory by typing its name
 shopt -s autocd
+
+# Disable Ctrl-J and Ctrl-S console breaking
+stty -ixon
