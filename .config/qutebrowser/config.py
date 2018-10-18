@@ -48,8 +48,8 @@ c.hints.uppercase = True
 c.qt.args = ['ppapi-widevine-path=/usr/lib/qt/plugins/ppapi/libwidevinecdmadapter.so']
 
 # Show a scrollbar.
-# Type: Bool
-c.scrolling.bar = True
+# Type: String
+c.scrolling.bar = "always"
 
 # Enable smooth scrolling for web pages. Note smooth scrolling does not
 # work with the `:scroll-px` command.
