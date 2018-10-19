@@ -22,6 +22,6 @@ if [ "$hostname" == "lg-gram" ]; then
 	xset r rate 250 40
 
 	# Give some time for network connection, then check for updates
-	sleep 10
-	./pacman-i3.sh
+	sleep 20
+	ping -q -w 1 -c 1 `ip r | grep default | cut -d ' ' -f 3` > /dev/null && ./pacman-i3.sh
 fi
