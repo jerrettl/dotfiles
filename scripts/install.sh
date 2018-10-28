@@ -60,7 +60,8 @@ mkdir -pv ~/.config/ranger
 ln -sfv ~/dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -sfv ~/dotfiles/.config/ranger/scope.sh ~/.config/ranger/scope.sh
 mkdir -pv ~/.config/rofi
-ln -sfv ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi
+ln -sfv ~/dotfiles/.config/rofi/config ~/.config/rofi/config
+ln -sfv ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi.bak
 ln -sfv ~/dotfiles/.inputrc ~/.inputrc
 rm -f ~/.msmtp
 ln -sfv ~/dotfiles/.msmtp/ ~/.msmtp
