@@ -23,3 +23,7 @@ shopt -s autocd
 
 # Disable Ctrl-J and Ctrl-S console breaking
 stty -ixon
+
+# Unlimited command history
+export HISTFILESIZE=-1
+export HISTSIZE=-1
