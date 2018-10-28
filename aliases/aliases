@@ -5,9 +5,9 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias gst='git status -uno'
 alias gstu='git status -uall'
-alias l='ls -al --color=auto -F'
-alias la='ls -al --color=auto -F'
-alias ll='ls -l --color=auto -F'
+alias l='ls -alh --color=auto -F'
+alias la='ls -alh --color=auto -F'
+alias ll='ls -lh --color=auto -F'
 alias more=less
 alias su='sudo -Es'
 alias update='pacaur -Syyu'
