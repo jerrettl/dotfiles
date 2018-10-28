@@ -1,0 +1,25 @@
+rofi.fullscreen: true
+rofi.separator-style: dash
+rofi.hide-scrollbar: true
+rofi.padding: 200
+! rofi.eh: 1
+rofi.bw: 0
+rofi.lines: 10
+! rofi.line-margin: 15
+rofi.line-padding: 5
+!rofi.location: 4
+rofi.font: SanFranciscoDisplay-Regular 20
+! rofi.show-icons: true
+! rofi.levenshtein-sort: true
+! rofi.sidebar-mode: true
+! rofi.auto-select: true
+
+! Window		'background'	'border'	'separator'
+rofi.color-window:	#ccffffff,	#00000000,	#000000
+
+! State			'bg',		'fg',		'altbg',	'hlbg',		'hlfg'
+rofi.color-normal:	#00000000,	#000000,	#00000000,	#22000000,	#0D567C
+rofi.color-active:	#00000000,	#000000,	#00000000,	#22000000,	#0D567C
+rofi.color-urgent:	#00000000,	#000000,	#00000000,	#22000000,	#0D567C
+
+
