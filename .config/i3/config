@@ -291,4 +291,4 @@ bindsym XF86AudioPrev exec "~/dotfiles/scripts/music-control.sh back"
 bindsym Ctrl+grave exec --no-startup-id xdotool keyup grave && xdotool keyup ctrl && xdotool type $(cat ~/Documents/chrome-text.txt)
 
 # Wifi selection
-bindsym $mod+Shift+d exec --no-startup-id networkmanager_dmenu
+bindsym $mod+Shift+d exec --no-startup-id networkmanager_dmenu -fn "Helvetica Neue 12"
