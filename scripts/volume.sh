@@ -26,4 +26,4 @@ elif [ "$1" = "toggle" ]; then
 fi
 
 pkill -RTMIN+1 i3blocks
-#notify-send -c volume 'Volume' "$(getlevel)"
+#notify-send -t 300 -c volume 'Volume' "$(getlevel)"
