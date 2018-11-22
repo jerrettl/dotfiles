@@ -1,1 +1,2 @@
 event_command = ~/dotfiles/scripts/pianobar.sh
+audio_quality = high
