@@ -102,6 +102,7 @@ hi search cterm=NONE ctermfg=black ctermbg=yellow
 hi spellbad cterm=none ctermfg=white ctermbg=160 "dark red
 hi folded cterm=none ctermfg=7 ctermbg=17
 hi LineNr cterm=none ctermfg=251
+hi Visual ctermfg=none ctermbg=239 guibg=Grey
 
 
 " Mappings
