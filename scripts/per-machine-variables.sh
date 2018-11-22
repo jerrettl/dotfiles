@@ -21,6 +21,10 @@ if [ "$hostname" == "lg-gram" ]; then
 	# Key press repeat timing
 	xset r rate 250 40
 
+	# Backlight daemon
+	pkill clight
+	clight &
+
 	# Give some time for network connection, then check for updates
 	sleep 20
 	ping -q -w 1 -c 1 `ip r | grep default | cut -d ' ' -f 3` > /dev/null && ./pacman-i3.sh
