@@ -27,3 +27,8 @@ stty -ixon
 # Unlimited command history
 export HISTFILESIZE=-1
 export HISTSIZE=-1
+
+bind '"\t":menu-complete'
+
+# Fuzzy file completion
+bind -x '"\C-f":"xdotool type $(fzf)"'
