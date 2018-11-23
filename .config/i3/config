@@ -307,3 +307,5 @@ bindsym $mod+Shift+d exec --no-startup-id networkmanager_dmenu -fn "Helvetica Ne
 # Brightness
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
+bindsym Shift+XF86MonBrightnessDown exec "xbacklight -dec 2"
+bindsym Shift+XF86MonBrightnessUp exec "xbacklight -inc 2"
