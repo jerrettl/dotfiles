@@ -118,8 +118,7 @@ nmap <C-g> :%s/\s\+$//<cr>
 nmap <C-n> :set norelativenumber<CR>
 nmap <C-m> :set relativenumber<CR>
 nmap <F10> :NERDTreeToggle<CR>
-nmap <silent> <leader>sp :set spell<cr>
-nmap <silent> <leader>nsp :set nospell<cr>
+nmap <silent> <leader>sp :set spell!<cr>
 nmap <leader><C-l> :loadview<cr>
 nmap ! :!
 
