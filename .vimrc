@@ -137,9 +137,6 @@ imap JK <esc>
 imap kj <esc>
 imap <C-a> <esc>jA
 
-" Nifty alphabetize shortcut
-vnoremap <F3> d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
-
 " Ctrl-S saving
 nmap <C-S> :update<CR>
 vmap <C-S> <C-C>:update<CR>
