@@ -124,10 +124,10 @@ nmap <leader><C-l> :loadview<cr>
 nmap ! :!
 
 " Window navigation
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 cmap w!! w !sudo tee % >/dev/null
 cmap Q q
