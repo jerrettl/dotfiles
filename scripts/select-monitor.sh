@@ -35,13 +35,13 @@ elif [ "$hostname" == "dell-xps400" ]; then
 
 elif [ "$hostname" == "lg-gram" ]; then
 	if [ "$action" == "primary" ]; then
-		xrandr --output "eDP-1" --auto --output "HDMI-1" --off
+		xrandr --output "eDP1" --auto --output "HDMI1" --off
 	elif [ "$action" == "secondary" ]; then
-		xrandr --output "eDP-1" --off --output "HDMI-1" --auto
+		xrandr --output "eDP1" --off --output "HDMI1" --auto
 	elif [ "$action" == "mirror" ]; then
-		xrandr --output "eDP-1" --primary --mode 1920x1080 --output "HDMI-1" --mode 1920x1080 --same-as "eDP-1"
+		xrandr --output "eDP1" --primary --mode 1920x1080 --output "HDMI1" --mode 1920x1080 --same-as "eDP1"
 	elif [ "$action" == "extend" ]; then
-		xrandr --output "eDP-1" --primary --mode 1920x1080 --pos 0x0 --rotate normal --output "HDMI-1" --mode 1920x1080 --pos 1920x0 --rotate normal
+		xrandr --output "eDP1" --primary --mode 1920x1080 --pos 0x0 --rotate normal --output "HDMI1" --mode 1920x1080 --pos 1920x0 --rotate normal
 	fi
 fi
 
