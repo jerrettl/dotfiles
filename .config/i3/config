@@ -248,8 +248,8 @@ bindsym $mod+Next exec xdotool click 5
 bindsym $mod+Ctrl+0 exec --no-startup-id xdotool mousemove_relative -- -10000 10000
 
 # Compton toggle
-bindsym $mod+F7 exec --no-startup-id pkill compton
-bindsym $mod+F8 exec --no-startup-id compton -b --xrender-sync-fence
+bindsym $mod+F8 exec --no-startup-id pkill compton
+bindsym $mod+F9 exec --no-startup-id compton -b --xrender-sync-fence
 
 # Floating window exceptions
 for_window [class="Steam" instance="Steam" title="Friends"] floating enable
@@ -263,7 +263,7 @@ new_window pixel 1
 
 # Select display
 set $select_display Select a display mode: (P)rimary, (S)econdary, (M)irror, or (E)xtend
-bindsym $mod+F6 mode "$select_display"
+bindsym $mod+F7 mode "$select_display"
 
 mode "$select_display" {
 	bindsym p exec --no-startup-id ~/dotfiles/scripts/select-monitor.sh primary, mode "default"
