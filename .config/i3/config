@@ -310,3 +310,6 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
 bindsym Shift+XF86MonBrightnessDown exec "xbacklight -dec 2"
 bindsym Shift+XF86MonBrightnessUp exec "xbacklight -inc 2"
+
+# Airplane Mode
+bindsym $mod+F6 exec --no-startup-id ~/dotfiles/scripts/airplane_mode.sh
