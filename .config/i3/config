@@ -255,6 +255,7 @@ bindsym $mod+F9 exec --no-startup-id compton -b --xrender-sync-fence
 for_window [class="Steam" instance="Steam" title="Friends"] floating enable
 for_window [class="Steam" instance="Steam" title="Steam Guard - Computer Authorization Required"] floating enable
 for_window [class="Firefox" title="About Mozilla Firefox"] floating enable
+for_window [class="SVPManager" title="SVP - Control Panel"] floating disable
 
 # i3-gaps fix
 # for_window [class="^.*"] border pixel 0
