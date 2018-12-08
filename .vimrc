@@ -3,109 +3,145 @@
 set nocompatible
 
 " Plug
+" If plug is not installed, fetch and install it automatically.
 if empty(glob('~/.vim/autoload/plug.vim'))
-	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-	  \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
 
 call plug#begin('~/.vim/plugged')
 
+" Syntastic: syntax checking
 Plug 'vim-syntastic/syntastic'
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
-"Plug 'altercation/vim-colors-solarized'
-"Plug 'flazz/vim-colorschemes'
-Plug 'vim-latex/vim-latex'
+
+" vim-latex: ease-of-life shortcuts for latex
+Plug 'vim-latex/vim-latex', { 'for': 'tex' }
+
+" nerdtree: file exploring side bar
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" vim-fugitive: git control within vim
 Plug 'tpope/vim-fugitive'
+
+" emmet-vim: quick html writing
 Plug 'mattn/emmet-vim', { 'for': 'html' }
-Plug 'alvan/vim-closetag'
-"Plug 'ctrlpvim/ctrlp.vim'
+
+" vim-closetag: automatically create matching close tags in html
+Plug 'alvan/vim-closetag', { 'for': 'html' }
+
+" goyo: distraction-free editing
+" Toggle shortcut: F12
 Plug 'junegunn/goyo.vim'
-"Plug 'Valloric/YouCompleteMe'
+
+" nerdcommenter: shortcuts to comment code
 Plug 'scrooloose/nerdcommenter'
-Plug 'hrother/offlineimaprc.vim'
+
+" vim-devicons: icons for nerdtree, lightline, etc.
 Plug 'ryanoasis/vim-devicons'
+
+" vim-surround: surrounding text
 Plug 'tpope/vim-surround'
+
+" vim-repeat: repeat commands mostly for vim-surround
 Plug 'tpope/vim-repeat'
+
+" lightline: status line
 Plug 'itchyny/lightline.vim'
+
+" vim-easymotion: jumping thoughout text easily
 Plug 'easymotion/vim-easymotion'
-Plug 'vim-scripts/indentpython.vim', { 'for': 'python' } " Correct python indentation
-Plug 'nvie/vim-flake8', { 'for': 'python' } " PEP8 checking
-Plug 'Yggdroot/indentLine' " Indent guides
-Plug 'davidhalter/jedi-vim', { 'for': 'python' } " Python autocompletion
-Plug 'tpope/vim-unimpaired'
 
+" indentLine: indent guides
+Plug 'Yggdroot/indentLine'
 
+" Python specific:
+"   indentpython: auto intent after : and in multiline statements
+Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
+
+"   jedi-vim: completion, renaming, jumping, etc.
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+
+" Syntax highlighting plugins:
+Plug 'hrother/offlineimaprc.vim'
+
+"Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'Valloric/YouCompleteMe'
+"Plug 'nvie/vim-flake8', { 'for': 'python' }
+"Plug 'tpope/vim-unimpaired'
 call plug#end()
 
 
+" ===================================
+
+
 " Basics
-set encoding=utf8
-syntax on
-set mouse=a
 let mapleader=","
-set tabstop=2
-set backspace=indent,eol,start
-set autoindent
-set copyindent
-set number
-set shiftwidth=2
-set shiftround
-set showmatch
-set ignorecase
-set smartcase
-set smarttab
-set hlsearch
-set incsearch
-set title
-set noerrorbells
-set nobackup
-set noswapfile
-set wildmenu
-set clipboard=unnamedplus
-set pastetoggle=<F2>
-set linebreak
-set noshowmode
-if !has('nvim')
-	set noesckeys
-endif
-if has("win32")
-	set guifont=PragmataProMono_Nerd_Font_Mono:h10:w5
-else
-	if has("unix")
-		set guifont=PragmataProMono\ Nerd\ Font\ Mono\ 11
-	endif
-endif
-
-set laststatus=2
+set encoding=utf8
+syntax on           " Syntax highlighting
+set mouse=a         " Enable mouse support (yes crucify me)
+set tabstop=2       " Tab width
+set shiftwidth=2    " Tab width
+set softtabstop=0   " Vim will not insert spaces to simulate tabstops
+set smarttab        " Tabs at the beginning of a line use shiftwidth, not tabstop
+set expandtab       " Use spaces instead of tab characters when pressing tab
+set backspace=indent,eol,start  " Allow backspacing over autoindent, line breaks, and the start of an insert
+set autoindent      " If a line is indented, an added line will be too
+set copyindent      " If a line is indented, an added line will use the same type of indentation (tabs, spaces)
+set number          " Print line numbers
+set shiftround      " Round intents to a multiple of the shiftwidth
+set showmatch       " When adding a bracket, show the matching one for a second
+set ignorecase      " Searching will ignore the case of letters
+set smartcase       " Searching will only consider the case of letters if a capital is used
+set hlsearch        " Highlight all matched in last search
+set incsearch       " Highlight all matched in current search
+set title           " Set the title of the window to the filename
+set noerrorbells    " Do not beep or flash during errors
+set nobackup        " Do not backup files before overwriting them
+set noswapfile      " Do not use swap files
+set wildmenu        " Command line completion is enhanced (suggestions)
+set clipboard+=unnamedplus  " Use the clipboard for all operations
+set linebreak       " Wrap long lines at characters that make sense (breakat)
+set noshowmode      " Don't show the mode on the last line (this is done with lightline)
+set laststatus=2    " Enable status line for all windows
+set display+=lastline  " As much as possible will be displayed, even if the line is cut off (prevents displaying @ on lines that are longer than end of screen)
 set shell=/bin/bash
-set display+=lastline
-let g:BASH_Ctrl_j = 'off'
 
-autocmd InsertEnter * set timeoutlen=250 ttimeoutlen=0
-autocmd InsertLeave * set timeoutlen=1000 ttimeoutlen=0
+if !has('nvim')
+  set noesckeys     " Function keys that start with <ESC> are recognised in insert mode (only necessary in vim, not neovim)
+endif
 
+" Set GUI font
+if has("win32")
+  set guifont=PragmataProMono_Nerd_Font_Mono:h10:w5
+else
+  if has("unix")
+    set guifont=PragmataProMono\ Nerd\ Font\ Mono\ 11
+  endif
+endif
 
 " Advanced
 set omnifunc=htmlcomplete#CompleteTags
 
-" Auto refresh aliases
+" Auto refresh databases on saving
 autocmd BufWritePost ~/dotfiles/aliases/folders,~/dotfiles/aliases/configs !bash ~/dotfiles/scripts/shortcuts.sh
 autocmd BufWritePost ~/.Xresources,~/dotfiles/.Xresources !xrdb ~/.Xresources
 autocmd BufWritePost ~/.bashrc,~/dotfiles/aliases/aliases !bash source ~/.bashrc
+
+" ===================================
 
 " Theming
 let &t_Co=256
 hi search cterm=NONE ctermfg=black ctermbg=yellow
 hi spellbad cterm=none ctermfg=white ctermbg=160 "dark red
-hi folded cterm=none ctermfg=7 ctermbg=17
-hi LineNr cterm=none ctermfg=251
+hi folded cterm=none ctermfg=7 ctermbg=17 "blue
+hi LineNr cterm=none ctermfg=251 "grey
 hi Visual ctermfg=none ctermbg=239 guibg=Grey
 
-
+" ===================================
 " Mappings
+
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nmap ; :
@@ -125,11 +161,18 @@ nmap ! :!
 " Window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
+let g:BASH_Ctrl_j = 'off' " Sometimes bash may treat Ctrl+J weird. Disable that behavior.
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Forgot to get root access before editing? No worries!
 cmap w!! w !sudo tee % >/dev/null
+
 cmap Q q
+
+" Mostly for the following jk commands. Makes exiting insert mode really fast.
+autocmd InsertEnter * set timeoutlen=250 ttimeoutlen=0
+autocmd InsertLeave * set timeoutlen=1000 ttimeoutlen=0
 
 imap jk <esc>
 imap JK <esc>
@@ -141,31 +184,19 @@ nmap <C-S> :update<CR>
 vmap <C-S> <C-C>:update<CR>
 imap <C-S> <C-O>:update<CR>
 
-
+" ===================================
 " Plugin Configurations
-
-" Airline
-"let g:airline#extensions#synastic#enables = 1
-"set laststatus=2
-"let g:airline_powerline_fonts = 1
-"let g:airline_theme = 'powerlineish'
-"if !exists('g:airline_symbols')
-"	let g:airline_symbols = {}
-"endif
-"let g:airline_symbols.maxlinenr = ''
-"let g:airline_symbols.whitespace = ''
-
 
 " Neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#dictionary#dictionaries = {
-			\ 'default' : '',
-			\ 'vimshell' : $HOME.'/.vimshell_hist',
-			\ 'scheme' : $HOME.'/.gosh_completions'
-			\ }
+      \ 'default' : '',
+      \ 'vimshell' : $HOME.'/.vimshell_hist',
+      \ 'scheme' : $HOME.'/.gosh_completions'
+      \ }
 if !exists('g:neocomplete#keyword_patterns')
-	let g:neocomplete#keyword_patterns = {}
+  let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
@@ -185,9 +216,9 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {
-			\ "mode": "passive",
-			\ "active_filetypes": ['python', 'sh'],
-			\ "passive_filetypes": [] }
+      \ "mode": "passive",
+      \ "active_filetypes": ['python', 'sh'],
+      \ "passive_filetypes": [] }
 let g:syntastic_python_checkers=['flake8', 'python']
 let g:syntastic_sh_checkers=['shellcheck', 'bashate']
 nmap <F8> :SyntasticCheck<cr>
@@ -200,7 +231,7 @@ hi SyntasticErrorSign cterm=none ctermfg=white ctermbg=160 "dark red
 let g:flake8_show_quickfix=0
 
 
-" latex-suite
+" latex-suite / vim-latex
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
@@ -215,7 +246,7 @@ let g:Tex_IgnoredWarnings='"Underfull\n".
     \"Citation %.%# undefined"
     \"Package gensymb Warning: Not defining\n".'
 let g:Tex_IgnoreLevel=8
-map <f3> <esc>:w<cr><leader>ll<CR>
+autocmd FileType tex map <f3> <esc>:w<cr><leader>ll<CR>
 imap <C-t> <Plug>Tex_InsertItemOnThisLine
 imap i <Plug>Tex_InsertItemOnThisLine
 
@@ -227,58 +258,52 @@ imap <F12> <C-o>:Goyo<cr>
 
 " YouCompleteMe
 let g:ycm_filetype_blacklist = {
-			\ 'tex' : 1
-			\}
+      \ 'tex' : 1
+      \}
+
 
 " NERDTree
+" This function closes NERDTree automatically if it detects that it is the last window.
 function! NERDTreeQuit()
-	redir => buffersoutput
-	silent buffers
-	redir END
-	"                     1BufNo  2Mods.     3File           4LineNo
-	let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
-	let windowfound = 0
+  redir => buffersoutput
+  silent buffers
+  redir END
+  "                     1BufNo  2Mods.     3File           4LineNo
+  let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
+  let windowfound = 0
 
-	for bline in split(buffersoutput, "\n")
-		let m = matchlist(bline, pattern)
+  for bline in split(buffersoutput, "\n")
+    let m = matchlist(bline, pattern)
 
-		if (len(m) > 0)
-			if (m[2] =~ '..a..')
-				let windowfound = 1
-			endif
-		endif
-	endfor
+    if (len(m) > 0)
+      if (m[2] =~ '..a..')
+        let windowfound = 1
+      endif
+    endif
+  endfor
 
-	if (!windowfound)
-		quitall
-	endif
+  if (!windowfound)
+    quitall
+  endif
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
 
 
 " Closetag
-" filenames like *.xml, *.html, *.xhtml, ...
-" Then after you press <kbd>&gt;</kbd> in these files, this plugin will try to close the current tag.
-"
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
-
-" filenames like *.xml, *.xhtml, ...
-" This will make the list of non closing tags self closing in the specified files.
-"
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
-
-" integer value [0|1]
-" This will make the list of non closing tags case sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
-"
-let g:closetag_emptyTags_caseSensitive = 1
-
-" Shortcut for closing tags, default is '>'
-"
+" Shortcut for closing tags.
 let g:closetag_shortcut = '>'
 
-" Add > at current position without closing the current tag, default is ''
-"
+" Add > at current position without closing the current tag.
 let g:closetag_close_shortcut = '<leader>>'
+
+" After you press > in these files, this plugin will try to close the current tag.
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+
+" This will make the list of non closing tags self closing in the specified files.
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+
+" This will make the list of non closing tags case sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
+let g:closetag_emptyTags_caseSensitive = 1
 
 
 
@@ -292,9 +317,3 @@ au BufNewFile,BufRead *.py
       \ set fileformat=unix
 
 let python_highlight_all=1
-
-
-"au BufNewFile,BufRead *.js, *.html, *.css
-      "\ set tabstop=2 |
-      "\ set softtabstop=2 |
-      "\ set shiftwidth=2
