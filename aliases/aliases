@@ -22,6 +22,7 @@ alias dv='d; v'
 alias Dv='D; v'
 alias pacman='pacman --color=auto'
 alias spac='sudo pacman --color=auto'
+alias sudo='sudo '
 
 # ==== Common Directories
 alias dotf='cd ~/dotfiles && gstu'
