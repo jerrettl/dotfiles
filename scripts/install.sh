@@ -34,6 +34,7 @@ echo "Creating symlinks..."
 ln -sfv ~/dotfiles/.bash_profile ~/.bash_profile
 ln -sfv ~/dotfiles/.bashrc ~/.bashrc
 ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
+ln -sfv ~/dotfiles/.config/clight.conf ~/.config/clight.conf
 mkdir -pv ~/.config/dunst
 ln -sfv ~/dotfiles/.config/dunst/dunstrc ~/.config/dunst/dunstrc
 mkdir -pv ~/.config/fish
