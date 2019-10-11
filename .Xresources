@@ -10,6 +10,11 @@
 #endif
 ! URxvt.font: xft:Pragmata Pro:pixelsize=24:antialias=true
 
+#ifdef SRVR_virtualbox_gram
+  Xft.dpi: 140
+  URxvt.font: xft:PragmataProMono Nerd Font Mono:pixelsize=24:antialias=true
+#endif
+
 ! Font rendering
 Xft.antialias: 1
 Xft.autohint: 0
