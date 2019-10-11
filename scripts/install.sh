@@ -5,11 +5,14 @@ sudo pacman -Syyu --noconfirm
 
 
 # Install pacaur
-if [ "$(pacman -Qi pacaur)" ]; then
-	echo "Pacaur installed, skipping..."
+if [ "$(pacman -Qi yay)" ]; then
+	echo "yay installed, skipping..."
 else
-	sudo pacman -S --needed curl
-	curl -s https://gist.githubusercontent.com/Tadly/0e65d30f279a34c33e9b/raw/pacaur_install.sh | bash
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -si
+	cd ..
+	rm -rf yay
 fi
 
 
@@ -21,7 +24,7 @@ for line in $(sed "/^#/d" "packages"); do
 	tput bold
 	echo "($i/$total) $line"
 	tput sgr0
-	pacaur -S --needed --noconfirm --noedit "$line"
+  yay -S --needed --noconfirm --norebuild "$line"
 done
 
 
