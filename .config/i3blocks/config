@@ -24,7 +24,7 @@
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
-command=/usr/lib/i3blocks/$BLOCK_NAME
+#command=/usr/lib/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
@@ -79,7 +79,8 @@ signal=2
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-label=DISK
+command=~/dotfiles/scripts/disk
+label=DISK 
 #instance=/mnt/data
 interval=30
 
@@ -88,12 +89,14 @@ interval=30
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
+command=~/dotfiles/scripts/iface
 #instance=wlan0
 #color=#00FF00
 interval=10
 separator=true
 
 [wifi]
+command=~/dotfiles/scripts/wifi
 #instance=wlp3s0
 interval=10
 separator=true
@@ -107,6 +110,7 @@ separator=true
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
+command=~/dotfiles/scripts/cpu_usage
 label=CPU
 interval=10
 min_width=CPU: 100.00%
@@ -119,7 +123,8 @@ min_width=CPU: 100.00%
 #
 # The battery instance defaults to 0.
 [battery]
-label=BAT
+command=~/dotfiles/scripts/battery
+label=BAT 
 #label=⚡
 #instance=1
 interval=30
@@ -171,7 +176,7 @@ interval=5
 #signal=11
 
 [volume-pulseaudio]
-label=Volume
+label=Volume 
 command=~/dotfiles/scripts/volume-pulseaudio.sh
 interval=once
 signal=1
