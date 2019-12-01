@@ -64,7 +64,7 @@ bindsym $mod+F3 exec $terminal -e ranger
 bindsym $mod+Shift+F3 exec pcmanfm
 
 # On startup
-exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpaper.png
+exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpaper.jpg
 #exec_always --no-startup-id volumeicon
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id system-config-printer-applet
