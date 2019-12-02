@@ -32,3 +32,8 @@ bind '"\t":menu-complete'
 
 # Fuzzy file completion
 bind -x '"\C-f":"xdotool type $(fzf)"'
+
+if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ]; then
+  export LIBGL_ALWAYS_INDIRECT=1
+  export DISPLAY=:0
+fi
