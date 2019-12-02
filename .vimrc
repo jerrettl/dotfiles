@@ -23,7 +23,7 @@ Plug 'vim-latex/vim-latex', { 'for': 'tex' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " vim-fugitive: git control within vim
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 
 " emmet-vim: quick html writing
 Plug 'mattn/emmet-vim', { 'for': 'html' }
