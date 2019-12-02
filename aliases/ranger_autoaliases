@@ -66,6 +66,14 @@ map gaa cd ~/dotfiles/aliases
 map taa tab_new ~/dotfiles/aliases
 map maa shell mv %s ~/dotfiles/aliases
 map Yaa shell cp -r %s ~/dotfiles/aliases
+map gdesktop cd /mnt/c/Users/Jerre/Desktop/
+map tdesktop tab_new /mnt/c/Users/Jerre/Desktop/
+map mdesktop shell mv %s /mnt/c/Users/Jerre/Desktop/
+map Ydesktop shell cp -r %s /mnt/c/Users/Jerre/Desktop/
+map gcss cd /mnt/c/Users/Jerre/Documents/Programming/C/scratch-space
+map tcss tab_new /mnt/c/Users/Jerre/Documents/Programming/C/scratch-space
+map mcss shell mv %s /mnt/c/Users/Jerre/Documents/Programming/C/scratch-space
+map Ycss shell cp -r %s /mnt/c/Users/Jerre/Documents/Programming/C/scratch-space
 map zrc shell $EDITOR ~/.zshrc
 map zshrc shell $EDITOR ~/.zshrc
 map vrc shell $EDITOR ~/.vimrc
