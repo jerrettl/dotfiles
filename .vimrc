@@ -61,7 +61,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 
 "   jedi-vim: completion, renaming, jumping, etc.
-Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+" Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
 " Syntax highlighting plugins:
 Plug 'hrother/offlineimaprc.vim'
