@@ -28,8 +28,6 @@ alias sudo='sudo '
 alias dotf='cd ~/dotfiles && gstu'
 alias dotu='dotf && git pull && cd'
 
-alias gcc='cd $(find ~ -maxdepth 4 2>/dev/null | grep -s "grade-calculator\$" | cat) && gstu'
-alias gcv='gcc && $EDITOR grade_calculator.py'
 
 # ==== Mounting
 alias mnttv='sshfs jerrett@192.168.1.11:/media/usb0/Files/Documents/tv ~/mnt -C -p 21999'
