@@ -14,7 +14,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Syntastic: syntax checking
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
 
 " vim-latex: ease-of-life shortcuts for latex
 Plug 'vim-latex/vim-latex', { 'for': 'tex' }
