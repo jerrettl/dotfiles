@@ -37,7 +37,6 @@ git config credential.helper store # Big brain move
 echo "Creating symlinks..."
 ln -sfv ~/dotfiles/.bash_profile ~/.bash_profile
 ln -sfv ~/dotfiles/.bashrc ~/.bashrc
-ln -sfv ~/dotfiles/.compton.conf ~/.compton.conf
 ln -sfv ~/dotfiles/.config/clight.conf ~/.config/clight.conf
 mkdir -pv ~/.config/dunst
 ln -sfv ~/dotfiles/.config/dunst/dunstrc ~/.config/dunst/dunstrc
@@ -58,6 +57,7 @@ mkdir ~/.config/pianobar
 mkfifo ~/.config/pianobar/ctl
 touch ~/.config/pianobar/nowplaying
 ln -sfv ~/dotfiles/.config/pianobar/config ~/.config/pianobar/config
+ln -sfv ~/dotfiles/.config/picom.conf ~/.config/picom.conf
 rm -rf ~/.config/qutebrowser
 mkdir -pv ~/.config/qutebrowser/
 ln -sfv ~/dotfiles/.config/qutebrowser/* ~/.config/qutebrowser

@@ -76,7 +76,7 @@ exec_always --no-startup-id udiskie -ANs
 exec_always --no-startup-id unclutter
 exec_always --no-startup-id dunst
 exec_always --no-startup-id setxkbmap -option compose:ralt
-exec_always --no-startup-id ~/dotfiles/scripts/compton.sh
+exec_always --no-startup-id ~/dotfiles/scripts/picom.sh
 exec_always --no-startup-id ~/dotfiles/scripts/per-machine-variables.sh
 exec_always --no-startup-id VBoxClient-all
 exec --no-startup-id clight
@@ -248,9 +248,9 @@ bindsym $mod+Next exec xdotool click 5
 
 bindsym $mod+Ctrl+0 exec --no-startup-id xdotool mousemove_relative -- -10000 10000
 
-# Compton toggle
-bindsym $mod+F8 exec --no-startup-id pkill compton
-bindsym $mod+F9 exec --no-startup-id compton -b --xrender-sync-fence
+# Picom toggle
+bindsym $mod+F8 exec --no-startup-id pkill picom
+bindsym $mod+F9 exec --no-startup-id picom -b --xrender-sync-fence
 
 # Floating window exceptions
 for_window [class="Steam" instance="Steam" title="Friends"] floating enable

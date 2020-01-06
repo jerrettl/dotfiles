@@ -6,7 +6,6 @@ bdf-unifont
 caffeine-ng
 chromium
 clight-git
-compton-git
 dmenu
 dunst
 engrampa
@@ -41,6 +40,7 @@ pango
 paper-icon-theme-git
 pavucontrol
 pcmanfm
+picom
 pkgfile
 pulseaudio
 pulseaudio-alsa

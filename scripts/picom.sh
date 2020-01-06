@@ -7,5 +7,5 @@ if [ "$hostname" == "arch-aspire-d255" ]; then
 elif [ "$hostname" == "dell-xps400" ]; then
 	exit
 else
-	compton &
+	picom &
 fi
