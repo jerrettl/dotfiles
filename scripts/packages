@@ -80,6 +80,7 @@ wget
 xdotool
 xterm
 xorg-server
+xorg-xbacklight
 xorg-xrdb
 youtube-dl
 zathura
