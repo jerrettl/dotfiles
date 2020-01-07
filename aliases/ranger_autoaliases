@@ -22,14 +22,10 @@ map gmovies cd /media/usb0/Files/Documents/movies
 map tmovies tab_new /media/usb0/Files/Documents/movies
 map mmovies shell mv %s /media/usb0/Files/Documents/movies
 map Ymovies shell cp -r %s /media/usb0/Files/Documents/movies
-map gusb0 cd /media/usb0
-map tusb0 tab_new /media/usb0
-map musb0 shell mv %s /media/usb0
-map Yusb0 shell cp -r %s /media/usb0
-map gusb1 cd /media/usb1
-map tusb1 tab_new /media/usb1
-map musb1 shell mv %s /media/usb1
-map Yusb1 shell cp -r %s /media/usb1
+map gusb cd /run/media/jerrett/Jerrett
+map tusb tab_new /run/media/jerrett/Jerrett
+map musb shell mv %s /run/media/jerrett/Jerrett
+map Yusb shell cp -r %s /run/media/jerrett/Jerrett
 map gd cd ~/Downloads
 map td tab_new ~/Downloads
 map md shell mv %s ~/Downloads
@@ -74,6 +70,10 @@ map gcss cd /mnt/c/Users/Jerre/Documents/Programming/C/scratch-space
 map tcss tab_new /mnt/c/Users/Jerre/Documents/Programming/C/scratch-space
 map mcss shell mv %s /mnt/c/Users/Jerre/Documents/Programming/C/scratch-space
 map Ycss shell cp -r %s /mnt/c/Users/Jerre/Documents/Programming/C/scratch-space
+map gsha cd /mnt/shared
+map tsha tab_new /mnt/shared
+map msha shell mv %s /mnt/shared
+map Ysha shell cp -r %s /mnt/shared
 map zrc shell $EDITOR ~/.zshrc
 map zshrc shell $EDITOR ~/.zshrc
 map vrc shell $EDITOR ~/.vimrc
