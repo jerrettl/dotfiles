@@ -1,0 +1,54 @@
+## Fixes and tweaks specific to the LG Gram.
+
+
+# In the LightDM settings file (/etc/lightdm/lightdm.conf), you must set:
+[LightDM]
+logind-check-graphical=true
+
+[Seat:*]
+autologin-user=[username]
+
+# Then run the following two commands:
+sudo groupadd -r autologin
+sudo gpasswd -a [username] autologin
+
+
+
+# The xf86-video-intel package must be installed.
+
+
+# /etc/X11/xorg.conf.d/20-intel.conf
+# The following text must be placed here for Intel graphics to change the backlight.
+Section "Device"
+	Identifier "Intel Graphics"
+	Driver "intel"
+	Option "Backlight" "intel_backlight"
+	Option "TearFree" "true"
+EndSection
+
+
+# /etc/X11/xorg.conf.d/30-touchpad.conf
+Section "InputClass"
+  Identifier "touchpad"
+  Driver "libinput"
+  MatchIsTouchpad "on"
+  Option "Tapping" "on"
+  Option "NaturalScrolling" "true"
+EndSection
+
+
+# /etc/systemd/system/battery-care-limit.service
+[Unit]
+Description=Battery Care Limit service.
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=bash -c "echo 80 > /sys/devices/platform/lg-laptop/battery_care_limit"
+
+[Install]
+WantedBy=multi-user.target
+
+
+# sudo systemctl daemon-reload
+# sudo systemctl enable battery-care-limit.service
