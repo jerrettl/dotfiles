@@ -324,3 +324,5 @@ bindsym $mod+Shift+comma exec "ph --database ~/Documents/passwords.kdbx type dme
 # Mount
 bindsym $mod+period exec "udiskie-mount $(udiskie-info -a | dmenu)"
 bindsym $mod+Shift+period exec "udiskie-umount -d $(udiskie-info -a | dmenu)"
+
+bindsym $mod+F11 exec "~/Downloads/script.sh"
