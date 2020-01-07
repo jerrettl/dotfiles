@@ -32,6 +32,11 @@ done
 #git config --global credential.helper 'cache --timeout=1500'
 git config credential.helper store # Big brain move
 
+# Set time
+timedatectl set-timezone America/New_York
+timedatectl set-ntp true
+timedatectl set-local-rtc false
+
 
 # Symlinks (disgusting)
 echo "Creating symlinks..."
