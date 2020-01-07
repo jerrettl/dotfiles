@@ -42,6 +42,8 @@ timedatectl set-local-rtc false
 echo "Creating symlinks..."
 ln -sfv ~/dotfiles/.bash_profile ~/.bash_profile
 ln -sfv ~/dotfiles/.bashrc ~/.bashrc
+ln -sfv ~/dotfiles/.config/chromium-flags.conf ~/.config/chromium-flags.conf
+ln -sfv ~/dotfiles/.config/chromium-flags.conf ~/.config/chrome-flags.conf
 ln -sfv ~/dotfiles/.config/clight.conf ~/.config/clight.conf
 mkdir -pv ~/.config/dunst
 ln -sfv ~/dotfiles/.config/dunst/dunstrc ~/.config/dunst/dunstrc
