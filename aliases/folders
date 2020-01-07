@@ -4,8 +4,7 @@ dotf	~/dotfiles
 www	/srv/http
 tv	/media/usb0/Files/Documents/tv
 movies	/media/usb0/Files/Documents/movies
-usb0	/media/usb0
-usb1	/media/usb1
+usb /run/media/jerrett/Jerrett
 d	~/Downloads
 D	~/Documents
 m	~/Music
