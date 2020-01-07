@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Defined in cron as:
+# Defined in cron (crontab -e) as:
 # */30 * * * * ~/dotfiles/scripts/pacman-i3.sh
 
 # Entry added to /etc/sudoers:
-# username ALL=(ALL) NOPASSWD: /usr/bin/pacman -Sy >/dev/null 2>&1, /usr/bin/pacman -Sywu --noconfirm >/dev/null 2>&1
+# <username> ALL=(ALL) NOPASSWD: /usr/bin/pacman -Sy >/dev/null 2>&1, /usr/bin/pacman -Sywu --noconfirm >/dev/null 2>&1
 
 update="pkill -RTMIN+2 i3blocks"
 
