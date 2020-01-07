@@ -63,6 +63,7 @@ ln -sfv ~/dotfiles/.config/nvim/ ~/.config/nvim
 mkdir ~/.config/pianobar
 mkfifo ~/.config/pianobar/ctl
 touch ~/.config/pianobar/nowplaying
+ln -sfv ~/dotfiles/.config/redshift.conf ~/.config/redshift.conf
 ln -sfv ~/dotfiles/.config/pianobar/config ~/.config/pianobar/config
 ln -sfv ~/dotfiles/.config/picom.conf ~/.config/picom.conf
 rm -rf ~/.config/qutebrowser
