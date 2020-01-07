@@ -81,6 +81,7 @@ xdotool
 xterm
 xorg-server
 xorg-xbacklight
+xorg-xinput
 xorg-xrdb
 youtube-dl
 zathura
