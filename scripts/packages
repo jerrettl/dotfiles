@@ -20,6 +20,7 @@ i3blocks
 i3lock-color-git
 imagemagick
 keepass
+libinput-gestures
 libnotify
 libotf
 lightdm

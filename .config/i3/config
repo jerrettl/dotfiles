@@ -78,6 +78,7 @@ exec_always --no-startup-id dunst
 exec_always --no-startup-id setxkbmap -option compose:ralt
 exec_always --no-startup-id ~/dotfiles/scripts/picom.sh
 exec_always --no-startup-id ~/dotfiles/scripts/per-machine-variables.sh
+exec --no-startup-id libinput-gestures-setup start
 # exec_always --no-startup-id VBoxClient-all
 # exec --no-startup-id clight
 
