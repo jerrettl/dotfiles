@@ -32,6 +32,11 @@ done
 #git config --global credential.helper 'cache --timeout=1500'
 git config credential.helper store # Big brain move
 
+# Start services
+sudo systemctl enable bluetooth.service
+sudo systemctl enable redshift-gtk.service
+sudo systemctl enable cronie.service
+
 # Set time
 timedatectl set-timezone America/New_York
 timedatectl set-ntp true
