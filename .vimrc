@@ -151,8 +151,7 @@ nmap <silent> ,/ :nohlsearch<CR>
 nmap J gj
 nmap K gk
 nmap <C-g> :%s/\s\+$//<cr>
-nmap <C-n> :set norelativenumber<CR>
-nmap <C-m> :set relativenumber<CR>
+nmap <C-n> :set relativenumber!<CR>
 nmap <F10> :NERDTreeToggle<CR>
 nmap <silent> <leader>sp :set spell!<cr>
 nmap <leader><C-l> :loadview<cr>
