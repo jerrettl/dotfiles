@@ -95,6 +95,7 @@ ln -sfv ~/dotfiles/.urxvt/ext/* ~/.urxvt/ext
 rm ~/.vim
 ln -sfv ~/dotfiles/.vim/ ~/.vim
 ln -sfv ~/dotfiles/.vimrc ~/.vimrc
+ln -sfv ~/dotfiles/.xinitrc ~/.xinitrc
 ln -sfv ~/dotfiles/.Xresources ~/.Xresources
 ln -sfv ~/dotfiles/.zshrc ~/.zshrc
 xrdb ~/.Xresources
