@@ -1,6 +1,15 @@
 ## Fixes and tweaks specific to the LG Gram.
 
 
+# Sorting pacman mirrors
+mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+rankmirrors -n 10 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
+
+
+# Pacman colors
+# uncomment the line Color in /etc/pacman.conf
+
+
 # In the LightDM settings file (/etc/lightdm/lightdm.conf), you must set:
 [LightDM]
 logind-check-graphical=true
