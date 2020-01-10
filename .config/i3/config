@@ -318,8 +318,8 @@ bindsym Shift+XF86MonBrightnessUp exec "xbacklight -inc 2"
 bindsym $mod+F6 exec --no-startup-id ~/dotfiles/scripts/airplane_mode.sh
 
 # Passhole
-bindsym $mod+comma exec "ph --database ~/Documents/passwords.kdbx type dmenu"
-bindsym $mod+Shift+comma exec "ph --database ~/Documents/passwords.kdbx type dmenu --tabbed"
+bindsym $mod+comma exec "ph --database ~/Documents/passwords.kdbx type 'dmenu -i'"
+bindsym $mod+Shift+comma exec "ph --database ~/Documents/passwords.kdbx type --tabbed 'dmenu -i'"
 
 # Mount
 bindsym $mod+period exec "udiskie-mount $(udiskie-info -a | dmenu)"
