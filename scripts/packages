@@ -25,6 +25,7 @@ i3lock-color-git
 inetutils
 imagemagick
 keepass
+korla-icon-theme
 libinput-gestures
 libnotify
 libotf
@@ -32,6 +33,7 @@ lightdm
 lightdm-gtk-greeter
 lxappearance
 man
+mojave-gtk-theme-git
 mpv-git
 msmtp
 neomutt
@@ -42,11 +44,9 @@ network-manager-applet
 ntfs-3g
 numlockx
 offlineimap
-x-arc-white
 p7zip
 pacman-contrib
 pango
-paper-icon-theme-git
 pavucontrol
 pcmanfm
 picom

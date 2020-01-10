@@ -200,15 +200,15 @@ bar {
 	status_command i3blocks
 
 	colors{
-		background #ffffff
-		statusline #000000
+		background #303030
+		statusline #ffffff
 		separator #444444
 
 # 											border 		background 		number
-		focused_workspace	 	#044f77 	#1badf8 			#000000
+		focused_workspace	 	#044f77 	#0a84ff 			#ffffff
 		active_workspace 		#444444 	#6c71c4 			#fdf6e3
-		inactive_workspace 	#888888 	#ffffff 			#333333
-		urgent_workspace 		#970800 	#ff3b30 			#ffffff
+		inactive_workspace 	#202020 	#696969 			#ffffff
+		urgent_workspace 		#970800 	#ff453a 			#ffffff
 	}
 }
 
