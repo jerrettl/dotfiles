@@ -26,3 +26,4 @@ cfM	~/.config/mpd/mpd.conf
 cfx	~/.Xresources
 xrc	~/.Xresources
 brc ~/.bashrc
+todo ~/Downloads/todo.txt
