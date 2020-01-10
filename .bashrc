@@ -37,7 +37,7 @@ HISTCONTROL=ignoredups:erasedups
 bind '"\t":menu-complete'
 
 # Fuzzy file completion
-bind -x '"\C-f":"xdotool type $(fzf)"'
+bind -x '"\C-f":"xdotool type $(find . | sed '"'"'s/^..//'"'"' | fzf)"'
 
 if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ]; then
   export LIBGL_ALWAYS_INDIRECT=1
