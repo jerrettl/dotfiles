@@ -77,6 +77,7 @@ mkdir -pv ~/.config/qutebrowser/
 ln -sfv ~/dotfiles/.config/qutebrowser/* ~/.config/qutebrowser
 mkdir -pv ~/.config/ranger
 ln -sfv ~/dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
+ln -sfv ~/dotfiles/.config/ranger/rifle.conf ~/.config/ranger/rifle.conf
 ln -sfv ~/dotfiles/.config/ranger/scope.sh ~/.config/ranger/scope.sh
 mkdir -pv ~/.config/rofi
 ln -sfv ~/dotfiles/.config/rofi/config ~/.config/rofi/config
