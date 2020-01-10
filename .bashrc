@@ -21,6 +21,9 @@ fi
 # Change directory by typing its name
 shopt -s autocd
 
+# When the shell exits, append to history, not overwrite
+shopt -s histappend
+
 # Disable Ctrl-J and Ctrl-S console breaking
 stty -ixon
 
