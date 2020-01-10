@@ -187,6 +187,7 @@ imap <C-S> <C-O>:update<CR>
 autocmd FileType c nmap <leader>b !make %:r<cr>
 autocmd FileType c nmap <C-b> !make %:r<cr>
 autocmd FileType c imap {<CR> {<CR>}<ESC>ka<CR>
+autocmd FileType c imap MAIN int main(void)<CR>{<CR><CR>return 0;<ESC>kO
 
 " ===================================
 " Plugin Configurations
