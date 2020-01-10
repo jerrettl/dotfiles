@@ -31,6 +31,9 @@ stty -ixon
 export HISTFILESIZE=-1
 export HISTSIZE=-1
 
+# Avoid duplicates
+HISTCONTROL=ignoredups:erasedups
+
 bind '"\t":menu-complete'
 
 # Fuzzy file completion
