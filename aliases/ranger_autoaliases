@@ -46,10 +46,10 @@ map gvv cd ~/Videos
 map tvv tab_new ~/Videos
 map mvv shell mv %s ~/Videos
 map Yvv shell cp -r %s ~/Videos
-map gsch cd ~/Documents/school
-map tsch tab_new ~/Documents/school
-map msch shell mv %s ~/Documents/school
-map Ysch shell cp -r %s ~/Documents/school
+map gsch cd /mnt/shared/School
+map tsch tab_new /mnt/shared/School
+map msch shell mv %s /mnt/shared/School
+map Ysch shell cp -r %s /mnt/shared/School
 map gmm cd /media
 map tmm tab_new /media
 map mmm shell mv %s /media
