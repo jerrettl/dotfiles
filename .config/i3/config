@@ -325,3 +325,6 @@ bindsym $mod+period exec "udiskie-mount $(udiskie-info -a | dmenu)"
 bindsym $mod+Shift+period exec "udiskie-umount -d $(udiskie-info -a | dmenu)"
 
 bindsym $mod+F11 exec "~/Downloads/script.sh"
+
+# Chrome quick-open
+bindsym $mod+X exec "~/dotfiles/scripts/chrome-quickopen.sh"
