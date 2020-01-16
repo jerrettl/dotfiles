@@ -18,7 +18,7 @@ Xft.hinting: 1
 Xft.hintstyle: hintfull
 
 ! Primary theme colors
-URxvt*background: #090909
+URxvt*background: #1d1d1d
 URxvt*foreground: #f5f5f5
 
 ! Bold fonts
