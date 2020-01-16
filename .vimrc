@@ -189,6 +189,9 @@ autocmd FileType c nmap <leader>b !make %:r<cr>
 autocmd FileType c nmap <C-b> !make %:r<cr>
 autocmd FileType c imap {<CR> {<CR>}<ESC>ka<CR>
 autocmd FileType c imap MAIN int main(void)<CR>{<CR><CR>return 0;<ESC>kO
+autocmd FileType c imap STDIO #include <stdio.h>
+autocmd FileType c imap STDLIB #include <stdlib.h>
+autocmd FileType c imap STRING #include <string.h>
 
 " ===================================
 " Plugin Configurations
