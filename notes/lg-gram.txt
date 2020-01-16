@@ -61,3 +61,14 @@ WantedBy=multi-user.target
 
 # sudo systemctl daemon-reload
 # sudo systemctl enable battery-care-limit.service
+
+
+# Power Saving
+# /etc/modprobe.d/audio_powersave.conf
+options snd_hda_intel power_save=1
+
+# /etc/modprobe.d/iwlwifi.conf
+options iwlwifi power_save=1
+
+# /etc/tmpfiles.d/energy_performance_preference.conf
+w /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference - - - - power
