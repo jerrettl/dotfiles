@@ -78,6 +78,7 @@ exec_always --no-startup-id setxkbmap -option compose:ralt
 exec_always --no-startup-id ~/dotfiles/scripts/picom.sh
 exec_always --no-startup-id ~/dotfiles/scripts/per-machine-variables.sh
 exec --no-startup-id libinput-gestures-setup start
+exec --no-startup-id sudo powertop --auto-tune
 
 # change focus
 bindsym $mod+h focus left
