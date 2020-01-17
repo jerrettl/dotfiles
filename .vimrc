@@ -184,6 +184,9 @@ nmap <C-S> :update<CR>
 vmap <C-S> <C-C>:update<CR>
 imap <C-S> <C-O>:update<CR>
 
+" Auto clear when a command is entered
+autocmd CmdlineLeave : echo ''
+
 " C stuff
 autocmd FileType c nmap <leader>b !make %:r<cr>
 autocmd FileType c nmap <C-b> !make %:r<cr>
