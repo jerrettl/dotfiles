@@ -75,3 +75,13 @@ options iwlwifi power_save=1
 
 # /etc/tmpfiles.d/energy_performance_preference.conf
 w /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference - - - - power
+
+# Plymouth boot logo (optional)
+- install plymouth (yay)
+- install plymouth-theme-monoarch
+- install ttf-dejavu
+- add 'plymouth' to HOOKS in /etc/mkinitcpio.conf after base and udev.
+- replace 'encrypt' with 'plymouth-encrypt' in HOOKS
+- plymouth-set-default-theme -R monoarch
+- add 'quiet splash' to GRUB_CMDLINE_LINUX_DEFAULT in /etc/default/grub
+- grub-mkconfig -o /boot/grub/grub.cfg
