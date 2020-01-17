@@ -22,6 +22,9 @@ sudo groupadd -r autologin
 sudo gpasswd -a [username] autologin
 
 
+# Append to sudoers (with visudo)
+<username> ALL=(ALL) NOPASSWD: /usr/bin/powertop --auto-tune, /usr/bin/rfkill block bluetooth, /usr/bin/pacman -Syy, /usr/bin/pacman -Syywu --noconfirm
+
 
 # The xf86-video-intel package must be installed.
 
