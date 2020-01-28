@@ -148,20 +148,22 @@ hi Visual ctermfg=none ctermbg=239 guibg=Grey
 " ===================================
 " Mappings
 
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
-nmap ; :
-nmap <up> gk
-nmap <down> gj
-nmap <silent> ,/ :nohlsearch<CR>
-nmap J gj
-nmap K gk
-nmap <C-g> :%s/\s\+$//<cr>
-nmap <C-n> :set relativenumber!<CR>
-nmap <F10> :NERDTreeToggle<CR>
-nmap <silent> <leader>sp :set spell!<cr>
-nmap <leader><C-l> :loadview<cr>
-nmap ! :!
+nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
+nnoremap ; :
+nnoremap : ;
+nnoremap <up> gk
+nnoremap <down> gj
+nnoremap <silent> ,/ :nohlsearch<CR>
+nnoremap J gj
+nnoremap K gk
+nnoremap <C-g> :%s/\s\+$//<cr>
+nnoremap <C-n> :set relativenumber!<CR>
+nnoremap <F10> :NERDTreeToggle<CR>
+nnoremap <silent> <leader>sp :set spell!<cr>
+nnoremap <leader><C-l> :loadview<cr>
+nnoremap ! :!
+nnoremap Q <nop>
 
 " Window navigation
 nnoremap <C-h> <C-w>h
@@ -186,7 +188,7 @@ imap kj <esc>
 imap <C-a> <esc>jA
 
 " Ctrl-S saving
-nmap <C-S> :update<CR>
+nnoremap <C-S> :update<CR>
 vmap <C-S> <C-C>:update<CR>
 imap <C-S> <C-O>:update<CR>
 
@@ -194,8 +196,8 @@ imap <C-S> <C-O>:update<CR>
 autocmd CmdlineLeave : echo ''
 
 " C stuff
-autocmd FileType c nmap <leader>b !make %:r<cr>
-autocmd FileType c nmap <C-b> !make %:r<cr>
+autocmd FileType c nnoremap <leader>b !make %:r<cr>
+autocmd FileType c nnoremap <C-b> !make %:r<cr>
 autocmd FileType c imap {<CR> {<CR>}<ESC>ka<CR>
 autocmd FileType c imap MAIN int main(void)<CR>{<CR><CR>return 0;<ESC>kO
 autocmd FileType c imap STDIO #include <stdio.h>
@@ -239,9 +241,9 @@ let g:syntastic_mode_map = {
       \ "passive_filetypes": [] }
 let g:syntastic_python_checkers=['flake8', 'python']
 let g:syntastic_sh_checkers=['shellcheck', 'bashate']
-nmap <F8> :SyntasticCheck<cr>
-nmap ]sd :lopen<cr>
-nmap [sd :lclose<cr>
+nnoremap <F8> :SyntasticCheck<cr>
+nnoremap ]sd :lopen<cr>
+nnoremap [sd :lclose<cr>
 hi SyntasticErrorSign cterm=none ctermfg=white ctermbg=160 "dark red
 
 
@@ -270,7 +272,7 @@ imap i <Plug>Tex_InsertItemOnThisLine
 
 
 " Goyo
-nmap <F12> :Goyo<cr>
+nnoremap <F12> :Goyo<cr>
 imap <F12> <C-o>:Goyo<cr>
 
 
