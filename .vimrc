@@ -112,6 +112,7 @@ set noshowmode      " Don't show the mode on the last line (this is done with li
 set laststatus=2    " Enable status line for all windows
 set display+=lastline  " As much as possible will be displayed, even if the line is cut off (prevents displaying @ on lines that are longer than end of screen)
 set shell=/bin/bash
+set scrolloff=3     " Set a minimum amount of lines above and below the cursor
 
 if !has('nvim')
   set noesckeys     " Function keys that start with <ESC> are recognised in insert mode (only necessary in vim, not neovim)
