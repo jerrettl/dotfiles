@@ -14,14 +14,6 @@ map gwww cd /srv/http
 map twww tab_new /srv/http
 map mwww shell mv %s /srv/http
 map Ywww shell cp -r %s /srv/http
-map gtv cd /media/usb0/Files/Documents/tv
-map ttv tab_new /media/usb0/Files/Documents/tv
-map mtv shell mv %s /media/usb0/Files/Documents/tv
-map Ytv shell cp -r %s /media/usb0/Files/Documents/tv
-map gmovies cd /media/usb0/Files/Documents/movies
-map tmovies tab_new /media/usb0/Files/Documents/movies
-map mmovies shell mv %s /media/usb0/Files/Documents/movies
-map Ymovies shell cp -r %s /media/usb0/Files/Documents/movies
 map gusb cd /run/media/jerrett/Jerrett
 map tusb tab_new /run/media/jerrett/Jerrett
 map musb shell mv %s /run/media/jerrett/Jerrett
@@ -74,6 +66,26 @@ map gsha cd /mnt/shared
 map tsha tab_new /mnt/shared
 map msha shell mv %s /mnt/shared
 map Ysha shell cp -r %s /mnt/shared
+map gcda cd /mnt/shared/School/cda-3103c
+map tcda tab_new /mnt/shared/School/cda-3103c
+map mcda shell mv %s /mnt/shared/School/cda-3103c
+map Ycda shell cp -r %s /mnt/shared/School/cda-3103c
+map gcop cd /mnt/shared/School/cop-3502c
+map tcop tab_new /mnt/shared/School/cop-3502c
+map mcop shell mv %s /mnt/shared/School/cop-3502c
+map Ycop shell cp -r %s /mnt/shared/School/cop-3502c
+map gphi cd /mnt/shared/School/phi-2010
+map tphi tab_new /mnt/shared/School/phi-2010
+map mphi shell mv %s /mnt/shared/School/phi-2010
+map Yphi shell cp -r %s /mnt/shared/School/phi-2010
+map gwoh cd /mnt/shared/School/woh-2012
+map twoh tab_new /mnt/shared/School/woh-2012
+map mwoh shell mv %s /mnt/shared/School/woh-2012
+map Ywoh shell cp -r %s /mnt/shared/School/woh-2012
+map gtxt cd /mnt/shared/School/Textbooks
+map ttxt tab_new /mnt/shared/School/Textbooks
+map mtxt shell mv %s /mnt/shared/School/Textbooks
+map Ytxt shell cp -r %s /mnt/shared/School/Textbooks
 map zrc shell $EDITOR ~/.zshrc
 map zshrc shell $EDITOR ~/.zshrc
 map vrc shell $EDITOR ~/.vimrc

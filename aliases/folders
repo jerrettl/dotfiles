@@ -2,8 +2,6 @@ doc	~/Documents
 dow	~/Downloads
 dotf	~/dotfiles
 www	/srv/http
-tv	/media/usb0/Files/Documents/tv
-movies	/media/usb0/Files/Documents/movies
 usb /run/media/jerrett/Jerrett
 d	~/Downloads
 D	~/Documents
@@ -17,3 +15,8 @@ aa ~/dotfiles/aliases
 desktop /mnt/c/Users/Jerre/Desktop/
 css /mnt/c/Users/Jerre/Documents/Programming/C/scratch-space
 sha /mnt/shared
+cda /mnt/shared/School/cda-3103c
+cop /mnt/shared/School/cop-3502c
+phi /mnt/shared/School/phi-2010
+woh /mnt/shared/School/woh-2012
+txt /mnt/shared/School/Textbooks
