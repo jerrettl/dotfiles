@@ -70,6 +70,11 @@ Plug 'hrother/offlineimaprc.vim'
 "Plug 'Valloric/YouCompleteMe'
 "Plug 'nvie/vim-flake8', { 'for': 'python' }
 "Plug 'tpope/vim-unimpaired'
+
+" Pandoc markdown editing
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+
 call plug#end()
 
 
@@ -329,3 +334,14 @@ au BufNewFile,BufRead *.py
       \ set fileformat=unix
 
 let python_highlight_all=1
+
+
+" indentLine
+let g:indentLine_setConceal = 0
+let g:indentLine_fileTypeExclude = ['markdown', 'pandoc']
+set concealcursor=nc
+set conceallevel=2
+
+
+" Pandoc
+let g:pandoc#spell#enabled = 0
