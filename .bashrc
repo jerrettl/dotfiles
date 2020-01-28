@@ -43,3 +43,5 @@ if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ]; then
   export LIBGL_ALWAYS_INDIRECT=1
   export DISPLAY=:0
 fi
+
+set -o vi
