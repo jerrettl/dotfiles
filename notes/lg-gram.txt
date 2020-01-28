@@ -78,7 +78,7 @@ w /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference - - - - 
 
 # Plymouth boot logo (optional)
 - install plymouth (yay)
-- install plymouth-theme-monoarch
+- install plymouth-theme-monoarch (yay)
 - install ttf-dejavu
 - add 'plymouth' to HOOKS in /etc/mkinitcpio.conf after base and udev.
 - replace 'encrypt' with 'plymouth-encrypt' in HOOKS
