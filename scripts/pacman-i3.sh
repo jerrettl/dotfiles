@@ -10,6 +10,7 @@ update="pkill -RTMIN+2 i3blocks"
 
 case "$BLOCK_BUTTON" in
 	1) urxvt -e sh -c "pacman -Qu --color=auto && echo && sudo pacman -Su --color=auto" ;;
+  3) echo "" ; $update ; exit ;;
 esac
 
 # This command does not need a password since an exception has been created for it in sudoers
