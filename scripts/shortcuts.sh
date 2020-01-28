@@ -24,3 +24,5 @@ cat "$folders" | awk '{print "config.bind(\";"$1"\", \"set downloads.location.di
 # Config bindings
 cat "$configs" | awk '{print "alias "$1"=\"$EDITOR "$2"\""}' >> "$bash_shortcuts"
 cat "$configs" | awk '{print "map "$1" shell $EDITOR "$2""}' >> "$ranger_shortcuts"
+
+source ~/.bashrc
