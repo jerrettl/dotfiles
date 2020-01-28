@@ -204,6 +204,9 @@ autocmd FileType c imap STDIO #include <stdio.h>
 autocmd FileType c imap STDLIB #include <stdlib.h>
 autocmd FileType c imap STRING #include <string.h>
 
+" CSS autocmds
+autocmd FileType css imap {<CR> {<CR>}<ESC>O
+
 " ===================================
 " Plugin Configurations
 
