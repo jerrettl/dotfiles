@@ -2,6 +2,9 @@
 # Location: ~/.config/i3/config
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# Start with a black screen
+exec --no-startup-id hsetroot -solid "#000000"
+
 # Mod1=<Alt> Mod4=<Super>
 set $mod Mod4
 
