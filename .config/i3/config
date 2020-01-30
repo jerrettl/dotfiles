@@ -317,8 +317,8 @@ bindsym Shift+XF86MonBrightnessUp exec "xbacklight -inc 2"
 bindsym $mod+F6 exec --no-startup-id ~/dotfiles/scripts/airplane_mode.sh
 
 # Passhole
-bindsym $mod+comma exec "ph --database ~/Documents/passwords.kdbx type 'dmenu -i'"
-bindsym $mod+Shift+comma exec "ph --database ~/Documents/passwords.kdbx type --tabbed 'dmenu -i'"
+bindsym $mod+comma exec "ph --database ~/Documents/passwords.kdbx type 'dmenu -i -nb \\"#303030\\" -nf \\"#ffffff\\" -sb \\"#ffffff\\" -sf \\"#303030\\" -fn \\"HelveticaNeue-11\\"'"
+bindsym $mod+Shift+comma exec "ph --database ~/Documents/passwords.kdbx type --tabbed 'dmenu -i -nb \\"#303030\\" -nf \\"#ffffff\\" -sb \\"#ffffff\\" -sf \\"#303030\\" -fn \\"HelveticaNeue-11\\"'"
 
 # Mount
 bindsym $mod+period exec "udiskie-mount $(udiskie-info -a | dmenu)"
