@@ -191,8 +191,8 @@ imap <C-a> <esc>jA
 
 " Ctrl-S saving
 nnoremap <C-S> :update<CR>
-vmap <C-S> <C-C>:update<CR>
-imap <C-S> <C-O>:update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
 
 " Auto clear when a command is entered
 autocmd CmdlineLeave : echo ''
