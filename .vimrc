@@ -165,6 +165,8 @@ nnoremap <leader><C-l> :loadview<cr>
 nnoremap ! :!
 nnoremap Q <nop>
 
+nmap \ a_<esc>r
+
 " Window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
