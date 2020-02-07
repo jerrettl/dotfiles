@@ -50,6 +50,7 @@ pacman-contrib
 pango
 pavucontrol
 pcmanfm
+perl-anyevent-i3
 picom
 pkgfile
 powertop
