@@ -86,6 +86,10 @@ map gtxt cd /mnt/shared/School/Textbooks
 map ttxt tab_new /mnt/shared/School/Textbooks
 map mtxt shell mv %s /mnt/shared/School/Textbooks
 map Ytxt shell cp -r %s /mnt/shared/School/Textbooks
+map gtv cd /mnt/shared/saved-tv
+map ttv tab_new /mnt/shared/saved-tv
+map mtv shell mv %s /mnt/shared/saved-tv
+map Ytv shell cp -r %s /mnt/shared/saved-tv
 map zrc shell $EDITOR ~/.zshrc
 map zshrc shell $EDITOR ~/.zshrc
 map vrc shell $EDITOR ~/.vimrc
@@ -115,3 +119,4 @@ map cfx shell $EDITOR ~/.Xresources
 map xrc shell $EDITOR ~/.Xresources
 map brc shell $EDITOR ~/.bashrc
 map todo shell $EDITOR ~/Downloads/todo.txt
+map scratch shell $EDITOR ~/Downloads/scratch
