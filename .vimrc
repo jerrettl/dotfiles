@@ -209,6 +209,8 @@ autocmd FileType c imap STRING #include <string.h>
 " CSS autocmds
 autocmd FileType css,javascript imap {<CR> {<CR>}<ESC>O
 
+autocmd FileType json set conceallevel=0
+
 " ===================================
 " Plugin Configurations
 
