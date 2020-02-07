@@ -328,3 +328,6 @@ bindsym $mod+F11 exec "~/Downloads/script.sh"
 
 # Chrome quick-open
 bindsym $mod+X exec "~/dotfiles/scripts/chrome-quickopen.sh"
+
+# Saved layout loader
+bindsym $mod+R exec "~/dotfiles/scripts/load-layout.sh"
