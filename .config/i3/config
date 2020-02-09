@@ -61,8 +61,9 @@ bindsym Shift+Print exec flameshot gui
 # Shortcut applications
 bindsym $mod+F1 exec chromium
 bindsym $mod+Shift+F1 exec qutebrowser
-bindsym $mod+F2 exec $terminal -e bash -c "cd ~/dotfiles && git pull && sleep 5"
-bindsym $mod+Shift+F2 exec $terminal -e yay -Syyu --needed --norebuild
+bindsym $mod+F2 exec emacs
+#bindsym $mod+F2 exec $terminal -e bash -c "cd ~/dotfiles && git pull && sleep 5"
+#bindsym $mod+Shift+F2 exec $terminal -e yay -Syyu --needed --norebuild
 bindsym $mod+F3 exec $terminal -e ranger
 bindsym $mod+Shift+F3 exec pcmanfm
 
