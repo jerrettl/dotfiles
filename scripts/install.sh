@@ -110,4 +110,3 @@ xrdb ~/.Xresources
 # Get some linting for vim
 pip3 install --user flake8 \
 	bashate
-sudo pip3 install passhole
