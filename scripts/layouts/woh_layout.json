@@ -41,10 +41,8 @@
             "percent": 0.30,
             "swallows": [
             {
-                "class": "^URxvt$",
-                "instance": "^urxvt$",
-                "title": "^Chapter\\ [0-9]*\\.md\\ \\(\\/mnt\\/shared\\/School\\/woh\\-2012\\/Notes\\)\\ \\-\\ NVIM$",
-                "title": "^ranger$"
+                "class": "^[eE]macs$",
+                "instance": "^[eE]macs$"
             }
             ],
             "type": "con"
