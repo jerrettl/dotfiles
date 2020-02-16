@@ -36,6 +36,7 @@ git config credential.helper store # Big brain move
 sudo systemctl enable bluetooth.service
 sudo systemctl enable redshift-gtk.service
 sudo systemctl enable cronie.service
+systemctl --user enable emacs
 
 # Set time
 timedatectl set-timezone America/New_York
