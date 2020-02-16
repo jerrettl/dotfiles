@@ -1,10 +1,10 @@
-doc	~/Documents
-dow	~/Downloads
 dotf	~/dotfiles
 www	/srv/http
 usb /run/media/jerrett/Jerrett
 d	~/Downloads
 D	~/Documents
+doc	~/Documents
+dow	~/Downloads
 m	~/Music
 pp	~/Pictures
 vv	~/Videos

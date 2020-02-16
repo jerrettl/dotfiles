@@ -1,11 +1,3 @@
-map gdoc cd ~/Documents
-map tdoc tab_new ~/Documents
-map mdoc shell mv %s ~/Documents
-map Ydoc shell cp -r %s ~/Documents
-map gdow cd ~/Downloads
-map tdow tab_new ~/Downloads
-map mdow shell mv %s ~/Downloads
-map Ydow shell cp -r %s ~/Downloads
 map gdotf cd ~/dotfiles
 map tdotf tab_new ~/dotfiles
 map mdotf shell mv %s ~/dotfiles
@@ -26,6 +18,14 @@ map gD cd ~/Documents
 map tD tab_new ~/Documents
 map mD shell mv %s ~/Documents
 map YD shell cp -r %s ~/Documents
+map gdoc cd ~/Documents
+map tdoc tab_new ~/Documents
+map mdoc shell mv %s ~/Documents
+map Ydoc shell cp -r %s ~/Documents
+map gdow cd ~/Downloads
+map tdow tab_new ~/Downloads
+map mdow shell mv %s ~/Downloads
+map Ydow shell cp -r %s ~/Downloads
 map gm cd ~/Music
 map tm tab_new ~/Music
 map mm shell mv %s ~/Music
