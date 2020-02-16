@@ -68,6 +68,7 @@ rofi
 rxvt-unicode-pixbuf
 scrot
 shellcheck
+sshfs
 system-config-printer
 system-san-francisco-font-git
 tmux
