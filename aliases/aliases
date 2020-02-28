@@ -25,6 +25,7 @@ alias spac='sudo pacman --color=auto'
 alias sudo='sudo '
 alias dmenu='dmenu -nb "#303030" -nf "#ffffff" -sb "#ffffff" -sf "#303030" -fn "HelveticaNeue-11"'
 alias e="emacsclient -c --alternate-editor emacs"
+alias pqu='pacman -Qu'
 
 # ==== Common Directories
 alias dotf='cd ~/dotfiles && gstu'
