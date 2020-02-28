@@ -13,4 +13,8 @@ if [ "$selection" == "World History Outlining" ]; then
   zathura -c ~/dotfiles/.config/zathura/nogui /mnt/shared/School/Textbooks/Robert\ W.\ Strayer\,\ Eric\ W.\ Nelson\ -\ Ways\ of\ the\ World_\ A\ Brief\ Global\ History\ with\ Sources\,\ Combined\ Volume-Bedford_St.\ Martin’s\ \(2015\).pdf &
   #urxvt -e ranger /mnt/shared/School/woh-2012/Notes/ &
   emacs /mnt/shared/School/woh-2012/Notes/ &
+elif [ "$selection" == "Watch TV" ]; then
+  i3-msg "workspace $workspace; layout tabbed"
+  chromium --new-window http://trakt.tv/dashboard &
+  urxvt -e ranger /mnt/shared/saved-tv &
 fi
