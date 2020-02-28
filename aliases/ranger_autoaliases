@@ -74,6 +74,10 @@ map gcop cd /mnt/shared/School/cop-3502c
 map tcop tab_new /mnt/shared/School/cop-3502c
 map mcop shell mv %s /mnt/shared/School/cop-3502c
 map Ycop shell cp -r %s /mnt/shared/School/cop-3502c
+map gcopc cd /mnt/shared/School/cop-3502c/code
+map tcopc tab_new /mnt/shared/School/cop-3502c/code
+map mcopc shell mv %s /mnt/shared/School/cop-3502c/code
+map Ycopc shell cp -r %s /mnt/shared/School/cop-3502c/code
 map gphi cd /mnt/shared/School/phi-2010
 map tphi tab_new /mnt/shared/School/phi-2010
 map mphi shell mv %s /mnt/shared/School/phi-2010
