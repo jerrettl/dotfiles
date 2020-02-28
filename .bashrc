@@ -44,4 +44,6 @@ if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ]; then
   export DISPLAY=:0
 fi
 
+# Vi mode (with some modifications)
 set -o vi
+bind '"jk":vi-movement-mode'

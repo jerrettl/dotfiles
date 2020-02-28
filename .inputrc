@@ -8,3 +8,10 @@ set completion-ignore-case on
 
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+
+set editing-mode vi
+$if mode=vi
+  set keymap vi-command
+  "k":history-search-backward
+  "j":history-search-forward
+$endif
