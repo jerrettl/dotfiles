@@ -27,6 +27,7 @@ alias dmenu='dmenu -nb "#303030" -nf "#ffffff" -sb "#ffffff" -sf "#303030" -fn "
 alias e="emacsclient -c --alternate-editor emacs"
 alias pqu='pacman -Qu'
 alias psu='sudo pacman -Su'
+alias yayu='yay -a -Su'
 
 # ==== Common Directories
 alias dotf='cd ~/dotfiles && gstu'
