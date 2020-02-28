@@ -23,7 +23,7 @@ sudo gpasswd -a [username] autologin
 
 
 # Append to sudoers (with visudo)
-<username> ALL=(ALL) NOPASSWD: /usr/bin/powertop --auto-tune, /usr/bin/rfkill block bluetooth, /usr/bin/pacman -Syy, /usr/bin/pacman -Syywu --noconfirm
+<username> ALL=(ALL) NOPASSWD: /usr/bin/powertop --auto-tune, /usr/bin/rfkill block bluetooth, /usr/bin/pacman -Syy, /usr/bin/pacman -Syywu --noconfirm, /usr/bin/tee /sys/devices/platform/lg-laptop/leds/tpad_led/brightness
 
 
 # The xf86-video-intel package must be installed.
