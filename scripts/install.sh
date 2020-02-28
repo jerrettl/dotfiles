@@ -85,6 +85,7 @@ ln -sfv ~/dotfiles/.config/rofi/config ~/.config/rofi/config
 ln -sfv ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi.bak
 mkdir -pv ~/.config/zathura
 ln -sfv ~/dotfiles/.config/zathura/gui/zathurarc ~/.config/zathura/zathurarc
+ln -sfv ~/dotfiles/.emacs ~/.emacs
 ln -sfv ~/dotfiles/.inputrc ~/.inputrc
 rm -f ~/.msmtp
 ln -sfv ~/dotfiles/.msmtp/ ~/.msmtp
