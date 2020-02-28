@@ -47,3 +47,4 @@ fi
 # Vi mode (with some modifications)
 set -o vi
 bind '"jk":vi-movement-mode'
+bind '"\C-l":clear-screen'
