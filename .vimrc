@@ -285,8 +285,20 @@ imap i <Plug>Tex_InsertItemOnThisLine
 
 
 " Goyo
+function! s:goyo_enter()
+  highlight EndOfBuffer ctermfg=234
+endfunction
+
+function! s:goyo_leave()
+  colorscheme default
+endfunction
+
 nnoremap <F12> :Goyo<cr>
 imap <F12> <C-o>:Goyo<cr>
+
+autocmd! user GoyoEnter nested call <SID>goyo_enter()
+autocmd! user GoyoLeave nested call <SID>goyo_leave()
+
 
 
 " YouCompleteMe
