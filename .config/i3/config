@@ -18,7 +18,7 @@ font pango:SFNS Display 10
 floating_modifier $mod
 
 set $terminal urxvt
-set $lock i3lock -B 10 --ringcolor=ccccccff --insidecolor=ffffff00 --keyhlcolor=3333ccff --bshlcolor=cc3333ff --ringvercolor=ccccccff --insidevercolor=00000000 --verifcolor=ffffffff --wrongcolor=ffffffff --linecolor=00000000 --separatorcolor=00000000 --timecolor=ffffffff --time-font="Helvetica Neue" --date-font="Helvetica Neue" --layout-font="Helvetica Neue" --verif-font="Helvetica Neue" --wrong-font="Helvetica Neue"
+set $lock i3lock -B 10 --ringcolor=ccccccff --insidecolor=ffffff00 --keyhlcolor=3333ccff --bshlcolor=cc3333ff --ringvercolor=ccccccff --insidevercolor=00000000 --verifcolor=ffffffff --wrongcolor=ffffffff --linecolor=00000000 --separatorcolor=00000000 --timecolor=ffffffff --datecolor=ffffffff --time-font="Helvetica Neue" --date-font="Helvetica Neue" --layout-font="Helvetica Neue" --verif-font="Helvetica Neue" --wrong-font="Helvetica Neue" --pass-screen-keys
 
 # The basics
 bindsym $mod+Return exec $terminal
