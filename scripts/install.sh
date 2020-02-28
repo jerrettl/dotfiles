@@ -83,6 +83,8 @@ ln -sfv ~/dotfiles/.config/ranger/scope.sh ~/.config/ranger/scope.sh
 mkdir -pv ~/.config/rofi
 ln -sfv ~/dotfiles/.config/rofi/config ~/.config/rofi/config
 ln -sfv ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi.bak
+mkdir -pv ~/.config/zathura
+ln -sfv ~/dotfiles/.config/zathura/gui/zathurarc ~/.config/zathura/zathurarc
 ln -sfv ~/dotfiles/.inputrc ~/.inputrc
 rm -f ~/.msmtp
 ln -sfv ~/dotfiles/.msmtp/ ~/.msmtp
