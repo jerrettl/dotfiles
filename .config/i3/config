@@ -224,6 +224,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 bar {
 	status_command i3blocks
+	mode dock
 
 	colors{
 		background #303030
@@ -237,6 +238,9 @@ bar {
 		urgent_workspace 		#970800 	#ff453a 			#ffffff
 	}
 }
+
+bindsym $mod+Y bar mode hide
+bindsym $mod+Shift+Y bar mode dock
 
 # Gaps
 gaps inner 0
