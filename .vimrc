@@ -208,6 +208,9 @@ inoremap <C-S> <C-O>:update<CR>
 " Auto clear when a command is entered
 autocmd CmdlineLeave : echo ''
 
+" Moving v-blocks
+vnoremap L dpgv
+
 " C stuff
 autocmd FileType c nnoremap <leader>b !make %:r<cr>
 autocmd FileType c nnoremap <C-b> !make %:r<cr>
