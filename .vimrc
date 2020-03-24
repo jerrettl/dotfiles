@@ -180,6 +180,10 @@ nnoremap <C-j> <C-w>j
 let g:BASH_Ctrl_j = 'off' " Sometimes bash may treat Ctrl+J weird. Disable that behavior.
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+inoremap <C-h> <esc><C-w>h
+inoremap <C-j> <esc><C-w>j
+inoremap <C-k> <esc><C-w>k
+inoremap <C-l> <esc><C-w>l
 
 " Forgot to get root access before editing? No worries!
 cmap w!! w !sudo tee % >/dev/null
