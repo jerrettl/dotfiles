@@ -83,6 +83,7 @@ call plug#end()
 
 " Basics
 let mapleader=","
+let maplocalleader="-"
 set encoding=utf8
 syntax on           " Syntax highlighting
 set mouse=a         " Enable mouse support (yes crucify me)
