@@ -86,6 +86,14 @@ map gwoh cd /mnt/shared/School/woh-2012
 map twoh tab_new /mnt/shared/School/woh-2012
 map mwoh shell mv %s /mnt/shared/School/woh-2012
 map Ywoh shell cp -r %s /mnt/shared/School/woh-2012
+map gwohn cd /mnt/shared/School/woh-2012/Notes
+map twohn tab_new /mnt/shared/School/woh-2012/Notes
+map mwohn shell mv %s /mnt/shared/School/woh-2012/Notes
+map Ywohn shell cp -r %s /mnt/shared/School/woh-2012/Notes
+map gwohr cd /mnt/shared/School/woh-2012/Review
+map twohr tab_new /mnt/shared/School/woh-2012/Review
+map mwohr shell mv %s /mnt/shared/School/woh-2012/Review
+map Ywohr shell cp -r %s /mnt/shared/School/woh-2012/Review
 map gtxt cd /mnt/shared/School/Textbooks
 map ttxt tab_new /mnt/shared/School/Textbooks
 map mtxt shell mv %s /mnt/shared/School/Textbooks
@@ -124,3 +132,4 @@ map xrc shell $EDITOR ~/.Xresources
 map brc shell $EDITOR ~/.bashrc
 map todo shell $EDITOR ~/Downloads/todo.txt
 map scratch shell $EDITOR ~/Downloads/scratch
+map copn shell $EDITOR /mnt/shared/School/cop-3502c/COP\ 3502\ Notes.md
