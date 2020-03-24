@@ -67,6 +67,28 @@ bindsym $mod+Shift+F1 exec qutebrowser
 #bindsym $mod+Shift+F2 exec $terminal -e yay -Syyu --needed --norebuild
 bindsym $mod+Shift+F3 exec pcmanfm
 
+# Shift Fn mode
+set $extra_fn_mode Shift+FN
+bindsym $mod+grave mode "$extra_fn_mode"
+
+mode "$extra_fn_mode" {
+	bindsym F1 exec qutebrowser, mode default
+	#bindsym F2
+	bindsym F3 exec pcmanfm, mode default
+	#bindsym F4
+	#bindsym F5
+	#bindsym F6
+	#bindsym F7
+	#bindsym F8
+	#bindsym F9
+	#bindsym F10
+	#bindsym F11
+	#bindsym F12
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
 # On startup
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpaper.jpg
 exec_always --no-startup-id nm-applet
