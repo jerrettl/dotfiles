@@ -44,7 +44,11 @@ There are two things you can do about this warning:
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "PragmataProMono Nerd Font Mono" :foundry "fsdf" :slant normal :weight normal :height 108 :width normal)))))
+ '(default ((t (:family "PragmataProMono Nerd Font Mono" :foundry "fsdf" :slant normal :weight normal :height 108 :width normal))))
+ '(markdown-code-face ((t (:family "PragmataProMono Nerd Font Mono"))))
+ '(markdown-header-face ((t (:inherit font-lock-function-name-face :weight bold))))
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.6))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.4)))))
 
 (require 'evil)
 (evil-mode 1)
@@ -72,10 +76,16 @@ There are two things you can do about this warning:
       (progn
         (fringe-mode nil)))))
 
+(defun helvetica-face-set ()
+   (interactive)
+   (setq buffer-face-mode-face '(:family "Helvetica Neue"))
+   (buffer-face-mode))
+
 (add-hook 'markdown-mode-hook
           (lambda ()
             (visual-line-mode)
-            (flyspell-mode)))
+            (flyspell-mode)
+            (helvetica-face-set)))
 
 (global-set-key (kbd "<f12>") 'writeroom-mode)   ; open writeroom-mode
 
