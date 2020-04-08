@@ -358,3 +358,6 @@ bindsym $mod+R exec "~/dotfiles/scripts/load-layout.sh"
 
 # Toggle touchpad. Pressing FN-F5 will cause XF86Tools to be sent to the system.
 bindsym XF86Tools exec "~/dotfiles/scripts/toggle-touchpad.sh"
+
+# Battery mode script
+bindsym $mod+Shift+B exec $terminal -e ~/dotfiles/scripts/change-cpu-mode.sh
