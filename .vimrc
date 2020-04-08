@@ -147,6 +147,9 @@ function! s:new_colors()
   hi LineNr cterm=none ctermfg=251 "grey
   hi Visual ctermfg=none ctermbg=239 guibg=Grey
   hi EndOfBuffer ctermfg=12 gui=bold guifg=Blue
+  hi DiffChange ctermfg=white ctermbg=8
+  hi DiffAdd ctermfg=black ctermbg=2
+  hi DiffDelete ctermfg=black ctermbg=1
 endfunction
 autocmd! ColorScheme default call s:new_colors()
 
