@@ -4,11 +4,7 @@
 
 #ifdef SRVR_lg_gram
 	Xft.dpi: 120
-	URxvt.font: xft:PragmataProMono Nerd Font Mono:pixelsize=22:antialias=true
-#endif
-#ifdef SRVR_virtualbox_gram
-  Xft.dpi: 140
-  URxvt.font: xft:PragmataProMono Nerd Font Mono:pixelsize=24:antialias=true
+  URxvt.font: xft:Iosevka Fixed:pixelsize=22:antialias=true
 #endif
 
 ! Font rendering
@@ -26,9 +22,6 @@ URxvt.allow_bold: true
 
 ! Remove scroll bar
 URxvt.scrollBar: false
-
-! Fix font spacing
-URxvt.letterSpace: -1
 
 ! Fix keys
 URxvt.keysym.Home: \033[1~
