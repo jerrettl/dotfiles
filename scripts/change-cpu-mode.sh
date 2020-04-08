@@ -3,10 +3,18 @@
 # Utilizes processor support for HWP (Hardware P-state).
 # https://wiki.archlinux.org/index.php/Power_management#Processors_with_HWP_(Hardware_P-state)_support
 
+# Enables fan silent mode if "power" mode is selected. Disables fan silent mode if "performance" mode is selected.
+
 arg="$1"
 
 apply_to_conf () {
-    echo "$1" | awk '{print "w /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference - - - - " $1}' | sudo tee /etc/tmpfiles.d/energy_performance_preference.conf
+  if [ "$1" == "power" ]; then
+    echo 0 | sudo tee /sys/devices/platform/lg-laptop/fan_mode
+  elif [ "$1" == "performance" ]; then
+    echo 1 | sudo tee /sys/devices/platform/lg-laptop/fan_mode
+  fi
+
+  echo "$1" | awk '{print "w /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference - - - - " $1}' | sudo tee /etc/tmpfiles.d/energy_performance_preference.conf
 }
 
 if [ "$arg" == "list" ]; then
