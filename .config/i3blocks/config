@@ -84,6 +84,17 @@ label=DISK
 #instance=/mnt/data
 interval=30
 
+# Temperature
+#
+# Support multiple chips, though lm-sensors.
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+[temperature]
+command=sensors | grep -i "package id 0" | awk '{print $4}' | cut -c 2-
+label=TEMP 
+interval=10
+
+
 # Network interface monitoring
 #
 # If the instance is not specified, use the interface used for default route.
@@ -150,14 +161,6 @@ interval=5
 #[openvpn]
 #interval=20
 
-# Temperature
-#
-# Support multiple chips, though lm-sensors.
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
-#[temperature]
-#label=TEMP
-#interval=10
 
 # Key indicators
 #
