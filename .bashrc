@@ -49,4 +49,4 @@ set -o vi
 bind '"jk":vi-movement-mode'
 bind '"\C-l":clear-screen'
 
-export PATH="$PATH:/opt/cisco/anyconnect/bin/"
+export PATH="$PATH:/opt/cisco/anyconnect/bin/:/opt/fah/"
