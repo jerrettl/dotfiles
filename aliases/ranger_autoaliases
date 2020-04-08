@@ -58,10 +58,6 @@ map gdesktop cd /mnt/c/Users/Jerre/Desktop/
 map tdesktop tab_new /mnt/c/Users/Jerre/Desktop/
 map mdesktop shell mv %s /mnt/c/Users/Jerre/Desktop/
 map Ydesktop shell cp -r %s /mnt/c/Users/Jerre/Desktop/
-map gcss cd /mnt/c/Users/Jerre/Documents/Programming/C/scratch-space
-map tcss tab_new /mnt/c/Users/Jerre/Documents/Programming/C/scratch-space
-map mcss shell mv %s /mnt/c/Users/Jerre/Documents/Programming/C/scratch-space
-map Ycss shell cp -r %s /mnt/c/Users/Jerre/Documents/Programming/C/scratch-space
 map gsha cd /mnt/shared
 map tsha tab_new /mnt/shared
 map msha shell mv %s /mnt/shared
@@ -102,6 +98,10 @@ map gtv cd /mnt/shared/saved-tv
 map ttv tab_new /mnt/shared/saved-tv
 map mtv shell mv %s /mnt/shared/saved-tv
 map Ytv shell cp -r %s /mnt/shared/saved-tv
+map gsshtv cd /mnt/sshfs/Documents/tv
+map tsshtv tab_new /mnt/sshfs/Documents/tv
+map msshtv shell mv %s /mnt/sshfs/Documents/tv
+map Ysshtv shell cp -r %s /mnt/sshfs/Documents/tv
 map zrc shell $EDITOR ~/.zshrc
 map zshrc shell $EDITOR ~/.zshrc
 map vrc shell $EDITOR ~/.vimrc
