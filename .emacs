@@ -44,7 +44,7 @@ There are two things you can do about this warning:
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "PragmataProMono Nerd Font Mono" :foundry "fsdf" :slant normal :weight normal :height 108 :width normal))))
+ '(default ((t (:family "Iosevka" :foundry "BE5N" :slant normal :weight normal :height 132 :width normal))))
  '(markdown-code-face ((t (:family "PragmataProMono Nerd Font Mono"))))
  '(markdown-header-face ((t (:inherit font-lock-function-name-face :weight bold))))
  '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.6))))
