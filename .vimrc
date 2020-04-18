@@ -66,7 +66,7 @@ Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 " Syntax highlighting plugins:
 Plug 'hrother/offlineimaprc.vim'
 
-"Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'Valloric/YouCompleteMe'
 "Plug 'nvie/vim-flake8', { 'for': 'python' }
 "Plug 'tpope/vim-unimpaired'
