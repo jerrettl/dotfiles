@@ -299,8 +299,6 @@ let g:Tex_IgnoredWarnings='"Underfull\n".
     \"Package gensymb Warning: Not defining\n".'
 let g:Tex_IgnoreLevel=8
 autocmd FileType tex map <f3> <esc>:w<cr><leader>ll<CR>
-imap <C-t> <Plug>Tex_InsertItemOnThisLine
-imap i <Plug>Tex_InsertItemOnThisLine
 
 
 " Goyo
