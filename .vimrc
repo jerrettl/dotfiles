@@ -227,6 +227,9 @@ autocmd FileType c imap STDIO #include <stdio.h>
 autocmd FileType c imap STDLIB #include <stdlib.h>
 autocmd FileType c imap STRING #include <string.h>
 
+autocmd FileType c nnoremap <leader>ta :CtrlPTag<CR>
+autocmd FileType c nnoremap <leader>p :CtrlPTag<CR>
+
 " CSS autocmds
 autocmd FileType css,javascript imap {<CR> {<CR>}<ESC>O
 
