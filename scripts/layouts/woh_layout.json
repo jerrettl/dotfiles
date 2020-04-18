@@ -18,7 +18,7 @@
                "y": 0
             },
             "name": "Textbook",
-            "percent": 70,
+            "percent": 0.7,
             "swallows": [
                {
                    "class": "^Zathura$",
@@ -38,7 +38,7 @@
                 "y": 0
             },
             "name": "Notes",
-            "percent": 0.30,
+            "percent": 0.3,
             "swallows": [
             {
                 "class": "^[eE]macs$",
