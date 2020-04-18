@@ -361,3 +361,6 @@ bindsym XF86Tools exec "~/dotfiles/scripts/toggle-touchpad.sh"
 
 # Battery mode script
 bindsym $mod+Shift+B exec $terminal -e ~/dotfiles/scripts/change-cpu-mode.sh
+
+# Toggle sticky
+bindsym $mod+Shift+S sticky toggle
