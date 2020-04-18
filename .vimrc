@@ -214,6 +214,10 @@ autocmd CmdlineLeave : echo ''
 " Moving v-blocks
 vnoremap L dpgv
 
+" Jump to the next edit marker and edit
+nmap <C-t> 0/<++><cr>,/c4l
+imap <C-t> <esc>0/<++><cr>,/c4l
+
 " C stuff
 autocmd FileType c nnoremap <leader>b !make %:r<cr>
 autocmd FileType c nnoremap <C-b> !make %:r<cr>
