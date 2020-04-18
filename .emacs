@@ -33,7 +33,7 @@ There are two things you can do about this warning:
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (flycheck ample-theme vs-dark-theme org-plus-contrib writeroom-mode olivetti markdown-mode evil)))
+    (smooth-scrolling flycheck ample-theme vs-dark-theme org-plus-contrib writeroom-mode olivetti markdown-mode evil)))
  '(writeroom-border-width 50)
  '(writeroom-fringes-outside-margins nil)
  '(writeroom-global-effects
@@ -45,10 +45,10 @@ There are two things you can do about this warning:
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Iosevka" :foundry "BE5N" :slant normal :weight normal :height 132 :width normal))))
- '(markdown-code-face ((t (:family "PragmataProMono Nerd Font Mono"))))
+ '(markdown-code-face ((t nil)))
  '(markdown-header-face ((t (:inherit font-lock-function-name-face :weight bold))))
- '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.6))))
- '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.4)))))
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face)))))
 
 (require 'evil)
 (evil-mode 1)
@@ -84,8 +84,7 @@ There are two things you can do about this warning:
 (add-hook 'markdown-mode-hook
           (lambda ()
             (visual-line-mode)
-            (flyspell-mode)
-            (helvetica-face-set)))
+            (flyspell-mode)))
 
 (global-set-key (kbd "<f12>") 'writeroom-mode)   ; open writeroom-mode
 
@@ -102,4 +101,8 @@ There are two things you can do about this warning:
 
 (setq-default flycheck-display-errors-delay 0)
 
-(set-frame-font "PragmataProMono Nerd Font Mono 12" nil t)
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
+(setq smooth-scroll-margin 3)
+
+(set-frame-font "Iosevka 13" nil t)
