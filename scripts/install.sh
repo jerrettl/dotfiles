@@ -31,6 +31,8 @@ done
 # Configure git
 #git config --global credential.helper 'cache --timeout=1500'
 git config credential.helper store # Big brain move
+git config core.pager delta
+git config interactive.diffFilter 'delta --color-only'
 
 # Start services
 sudo systemctl enable bluetooth.service
