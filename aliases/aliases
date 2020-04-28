@@ -35,9 +35,3 @@ alias dssh='fusermount -u /mnt/sshfs'
 # ==== Common Directories
 alias dotf='cd ~/dotfiles && gstu'
 alias dotu='dotf && git pull && cd'
-
-
-# ==== Mounting
-alias mnttv='sshfs jerrett@192.168.1.11:/media/usb0/Files/Documents/tv ~/mnt -C -p 21999'
-alias umntssh='fusermount -u ~/mnt'
-alias umntusb='sudo umount ~/mnt'
