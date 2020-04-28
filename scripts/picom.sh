@@ -2,10 +2,4 @@
 
 hostname=$(uname -n)
 
-if [ "$hostname" == "arch-aspire-d255" ]; then
-	exit
-elif [ "$hostname" == "dell-xps400" ]; then
-	exit
-else
-	picom &
-fi
+picom &
