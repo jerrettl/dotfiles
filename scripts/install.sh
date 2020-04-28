@@ -49,6 +49,10 @@ timedatectl set-local-rtc false
 echo "Setting up vim..."
 nvim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
 
+# Generate autoconfig files
+echo "Generating alias shortcuts..."
+~/dotfiles/scripts/shortcuts.sh
+
 # Symlinks (disgusting)
 echo "Creating symlinks..."
 ln -sfv ~/dotfiles/.bash_profile ~/.bash_profile
