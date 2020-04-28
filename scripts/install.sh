@@ -45,6 +45,9 @@ timedatectl set-timezone America/New_York
 timedatectl set-ntp true
 timedatectl set-local-rtc false
 
+# Set up vim plugins
+echo "Setting up vim..."
+nvim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
 
 # Symlinks (disgusting)
 echo "Creating symlinks..."
