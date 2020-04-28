@@ -118,8 +118,3 @@ ln -sfv ~/dotfiles/.xinitrc ~/.xinitrc
 ln -sfv ~/dotfiles/.Xresources ~/.Xresources
 ln -sfv ~/dotfiles/.zshrc ~/.zshrc
 xrdb ~/.Xresources
-
-
-# Get some linting for vim
-pip3 install --user flake8 \
-	bashate
