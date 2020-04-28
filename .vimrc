@@ -132,9 +132,9 @@ endif
 set omnifunc=htmlcomplete#CompleteTags
 
 " Auto refresh databases on saving
-autocmd BufWritePost ~/dotfiles/aliases/folders,~/dotfiles/aliases/configs,~/dotfiles/scripts/shortcuts.sh !bash ~/dotfiles/scripts/shortcuts.sh
+autocmd BufWritePost ~/dotfiles/aliases/folders*,~/dotfiles/aliases/configs*,~/dotfiles/scripts/shortcuts.sh !bash ~/dotfiles/scripts/shortcuts.sh
 autocmd BufWritePost ~/.Xresources,~/dotfiles/.Xresources !xrdb ~/.Xresources
-autocmd BufWritePost ~/.bashrc,~/dotfiles/aliases/aliases,~/dotfiles/aliases/folders,~/dotfiles/aliases/configs !source ~/.bashrc
+autocmd BufWritePost ~/.bashrc,~/dotfiles/aliases/aliases,~/dotfiles/aliases/folders*,~/dotfiles/aliases/configs* !source ~/.bashrc
 
 " ===================================
 
