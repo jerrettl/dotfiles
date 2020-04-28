@@ -13,9 +13,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" Syntastic: syntax checking
-" Plug 'vim-syntastic/syntastic'
-
 " vim-latex: ease-of-life shortcuts for latex
 Plug 'vim-latex/vim-latex', { 'for': 'tex' }
 
@@ -60,16 +57,10 @@ Plug 'Yggdroot/indentLine'
 "   indentpython: auto intent after : and in multiline statements
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 
-"   jedi-vim: completion, renaming, jumping, etc.
-" Plug 'davidhalter/jedi-vim', { 'for': 'python' }
-
 " Syntax highlighting plugins:
 Plug 'hrother/offlineimaprc.vim'
 
 Plug 'ctrlpvim/ctrlp.vim'
-"Plug 'Valloric/YouCompleteMe'
-"Plug 'nvie/vim-flake8', { 'for': 'python' }
-"Plug 'tpope/vim-unimpaired'
 
 " Pandoc markdown editing
 Plug 'vim-pandoc/vim-pandoc'
