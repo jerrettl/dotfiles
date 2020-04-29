@@ -28,10 +28,7 @@ c.colors.statusbar.url.success.https.fg = "white"
 # Type: ShellCommand
 c.editor.command = ['urxvt', '-e', 'vim', '-f', '{}']
 
-# Default monospace fonts. Whenever "monospace" is used ina font setting,
-# it's replaced with the fonts listed here.
-# Type: Font
-c.fonts.monospace = "PragmataProMono Nerd Font Mono"
+c.fonts.default_family = "Iosevka"
 
 helvetica = "7pt Helvetica Neue"
 
