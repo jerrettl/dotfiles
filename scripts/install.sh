@@ -107,6 +107,7 @@ ln -sfv ~/dotfiles/.neomutt/neomuttrc ~/.neomutt/neomuttrc
 cp -nv ~/dotfiles/.neomutt/user1-example ~/.neomutt/user1
 ln -sfv ~/dotfiles/.offlineimap.py ~/.offlineimap.py
 cp -nv ~/dotfiles/.offlineimaprc-example ~/.offlineimaprc
+ln -sfv ~/dotfiles/.profile ~/.profile
 ln -sfv ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sfv ~/dotfiles/.urlview ~/.urlview
 mkdir -pv ~/.urxvt/ext

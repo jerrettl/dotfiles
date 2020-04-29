@@ -63,6 +63,7 @@ python-neovim
 python-pip
 python2-neovim
 python2-pip
+qt5-styleplugins
 qutebrowser
 ranger
 redshift
