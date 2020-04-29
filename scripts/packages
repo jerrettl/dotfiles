@@ -1,5 +1,4 @@
 acpi
-adapta-gtk-theme
 alsa-utils
 arandr
 awk
@@ -9,7 +8,6 @@ bluez
 bluez-utils
 caffeine-ng
 chromium
-clight-git
 cronie
 dmenu
 dunst
@@ -77,12 +75,10 @@ system-san-francisco-font-git
 tmux
 tree
 transset-df
-ttf-droid
 ttf-iosevka
 ttf-iosevka-term
 ttf-ms-fonts
 ttf-roboto
-udevil
 udiskie
 unclutter
 unzip
@@ -90,7 +86,6 @@ urlview
 urxvt-perls
 wget
 xdotool
-xterm
 xorg-server
 xorg-xbacklight
 xorg-xinput
