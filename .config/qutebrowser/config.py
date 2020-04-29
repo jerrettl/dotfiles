@@ -30,7 +30,7 @@ c.editor.command = ['urxvt', '-e', 'vim', '-f', '{}']
 
 c.fonts.default_family = "Iosevka"
 
-helvetica = "7pt Helvetica Neue"
+helvetica = "10pt Helvetica Neue"
 
 c.fonts.completion.category = "bold " + helvetica
 c.fonts.completion.entry = c.fonts.downloads = c.fonts.hints = c.fonts.keyhint = c.fonts.messages.error = c.fonts.messages.info = c.fonts.messages.warning = c.fonts.prompts = c.fonts.statusbar = c.fonts.tabs = helvetica
@@ -56,6 +56,9 @@ c.scrolling.smooth = False
 c.tabs.background = False
 
 c.tabs.show = 'multiple'
+
+c.qt.highdpi = True
+c.zoom.default = "125%"
 
 # The page to open if :open -t/-b/-w is used without URL. Use
 # `about:blank` for a blank page.
