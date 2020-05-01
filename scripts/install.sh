@@ -76,6 +76,7 @@ rm -rf ~/.config/networkmanager-dmenu
 ln -sfv ~/dotfiles/.config/networkmanager-dmenu/ ~/.config/networkmanager-dmenu
 rm -rf ~/.config/nvim
 ln -sfv ~/dotfiles/.config/nvim/ ~/.config/nvim
+ln -sfv ~/dotfiles/.git-prompt-colors.sh ~/.git-prompt-colors.sh
 mkdir ~/.config/pianobar
 mkfifo ~/.config/pianobar/ctl
 touch ~/.config/pianobar/nowplaying

@@ -50,3 +50,14 @@ bind '"jk":vi-movement-mode'
 bind '"\C-l":clear-screen'
 
 export PATH="$PATH:/opt/cisco/anyconnect/bin/:/opt/fah/"
+
+if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+  GIT_PROMPT_ONLY_IN_REPO=1
+  GIT_PROMPT_THEME=Custom
+  GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
+  source $HOME/.bash-git-prompt/gitprompt.sh
+else
+  echo "Git prompt not installed. Run the following command to set up:"
+  echo "git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1"
+  echo "More information can be found at https://github.com/magicmonty/bash-git-prompt"
+fi
