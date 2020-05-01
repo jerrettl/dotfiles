@@ -6,6 +6,10 @@
 	Xft.dpi: 120
   URxvt.font: xft:Iosevka Fixed:pixelsize=22:antialias=true
 #endif
+#ifdef SRVR_inspiron3537
+	Xft.dpi: 120
+  URxvt.font: xft:Iosevka Fixed:pixelsize=16:antialias=true
+#endif
 
 ! Font rendering
 Xft.antialias: 1
