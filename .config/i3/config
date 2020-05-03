@@ -364,3 +364,6 @@ bindsym $mod+Shift+B exec $terminal -e ~/dotfiles/scripts/change-cpu-mode.sh
 
 # Toggle sticky
 bindsym $mod+Shift+S sticky toggle
+
+# View battery level
+bindsym $mod+Ctrl+B exec "acpi -b | sed -E 's/.*,\ ([0-9]+%).*/\1/' | xargs notify-send 'Battery level:'"
