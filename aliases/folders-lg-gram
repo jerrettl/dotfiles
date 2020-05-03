@@ -3,3 +3,4 @@ sha /mnt/shared
 txt /mnt/shared/School/Textbooks
 tv /mnt/shared/saved-tv
 sshtv /mnt/sshfs/Documents/tv
+vssh /mnt/sshfs
