@@ -63,3 +63,7 @@ if [ "$(uname -n)" != "raspberrypi" ]; then
     echo "More information can be found at https://github.com/magicmonty/bash-git-prompt"
   fi
 fi
+
+if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ]; then
+  cd ~
+fi
