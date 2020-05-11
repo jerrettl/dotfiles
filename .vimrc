@@ -66,6 +66,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
+" Autodetect tab settings in a file
+Plug 'tpope/vim-sleuth'
+
 call plug#end()
 
 
