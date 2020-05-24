@@ -18,6 +18,11 @@ else
 	PS1="${BOLD}$(uname -n)${RESET} ${GREEN}\$(pwd | sed \"s|^$HOME|~|\")${RESET}> "
 fi
 
+# Custom functions
+makenotes() {
+  pandoc "$1.md" -o "$1.html" --self-contained
+}
+
 # Change directory by typing its name
 shopt -s autocd
 
