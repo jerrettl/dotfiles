@@ -288,6 +288,7 @@ for_window [class="Steam" instance="Steam" title="Friends"] floating enable
 for_window [class="Steam" instance="Steam" title="Steam Guard - Computer Authorization Required"] floating enable
 for_window [class="Firefox" title="About Mozilla Firefox"] floating enable
 for_window [class="SVPManager" title="SVP - Control Panel"] floating disable
+for_window [class="jetbrains-idea" title="win0"] floating enable
 
 # i3-gaps fix
 # for_window [class="^.*"] border pixel 0
