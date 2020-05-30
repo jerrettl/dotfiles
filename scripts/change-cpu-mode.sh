@@ -10,7 +10,7 @@ arg="$1"
 apply_to_conf () {
   if [ "$1" == "power" ]; then
     echo 0 | sudo tee /sys/devices/platform/lg-laptop/fan_mode
-  elif [ "$1" == "performance" ]; then
+	else
     echo 1 | sudo tee /sys/devices/platform/lg-laptop/fan_mode
   fi
 
