@@ -6,3 +6,4 @@ sshtv /mnt/sshfs/Documents/tv
 vssh /mnt/sshfs
 oop /mnt/shared/School/cop-3330
 dis /mnt/shared/School/cot-3100
+dwmm ~/Documents/dwm-6.2
