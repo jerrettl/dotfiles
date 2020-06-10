@@ -9,7 +9,7 @@
 update="pkill -RTMIN+2 i3blocks"
 
 case "$BLOCK_BUTTON" in
-	1) urxvt -e sh -c "pacman -Qu --color=auto && echo && sudo pacman -Su --color=auto" ;;
+  1) urxvt -e sh -c "pacman -Qu --color=auto && echo && sudo pacman -Su --color=auto" ;;
   3) echo "" ; $update ; exit ;;
 esac
 
@@ -24,9 +24,9 @@ if [ "$number" == "0" ]; then echo ""; $update; exit; fi
 sudo /usr/bin/pacman -Syywu --noconfirm >/dev/null 2>&1
 
 if [ "$number" == "1" ]; then
-	indicator="$number Update"
+  indicator="$number Update"
 else
-	indicator="$number Updates"
+  indicator="$number Updates"
 fi
 
 # ad3a00 - orange
