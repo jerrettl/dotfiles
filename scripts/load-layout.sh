@@ -5,14 +5,19 @@
 selection=$(cat ~/dotfiles/scripts/layout-list | dmenu -nb "#303030" -nf "#ffffff" -sb "#ffffff" -sf "#303030" -fn "HelveticaNeue-11" -p "Select a layout:" -l 15 -i)
 if [ "$?" == "1" ]; then exit; fi
 
-workspace=$(echo | dmenu -nb "#303030" -nf "#ffffff" -sb "#ffffff" -sf "#303030" -fn "HelveticaNeue-11" -p "What workspace would you like to place it on?")
+workspace=$(echo "this" | dmenu -nb "#303030" -nf "#ffffff" -sb "#ffffff" -sf "#303030" -fn "HelveticaNeue-11" -p "What workspace would you like to place it on?")
 if [ "$?" == "1" ]; then exit; fi
 
+
+if [ "$workspace" != "this" ]; then
+  i3-msg "workspace $workspace"
+fi
+
 if [ "$selection" == "School" ]; then
-  i3-msg "workspace $workspace; layout tabbed"
-	chromium --new-window https://webcourses.ucf.edu https://keep.google.com/u/0 &
+  i3-msg "layout tabbed"
+  chromium --new-window https://webcourses.ucf.edu https://keep.google.com/u/0 &
 elif [ "$selection" == "Watch TV" ]; then
-  i3-msg "workspace $workspace; layout tabbed"
+  i3-msg "layout tabbed"
   chromium --new-window http://trakt.tv/dashboard &
   urxvt -e ranger /mnt/shared/saved-tv &
 fi
