@@ -1,3 +1,6 @@
+# Stop early if the shell is non-interactive
+if [[ $- != *i* ]]; then return; fi
+
 export EDITOR="/usr/bin/nvim"
 export DOTFILES="$HOME/dotfiles"
 
