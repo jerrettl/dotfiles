@@ -4,6 +4,7 @@ txt /mnt/shared/School/Textbooks
 tv /mnt/shared/saved-tv
 sshtv /mnt/sshfs/Documents/tv
 vssh /mnt/sshfs
+sfs /mnt/sshfs
 oop /mnt/shared/School/cop-3330
 dis /mnt/shared/School/cot-3100
 dwmm ~/Documents/dwm
