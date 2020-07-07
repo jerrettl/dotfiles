@@ -384,4 +384,6 @@ set conceallevel=2
 
 
 " Pandoc
+let g:pandoc#folding#level = 1
+let g:pandoc#folding#mode = "relative"
 let g:pandoc#spell#enabled = 0
