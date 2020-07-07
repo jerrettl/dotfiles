@@ -7,6 +7,12 @@ export DOTFILES="$HOME/dotfiles"
 . "$DOTFILES"/aliases/aliases
 . "$DOTFILES"/aliases/bash_autoaliases
 
+# Host-specific aliases
+hsa="$DOTFILES/aliases/aliases-$(hostname)"
+if [ -f "$hsa" ]; then
+  . "$hsa"
+fi
+
 source /usr/share/doc/pkgfile/command-not-found.bash
 
 

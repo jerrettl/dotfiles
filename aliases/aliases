@@ -30,8 +30,6 @@ alias e="emacsclient -c --alternate-editor emacs"
 alias pqu='pacman -Qu'
 alias psu='sudo pacman -Su'
 alias yayu='yay -a -Su'
-alias cssh='sshfs jerrett@192.168.1.25:/media/ExternalUSB /mnt/sshfs -p 21999'
-alias dssh='fusermount -u /mnt/sshfs'
 alias cpum='~/dotfiles/scripts/change-cpu-mode.sh'
 
 # ==== Common Directories
