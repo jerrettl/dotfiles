@@ -15,7 +15,7 @@ fi
 
 if [ "$selection" == "School" ]; then
   i3-msg "layout tabbed"
-  chromium --new-window https://webcourses.ucf.edu https://keep.google.com/u/0 &
+  chromium --new-window https://keep.google.com/u/0 https://webcourses.ucf.edu &
 elif [ "$selection" == "Watch TV" ]; then
   i3-msg "layout tabbed"
   chromium --new-window http://trakt.tv/dashboard &
