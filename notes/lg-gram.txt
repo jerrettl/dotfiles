@@ -76,6 +76,13 @@ options iwlwifi power_save=1
 # /etc/tmpfiles.d/energy_performance_preference.conf
 w /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference - - - - power
 
+
+# Hibernate when battery low
+# /etc/udev/rules.d/99-lowbat.rules
+# Suspend the system when battery level drops to 5% or lower
+SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="[0-5]", RUN+="/usr/bin/systemctl hibernate"
+
+
 # Plymouth boot logo (optional)
 - install plymouth (yay)
 - install plymouth-theme-monoarch (yay)
