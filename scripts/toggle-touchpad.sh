@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 # Grabbed from https://github.com/lahwaacz/Scripts/blob/master/toggle-touchpad.sh
 
 device="04CA00A0:00 04CA:00A0 Touchpad"
