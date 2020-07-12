@@ -50,8 +50,8 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
-# Blink active window
-bindsym $mod+Tab exec ~/dotfiles/scripts/flash_win.sh
+# switch to last workspace
+bindsym $mod+Tab workspace back_and_forth
 
 # Screenshot
 bindsym Print exec scrot -e 'mv $f ~/Pictures/'
@@ -311,11 +311,12 @@ mode "$select_display" {
 
 
 # Music mode
-set $music_mode Select a music player: (P)ianobar or (S)potify
+set $music_mode Select a music player: (C)hrome, (P)ianobar, or (S)potify
 bindsym $mod+Shift+m mode "$music_mode"
 bindsym $mod+Shift+p mode "$music_mode"
 
 mode "$music_mode" {
+	bindsym c exec --no-startup-id echo -n "chrome" > ~/.musicmode, mode "default"
 	bindsym p exec --no-startup-id echo -n "pianobar" > ~/.musicmode, mode "default"
 	bindsym s exec --no-startup-id echo -n "spotify" > ~/.musicmode, mode "default"
 
