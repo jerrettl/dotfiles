@@ -25,4 +25,16 @@ elif [ "$MODE" = "spotify" ]; then
 
 #bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
 
+elif [ "$MODE" = "chrome" ]; then
+	# We can use the Chrome extension StreamKeys to communicate to a currently
+	# playing song using dbus
+	if [ "$COMMAND" = "playpause" ]; then
+		dbus-send --print-reply --dest=org.mpris.MediaPlayer2.streamkeys /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+	elif [ "$COMMAND" = "next" ]; then
+		dbus-send --print-reply --dest=org.mpris.MediaPlayer2.streamkeys /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+
+	elif [ "$COMMAND" = "back" ]; then
+		dbus-send --print-reply --dest=org.mpris.MediaPlayer2.streamkeys /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+	fi
 fi

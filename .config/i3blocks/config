@@ -29,6 +29,11 @@ separator_block_width=15
 markup=none
 
 
+[chromemusic]
+command=~/dotfiles/scripts/chromemusic-i3blocks.sh
+markup=pango
+interval=5
+
 [pianobar]
 command=~/dotfiles/scripts/pianobar-relay.sh
 markup=pango
