@@ -21,7 +21,7 @@ number=$(pacman -Qu | grep -vic ignore)
 if [ "$number" == "0" ]; then echo ""; $update; exit; fi
 
 # If there are updates, download them to local storage
-sudo /usr/bin/pacman -Syywu --noconfirm >/dev/null 2>&1
+#sudo /usr/bin/pacman -Syywu --noconfirm >/dev/null 2>&1
 
 if [ "$number" == "1" ]; then
   indicator="$number Update"
