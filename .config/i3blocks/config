@@ -34,21 +34,21 @@ markup=none
 #markup=pango
 #interval=5
 
-[chromemusic]
-command=~/dotfiles/scripts/chromemusic-i3blocks.sh
-markup=pango
-interval=5
+#[chromemusic]
+#command=~/dotfiles/scripts/chromemusic-i3blocks.sh
+#markup=pango
+#interval=5
 
-[pianobar]
-command=~/dotfiles/scripts/pianobar-relay.sh
-markup=pango
-interval=5
+#[pianobar]
+#command=~/dotfiles/scripts/pianobar-relay.sh
+#markup=pango
+#interval=5
 
 # Spotify icon \uF1BC
-[spotify]
-command=~/dotfiles/scripts/spotify.py
-markup=pango
-interval=5
+#[spotify]
+#command=~/dotfiles/scripts/spotify.py
+#markup=pango
+#interval=5
 
 # Pacman new update notification
 [pacman]
