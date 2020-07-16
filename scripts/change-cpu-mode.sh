@@ -3,14 +3,14 @@
 # Utilizes processor support for HWP (Hardware P-state).
 # https://wiki.archlinux.org/index.php/Power_management#Processors_with_HWP_(Hardware_P-state)_support
 
-# Enables fan silent mode if "power" mode is selected. Disables fan silent mode if "performance" mode is selected.
+# Enables fan silent mode if "power" mode is selected. Disables fan silent mode if any other mode is selected.
 
 arg="$1"
 
 apply_to_conf () {
   if [ "$1" == "power" ]; then
     echo 0 | sudo tee /sys/devices/platform/lg-laptop/fan_mode
-	else
+  else
     echo 1 | sudo tee /sys/devices/platform/lg-laptop/fan_mode
   fi
 
