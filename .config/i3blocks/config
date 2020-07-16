@@ -29,6 +29,11 @@ separator_block_width=15
 markup=none
 
 
+#[firefoxmusic]
+#command=~/dotfiles/scripts/firefoxmusic-i3blocks.sh
+#markup=pango
+#interval=5
+
 [chromemusic]
 command=~/dotfiles/scripts/chromemusic-i3blocks.sh
 markup=pango

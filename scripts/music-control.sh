@@ -37,4 +37,16 @@ elif [ "$MODE" = "chrome" ]; then
 	elif [ "$COMMAND" = "back" ]; then
 		dbus-send --print-reply --dest=org.mpris.MediaPlayer2.streamkeys /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 	fi
+
+elif [ "$MODE" = "firefox" ]; then
+	player=$(playerctl -l | grep -i firefox)
+	if [ "$COMMAND" = "playpause" ]; then
+		dbus-send --print-reply --dest=org.mpris.MediaPlayer2."$player" /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+	elif [ "$COMMAND" = "next" ]; then
+		dbus-send --print-reply --dest=org.mpris.MediaPlayer2."$player" /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+
+	elif [ "$COMMAND" = "back" ]; then
+		dbus-send --print-reply --dest=org.mpris.MediaPlayer2."$player" /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+	fi
 fi

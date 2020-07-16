@@ -311,12 +311,13 @@ mode "$select_display" {
 
 
 # Music mode
-set $music_mode Select a music player: (C)hrome, (P)ianobar, or (S)potify
+set $music_mode Select a music player: (C)hrome, (F)irefox, (P)ianobar, or (S)potify
 bindsym $mod+Shift+m mode "$music_mode"
 bindsym $mod+Shift+p mode "$music_mode"
 
 mode "$music_mode" {
 	bindsym c exec --no-startup-id echo -n "chrome" > ~/.musicmode, mode "default"
+	bindsym f exec --no-startup-id echo -n "firefox" > ~/.musicmode, mode "default"
 	bindsym p exec --no-startup-id echo -n "pianobar" > ~/.musicmode, mode "default"
 	bindsym s exec --no-startup-id echo -n "spotify" > ~/.musicmode, mode "default"
 
