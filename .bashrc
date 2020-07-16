@@ -1,6 +1,7 @@
 # Stop early if the shell is non-interactive
 if [[ $- != *i* ]]; then return; fi
 
+export BROWSER="/usr/bin/firefox"
 export EDITOR="/usr/bin/nvim"
 export DOTFILES="$HOME/dotfiles"
 

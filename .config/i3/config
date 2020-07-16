@@ -58,7 +58,7 @@ bindsym Print exec scrot -e 'mv $f ~/Pictures/'
 bindsym Shift+Print exec flameshot gui
 
 # Shortcut applications
-bindsym $mod+F1 exec chromium
+bindsym $mod+F1 exec firefox
 bindsym $mod+F2 exec emacsclient -c --alternate-editor emacs
 #bindsym $mod+F2 exec $terminal -e bash -c "cd ~/dotfiles && git pull && sleep 5"
 bindsym $mod+F3 exec $terminal -e ranger
@@ -352,8 +352,8 @@ bindsym $mod+Shift+period exec "udiskie-umount -d $(udiskie-info -a | dmenu)"
 
 bindsym $mod+F11 exec "~/Downloads/script.sh"
 
-# Chrome quick-open
-bindsym $mod+X exec "~/dotfiles/scripts/chrome-quickopen.sh"
+# Browser quick-open
+bindsym $mod+X exec "~/dotfiles/scripts/browser-quickopen.sh"
 
 # Saved layout loader
 bindsym $mod+R exec "~/dotfiles/scripts/load-layout.sh"

@@ -15,9 +15,9 @@ fi
 
 if [ "$selection" == "School" ]; then
   i3-msg "layout tabbed"
-  chromium --new-window https://keep.google.com/u/0 https://webcourses.ucf.edu &
+	firefox https://keep.google.com/u/0 https://webcourses.ucf.edu &
 elif [ "$selection" == "Watch TV" ]; then
   i3-msg "layout tabbed"
-  chromium --new-window http://trakt.tv/dashboard &
+	firefox http://trakt.tv/dashboard &
   urxvt -e ranger /mnt/shared/saved-tv &
 fi

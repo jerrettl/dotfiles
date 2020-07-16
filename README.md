@@ -7,7 +7,7 @@
 | Desktop Environment | `i3-gaps` + `i3blocks`											|
 | Terminal Emulator		| `rxvt-unicode-pixbuf` 											|
 | Shell 							| `bash`                                     	|
-| Web Browser 				| `chromium`   																|
+| Web Browser 				| `firefox`   																|
 | E-Mail 							| `neomutt` + `offlineimap` + `msmtp` 				|
 | Editor 							| `nvim`																			|
 
