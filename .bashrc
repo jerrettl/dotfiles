@@ -14,7 +14,7 @@ if [ -f "$hsa" ]; then
   . "$hsa"
 fi
 
-source /usr/share/doc/pkgfile/command-not-found.bash
+[ -f /usr/share/doc/pkgfile/command-not-found.bash ] && source /usr/share/doc/pkgfile/command-not-found.bash
 
 
 RED="\[$(tput setaf 1)\]"
