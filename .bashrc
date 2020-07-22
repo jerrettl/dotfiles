@@ -5,8 +5,8 @@ export BROWSER="/usr/bin/firefox"
 export EDITOR="/usr/bin/nvim"
 export DOTFILES="$HOME/dotfiles"
 
-. "$DOTFILES"/aliases/aliases
-. "$DOTFILES"/aliases/bash_autoaliases
+[ -f "$DOTFILES"/aliases/aliases ] && . "$DOTFILES"/aliases/aliases
+[ -f "$DOTFILES"/aliases/bash_autoaliases ] && . "$DOTFILES"/aliases/bash_autoaliases
 
 # Host-specific aliases
 hsa="$DOTFILES/aliases/aliases-$(hostname)"
@@ -72,15 +72,14 @@ if [ "$(uname -n)" != "raspberrypi" ]; then
     GIT_PROMPT_THEME=Custom
     GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
     source $HOME/.bash-git-prompt/gitprompt.sh
-  else
-    echo "Git prompt not installed. Run the following command to set up:"
-    echo "git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1"
-    echo "More information can be found at https://github.com/magicmonty/bash-git-prompt"
   fi
+    #echo "Git prompt not installed. Run the following command to set up:"
+    #echo "git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1"
+    #echo "More information can be found at https://github.com/magicmonty/bash-git-prompt"
 fi
 
 if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ]; then
   cd ~
 fi
 
-eval $(keychain --eval --quiet --nogui --noask --agents ssh id_rsa)
+which keychain 2>/dev/null > /dev/null && eval $(keychain --eval --quiet --nogui --noask --agents ssh id_rsa)
