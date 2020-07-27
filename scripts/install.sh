@@ -159,6 +159,8 @@ install_link() {
   ln -sfv ~/dotfiles/.offlineimap.py ~/.offlineimap.py
   cp -nv ~/dotfiles/.offlineimaprc-example ~/.offlineimaprc
   ln -sfv ~/dotfiles/.profile ~/.profile
+  mkdir ~/.ssh
+  cp -nv ~/dotfiles/.ssh/config-example ~/.ssh/config
   ln -sfv ~/dotfiles/.tmux.conf ~/.tmux.conf
   ln -sfv ~/dotfiles/.urlview ~/.urlview
   mkdir -pv ~/.urxvt/ext
