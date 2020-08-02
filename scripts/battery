@@ -24,6 +24,8 @@ my $full_text;
 my $short_text;
 my $bat_number = $ENV{BAT_NUMBER} || 0;
 my $label = $ENV{LABEL} || "";
+my $batt_mode_script = "~/dotfiles/scripts/change-cpu-mode.sh list | head -1";
+my $batt_mode;
 
 # read the first line of the "acpi" command output
 open (ACPI, "acpi -b 2>/dev/null| grep 'Battery $bat_number' |") or die;
@@ -37,6 +39,16 @@ if (not defined($acpi)) {
 }
 elsif ($acpi !~ /: ([\w\s]+), (\d+)%/) {
 	die "$acpi\n";
+}
+
+$batt_mode = `$batt_mode_script`;
+
+# fail on unexpected output
+if (not defined($batt_mode)) {
+    $batt_mode = "";
+}
+else {
+    $batt_mode =~ s/\n*//g;
 }
 
 $status = $1;
@@ -67,6 +79,13 @@ $short_text = $full_text;
 
 if ($acpi =~ /(\d\d:\d\d):/) {
 	$full_text .= " ($1)";
+}
+
+if ((not defined $batt_mode) or ($batt_mode eq '')) {
+    # Do nothing
+    $full_text .= "";
+} else {
+    $full_text .= " [$batt_mode]";
 }
 
 # print text
