@@ -66,18 +66,6 @@ bind '"\C-l":clear-screen'
 
 export PATH="$PATH:/opt/cisco/anyconnect/bin/:/opt/fah/:/usr/NX/bin/"
 
-if [ "$(uname -n)" != "raspberrypi" ]; then
-  if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
-    GIT_PROMPT_ONLY_IN_REPO=1
-    GIT_PROMPT_THEME=Custom
-    GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
-    source $HOME/.bash-git-prompt/gitprompt.sh
-  fi
-    #echo "Git prompt not installed. Run the following command to set up:"
-    #echo "git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1"
-    #echo "More information can be found at https://github.com/magicmonty/bash-git-prompt"
-fi
-
 if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ]; then
   cd ~
 fi
