@@ -33,6 +33,10 @@ makenotes() {
   pandoc "$1.md" -o "$1.html" --self-contained
 }
 
+cdl() {
+  cd "$1"; l
+}
+
 # Change directory by typing its name
 shopt -s autocd
 
