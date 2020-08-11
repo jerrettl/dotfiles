@@ -239,8 +239,7 @@ bar {
 	}
 }
 
-bindsym $mod+Y bar mode hide
-bindsym $mod+Shift+Y bar mode dock
+bindsym $mod+Y bar mode toggle
 
 # Gaps
 gaps inner 0
