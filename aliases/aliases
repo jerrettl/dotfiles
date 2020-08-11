@@ -31,6 +31,7 @@ alias pqu='pacman -Qu'
 alias psu='sudo pacman -Su'
 alias yayu='yay -a -Su'
 alias cpum='~/dotfiles/scripts/change-cpu-mode.sh'
+alias smpv='i3-swallow mpv'
 
 # ==== Common Directories
 alias dotf='cd ~/dotfiles && gstu'
