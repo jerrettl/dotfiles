@@ -9,7 +9,7 @@ exec --no-startup-id hsetroot -solid "#000000"
 set $mod Mod4
 
 # Don't hide borders
-hide_edge_borders none
+hide_edge_borders smart
 
 # Font
 font pango:SFNS Display 10
@@ -208,12 +208,12 @@ mode "$move_mode" {
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
-set $bg-color 	         #ffffff
+set $bg-color 	         #969696
 set $inactive-bg-color   #2d2d2d
 set $text-color          #000000
 set $inactive-text-color #999999
 set $urgent-bg-color     #d64937
-set $indicator           #999999
+set $indicator           #666666
 
 # window colors
 #                       border              background         text                 indicator
