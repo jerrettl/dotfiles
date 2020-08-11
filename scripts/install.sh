@@ -190,6 +190,7 @@ install_all() {
   git config credential.helper store # Big brain move
   git config core.pager delta
   git config interactive.diffFilter 'delta --color-only'
+  git config --global pull.rebase false
 }
 
 
