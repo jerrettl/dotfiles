@@ -1,7 +1,7 @@
 sch	/mnt/shared/School
 sha /mnt/shared
 txt /mnt/shared/School/Textbooks
-tv /mnt/shared/saved-tv
+tv /mnt/shared/Saved\ TV
 sshtv /mnt/sshfs/Documents/tv
 vssh /mnt/sshfs
 sfs /mnt/sshfs
