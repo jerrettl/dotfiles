@@ -1,5 +1,7 @@
 ! Location: ~/.Xresources
 
+#define browser firefox
+
 ! Machine specific exceptions
 
 #ifdef SRVR_lg_gram
@@ -85,7 +87,7 @@ URxvt.keysym.M-C-S-Left       : \033[1;8D
 
 ! URL, text selection, changing font
 URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,font-size
-URxvt.url-select.launcher:  chromium
+URxvt.url-select.launcher:  browser
 URxvt.url-select.underline: true
 URxvt.url-select.button:		1
 URxvt.keysym.M-u:           perl:url-select:select_next
