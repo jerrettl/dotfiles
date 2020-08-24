@@ -62,11 +62,11 @@ Type=oneshot
 ExecStart=bash -c "echo 80 > /sys/devices/platform/lg-laptop/battery_care_limit"
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-user.target sleep.target
 
 
 # sudo systemctl daemon-reload
-# sudo systemctl enable battery-care-limit.service
+# sudo systemctl enable battery_care_limit.service
 
 
 # Power Saving
