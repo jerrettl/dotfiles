@@ -7,8 +7,7 @@ vssh /mnt/sshfs
 lssh /mnt/sshfs
 sfs /mnt/sshfs
 dwmm ~/Documents/dwm
-mattf /mnt/sshfs/Documents/Other/Footage/Matt\ YouTube\ Channel
-mattm /mnt/sshfs/Documents/Other/Matt\ YouTube\ Channel
+vmv /mnt/sshfs/Documents/Volume\ May\ Vary
 cis /mnt/shared/School/cis-3360
 cop /mnt/shared/School/cop-3503
 enc /mnt/shared/School/enc-3241
