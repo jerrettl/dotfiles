@@ -6,8 +6,10 @@ sshtv /mnt/sshfs/Documents/tv
 vssh /mnt/sshfs
 lssh /mnt/sshfs
 sfs /mnt/sshfs
-oop /mnt/shared/School/cop-3330
-dis /mnt/shared/School/cot-3100
 dwmm ~/Documents/dwm
 mattf /mnt/sshfs/Documents/Other/Footage/Matt\ YouTube\ Channel
 mattm /mnt/sshfs/Documents/Other/Matt\ YouTube\ Channel
+cis /mnt/shared/School/cis-3360
+cop /mnt/shared/School/cop-3503
+enc /mnt/shared/School/enc-3241
+phy /mnt/shared/School/phy-2048
