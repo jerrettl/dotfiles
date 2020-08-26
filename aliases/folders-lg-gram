@@ -10,5 +10,7 @@ dwmm ~/Documents/dwm
 vmv /mnt/sshfs/Documents/Volume\ May\ Vary
 cis /mnt/shared/School/cis-3360
 cop /mnt/shared/School/cop-3503
+copa /mnt/shared/School/cop-3503/Assignments
+sq /mnt/shared/School/cop-3503/Assignments/SneakyQueens
 enc /mnt/shared/School/enc-3241
 phy /mnt/shared/School/phy-2048
