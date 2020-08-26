@@ -216,7 +216,7 @@ imap <C-t> <esc>0/<++><cr>,/c4l
 " C stuff
 autocmd FileType c nnoremap <leader>b !make %:r<cr>
 autocmd FileType c nnoremap <C-b> !make %:r<cr>
-autocmd FileType c imap {<CR> {<CR>}<ESC>ka<CR>
+autocmd FileType c,java imap {<CR> {<CR>}<ESC>ka<CR>
 autocmd FileType c imap MAIN int main(void)<CR>{<CR><CR>return 0;<ESC>kO
 autocmd FileType c imap STDIO #include <stdio.h>
 autocmd FileType c imap STDLIB #include <stdlib.h>
