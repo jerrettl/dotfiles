@@ -54,7 +54,7 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+Tab workspace back_and_forth
 
 # Screenshot
-bindsym Print exec scrot -e 'mv $f ~/Pictures/'
+bindsym Print exec "scrot ~/Pictures/%F-%H%M%S_\$wx\$h_scrot.png -e 'xclip -selection c -t image/png < $f'"
 bindsym Shift+Print exec flameshot gui
 
 # Shortcut applications
