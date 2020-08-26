@@ -37,6 +37,10 @@ cdl() {
   cd "$1"; l
 }
 
+mkcd() {
+  mkdir "$1"; cd "$1"
+}
+
 # Change directory by typing its name
 shopt -s autocd
 
