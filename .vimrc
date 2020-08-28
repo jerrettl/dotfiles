@@ -59,6 +59,7 @@ Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 
 " Syntax highlighting plugins:
 Plug 'hrother/offlineimaprc.vim'
+Plug 'dart-lang/dart-vim-plugin'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
