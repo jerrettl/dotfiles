@@ -33,7 +33,7 @@ c.fonts.default_family = "Iosevka"
 helvetica = "10pt Helvetica Neue"
 
 c.fonts.completion.category = "bold " + helvetica
-c.fonts.completion.entry = c.fonts.downloads = c.fonts.hints = c.fonts.keyhint = c.fonts.messages.error = c.fonts.messages.info = c.fonts.messages.warning = c.fonts.prompts = c.fonts.statusbar = c.fonts.tabs = helvetica
+c.fonts.completion.entry = c.fonts.downloads = c.fonts.hints = c.fonts.keyhint = c.fonts.messages.error = c.fonts.messages.info = c.fonts.messages.warning = c.fonts.prompts = c.fonts.statusbar = c.fonts.tabs.selected = c.fonts.tabs.unselected = helvetica
 
 c.hints.uppercase = True
 
