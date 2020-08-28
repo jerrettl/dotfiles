@@ -5,6 +5,8 @@ export BROWSER="/usr/bin/firefox"
 export EDITOR="/usr/bin/nvim"
 export DOTFILES="$HOME/dotfiles"
 
+export GEM_HOME="$HOME/gems"
+
 [ -f "$DOTFILES"/aliases/aliases ] && . "$DOTFILES"/aliases/aliases
 [ -f "$DOTFILES"/aliases/bash_autoaliases ] && . "$DOTFILES"/aliases/bash_autoaliases
 
@@ -72,7 +74,7 @@ set -o vi
 bind '"jk":vi-movement-mode'
 bind '"\C-l":clear-screen'
 
-export PATH="$PATH:/opt/cisco/anyconnect/bin/:/opt/fah/:/usr/NX/bin/"
+export PATH="$PATH:/opt/cisco/anyconnect/bin/:/opt/fah/:/usr/NX/bin/:$HOME/gems/bin:$HOME/.gem/ruby/2.7.0/bin"
 
 if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ]; then
   cd ~
