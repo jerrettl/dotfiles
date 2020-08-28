@@ -304,6 +304,7 @@ endfunction
 
 function! s:goyo_leave()
   colorscheme default
+  syntax on
 endfunction
 
 nnoremap <F12> :Goyo<cr>
