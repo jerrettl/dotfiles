@@ -4,14 +4,17 @@ set nocompatible
 
 " Plug
 " If plug is not installed, fetch and install it automatically.
-if empty(glob('~/.vim/autoload/plug.vim'))
+if has("unix") && empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-
-call plug#begin('~/.vim/plugged')
+if has("unix")
+  call plug#begin('~/.vim/plugged')
+elseif has("win32")
+  call plug#begin('~/vimfiles/plugged')
+endif
 
 " vim-latex: ease-of-life shortcuts for latex
 Plug 'vim-latex/vim-latex', { 'for': 'tex' }
