@@ -231,6 +231,9 @@ autocmd FileType c nnoremap <leader>ta :CtrlPTag<CR>
 autocmd FileType c nnoremap <leader>p :CtrlPTag<CR>
 autocmd BufWritePost *.c silent! !ctags %
 
+" Java
+autocmd FileType java set colorcolumn=100
+
 " CSS autocmds
 autocmd FileType css,javascript imap {<CR> {<CR>}<ESC>O
 
