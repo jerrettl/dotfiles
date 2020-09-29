@@ -149,6 +149,7 @@ function! s:new_colors()
   hi DiffChange ctermfg=white ctermbg=8
   hi DiffAdd ctermfg=black ctermbg=2
   hi DiffDelete ctermfg=black ctermbg=1
+  hi ColorColumn ctermbg=236
 endfunction
 autocmd! ColorScheme default call s:new_colors()
 
