@@ -9,7 +9,7 @@
 update="pkill -RTMIN+2 i3blocks"
 
 case "$BLOCK_BUTTON" in
-  1) urxvt -e sh -c "pacman -Qu --color=auto && echo && sudo pacman -Su --color=auto; bash" ;;
+  1) urxvt -e sh -c "pacman -Qu --color=auto && echo && sudo pacman -Su --color=auto; cd ~; bash" ;;
   3) echo "" ; $update ; exit ;;
 esac
 
