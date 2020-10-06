@@ -8,6 +8,7 @@ lssh /mnt/sshfs
 sfs /mnt/sshfs
 dwmm ~/Documents/dwm
 gdrive ~/gdrive
+oh /mnt/shared/School/cop-3223/office-hours
 vmv /mnt/sshfs/Documents/Volume\ May\ Vary
 cis /mnt/shared/School/cis-3360
 cop /mnt/shared/School/cop-3503
