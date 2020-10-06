@@ -279,8 +279,8 @@ bindsym $mod+Next exec xdotool click 5
 bindsym $mod+Ctrl+0 exec --no-startup-id xdotool mousemove_relative -- -10000 10000
 
 # Picom toggle
-bindsym $mod+F8 exec --no-startup-id pkill picom
-bindsym $mod+F9 exec --no-startup-id picom -b --xrender-sync-fence
+bindsym $mod+F8 exec --no-startup-id ~/dotfiles/scripts/picom.sh kill
+bindsym $mod+F9 exec --no-startup-id ~/dotfiles/scripts/picom.sh start
 
 # Floating window exceptions
 for_window [class="Steam" instance="Steam" title="Friends"] floating enable
