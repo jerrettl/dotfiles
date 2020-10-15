@@ -225,6 +225,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 bar {
 	status_command i3blocks
 	mode dock
+	tray_output primary
 
 	colors{
 		background #303030
