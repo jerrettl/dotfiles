@@ -277,8 +277,8 @@ let g:syntastic_mode_map = {
 let g:syntastic_python_checkers=['flake8', 'python']
 let g:syntastic_sh_checkers=['shellcheck', 'bashate']
 nnoremap <F8> :SyntasticCheck<cr>
-nnoremap ]sd :lopen<cr>
-nnoremap [sd :lclose<cr>
+" nnoremap ]sd :lopen<cr>
+" nnoremap [sd :lclose<cr>
 hi SyntasticErrorSign cterm=none ctermfg=white ctermbg=160 "dark red
 
 
