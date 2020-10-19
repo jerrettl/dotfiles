@@ -2,6 +2,10 @@
 
 hostname=$(uname -n)
 
+
+# Key press repeat timing
+xset r rate 250 40
+
 if [ "$hostname" == "lg-gram" ]; then
 	# Display scaling
 	export GDK_SCALE=2
@@ -18,8 +22,6 @@ if [ "$hostname" == "lg-gram" ]; then
 	accel="0.2"
 	xinput set-prop "$id" "$property" "$accel"
 
-	# Key press repeat timing
-	xset r rate 250 40
 
 elif [ "$hostname" == "inspiron3537" ]; then
 	# Display scaling
@@ -30,7 +32,4 @@ elif [ "$hostname" == "inspiron3537" ]; then
 	property=$(xinput list-props "$id" | grep -i 'libinput Accel Speed (' | cut -d "(" -f2 | cut -d ")" -f1)
 	accel="0.4"
 	xinput set-prop "$id" "$property" "$accel"
-
-	# Key press repeat timing
-	xset r rate 250 40
 fi
