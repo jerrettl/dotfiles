@@ -11,6 +11,8 @@ set $mod Mod4
 # Don't hide borders
 hide_edge_borders smart
 
+mouse_warping none
+
 # Font
 font pango:SFNS Display 10
 
