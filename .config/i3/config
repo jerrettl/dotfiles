@@ -250,11 +250,10 @@ bindsym $mod+Y bar mode toggle
 gaps inner 0
 gaps outer 0
 
-bindsym $mod+U gaps inner current minus 4; gaps outer current minus 4
-bindsym $mod+I gaps inner current plus 4; gaps outer current plus 4
-bindsym $mod+O gaps inner current set 0; gaps outer current set 0
-bindsym $mod+P gaps inner current set 8; gaps outer current set 8
-
+bindsym $mod+U gaps outer current minus 8
+bindsym $mod+I gaps outer current plus 8
+bindsym $mod+O gaps inner current set 0; gaps outer current set 0; [floating] border pixel $default_border_width; [tiling] border pixel $default_border_width
+bindsym $mod+P gaps inner current set 8; gaps outer current set 8; [floating] border pixel 0; [tiling] border pixel 0
 
 
 # Poor Man's volume control
@@ -301,8 +300,9 @@ for_window [class="zoom" title="Breakout Rooms"] floating enable
 for_window [class="zoom" title="^zoom$"] floating enable
 
 # i3-gaps fix
-# for_window [class="^.*"] border pixel 0
-new_window pixel 1
+#for_window [class="^.*"] border pixel 0
+set $default_border_width 1
+new_window pixel $default_border_width
 
 
 # Select display
