@@ -10,5 +10,5 @@ elif [ "$1" == "kill" ]; then
 	exit
 fi
 
-picom -b --xrender-sync-fence &
+picom -b --xrender-sync-fence --sw-opti &
 
