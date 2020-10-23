@@ -114,6 +114,9 @@ set shell=/bin/bash
 set scrolloff=3     " Set a minimum amount of lines above and below the cursor
 set undofile        " Persistent undo tree between sessions
 
+" Do not auto-insert comments on new lines
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 if !has('nvim')
   set noesckeys     " Function keys that start with <ESC> are recognised in insert mode (only necessary in vim, not neovim)
 endif
