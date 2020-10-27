@@ -230,9 +230,10 @@ autocmd FileType c imap STDIO #include <stdio.h>
 autocmd FileType c imap STDLIB #include <stdlib.h>
 autocmd FileType c imap STRING #include <string.h>
 
-autocmd FileType c nnoremap <leader>ta :CtrlPTag<CR>
-autocmd FileType c nnoremap <leader>p :CtrlPTag<CR>
-autocmd BufWritePost *.c silent! !ctags %
+autocmd FileType c,java nnoremap <leader>ta :CtrlPTag<CR>
+autocmd FileType c,java nnoremap <leader>p :CtrlPTag<CR>
+autocmd FileType c,java
+      \ autocmd BufWritePost <buffer> silent! !ctags %
 
 " Java
 autocmd FileType java set colorcolumn=100
