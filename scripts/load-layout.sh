@@ -14,7 +14,7 @@ if [ "$workspace" != "this" ]; then
 fi
 
 if [ "$selection" == "School" ]; then
-  i3-msg "layout default"
+  # i3-msg "layout default"
   firefox https://keep.google.com/u/0 https://gmail.com https://outlook.office.com/mail/inbox https://webcourses.ucf.edu &
 elif [ "$selection" == "Watch TV" ]; then
   i3-msg "layout tabbed"
