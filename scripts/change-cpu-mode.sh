@@ -6,6 +6,7 @@
 # Enables fan silent mode if "power" mode is selected. Disables fan silent mode if any other mode is selected.
 
 arg="$1"
+update="pkill -RTMIN+3 i3blocks"
 
 apply_to_conf () {
   if [ "$1" == "power" ]; then
@@ -15,6 +16,7 @@ apply_to_conf () {
   fi
 
   echo "$1" | awk '{print "w /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference - - - - " $1}' | \sudo tee /etc/tmpfiles.d/energy_performance_preference.conf
+	$update
 }
 
 if [ "$arg" == "list" ]; then

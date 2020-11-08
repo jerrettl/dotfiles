@@ -28,7 +28,6 @@
 separator_block_width=15
 markup=none
 
-
 #[firefoxmusic]
 #command=~/dotfiles/scripts/firefoxmusic-i3blocks.sh
 #markup=pango
@@ -149,6 +148,7 @@ label=BAT
 #label=⚡
 #instance=1
 interval=30
+signal=3
 
 # Date Time
 #
