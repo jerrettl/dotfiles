@@ -7,13 +7,14 @@ vssh /mnt/sshfs
 lssh /mnt/sshfs
 sfs /mnt/sshfs
 dwmm ~/Documents/dwm
-gdrive ~/gdrive
 oh /mnt/shared/ULA/cop-3223/office-hours
+cave /mnt/shared/ULA/cop-3223/the-cave
 vmv /mnt/sshfs/Documents/Volume\ May\ Vary
 cis /mnt/shared/School/cis-3360
-cop /mnt/shared/School/cop-3503
+tp /mnt/shared/School/cop-3503/Assignments/TopoPaths
 copa /mnt/shared/School/cop-3503/Assignments
-enc /mnt/shared/School/enc-3241
+cop /mnt/shared/School/cop-3503
 encn /mnt/shared/School/enc-3241/Notes
+enc /mnt/shared/School/enc-3241
 phy /mnt/shared/School/phy-2048
 ula /mnt/shared/ULA
