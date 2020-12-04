@@ -61,6 +61,7 @@ There are two things you can do about this warning:
 (setq-default completion-ignore-case t)
 (setq-default read-file-name-completion-ignore-case t)
 (setq-default read-buffer-completion-ignore-case t)
+(setq tab-width 2) 
 (setq-default tab-width 2)
 (setq-default evil-shift-width 2)
 (setq-default indent-tabs-mode nil)
