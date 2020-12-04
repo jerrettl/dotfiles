@@ -196,8 +196,8 @@ inoremap <C-l> <esc><C-w>l
 " Forgot to get root access before editing? No worries!
 cmap w!! w !sudo tee % >/dev/null
 
-cmap Q q
-cmap W w
+" cmap Q q
+" cmap W w
 
 " Mostly for the following jk commands. Makes exiting insert mode really fast.
 autocmd InsertEnter * set timeoutlen=250 ttimeoutlen=0
