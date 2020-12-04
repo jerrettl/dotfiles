@@ -381,3 +381,5 @@ bindsym $mod+Shift+S sticky toggle
 
 # View battery level
 bindsym $mod+Ctrl+B exec "acpi -b | sed -E 's/.*,\ ([0-9]+%).*/\1/' | xargs notify-send 'Battery level:'"
+
+bindsym $mod+Ctrl+S exec "~/dotfiles/scripts/i3-display-swap.sh"
