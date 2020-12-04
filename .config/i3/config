@@ -275,12 +275,6 @@ bindsym $mod+Shift+Down exec xdotool mousemove_relative 0 5
 bindsym $mod+Shift+Up exec xdotool mousemove_relative -- 0 -5
 bindsym $mod+Shift+Right exec xdotool mousemove_relative 5 0
 
-bindsym $mod+Shift+Return exec xdotool click 1
-bindsym $mod+F10 exec xdotool click 1
-bindsym $mod+Ctrl+Return exec xdotool click 3
-bindsym $mod+Prior exec xdotool click 4
-bindsym $mod+Next exec xdotool click 5
-
 bindsym $mod+Ctrl+0 exec --no-startup-id xdotool mousemove_relative -- -10000 10000
 
 # Picom toggle
