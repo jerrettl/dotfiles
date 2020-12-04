@@ -13,15 +13,14 @@ config.source('qute_autoaliases')
 # Type: Dict
 c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'}
 
-c.colors.statusbar.command.bg = "#303030"
-c.colors.statusbar.command.fg = "white"
-c.colors.statusbar.insert.bg = "#0a84ff"
-c.colors.statusbar.insert.fg = "white"
-c.colors.statusbar.normal.fg = "white"
-c.colors.statusbar.normal.bg = "#303030"
-c.colors.statusbar.url.fg = "white"
-c.colors.statusbar.url.hover.fg = "white"
-c.colors.statusbar.url.success.https.fg = "white"
+primary_fg = "white"
+primary_bg = "#303030"
+
+c.colors.statusbar.normal.fg = c.colors.statusbar.insert.fg = c.colors.statusbar.command.fg = primary_fg
+c.colors.statusbar.normal.bg = c.colors.statusbar.insert.bg = c.colors.statusbar.command.bg = primary_bg
+c.colors.statusbar.url.fg = primary_fg
+c.colors.statusbar.url.hover.fg = primary_fg
+c.colors.statusbar.url.success.https.fg = primary_fg
 
 # The editor (and arguments) to use for the `open-editor` command. `{}`
 # gets replaced by the filename of the file to be edited.
