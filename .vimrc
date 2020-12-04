@@ -73,6 +73,8 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 " Autodetect tab settings in a file
 Plug 'tpope/vim-sleuth'
 
+Plug 'mbbill/undotree'
+
 call plug#end()
 
 
