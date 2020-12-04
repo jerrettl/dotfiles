@@ -13,6 +13,9 @@
   *font: xft:Iosevka Fixed:pixelsize=16:antialias=true
 #endif
 
+! Fix for emacs
+emacs.font:Monospace 12
+
 ! Font rendering
 Xft.antialias: 1
 Xft.autohint: 0
