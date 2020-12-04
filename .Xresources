@@ -6,11 +6,11 @@
 
 #ifdef SRVR_lg_gram
 	Xft.dpi: 120
-  URxvt.font: xft:Iosevka Fixed:pixelsize=22:antialias=true
+  *font: xft:Iosevka Fixed:pixelsize=22:antialias=true
 #endif
 #ifdef SRVR_inspiron3537
 	Xft.dpi: 120
-  URxvt.font: xft:Iosevka Fixed:pixelsize=16:antialias=true
+  *font: xft:Iosevka Fixed:pixelsize=16:antialias=true
 #endif
 
 ! Font rendering
@@ -20,8 +20,8 @@ Xft.hinting: 1
 Xft.hintstyle: hintfull
 
 ! Primary theme colors
-URxvt*background: #1d1d1d
-URxvt*foreground: #f5f5f5
+*background: #1d1d1d
+*foreground: #f5f5f5
 
 ! Bold fonts
 URxvt.allow_bold: true
