@@ -143,6 +143,8 @@ install_link() {
   mkdir -pv ~/.config/rofi
   ln -sfv ~/dotfiles/.config/rofi/config ~/.config/rofi/config
   ln -sfv ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi.bak
+  ln -sfv $DOTFILES/.config/shell/profile ~/.profile
+  ln -sfv $DOTFILES/.config/x11/.xprofile ~/.xprofile
   mkdir -pv ~/.config/zathura
   ln -sfv ~/dotfiles/.config/zathura/gui/zathurarc ~/.config/zathura/zathurarc
   ln -sfv ~/dotfiles/.emacs ~/.emacs
@@ -158,7 +160,6 @@ install_link() {
   cp -nv ~/dotfiles/.neomutt/user1-example ~/.neomutt/user1
   ln -sfv ~/dotfiles/.offlineimap.py ~/.offlineimap.py
   cp -nv ~/dotfiles/.offlineimaprc-example ~/.offlineimaprc
-  ln -sfv ~/dotfiles/.profile ~/.profile
   mkdir ~/.ssh
   cp -nv ~/dotfiles/.ssh/config-example ~/.ssh/config
   ln -sfv ~/dotfiles/.tmux.conf ~/.tmux.conf
@@ -169,9 +170,8 @@ install_link() {
   ln -sfv ~/dotfiles/.vim/ ~/.vim
   ln -sfv ~/dotfiles/.vimrc ~/.vimrc
   ln -sfv ~/dotfiles/.xinitrc ~/.xinitrc
-  ln -sfv ~/dotfiles/.Xresources ~/.Xresources
   ln -sfv ~/dotfiles/.zshrc ~/.zshrc
-  xrdb ~/.Xresources
+  $DOTFILES_SCRIPTS/reload-xresources.sh
 }
 
 

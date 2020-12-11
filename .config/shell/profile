@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export BROWSER="/usr/bin/firefox"
+export EDITOR="/usr/bin/nvim"
+export DOTFILES="$HOME/dotfiles"
+export DOTFILES_SCRIPTS="$DOTFILES/scripts"

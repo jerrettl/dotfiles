@@ -1,1 +1,1 @@
-. $HOME/.bashrc
+. $DOTFILES/.bashrc

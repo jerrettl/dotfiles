@@ -23,8 +23,8 @@ cfmb	~/.ncmpcpp/bindings
 cfmc	~/.ncmpcpp/config
 cfmpd	~/.config/mpd/mpd.conf
 cfM	~/.config/mpd/mpd.conf
-cfx	~/.Xresources
-xrc	~/.Xresources
+cfx	$DOTFILES/.config/x11/.Xresources
+xrc	$DOTFILES/.config/x11/.Xresources
 brc ~/.bashrc
 todo ~/Downloads/todo.txt
 scratch ~/Downloads/scratch
