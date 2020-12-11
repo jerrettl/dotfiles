@@ -194,7 +194,13 @@ install_all() {
 }
 
 
-
+if [ -z "$DOTFILES" ] || [ -z "$DOTFILES_SCRIPTS" ]; then
+	echo "You appear to be missing some environment variables."
+	echo "Please set the following variables with the proper locations:"
+	echo "\$DOTFILES: $DOTFILES"
+	echo "\$DOTFILES_SCRIPTS: $DOTFILES_SCRIPTS"
+	exit
+fi
 
 if [ "$1" == "basic" ]; then
   install_basic
