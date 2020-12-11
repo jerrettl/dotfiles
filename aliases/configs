@@ -1,12 +1,9 @@
-zrc	~/.zshrc
-zshrc	~/.zshrc
 vrc	~/.vimrc
 vimrc	~/.vimrc
 i3rc	~/.config/i3/config
 cff	$DOTFILES/aliases/folders
 cfc	$DOTFILES/aliases/configs
 cfb	~/.bashrc
-cfz	~/.zshrc
 cfv	~/.vimrc
 cfr	~/.config/ranger/rc.conf
 cfi	~/.config/i3/config

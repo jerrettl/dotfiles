@@ -170,7 +170,6 @@ install_link() {
   rm ~/.vim
   ln -sfv ~/dotfiles/.vim/ ~/.vim
   ln -sfv ~/dotfiles/.vimrc ~/.vimrc
-  ln -sfv ~/dotfiles/.zshrc ~/.zshrc
   $DOTFILES_SCRIPTS/reload-xresources.sh
 }
 
