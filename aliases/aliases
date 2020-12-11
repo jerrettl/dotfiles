@@ -34,5 +34,5 @@ alias cpum='~/dotfiles/scripts/change-cpu-mode.sh'
 alias smpv='i3-swallow mpv'
 
 # ==== Common Directories
-alias dotf='cd ~/dotfiles && gstu'
+alias dotf='cd $DOTFILES && gstu'
 alias dotu='dotf && git pull && cd'
