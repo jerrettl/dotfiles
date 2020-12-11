@@ -176,7 +176,7 @@ install_link() {
 
 
 install_all() {
-  install_base
+  install_basic
   install_package_group all
 
   # Start services
