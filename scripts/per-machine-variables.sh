@@ -25,7 +25,7 @@ if [ "$hostname" == "lg-gram" ]; then
 	# Wireless mouse #2 sensitivity
 	id=$(xinput list | grep -i "Logitech MX Anywhere 3" | grep -oP 'id=[0-9]*' | sed 's/id=//')
 	property=$(xinput list-props "$id" | grep -i 'libinput Accel Speed (' | cut -d "(" -f2 | cut -d ")" -f1)
-	accel="0.3"
+	accel="0.35"
 	xinput set-prop "$id" "$property" "$accel"
 
 elif [ "$hostname" == "inspiron3537" ]; then
