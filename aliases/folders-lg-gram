@@ -6,7 +6,6 @@ sshtv /mnt/sshfs/Documents/tv
 vssh /mnt/sshfs
 lssh /mnt/sshfs
 sfs /mnt/sshfs
-dwmm ~/Documents/dwm
 oh /mnt/shared/ULA/cop-3223/office-hours
 cave /mnt/shared/ULA/cop-3223/the-cave
 vmv /mnt/sshfs/Documents/Volume\ May\ Vary
