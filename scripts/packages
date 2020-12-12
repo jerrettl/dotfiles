@@ -90,6 +90,7 @@ mojave-gtk-theme-git
 mpv
 network-manager-applet
 numlockx
+otf-san-francisco
 pango
 pavucontrol
 pcmanfm
@@ -101,7 +102,6 @@ rofi
 rxvt-unicode-pixbuf
 scrot
 system-config-printer
-system-san-francisco-font-git
 transset-df
 ttf-iosevka
 ttf-iosevka-term
