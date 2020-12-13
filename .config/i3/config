@@ -9,15 +9,18 @@ exec --no-startup-id hsetroot -solid "#000000"
 # Variables
 set $terminal urxvt
 set $lock i3lock -B 10 --ringcolor=ccccccff --insidecolor=ffffff00 --keyhlcolor=3333ccff --bshlcolor=cc3333ff --ringvercolor=ccccccff --insidevercolor=00000000 --verifcolor=ffffffff --wrongcolor=ffffffff --linecolor=00000000 --separatorcolor=00000000 --timecolor=ffffffff --datecolor=ffffffff --time-font="Helvetica Neue" --date-font="Helvetica Neue" --layout-font="Helvetica Neue" --verif-font="Helvetica Neue" --wrong-font="Helvetica Neue" --pass-screen-keys
-set $mod Mod4   # Mod1=<Alt> Mod4=<Super>
+# Mod1=<Alt> Mod4=<Super>
+set $mod Mod4
 
 
 # ==== General life ====
 hide_edge_borders smart                     # Don't hide borders
 mouse_warping none                          # Don't move the mouse between monitors
-floating_modifier $mod                      # Use Mouse+$mod to drag windows
+# Use Mouse+$mod to drag windows
+floating_modifier $mod
 #for_window [class="^.*"] border pixel 0
-set $default_border_width 1                 # i3-gaps fixes
+# i3-gaps fixes
+set $default_border_width 1
 new_window pixel $default_border_width
 
 
