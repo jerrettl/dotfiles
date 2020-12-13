@@ -34,6 +34,8 @@ alias cpum='~/dotfiles/scripts/change-cpu-mode.sh'
 alias smpv='i3-swallow mpv'
 
 alias ranger='RANGER_TMP_LOCATION=$(mktemp); ranger --choosedir="$RANGER_TMP_LOCATION"; cd "$(cat "$RANGER_TMP_LOCATION")"; rm "$RANGER_TMP_LOCATION"; unset RANGER_TMP_LOCATION'
+alias rr='ranger'
+
 # ==== Common Directories
 alias dotf='cd $DOTFILES && gstu'
 alias dotu='dotf && git pull && cd'
