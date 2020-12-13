@@ -3,33 +3,29 @@ alias cls='clear'
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias gst='git status -uno'
-alias gstu='git status -uall'
 alias l='ls -alh --color=auto -F'
 alias la='ls -alh --color=auto -F'
 alias ll='ls -lh --color=auto -F'
 alias more=less
+
 alias su='sudo -Es'
-alias update='pacaur -Syyu'
-alias yt='~/dotfiles/scripts/youtube.sh'
-alias gd='git diff'
+alias sudo='sudo --preserve-env '
+
 alias v='$EDITOR'
 alias vim='$EDITOR'
+
 alias ga='git add'
 alias gap='git add -p'
 alias gc='git commit -m'
 alias gca='git commit -am'
+alias gd='git diff'
 alias gp='git push'
-alias dv='d; v'
-alias Dv='D; v'
+alias gst='git status -uno'
+alias gstu='git status -uall'
+
 alias pacman='pacman --color=auto'
-alias spac='sudo pacman --color=auto'
-alias sudo='sudo --preserve-env '
 alias dmenu='dmenu -nb "#303030" -nf "#ffffff" -sb "#ffffff" -sf "#303030" -fn "HelveticaNeue-11"'
 alias e="emacsclient -c --alternate-editor emacs"
-alias pqu='pacman -Qu'
-alias psu='sudo pacman -Su'
-alias yayu='yay -a -Su'
 alias cpum='~/dotfiles/scripts/change-cpu-mode.sh'
 alias smpv='i3-swallow mpv'
 
@@ -38,4 +34,3 @@ alias rr='ranger'
 
 # ==== Common Directories
 alias dotf='cd $DOTFILES && gstu'
-alias dotu='dotf && git pull && cd'
