@@ -64,11 +64,9 @@ bindsym Shift+Print exec flameshot gui
 # Shortcut applications
 bindsym $mod+F1 exec firefox
 bindsym $mod+F2 exec emacsclient -c --alternate-editor emacs
-#bindsym $mod+F2 exec $terminal -e bash -c "cd ~/dotfiles && git pull && sleep 5"
 bindsym $mod+F3 exec $terminal -e ranger
 
 bindsym $mod+Shift+F1 exec qutebrowser
-#bindsym $mod+Shift+F2 exec $terminal -e yay -Syyu --needed --norebuild
 bindsym $mod+Shift+F3 exec pcmanfm
 
 # Shift Fn mode
@@ -298,22 +296,6 @@ for_window [class="zoom" title="^zoom$"] floating enable
 set $default_border_width 1
 new_window pixel $default_border_width
 
-
-# Select display
-set $select_display Select a display mode: (P)rimary, (S)econdary, (M)irror, or (E)xtend
-bindsym $mod+F7 mode "$select_display"
-
-mode "$select_display" {
-	bindsym p exec --no-startup-id ~/dotfiles/scripts/select-monitor.sh primary, mode "default"
-	bindsym s exec --no-startup-id ~/dotfiles/scripts/select-monitor.sh secondary, mode "default"
-	bindsym m exec --no-startup-id ~/dotfiles/scripts/select-monitor.sh mirror, mode "default"
-	bindsym e exec --no-startup-id ~/dotfiles/scripts/select-monitor.sh extend, mode "default"
-
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-}
-
-
 # Music mode
 set $music_mode Select a music player: (C)hrome, (F)irefox, (P)ianobar, or (S)potify
 bindsym $mod+Shift+m mode "$music_mode"
@@ -339,9 +321,6 @@ bindsym XF86AudioNext exec "~/dotfiles/scripts/music-control.sh next"
 bindsym $mod+B exec "~/dotfiles/scripts/music-control.sh back"
 bindsym XF86AudioPrev exec "~/dotfiles/scripts/music-control.sh back"
 
-# Chrome hacks
-bindsym Ctrl+grave exec --no-startup-id xdotool keyup grave && xdotool keyup ctrl && xdotool type $(cat ~/Documents/chrome-text.txt)
-
 # Brightness
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
@@ -354,8 +333,6 @@ bindsym $mod+F6 exec --no-startup-id ~/dotfiles/scripts/airplane_mode.sh
 # Mount
 bindsym $mod+period exec "udiskie-mount $(udiskie-info -a | dmenu)"
 bindsym $mod+Shift+period exec "udiskie-umount -d $(udiskie-info -a | dmenu)"
-
-bindsym $mod+F11 exec "~/Downloads/script.sh"
 
 # Browser quick-open
 bindsym $mod+X exec "~/dotfiles/scripts/browser-quickopen.sh"
