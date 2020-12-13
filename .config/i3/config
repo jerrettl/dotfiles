@@ -14,8 +14,10 @@ set $mod Mod4
 
 
 # ==== General life ====
-hide_edge_borders smart                     # Don't hide borders
-mouse_warping none                          # Don't move the mouse between monitors
+# Don't hide borders
+hide_edge_borders smart
+# Don't move the mouse between monitors
+mouse_warping none
 # Use Mouse+$mod to drag windows
 floating_modifier $mod
 #for_window [class="^.*"] border pixel 0
@@ -50,8 +52,7 @@ bindsym $mod+Shift+Return exec $terminal -cd "`xcwd`"
 bindsym $mod+q kill
 bindsym $mod+d exec --no-startup-id rofi -show run -font 'SF Pro Display 13' -hide-scrollbar -matching fuzzy
 bindsym $mod+Shift+r exec --no-startup-id bash ~/dotfiles/scripts/restart-i3.sh
-bindsym $mod+Shift+c reload   # reload the configuration file
-
+bindsym $mod+Shift+c reload
 
 # ==== Lock mode ====
 set $mode_system System (L) lock, (E) logout, (S) suspend, (H) hibernate, (R) reboot, (Shift+S) shutdown
@@ -95,20 +96,30 @@ mode "$extra_fn_mode" {
 
 
 # ==== Quick bindings ====
-bindsym $mod+X exec "~/dotfiles/scripts/browser-quickopen.sh"          # Browser quick-open
-bindsym $mod+R exec "~/dotfiles/scripts/load-layout.sh"                # Saved layout loader
-bindsym XF86Tools exec "~/dotfiles/scripts/toggle-touchpad.sh"         # Toggle touchpad. Pressing FN-F5 will cause XF86Tools to be sent to the system.
-bindsym $mod+Shift+B exec "~/dotfiles/scripts/change-cpu-mode.sh"      # Battery mode script
-bindsym $mod+Shift+S sticky toggle                                     # Toggle sticky
-bindsym $mod+Ctrl+B exec "acpi -b | sed -E 's/.*,\ ([0-9]+%).*/\1/' | xargs notify-send 'Battery level:'"     # View battery level
-bindsym $mod+Ctrl+S exec "~/dotfiles/scripts/i3-display-swap.sh"       # Swap workspaces on two displays
-bindsym Print exec "scrot ~/Pictures/%F-%H%M%S_\$wx\$h_scrot.png -e 'xclip -selection c -t image/png < $f'"   # Screenshot
-bindsym Shift+Print exec flameshot gui                                 # Advanced screenshot
+# Browser quick-open
+bindsym $mod+X exec "~/dotfiles/scripts/browser-quickopen.sh"
+# Saved layout loader
+bindsym $mod+R exec "~/dotfiles/scripts/load-layout.sh"
+# Toggle touchpad. Pressing FN-F5 will cause XF86Tools to be sent to the system.
+bindsym XF86Tools exec "~/dotfiles/scripts/toggle-touchpad.sh"
+# Battery mode script
+bindsym $mod+Shift+B exec "~/dotfiles/scripts/change-cpu-mode.sh"
+# Toggle sticky
+bindsym $mod+Shift+S sticky toggle
+# View battery level
+bindsym $mod+Ctrl+B exec "acpi -b | sed -E 's/.*,\ ([0-9]+%).*/\1/' | xargs notify-send 'Battery level:'"
+# Swap workspaces on two displays
+bindsym $mod+Ctrl+S exec "~/dotfiles/scripts/i3-display-swap.sh"
+# Screenshot
+bindsym Print exec "scrot ~/Pictures/%F-%H%M%S_\$wx\$h_scrot.png -e 'xclip -selection c -t image/png < $f'"
+bindsym Shift+Print exec flameshot gui
 
 
 # ==== Scratchpad ====
-bindsym $mod+Shift+minus move scratchpad   # Make the currently focused window a scratchpad
-bindsym $mod+minus scratchpad show         # Show the first scratchpad window
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
 
 
 # ==== Arranging windows ====
