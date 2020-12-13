@@ -138,7 +138,6 @@ set omnifunc=htmlcomplete#CompleteTags
 " Auto refresh databases on saving
 autocmd BufWritePost ~/dotfiles/aliases/folders*,~/dotfiles/aliases/configs*,~/dotfiles/scripts/shortcuts.sh !bash ~/dotfiles/scripts/shortcuts.sh
 autocmd FileType xdefaults autocmd BufWritePost <buffer> !$DOTFILES_SCRIPTS/reload-xresources.sh
-autocmd BufWritePost ~/.bashrc,~/dotfiles/aliases/aliases,~/dotfiles/aliases/folders*,~/dotfiles/aliases/configs* !source ~/.bashrc
 
 " ===================================
 

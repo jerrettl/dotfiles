@@ -105,7 +105,6 @@ install_package_group() {
 install_link() {
   # Symlinks (disgusting)
   echo "Creating symlinks..."
-  ln -sfv ~/dotfiles/.bashrc ~/.bashrc
   ln -sfv ~/dotfiles/.config/chromium-flags.conf ~/.config/chromium-flags.conf
   ln -sfv ~/dotfiles/.config/chromium-flags.conf ~/.config/chrome-flags.conf
   ln -sfv ~/dotfiles/.config/clight.conf ~/.config/clight.conf
@@ -141,6 +140,7 @@ install_link() {
   ln -sfv ~/dotfiles/.config/rofi/config ~/.config/rofi/config
   ln -sfv ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi.bak
   ln -sfv $DOTFILES/.config/shell/bash_profile ~/.bash_profile
+  ln -sfv $DOTFILES/.config/shell/bashrc ~/.bashrc
   ln -sfv $DOTFILES/.config/shell/profile ~/.profile
   ln -sfv $DOTFILES/.config/x11/.xinitrc ~/.xinitrc
   ln -sfv $DOTFILES/.config/x11/.xprofile ~/.xprofile

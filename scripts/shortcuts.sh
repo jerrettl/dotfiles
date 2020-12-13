@@ -57,4 +57,4 @@ if [ -f "$configs_custom" ]; then
   ranger_config_bind "$configs_custom"
 fi
 
-source ~/.bashrc
+source $DOTFILES/.config/shell/bashrc

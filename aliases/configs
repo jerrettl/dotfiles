@@ -3,7 +3,6 @@ vimrc	~/.vimrc
 i3rc	~/.config/i3/config
 cff	$DOTFILES/aliases/folders
 cfc	$DOTFILES/aliases/configs
-cfb	~/.bashrc
 cfv	~/.vimrc
 cfr	~/.config/ranger/rc.conf
 cfi	~/.config/i3/config
@@ -22,7 +21,8 @@ cfmpd	~/.config/mpd/mpd.conf
 cfM	~/.config/mpd/mpd.conf
 cfx	$DOTFILES/.config/x11/.Xresources
 xrc	$DOTFILES/.config/x11/.Xresources
-brc ~/.bashrc
+cfb $DOTFILES/.config/shell/bashrc
+brc $DOTFILES/.config/shell/bashrc
 todo ~/Downloads/todo.txt
 scratch ~/Downloads/scratch
 sshrc ~/.ssh/config
