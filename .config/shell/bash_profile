@@ -1,2 +1,2 @@
 . ~/.profile
-. $DOTFILES/config/shell/bashrc
+. $DOTFILES/.config/shell/bashrc
