@@ -5,99 +5,23 @@
 # Start with a black screen
 exec --no-startup-id hsetroot -solid "#000000"
 
-# Mod1=<Alt> Mod4=<Super>
-set $mod Mod4
 
-# Don't hide borders
-hide_edge_borders smart
-
-mouse_warping none
-
-# Font
-font pango:SF Pro Display 10
-
-# Use Mouse+$mod to drag windows
-floating_modifier $mod
-
+# Variables
 set $terminal urxvt
 set $lock i3lock -B 10 --ringcolor=ccccccff --insidecolor=ffffff00 --keyhlcolor=3333ccff --bshlcolor=cc3333ff --ringvercolor=ccccccff --insidevercolor=00000000 --verifcolor=ffffffff --wrongcolor=ffffffff --linecolor=00000000 --separatorcolor=00000000 --timecolor=ffffffff --datecolor=ffffffff --time-font="Helvetica Neue" --date-font="Helvetica Neue" --layout-font="Helvetica Neue" --verif-font="Helvetica Neue" --wrong-font="Helvetica Neue" --pass-screen-keys
-
-# The basics
-bindsym $mod+Return exec $terminal
-bindsym $mod+Shift+Return exec $terminal -cd "`xcwd`"
-bindsym $mod+q kill
-bindsym $mod+d exec --no-startup-id rofi -show run -font 'SF Pro Display 13' -hide-scrollbar -matching fuzzy
-bindsym $mod+Shift+r exec --no-startup-id bash ~/dotfiles/scripts/restart-i3.sh
+set $mod Mod4   # Mod1=<Alt> Mod4=<Super>
 
 
-# Lock mode
-set $mode_system System (L) lock, (E) logout, (S) suspend, (H) hibernate, (R) reboot, (Shift+S) shutdown
-bindsym $mod+Shift+e mode "$mode_system"
-
-mode "$mode_system" {
-	bindsym l exec --no-startup-id $lock, mode "default"
-	bindsym e exec --no-startup-id i3-msg exit, mode "default"
-	bindsym s exec --no-startup-id $lock && sleep 1 && systemctl suspend-then-hibernate, mode "default"
-	bindsym h exec --no-startup-id systemctl hibernate, mode "default"
-	bindsym r exec --no-startup-id systemctl reboot, mode "default"
-	bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
-
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-}
-
-# Scratchpad
-# Make the currently focused window a scratchpad
-bindsym $mod+Shift+minus move scratchpad
-
-# Show the first scratchpad window
-bindsym $mod+minus scratchpad show
-
-# switch to last workspace
-bindsym $mod+Tab workspace back_and_forth
-bindsym Mod1+Tab workspace back_and_forth
-
-# Screenshot
-bindsym Print exec "scrot ~/Pictures/%F-%H%M%S_\$wx\$h_scrot.png -e 'xclip -selection c -t image/png < $f'"
-bindsym Shift+Print exec flameshot gui
-
-# Shortcut applications
-bindsym $mod+F1 exec firefox
-bindsym $mod+F2 exec emacsclient -c --alternate-editor emacs
-bindsym $mod+F3 exec $terminal -e ranger
-# Airplane Mode
-bindsym $mod+F6 exec --no-startup-id ~/dotfiles/scripts/airplane_mode.sh
-# Picom toggle
-bindsym $mod+F8 exec --no-startup-id ~/dotfiles/scripts/picom.sh kill
-bindsym $mod+F9 exec --no-startup-id ~/dotfiles/scripts/picom.sh start
+# ==== General life ====
+hide_edge_borders smart                     # Don't hide borders
+mouse_warping none                          # Don't move the mouse between monitors
+floating_modifier $mod                      # Use Mouse+$mod to drag windows
+#for_window [class="^.*"] border pixel 0
+set $default_border_width 1                 # i3-gaps fixes
+new_window pixel $default_border_width
 
 
-bindsym $mod+Shift+F1 exec qutebrowser
-bindsym $mod+Shift+F3 exec pcmanfm
-
-# Shift Fn mode
-set $extra_fn_mode Shift+FN
-bindsym $mod+grave mode "$extra_fn_mode"
-
-mode "$extra_fn_mode" {
-	bindsym F1 exec qutebrowser, mode default
-	#bindsym F2
-	bindsym F3 exec pcmanfm, mode default
-	#bindsym F4
-	#bindsym F5
-	#bindsym F6
-	#bindsym F7
-	#bindsym F8
-	#bindsym F9
-	#bindsym F10
-	#bindsym F11
-	#bindsym F12
-
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-}
-
-# On startup
+# ==== Startup ====
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpaper.jpg
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id system-config-printer-applet
@@ -116,6 +40,75 @@ exec --no-startup-id sudo powertop --auto-tune
 exec --no-startup-id sudo rfkill block bluetooth
 #exec --no-startup-id blueman-tray
 
+
+# ==== The basics ====
+bindsym $mod+Return exec $terminal
+bindsym $mod+Shift+Return exec $terminal -cd "`xcwd`"
+bindsym $mod+q kill
+bindsym $mod+d exec --no-startup-id rofi -show run -font 'SF Pro Display 13' -hide-scrollbar -matching fuzzy
+bindsym $mod+Shift+r exec --no-startup-id bash ~/dotfiles/scripts/restart-i3.sh
+bindsym $mod+Shift+c reload   # reload the configuration file
+
+
+# ==== Lock mode ====
+set $mode_system System (L) lock, (E) logout, (S) suspend, (H) hibernate, (R) reboot, (Shift+S) shutdown
+bindsym $mod+Shift+e mode "$mode_system"
+
+mode "$mode_system" {
+	bindsym l exec --no-startup-id $lock, mode "default"
+	bindsym e exec --no-startup-id i3-msg exit, mode "default"
+	bindsym s exec --no-startup-id $lock && sleep 1 && systemctl suspend-then-hibernate, mode "default"
+	bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+	bindsym r exec --no-startup-id systemctl reboot, mode "default"
+	bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+
+# ==== Function key applications ====
+bindsym $mod+F1 exec firefox
+bindsym $mod+F2 exec emacsclient -c --alternate-editor emacs
+bindsym $mod+F3 exec $terminal -e ranger
+bindsym $mod+F6 exec --no-startup-id ~/dotfiles/scripts/airplane_mode.sh
+bindsym $mod+F8 exec --no-startup-id ~/dotfiles/scripts/picom.sh kill
+bindsym $mod+F9 exec --no-startup-id ~/dotfiles/scripts/picom.sh start
+
+bindsym $mod+Shift+F1 exec qutebrowser
+bindsym $mod+Shift+F3 exec pcmanfm
+
+# Shift Fn mode
+set $extra_fn_mode Shift+FN
+bindsym $mod+grave mode "$extra_fn_mode"
+
+mode "$extra_fn_mode" {
+	bindsym F1 exec qutebrowser, mode default
+	bindsym F3 exec pcmanfm, mode default
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+
+# ==== Quick bindings ====
+bindsym $mod+X exec "~/dotfiles/scripts/browser-quickopen.sh"          # Browser quick-open
+bindsym $mod+R exec "~/dotfiles/scripts/load-layout.sh"                # Saved layout loader
+bindsym XF86Tools exec "~/dotfiles/scripts/toggle-touchpad.sh"         # Toggle touchpad. Pressing FN-F5 will cause XF86Tools to be sent to the system.
+bindsym $mod+Shift+B exec "~/dotfiles/scripts/change-cpu-mode.sh"      # Battery mode script
+bindsym $mod+Shift+S sticky toggle                                     # Toggle sticky
+bindsym $mod+Ctrl+B exec "acpi -b | sed -E 's/.*,\ ([0-9]+%).*/\1/' | xargs notify-send 'Battery level:'"     # View battery level
+bindsym $mod+Ctrl+S exec "~/dotfiles/scripts/i3-display-swap.sh"       # Swap workspaces on two displays
+bindsym Print exec "scrot ~/Pictures/%F-%H%M%S_\$wx\$h_scrot.png -e 'xclip -selection c -t image/png < $f'"   # Screenshot
+bindsym Shift+Print exec flameshot gui                                 # Advanced screenshot
+
+
+# ==== Scratchpad ====
+bindsym $mod+Shift+minus move scratchpad   # Make the currently focused window a scratchpad
+bindsym $mod+minus scratchpad show         # Show the first scratchpad window
+
+
+# ==== Arranging windows ====
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -135,11 +128,11 @@ bindsym $mod+Ctrl+j resize grow height 20 px
 bindsym $mod+Ctrl+k resize shrink height 20 px
 bindsym $mod+Ctrl+l resize grow width 20 px
 
+bindsym $mod+f fullscreen toggle
+
 # split in horizontal or vertical orientation
 bindsym $mod+g split h
 bindsym $mod+v split v
-
-bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -156,6 +149,8 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 bindsym $mod+z focus child
 
+
+# ==== Switching workspaces ====
 set $workspace1 "1"
 set $workspace2 "2"
 set $workspace3 "3"
@@ -191,7 +186,6 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
-
 # move focused container to workspace and switch to it
 set $move_mode Choose a workspace to move and switch to (1-10).
 bindsym $mod+Shift+Tab mode "$move_mode"
@@ -212,9 +206,13 @@ mode "$move_mode" {
 	bindsym Escape mode "default"
 }
 
+# switch to last workspace
+bindsym $mod+Tab workspace back_and_forth
+bindsym Mod1+Tab workspace back_and_forth
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
+
+# ==== Theming ====
+font pango:SF Pro Display 10
 
 set $bg-color 	         #969696
 set $inactive-bg-color   #2d2d2d
@@ -250,7 +248,8 @@ bar {
 
 bindsym $mod+Y bar mode toggle
 
-# Gaps
+
+# ==== Gaps ====
 gaps inner 0
 gaps outer 0
 
@@ -259,26 +258,6 @@ bindsym $mod+I gaps outer current plus 8
 bindsym $mod+O gaps inner current set 0; gaps outer current set 0; [floating] border pixel $default_border_width; [tiling] border pixel $default_border_width
 bindsym $mod+P gaps inner current set 8; gaps outer current set 8; [floating] border pixel 0; [tiling] border pixel 0
 
-
-# Poor Man's volume control
-bindsym Scroll_Lock exec --no-startup-id xdotool keyup Scroll_Lock && ~/dotfiles/scripts/volume.sh down
-bindsym Pause exec --no-startup-id xdotool keyup Pause && ~/dotfiles/scripts/volume.sh up
-bindsym XF86AudioLowerVolume exec --no-startup-id xdotool keyup XF86AudioLowerVolume && ~/dotfiles/scripts/volume.sh down
-bindsym XF86AudioRaiseVolume exec --no-startup-id xdotool keyup XF86AudioRaiseVolume && ~/dotfiles/scripts/volume.sh up
-bindsym XF86AudioMute exec --no-startup-id xdotool keyup XF86AudioMute && ~/dotfiles/scripts/volume.sh toggle
-
-# Poor Man's mouse control
-bindsym $mod+Left exec xdotool mousemove_relative -- -15 0
-bindsym $mod+Down exec xdotool mousemove_relative 0 15
-bindsym $mod+Up exec xdotool mousemove_relative -- 0 -15
-bindsym $mod+Right exec xdotool mousemove_relative 15 0
-
-bindsym $mod+Shift+Left exec xdotool mousemove_relative -- -5 0
-bindsym $mod+Shift+Down exec xdotool mousemove_relative 0 5
-bindsym $mod+Shift+Up exec xdotool mousemove_relative -- 0 -5
-bindsym $mod+Shift+Right exec xdotool mousemove_relative 5 0
-
-bindsym $mod+Ctrl+0 exec --no-startup-id xdotool mousemove_relative -- -10000 10000
 
 # Floating window exceptions
 for_window [class="Steam" instance="Steam" title="Friends"] floating enable
@@ -293,10 +272,24 @@ no_focus [class="Microsoft Teams - Preview" title="Microsoft Teams Notification"
 for_window [class="zoom" title="Breakout Rooms"] floating enable
 for_window [class="zoom" title="^zoom$"] floating enable
 
-# i3-gaps fix
-#for_window [class="^.*"] border pixel 0
-set $default_border_width 1
-new_window pixel $default_border_width
+
+# ==== Music ====
+# Poor Man's volume control
+bindsym Scroll_Lock exec --no-startup-id xdotool keyup Scroll_Lock && ~/dotfiles/scripts/volume.sh down
+bindsym Pause exec --no-startup-id xdotool keyup Pause && ~/dotfiles/scripts/volume.sh up
+bindsym XF86AudioLowerVolume exec --no-startup-id xdotool keyup XF86AudioLowerVolume && ~/dotfiles/scripts/volume.sh down
+bindsym XF86AudioRaiseVolume exec --no-startup-id xdotool keyup XF86AudioRaiseVolume && ~/dotfiles/scripts/volume.sh up
+bindsym XF86AudioMute exec --no-startup-id xdotool keyup XF86AudioMute && ~/dotfiles/scripts/volume.sh toggle
+
+# Media control bindings
+bindsym $mod+M exec "~/dotfiles/scripts/music-control.sh playpause"
+bindsym XF86AudioPlay exec "~/dotfiles/scripts/music-control.sh playpause"
+
+bindsym $mod+N exec "~/dotfiles/scripts/music-control.sh next"
+bindsym XF86AudioNext exec "~/dotfiles/scripts/music-control.sh next"
+
+bindsym $mod+B exec "~/dotfiles/scripts/music-control.sh back"
+bindsym XF86AudioPrev exec "~/dotfiles/scripts/music-control.sh back"
 
 # Music mode
 set $music_mode Select a music player: (C)hrome, (F)irefox, (P)ianobar, or (S)potify
@@ -313,16 +306,8 @@ mode "$music_mode" {
 	bindsym Escape mode "default"
 }
 
-# Media control bindings
-bindsym $mod+M exec "~/dotfiles/scripts/music-control.sh playpause"
-bindsym XF86AudioPlay exec "~/dotfiles/scripts/music-control.sh playpause"
 
-bindsym $mod+N exec "~/dotfiles/scripts/music-control.sh next"
-bindsym XF86AudioNext exec "~/dotfiles/scripts/music-control.sh next"
-
-bindsym $mod+B exec "~/dotfiles/scripts/music-control.sh back"
-bindsym XF86AudioPrev exec "~/dotfiles/scripts/music-control.sh back"
-
+# ==== Misc. ====
 # Brightness
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
@@ -332,23 +317,3 @@ bindsym Shift+XF86MonBrightnessUp exec "xbacklight -inc 2"
 # Mount
 bindsym $mod+period exec "udiskie-mount $(udiskie-info -a | dmenu)"
 bindsym $mod+Shift+period exec "udiskie-umount -d $(udiskie-info -a | dmenu)"
-
-# Browser quick-open
-bindsym $mod+X exec "~/dotfiles/scripts/browser-quickopen.sh"
-
-# Saved layout loader
-bindsym $mod+R exec "~/dotfiles/scripts/load-layout.sh"
-
-# Toggle touchpad. Pressing FN-F5 will cause XF86Tools to be sent to the system.
-bindsym XF86Tools exec "~/dotfiles/scripts/toggle-touchpad.sh"
-
-# Battery mode script
-bindsym $mod+Shift+B exec "~/dotfiles/scripts/change-cpu-mode.sh"
-
-# Toggle sticky
-bindsym $mod+Shift+S sticky toggle
-
-# View battery level
-bindsym $mod+Ctrl+B exec "acpi -b | sed -E 's/.*,\ ([0-9]+%).*/\1/' | xargs notify-send 'Battery level:'"
-
-bindsym $mod+Ctrl+S exec "~/dotfiles/scripts/i3-display-swap.sh"
