@@ -65,6 +65,12 @@ bindsym Shift+Print exec flameshot gui
 bindsym $mod+F1 exec firefox
 bindsym $mod+F2 exec emacsclient -c --alternate-editor emacs
 bindsym $mod+F3 exec $terminal -e ranger
+# Airplane Mode
+bindsym $mod+F6 exec --no-startup-id ~/dotfiles/scripts/airplane_mode.sh
+# Picom toggle
+bindsym $mod+F8 exec --no-startup-id ~/dotfiles/scripts/picom.sh kill
+bindsym $mod+F9 exec --no-startup-id ~/dotfiles/scripts/picom.sh start
+
 
 bindsym $mod+Shift+F1 exec qutebrowser
 bindsym $mod+Shift+F3 exec pcmanfm
@@ -274,10 +280,6 @@ bindsym $mod+Shift+Right exec xdotool mousemove_relative 5 0
 
 bindsym $mod+Ctrl+0 exec --no-startup-id xdotool mousemove_relative -- -10000 10000
 
-# Picom toggle
-bindsym $mod+F8 exec --no-startup-id ~/dotfiles/scripts/picom.sh kill
-bindsym $mod+F9 exec --no-startup-id ~/dotfiles/scripts/picom.sh start
-
 # Floating window exceptions
 for_window [class="Steam" instance="Steam" title="Friends"] floating enable
 for_window [class="Steam" instance="Steam" title="Steam Guard - Computer Authorization Required"] floating enable
@@ -326,9 +328,6 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
 bindsym Shift+XF86MonBrightnessDown exec "xbacklight -dec 2"
 bindsym Shift+XF86MonBrightnessUp exec "xbacklight -inc 2"
-
-# Airplane Mode
-bindsym $mod+F6 exec --no-startup-id ~/dotfiles/scripts/airplane_mode.sh
 
 # Mount
 bindsym $mod+period exec "udiskie-mount $(udiskie-info -a | dmenu)"
