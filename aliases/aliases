@@ -1,3 +1,5 @@
+# vim: syntax=sh
+
 # ==== Commands
 alias cls='clear'
 alias cp="cp -i"                          # confirm before overwriting something
