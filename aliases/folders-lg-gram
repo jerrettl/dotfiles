@@ -1,10 +1,10 @@
-sch	/mnt/shared/School
-sha /mnt/shared
-txt /mnt/shared/School/Textbooks
-tv /mnt/shared/Saved\ TV
+sch $DIR_SCHOOL
+sha $DIR_SHARED
+txt $DIR_SCHOOL/Textbooks
+tv $DIR_SHARED/Saved\ TV
 sshtv /mnt/sshfs/Documents/tv
 vssh /mnt/sshfs
 lssh /mnt/sshfs
 sfs /mnt/sshfs
 vmv /mnt/sshfs/Documents/Volume\ May\ Vary
-ula /mnt/shared/ULA
+ula $DIR_SHARED/ULA
