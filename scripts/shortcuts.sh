@@ -9,7 +9,10 @@ bash_config_bind() {
 }
 
 ranger_folder_bind() {
-  cat "$1" | sed 's/\\//g' | awk '{print "map g"$1" cd "substr($0, index($0, $2))"\nmap t"$1" tab_new "substr($0, index($0, $2))"\nmap m"$1" shell mv %s "substr($0, index($0, $2))"\nmap Y"$1" shell cp -r %s "substr($0, index($0, $2))""}' >> "$ranger_shortcuts"
+	cat "$1" | sed 's/\\//g' | sed -E 's/\$([A-Z_]*)/\"\ \+\ os.getenv('"'"'\1\'"'"')\ +\ \"/' | awk '{print "map g"$1" eval fm.cd(\""substr($0, index($0, $2))"\")"}' >> "$ranger_shortcuts"
+	cat "$1" | sed 's/\\//g' | sed -E 's/\$([A-Z_]*)/\"\ \+\ os.getenv('"'"'\1\'"'"')\ +\ \"/' | awk '{print "map t"$1" eval fm.tab_new(\""substr($0, index($0, $2))"\")"}' >> "$ranger_shortcuts"
+  cat "$1" | sed 's/\\//g' | awk '{print "map m"$1" shell mv %s "substr($0, index($0, $2))""}' >> "$ranger_shortcuts"
+  cat "$1" | sed 's/\\//g' | awk '{print "map Y"$1" shell cp -r %s "substr($0, index($0, $2))""}' >> "$ranger_shortcuts"
 }
 
 ranger_config_bind() {
