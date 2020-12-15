@@ -1,4 +1,0 @@
-# vim: syntax=sh
-
-DIR_SHARED="/mnt/d"
-DIR_SCHOOL="$DIR_SHARED/School"
