@@ -147,7 +147,6 @@ install_link() {
   mkdir -pv ~/.config/zathura
   ln -sfv ~/dotfiles/.config/zathura/gui/zathurarc ~/.config/zathura/zathurarc
   ln -sfv ~/dotfiles/.emacs ~/.emacs
-  ln -sfv ~/dotfiles/.inputrc ~/.inputrc
   rm -f ~/.msmtp
   ln -sfv ~/dotfiles/.msmtp/ ~/.msmtp
   cp -nv ~/dotfiles/.msmtprc-example ~/.msmtprc

@@ -5,6 +5,8 @@ export PATH="$PATH:/opt/cisco/anyconnect/bin/:/opt/fah/:/usr/NX/bin/:$HOME/gems/
 export GEM_HOME="$HOME/gems"
 
 # ==== Sourcing external files ====
+bind -f "$DOTFILES"/.config/shell/inputrc
+
 [ -f "$DOTFILES"/aliases/aliases ] && . "$DOTFILES"/aliases/aliases
 [ -f "$DOTFILES"/aliases/bash_autoaliases ] && . "$DOTFILES"/aliases/bash_autoaliases
 
