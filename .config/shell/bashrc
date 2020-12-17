@@ -1,8 +1,10 @@
 # Stop early if the shell is non-interactive
 if [[ $- != *i* ]]; then return; fi
 
+export PATH="$PATH:/opt/cisco/anyconnect/bin/:/opt/fah/:/usr/NX/bin/:$HOME/gems/bin:$HOME/.gem/ruby/2.7.0/bin"
 export GEM_HOME="$HOME/gems"
 
+# ==== Sourcing external files ====
 [ -f "$DOTFILES"/aliases/aliases ] && . "$DOTFILES"/aliases/aliases
 [ -f "$DOTFILES"/aliases/bash_autoaliases ] && . "$DOTFILES"/aliases/bash_autoaliases
 
@@ -15,18 +17,20 @@ fi
 [ -f /usr/share/doc/pkgfile/command-not-found.bash ] && source /usr/share/doc/pkgfile/command-not-found.bash
 
 
+# ==== Prompt ====
 RED="\[$(tput setaf 1)\]"
 GREEN="\[$(tput setaf 2)\]"
 RESET="\[$(tput sgr0)\]"
 BOLD="\[$(tput bold)\]"
 
 if [ "$(id -u)" -eq 0 ]; then
-	PS1="${BOLD}$(uname -n)${RESET} ${RED}\$(pwd | sed \"s|^$HOME|~|\")${RESET}> "
+  PS1="${BOLD}$(uname -n)${RESET} ${RED}\$(pwd | sed \"s|^$HOME|~|\")${RESET}> "
 else
-	PS1="${BOLD}$(uname -n)${RESET} ${GREEN}\$(pwd | sed \"s|^$HOME|~|\")${RESET}> "
+  PS1="${BOLD}$(uname -n)${RESET} ${GREEN}\$(pwd | sed \"s|^$HOME|~|\")${RESET}> "
 fi
 
-# Custom functions
+
+# ==== Custom functions ====
 makenotes() {
   pandoc "$1.md" -o "$1.html" --self-contained
 }
@@ -38,6 +42,7 @@ cdl() {
 mkcd() {
   mkdir "$1"; cd "$1"
 }
+
 
 # Change directory by typing its name
 shopt -s autocd
@@ -55,25 +60,22 @@ export HISTSIZE=-1
 # Avoid duplicates
 HISTCONTROL=ignoredups:erasedups
 
-bind '"\t":menu-complete'
 
+# ==== Bindings ====
+bind '"\t":menu-complete'
 # Fuzzy file completion
 bind -x '"\C-f":"xdotool type $(find . | sed '"'"'s/^..//'"'"' | fzf)"'
-
-if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ]; then
-  export LIBGL_ALWAYS_INDIRECT=1
-  export DISPLAY=:0
-fi
-
 # Vi mode (with some modifications)
 set -o vi
 bind '"jk":vi-movement-mode'
 bind '"\C-l":clear-screen'
 
-export PATH="$PATH:/opt/cisco/anyconnect/bin/:/opt/fah/:/usr/NX/bin/:$HOME/gems/bin:$HOME/.gem/ruby/2.7.0/bin"
 
 if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ]; then
+  export LIBGL_ALWAYS_INDIRECT=1
+  export DISPLAY=:0
   cd ~
 fi
+
 
 which keychain 2>/dev/null > /dev/null && eval $(keychain --eval --quiet --nogui --noask --agents ssh id_rsa)
