@@ -28,58 +28,10 @@ command=$DOTFILES/scripts/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-#[firefoxmusic]
-#command=~/dotfiles/scripts/firefoxmusic-i3blocks.sh
-#markup=pango
-#interval=5
-
-#[chromemusic]
-#command=~/dotfiles/scripts/chromemusic-i3blocks.sh
-#markup=pango
-#interval=5
-
-#[pianobar]
-#command=~/dotfiles/scripts/pianobar-relay.sh
-#markup=pango
-#interval=5
-
-# Spotify icon \uF1BC
-#[spotify]
-#command=~/dotfiles/scripts/spotify.py
-#markup=pango
-#interval=5
-
 # Pacman new update notification
 [pacman-updates]
 markup=pango
 signal=2
-
-# Volume indicator
-#
-# The first parameter sets the step (and units to display)
-# The second parameter overrides the mixer selection
-# See the script for details.
-#[volume]
-#label=VOL
-##label=♪
-#instance=Master
-##instance=PCM
-#interval=once
-#signal=10
-
-# Memory usage
-#
-# The type defaults to "mem" if the instance is not specified.
-#[memory]
-#label=MEM
-#separator=false
-#interval=30
-
-#[memory]
-#label=SWAP
-#instance=swap
-#separator=false
-#interval=30
 
 # Disk usage
 #
@@ -117,10 +69,6 @@ separator=true
 interval=10
 separator=true
 
-#[bandwidth]
-##instance=eth0
-#interval=5
-
 # CPU usage
 #
 # The script may be called with -w and -c switches to specify thresholds,
@@ -130,9 +78,6 @@ label=CPU
 interval=10
 min_width=CPU: 100.00%
 #separator=false
-
-#[load_average]
-#interval=10
 
 # Battery indicator
 #
@@ -149,38 +94,6 @@ signal=3
 [time]
 command=date '+%a %Y-%m-%d %H:%M:%S'
 interval=5
-
-# Generic media player support
-#
-# This displays "ARTIST - SONG" if a music is playing.
-# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
-#[mediaplayer]
-#instance=spotify
-#interval=5
-#signal=10
-
-# OpenVPN support
-#
-# Support multiple VPN, with colors.
-#[openvpn]
-#interval=20
-
-
-# Key indicators
-#
-# Add the following bindings to i3 config file:
-#
-# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
-# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-#[keyindicator]
-#instance=CAPS
-#interval=once
-#signal=11
-
-#[keyindicator]
-#instance=NUM
-#interval=once
-#signal=11
 
 [volume-pulseaudio]
 label=Volume 
