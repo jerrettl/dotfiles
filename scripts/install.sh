@@ -147,26 +147,29 @@ install_link() {
   mkdir -pv ~/.config/zathura
   ln -sfv ~/dotfiles/.config/zathura/gui/zathurarc ~/.config/zathura/zathurarc
   ln -sfv ~/dotfiles/.emacs ~/.emacs
-  rm -f ~/.msmtp
-  ln -sfv ~/dotfiles/.msmtp/ ~/.msmtp
-  cp -nv ~/dotfiles/.msmtprc-example ~/.msmtprc
-  mkdir ~/.neomutt
-  ln -sfv ~/dotfiles/.neomutt/colors ~/.neomutt/colors
-  ln -sfv ~/dotfiles/.neomutt/macros ~/.neomutt/macros
-  ln -sfv ~/dotfiles/.neomutt/mailcap ~/.neomutt/mailcap
-  ln -sfv ~/dotfiles/.neomutt/neomuttrc ~/.neomutt/neomuttrc
-  cp -nv ~/dotfiles/.neomutt/user1-example ~/.neomutt/user1
-  ln -sfv ~/dotfiles/.offlineimap.py ~/.offlineimap.py
-  cp -nv ~/dotfiles/.offlineimaprc-example ~/.offlineimaprc
   mkdir ~/.ssh
   cp -nv ~/dotfiles/.ssh/config-example ~/.ssh/config
   ln -sfv ~/dotfiles/.tmux.conf ~/.tmux.conf
-  ln -sfv ~/dotfiles/.urlview ~/.urlview
   mkdir -pv ~/.urxvt/ext
   ln -sfv ~/dotfiles/.urxvt/ext/* ~/.urxvt/ext
   rm ~/.vim
   ln -sfv ~/dotfiles/.vim/ ~/.vim
   ln -sfv ~/dotfiles/.vimrc ~/.vimrc
+
+  # Mail
+  rm -f ~/.msmtp
+  ln -sfv $DOTFILES/.config/mail/.msmtp/ ~/.msmtp
+  cp -nv $DOTFILES/.config/mail/.msmtprc-example ~/.msmtprc
+  mkdir ~/.neomutt
+  ln -sfv $DOTFILES/.config/mail/.neomutt/colors ~/.neomutt/colors
+  ln -sfv $DOTFILES/.config/mail/.neomutt/macros ~/.neomutt/macros
+  ln -sfv $DOTFILES/.config/mail/.neomutt/mailcap ~/.neomutt/mailcap
+  ln -sfv $DOTFILES/.config/mail/.neomutt/neomuttrc ~/.neomutt/neomuttrc
+  cp -nv $DOTFILES/.config/mail/.neomutt/user1-example ~/.neomutt/user1
+  ln -sfv $DOTFILES/.config/mail/.offlineimap.py ~/.offlineimap.py
+  cp -nv $DOTFILES/.config/mail/.offlineimaprc-example ~/.offlineimaprc
+  ln -sfv $DOTFILES/.config/mail/.urlview ~/.urlview
+
   $DOTFILES_SCRIPTS/reload-xresources.sh
 }
 
