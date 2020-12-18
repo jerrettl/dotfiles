@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Defined in cron (crontab -e) as:
-# */30 * * * * ~/dotfiles/scripts/pacman-i3.sh
+# */30 * * * * $DOTFILES/scripts/i3blocks/pacman-updates
 
 # Entry added to /etc/sudoers:
 # <username> ALL=(ALL) NOPASSWD: /usr/bin/pacman -Syy, /usr/bin/pacman -Syywu --noconfirm
