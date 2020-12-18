@@ -1,6 +1,6 @@
 #!/bin/bash
 
-volume_script="$HOME/dotfiles/scripts/volume.sh"
+volume_script="$DOTFILES/scripts/volume.sh"
 update="pkill -RTMIN+1 i3blocks"
 
 case "$BLOCK_BUTTON" in
