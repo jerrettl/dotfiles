@@ -329,5 +329,5 @@ bindsym Shift+XF86MonBrightnessDown exec "xbacklight -dec 2"
 bindsym Shift+XF86MonBrightnessUp exec "xbacklight -inc 2"
 
 # Mount
-bindsym $mod+period exec "udiskie-mount $(udiskie-info -a | dmenu)"
-bindsym $mod+Shift+period exec "udiskie-umount -d $(udiskie-info -a | dmenu)"
+bindsym $mod+period exec "udiskie-mount $(udiskie-info --all --output '{device_presentation} ({id_label})' --filter is_filesystem | dmenu -p 'Mount a device:' | awk '{print $1}')"
+bindsym $mod+Shift+period exec "udiskie-umount -d $(udiskie-info --all --output '{device_presentation} ({id_label}) - {device_size}' --filter is_mounted | dmenu -p 'Unmount a device:' | awk '{print $1}')"
