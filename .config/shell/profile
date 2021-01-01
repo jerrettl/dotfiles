@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export TERMINAL="/usr/bin/urxvt"
 export BROWSER="/usr/bin/firefox"
 export EDITOR="/usr/bin/nvim"
 export DOTFILES="$HOME/dotfiles"

@@ -25,7 +25,7 @@ c.colors.statusbar.url.success.https.fg = primary_fg
 # The editor (and arguments) to use for the `open-editor` command. `{}`
 # gets replaced by the filename of the file to be edited.
 # Type: ShellCommand
-c.editor.command = ['urxvt', '-e', 'vim', '-f', '{}']
+c.editor.command = ['$TERMINAL', '-e', 'vim', '-f', '{}']
 
 c.fonts.default_family = "Iosevka"
 
