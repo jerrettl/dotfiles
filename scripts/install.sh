@@ -158,17 +158,15 @@ install_link() {
 
   # Mail
   rm -f ~/.msmtp
-  ln -sfv $DOTFILES/.config/mail/.msmtp/ ~/.msmtp
-  cp -nv $DOTFILES/.config/mail/.msmtprc-example ~/.msmtprc
-  mkdir ~/.neomutt
-  ln -sfv $DOTFILES/.config/mail/.neomutt/colors ~/.neomutt/colors
-  ln -sfv $DOTFILES/.config/mail/.neomutt/macros ~/.neomutt/macros
-  ln -sfv $DOTFILES/.config/mail/.neomutt/mailcap ~/.neomutt/mailcap
-  ln -sfv $DOTFILES/.config/mail/.neomutt/neomuttrc ~/.neomutt/neomuttrc
-  cp -nv $DOTFILES/.config/mail/.neomutt/user1-example ~/.neomutt/user1
-  ln -sfv $DOTFILES/.config/mail/.offlineimap.py ~/.offlineimap.py
-  cp -nv $DOTFILES/.config/mail/.offlineimaprc-example ~/.offlineimaprc
-  ln -sfv $DOTFILES/.config/mail/.urlview ~/.urlview
+  mkdir -p ~/.config/msmtp
+  cp -nv $DOTFILES/.config/mail/msmtp/config-example ~/.config/msmtp/config
+  mkdir -p ~/.config/neomutt
+  ln -sfv $DOTFILES/.config/mail/neomutt/colors ~/.config/neomutt/colors
+  ln -sfv $DOTFILES/.config/mail/neomutt/macros ~/.config/neomutt/macros
+  ln -sfv $DOTFILES/.config/mail/neomutt/mailcap ~/.config/neomutt/mailcap
+  ln -sfv $DOTFILES/.config/mail/neomutt/neomuttrc ~/.config/neomutt/neomuttrc
+  mkdir -p ~/.config/offlineimap
+  cp -nv $DOTFILES/.config/mail/offlineimap/config-example ~/.config/offlineimap/config
 
   $DOTFILES_SCRIPTS/reload-xresources.sh
 }

@@ -1,0 +1,23 @@
+# vim:filetype=msmtp
+
+defaults
+protocol smtp
+auth on
+tls on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+
+account main
+host smtp.gmail.com
+port 587
+tls_starttls on
+from john-smith@gmail.com
+user john-smith@gmail.com
+passwordeval "gpg --quiet --for-your-eyes-only --no-tty --decrypt ~/.config/neomutt/accounts/main/main.gpg"
+
+account school
+host smtp.office365.com
+port 587
+tls_starttls on
+from john-smith@university.edu
+user john-smith@university.edu
+passwordeval "gpg --quiet --for-your-eyes-only --no-tty --decrypt ~/.config/neomutt/accounts/school/school.gpg"

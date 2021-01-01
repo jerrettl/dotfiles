@@ -1,13 +1,17 @@
-source "~/.neomutt/macros"
-source "~/.neomutt/colors"
+source "$DOTFILES/.config/mail/neomutt/macros"
+source "$DOTFILES/.config/mail/neomutt/colors"
 
-source "~/.neomutt/user1"
 
-set spoolfile = "+INBOX"
-set record = /dev/null
-set mbox = "+[Gmail].All Mail"
-set postponed = "+[Gmail].Drafts"
-set trash = "+[Gmail].Bin"
+# Account main
+folder-hook '~/mail/main' 'source "~/.config/neomutt/accounts/main/config"'
+
+# Account school
+folder-hook '~/mail/school' 'source "~/.config/neomutt/accounts/school/config"'
+
+
+# Default account
+source "~/.config/neomutt/accounts/main/config"
+
 
 set sleep_time = 0
 
@@ -17,7 +21,19 @@ set ssl_force_tls = yes
 set sort = "threads"
 set sort_aux = "reverse-date"
 
-set mailcap_path = "~/.neomutt/mailcap"
-auto_view text_html
+set mailcap_path = "~/dotfiles/.config/mail/neomutt/mailcap"
+auto_view text/html
 alternative_order text/plain text/html
 
+set mark_old = no
+
+# Auto-advance messages?
+set resolve = no
+
+# Purge messages without prompting.
+set delete = yes
+
+# set sidebar_visible = yes
+
+macro index,pager <f1> '<sync-mailbox><enter-command>source ~/.config/neomutt/accounts/main/config<enter><change-folder>!<enter>'
+macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.config/neomutt/accounts/school/config<enter><change-folder>!<enter>'

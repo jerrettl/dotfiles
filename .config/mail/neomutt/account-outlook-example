@@ -1,0 +1,23 @@
+# vim:filetype=neomuttrc
+
+set mbox_type = Maildir
+
+set realname = "John Smith"
+set imap_user = "john-smith@university.edu"
+set from = "john-smith@university.edu"
+
+#set sendmail = "/usr/bin/msmtp -a school"
+set sendmail = "$DOTFILES/.config/mail/msmtp/msmtp-enqueue.sh -a school"
+#set smtp_url = "smtp://john-smith@university.edu:587/"
+
+set folder = "~/mail/school"
+set spoolfile = "+INBOX"
+#set record = "+Sent Items"  -- This prevents Outlook from putting things in 'Sent Items' twice.
+set record = "/dev/null"
+set postponed = "+Drafts"
+set mbox = "+Archive"
+set trash = "+Deleted Items"
+
+set header_cache = ~/.config/neomutt/accounts/school/cache/headers
+set message_cachedir = ~/.config/neomutt/accounts/school/cache/bodies
+set certificate_file = ~/.config/neomutt/accounts/school/certificates

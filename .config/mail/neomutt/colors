@@ -4,3 +4,6 @@
 color index_author cyan default '.*'
 color index_date magenta default
 color index_size yellow default
+
+# Bold unread messages
+color index bold default default "~U"

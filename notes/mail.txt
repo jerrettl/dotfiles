@@ -1,0 +1,21 @@
+It is assumed you follow these after running ./install.sh.
+
+
+NEOMUTT (interfacing with mail):
+- Create a folder ~/.config/neomutt/accounts
+  * Each subdirectory will contain a different account. In my personal case, this will be 'main' and 'school.'
+
+- Within each subdirectory, create a 'config' file and a gpg file.
+  * See the 'account-gmail-example' and 'account-outlook-example' for what configs look like for Gmail (localized in UK English) and Outlook.
+  * The gpg file will follow the name of the folder it resides in. (For example, the 'main' folder will contain 'main.gpg.') The gpg file will contain the password for your email account.
+  * To create the gpg file, use the following command: gpg --recipient <user-id> --encrypt <file>, where user-id is the email associated with the key used to encrypt, and <file> is the name of the file to be encrypted. For example, you would encrypt a 'main' file containing your password to create a 'main.gpg' file. This operation should take place in volitile memory (/tmp) under a directory with 700 permissions.
+
+- See the 'neomuttrc' file for adding new accounts and creating bindings to switch between them.
+
+
+OFFLINEIMAP (saving mail offline):
+- See '~/.config/offlineimap/config' and configure with a similar naming scheme to the neomutt config.
+
+
+MSMTP (sending mail):
+- Similar to the offlineimap instructions, see '~/.config/msmtp/config' and configure appropriately.

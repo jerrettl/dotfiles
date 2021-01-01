@@ -1,0 +1,22 @@
+# vim:filetype=neomuttrc
+
+set mbox_type = Maildir
+
+set realname = "John Smith"
+set imap_user = "john-smith@gmail.com"
+set from = "john-smith@gmail.com"
+
+#set sendmail = "/usr/bin/msmtp -a main"
+set sendmail = "$DOTFILES/.config/mail/msmtp/msmtp-enqueue.sh -a main"
+#set smtp_url = "smtp://john-smith@smtp.gmail.com:587/"
+
+set folder = "~/mail/main"
+set spoolfile = "+INBOX"
+set record = "+[Gmail].Sent Mail"
+set postponed = "+[Gmail].Drafts"
+set mbox = "+[Gmail].All Mail"
+set trash = "+[Gmail].Bin"
+
+set header_cache = ~/.config/neomutt/accounts/main/cache/headers
+set message_cachedir = ~/.config/neomutt/accounts/main/cache/bodies
+set certificate_file = ~/.config/neomutt/accounts/main/certificates

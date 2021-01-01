@@ -1,0 +1,65 @@
+# vim:filetype=offlineimap
+
+[general]
+accounts = main,school
+ui = TTYUI
+socktimeout = 90
+starttls = yes
+ssl = yes
+pythonfile = $DOTFILES/.config/mail/offlineimap/offlineimap.py
+
+
+# [mbnames]
+# enabled = yes
+# filename = ~/.config/neomutt/mailboxes
+# header = "mailboxes "
+# peritem = "+%(accountname)s/%(foldername)s"
+# sep = " "
+# footer = "\n"
+
+
+[Account main]
+localrepository = main-local
+remoterepository = main-remote
+#autorefresh = 5
+
+
+[Repository main-local]
+type = GmailMaildir
+localfolders = ~/mail/main/
+
+
+[Repository main-remote]
+type = Gmail
+remoteuser = john-smith@gmail.com
+remotepasseval = get_pass("main")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+#folderfilter = lambda foldername: foldername in ["INBOX", "[Gmail]/Bin"]
+#folderfilter = lambda foldername: foldername not in ["[Gmail]/All Mail"]
+folderfilter = lambda foldername: foldername not in ["[Gmail]/Important"]
+
+trashfolder = [Gmail]/Bin
+spamfolder = [Gmail]/Spam
+
+
+[Account school]
+localrepository = school-local
+remoterepository = school-remote
+#autorefresh = 1
+
+
+[Repository school-local]
+type = Maildir
+localfolders = ~/mail/school/
+
+
+[Repository school-remote]
+type = IMAP
+remotehost = outlook.office365.com
+remoteuser = john-smith@university.edu
+remotepasseval = get_pass("school")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+folderfilter = lambda foldername: foldername in ["INBOX", "Archive", "Deleted Items", "Drafts", "Junk Email", "Sent Items"]
+
+# trashfolder = [Gmail]/Bin
+# spamfolder = [Gmail]/Spam

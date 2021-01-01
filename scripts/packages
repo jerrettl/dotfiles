@@ -54,9 +54,11 @@ bluez
 bluez-utils
 =====
 [mail]
+lynx
 msmtp
 neomutt
 offlineimap
+urlscan
 =====
 [laptop]
 powertop
@@ -108,7 +110,6 @@ ttf-iosevka-term
 ttf-ms-fonts
 ttf-roboto
 unclutter
-urlview
 urxvt-perls
 xcwd-git
 xdotool
