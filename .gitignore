@@ -8,3 +8,5 @@
 aliases/bash_autoaliases
 aliases/ranger_autoaliases
 *.pyc
+.config/autorandr/*
+!.config/autorandr/postswitch
