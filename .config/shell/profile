@@ -7,3 +7,5 @@ export DOTFILES="$HOME/dotfiles"
 export DOTFILES_SCRIPTS="$DOTFILES/scripts"
 
 [ -f "$DOTFILES/aliases/env-$(hostname)" ] && source "$DOTFILES/aliases/env-$(hostname)"
+
+export SDL_JOYSTICK_HIDAPI=0
