@@ -81,6 +81,18 @@ w /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference - - - - 
 SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="[0-5]", RUN+="/usr/bin/systemctl hibernate"
 
 
+
+# Ignore some devices for usb autosuspend
+/etc/udev/rules.d/50-usb_power_save.rules
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="c33c", GOTO="power_usb_rules_end"         (G512 mechanical keyboard)
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="c52b", GOTO="power_usb_rules_end"         (Logitech unifying receiver)
+
+ACTION=="add", SUBSYSTEM=="usb", TEST=="power/control", ATTR{power/control}="auto"
+LABEL="power_usb_rules_end"
+
+
+
+
 # Plymouth boot logo (optional)
 - install plymouth (yay)
 - install plymouth-theme-monoarch (yay)
