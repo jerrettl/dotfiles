@@ -327,6 +327,18 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
 bindsym Shift+XF86MonBrightnessDown exec "xbacklight -dec 2"
 bindsym Shift+XF86MonBrightnessUp exec "xbacklight -inc 2"
+bindsym $mod+Shift+F4 mode "$brightness_mode"
+
+set $brightness_mode Change brightness
+mode "$brightness_mode" {
+	bindsym Up exec "xbacklight -inc 10"
+	bindsym Down exec "xbacklight -dec 10"
+	bindsym Right exec "xbacklight -inc 2"
+	bindsym Left exec "xbacklight -dec 2"
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
 
 # Mount
 bindsym $mod+period exec "udiskie-mount $(udiskie-info --all --output '{device_presentation} ({id_label})' --filter is_filesystem | dmenu -p 'Mount a device:' | awk '{print $1}')"
