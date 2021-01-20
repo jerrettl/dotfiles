@@ -1,5 +1,7 @@
 sha $DIR_SHARED
 tv $DIR_SHARED/Saved\ TV
+oh $DIR_SHARED/ULA/2021-Spring/office-hours
+ulaa $DIR_SHARED/ULA/2021-Spring
 ula $DIR_SHARED/ULA
 sch $DIR_SCHOOL
 txt $DIR_SCHOOL/Textbooks
