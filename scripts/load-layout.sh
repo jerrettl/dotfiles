@@ -19,5 +19,5 @@ if [ "$selection" == "School" ]; then
 elif [ "$selection" == "Watch TV" ]; then
   i3-msg "layout tabbed"
   firefox http://trakt.tv/dashboard &
-  $TERMINAL -e ranger /mnt/shared/saved-tv &
+  $TERMINAL -e ranger /mnt/shared/Saved\ TV &
 fi
