@@ -8,6 +8,7 @@
 awk
 cronie
 git
+htop
 inetutils
 keychain
 man
