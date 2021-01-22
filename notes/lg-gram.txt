@@ -84,13 +84,18 @@ SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="[0-5]",
 
 
 # Ignore some devices for usb autosuspend
-/etc/udev/rules.d/50-usb_power_save.rules
-ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="c33c", GOTO="power_usb_rules_end"         (G512 mechanical keyboard)
-ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="c52b", GOTO="power_usb_rules_end"         (Logitech unifying receiver)
+/etc/udev/rules.d/71-usb_power_save.rules
+
+# blacklist for usb autosuspend
+ACTION=="add", SUBSYSTEM=="usb", TEST=="power/control", ATTR{power/control}="on"
+
+# G512 mechanical keyboard
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="c33c", GOTO="power_usb_rules_end"
+# Logitech unifying receiver
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="c52b", GOTO="power_usb_rules_end"
 
 ACTION=="add", SUBSYSTEM=="usb", TEST=="power/control", ATTR{power/control}="auto"
 LABEL="power_usb_rules_end"
-
 
 
 

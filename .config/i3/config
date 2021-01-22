@@ -41,7 +41,6 @@ exec_always --no-startup-id setxkbmap -option compose:ralt
 exec_always --no-startup-id ~/dotfiles/scripts/picom.sh
 exec_always --no-startup-id "sleep 2; ~/dotfiles/scripts/per-machine-variables.sh"
 exec --no-startup-id keepassxc
-exec --no-startup-id sudo powertop --auto-tune
 exec --no-startup-id sudo rfkill block bluetooth
 #exec --no-startup-id blueman-tray
 
