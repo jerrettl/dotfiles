@@ -28,6 +28,15 @@ sudo gpasswd -a [username] autologin
 # The xf86-video-intel package must be installed.
 
 
+
+# /etc/X11/xorg.conf.d/00-keyboard.conf
+Section "InputClass"
+  Identifier "system-keyboard"
+  MatchIsKeyboard "on"
+  Option "XkbOptions" "compose:ralt"
+EndSection
+
+
 # /etc/X11/xorg.conf.d/20-intel.conf
 # The following text must be placed here for Intel graphics to change the backlight.
 Section "Device"
