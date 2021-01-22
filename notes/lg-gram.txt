@@ -13,6 +13,7 @@ scripts/reload-pacman-mirrors.sh
 logind-check-graphical=true
 
 [Seat:*]
+xserver-command=X -ardelay 250 -arinterval 20
 autologin-user=[username]
 
 # Then run the following two commands:
