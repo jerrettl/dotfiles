@@ -4,7 +4,7 @@ hostname=$(uname -n)
 
 
 # Key press repeat timing
-xset r rate 250 40
+xset r rate 250 50
 
 if [ "$hostname" == "lg-gram" ]; then
 	# Display scaling
