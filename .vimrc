@@ -75,6 +75,9 @@ Plug 'tpope/vim-sleuth'
 
 Plug 'mbbill/undotree'
 
+" Multiple cursors
+Plug 'mg979/vim-visual-multi'
+
 call plug#end()
 
 
