@@ -92,7 +92,7 @@ c.url.start_pages = 'https://start.duckduckgo.com/?kae=t&kaj=u&k5=2&kp=-2&kk=1&k
 #  - A zip-file of any of the above, with either only one file, or a file named hosts (with any extension).
 #  Type: List of Url
 
-c.content.host_blocking.lists = ["https://www.malwaredomainlist.com/hostslist/hosts.txt",
+c.content.blocking.hosts.lists = ["https://www.malwaredomainlist.com/hostslist/hosts.txt",
         "http://someonewhocares.org/hosts/hosts",
         "http://winhelp2002.mvps.org/hosts.zip",
         "http://malwaredomains.lehigh.edu/files/justdomains.zip",
