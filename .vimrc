@@ -195,6 +195,12 @@ inoremap <C-j> <esc><C-w>j
 inoremap <C-k> <esc><C-w>k
 inoremap <C-l> <esc><C-w>l
 
+noremap <leader>d "_d
+vnoremap p "_dp
+vnoremap P "_dP
+vnoremap <leader>p p
+vnoremap <leader>P P
+
 " Forgot to get root access before editing? No worries!
 cmap w!! w !sudo tee % >/dev/null
 
