@@ -38,9 +38,6 @@ Plug 'junegunn/goyo.vim'
 " nerdcommenter: shortcuts to comment code
 Plug 'scrooloose/nerdcommenter'
 
-" vim-devicons: icons for nerdtree, lightline, etc.
-Plug 'ryanoasis/vim-devicons'
-
 " vim-surround: surrounding text
 Plug 'tpope/vim-surround'
 
