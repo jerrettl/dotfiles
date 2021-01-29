@@ -64,13 +64,13 @@ HISTCONTROL=ignoredups:erasedups
 
 
 # ==== Bindings ====
-bind '"\t":menu-complete'
-# Fuzzy file completion
-bind -x '"\C-f":"xdotool type $(find . | sed '"'"'s/^..//'"'"' | fzf)"'
 # Vi mode (with some modifications)
 set -o vi
 bind '"jk":vi-movement-mode'
 bind '"\C-l":clear-screen'
+bind '"\t":menu-complete'
+# Fuzzy file completion
+bind -x '"\C-f":"xdotool type $(find . | sed '"'"'s/^..//'"'"' | fzf)"'
 
 
 if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ]; then
