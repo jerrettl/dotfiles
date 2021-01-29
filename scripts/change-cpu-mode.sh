@@ -16,7 +16,6 @@ apply_to_conf () {
   fi
 
   echo "$1" | awk '{print "w /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference - - - - " $1}' | \sudo tee /etc/tmpfiles.d/energy_performance_preference.conf
-	$update
 }
 
 if [ "$arg" == "list" ]; then
@@ -38,3 +37,4 @@ fi
 [ -z "$id" ] || i3-msg focus "[id=$id]"
 sudo systemd-tmpfiles --create
 cat /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference
+$update
