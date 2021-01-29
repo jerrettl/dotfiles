@@ -284,6 +284,8 @@ no_focus [class="Microsoft Teams - Preview" title="Microsoft Teams Notification"
 for_window [class="zoom" title="Breakout Rooms"] floating enable
 for_window [class="zoom" title="^zoom$"] floating enable
 
+for_window [class="jetbrains-studio" title="^win\d+$"] focus
+
 
 # ==== Music ====
 # Poor Man's volume control
