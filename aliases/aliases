@@ -35,5 +35,8 @@ alias smpv='i3-swallow mpv'
 alias ranger='RANGER_TMP_LOCATION=$(mktemp); ranger --choosedir="$RANGER_TMP_LOCATION"; cd "$(cat "$RANGER_TMP_LOCATION")"; rm "$RANGER_TMP_LOCATION"; unset RANGER_TMP_LOCATION'
 alias rr='ranger'
 
+alias pu='sudo pacman -Syyu'
+alias yayu='yay -Syyu -a'
+
 # ==== Common Directories
 alias dotf='cd $DOTFILES && gstu'
