@@ -63,9 +63,12 @@ Plug 'dart-lang/dart-vim-plugin'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
-" Pandoc markdown editing
+" Markdown:
+"   Pandoc markdown editing
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+"   Markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " Autodetect tab settings in a file
 Plug 'tpope/vim-sleuth'
