@@ -79,5 +79,6 @@ if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ]; then
   cd ~
 fi
 
+export GPG_TTY=$(tty)
 
 which keychain 2>/dev/null > /dev/null && eval $(keychain --eval --quiet --nogui --noask --agents ssh id_rsa)
