@@ -13,3 +13,4 @@ vssh /mnt/sshfs
 lssh /mnt/sshfs
 sfs /mnt/sshfs
 vmv /mnt/sshfs/Documents/Volume\ May\ Vary
+clip ~/Documents/Clippy
