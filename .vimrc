@@ -94,9 +94,9 @@ syntax on           " Syntax highlighting
 set mouse=a         " Enable mouse support (yes crucify me)
 set tabstop=2       " Tab width
 set shiftwidth=2    " Tab width
-set softtabstop=0   " Vim will not insert spaces to simulate tabstops
-set smarttab        " Tabs at the beginning of a line use shiftwidth, not tabstop
-set expandtab       " Use spaces instead of tab characters when pressing tab
+"set softtabstop=0  " Vim will not insert spaces to simulate tabstops
+"set smarttab       " Tabs at the beginning of a line use shiftwidth, not tabstop
+set noexpandtab     " Use tab characters instead of spaces when pressing tab
 set backspace=indent,eol,start  " Allow backspacing over autoindent, line breaks, and the start of an insert
 set autoindent      " If a line is indented, an added line will be too
 set copyindent      " If a line is indented, an added line will use the same type of indentation (tabs, spaces)
