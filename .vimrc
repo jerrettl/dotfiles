@@ -56,6 +56,8 @@ Plug 'Yggdroot/indentLine'
 " Python specific:
 "   indentpython: auto intent after : and in multiline statements
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
+"   black: code formatter
+Plug 'psf/black', { 'for': 'python', 'branch': 'stable' }
 
 " Syntax highlighting plugins:
 Plug 'hrother/offlineimaprc.vim'
@@ -386,15 +388,6 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
 let g:closetag_emptyTags_caseSensitive = 1
 
 
-
-" Make python /comfy/
-au BufNewFile,BufRead *.py
-      \ set tabstop=4 |
-      \ set softtabstop=4 |
-      \ set shiftwidth=4 |
-      \ set expandtab |
-      \ set autoindent |
-      \ set fileformat=unix
 
 let python_highlight_all=1
 
