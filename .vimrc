@@ -53,11 +53,12 @@ Plug 'easymotion/vim-easymotion'
 " indentLine: indent guides
 Plug 'Yggdroot/indentLine'
 
+" Asynchronous Lint Engine
+Plug 'dense-analysis/ale'
+
 " Python specific:
 "   indentpython: auto intent after : and in multiline statements
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
-"   black: code formatter
-Plug 'psf/black', { 'for': 'python', 'branch': 'stable' }
 
 " Syntax highlighting plugins:
 Plug 'hrother/offlineimaprc.vim'
@@ -404,3 +405,16 @@ let g:pandoc#folding#level = 1
 let g:pandoc#folding#mode = "relative"
 let g:pandoc#spell#enabled = 0
 let g:pandoc#syntax#codeblocks#embeds#langs = ["java"]
+
+
+" ALE
+nnoremap <F8> :ALEFix<CR>
+let g:ale_linters = {
+\   'cs' : [],
+\}
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'python': ['black'],
+\}
