@@ -269,10 +269,6 @@ autocmd FileType json set conceallevel=0
 " ===================================
 " Plugin Configurations
 
-" flake8
-let g:flake8_show_quickfix=0
-
-
 " latex-suite / vim-latex
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
