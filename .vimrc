@@ -214,6 +214,7 @@ inoremap <C-k> <esc><C-w>k
 inoremap <C-l> <esc><C-w>l
 
 noremap <leader>d "_d
+noremap <leader>c "_c
 vnoremap p "_dp
 vnoremap P "_dP
 vnoremap <leader>p p
