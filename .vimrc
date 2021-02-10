@@ -29,7 +29,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 
 " vim-closetag: automatically create matching close tags in html
-Plug 'alvan/vim-closetag', { 'for': 'html' }
+Plug 'alvan/vim-closetag', { 'for': ['html', 'javascript'] }
 
 " goyo: distraction-free editing
 " Toggle shortcut: F12
