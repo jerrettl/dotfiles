@@ -304,13 +304,6 @@ autocmd! user GoyoEnter nested call <SID>goyo_enter()
 autocmd! user GoyoLeave nested call <SID>goyo_leave()
 
 
-
-" YouCompleteMe
-let g:ycm_filetype_blacklist = {
-      \ 'tex' : 1
-      \}
-
-
 " NERDTree
 " This function closes NERDTree automatically if it detects that it is the last window.
 function! NERDTreeQuit()
