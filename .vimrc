@@ -57,7 +57,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'dense-analysis/ale'
 
 " Conquer of Completion (autocomplete, etc.)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': 'cs' }
 
 " Python specific:
 "   indentpython: auto intent after : and in multiline statements
