@@ -83,6 +83,9 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 "   JSX and TSX syntax highlighting
 Plug 'MaxMEllon/vim-jsx-pretty', { 'for': 'javascript' }
 
+" C#:
+Plug 'OmniSharp/omnisharp-vim', { 'for': 'cs' }
+
 " Autodetect tab settings in a file
 Plug 'tpope/vim-sleuth'
 
