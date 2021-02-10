@@ -348,10 +348,6 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
 let g:closetag_emptyTags_caseSensitive = 1
 
 
-
-let python_highlight_all=1
-
-
 " indentLine
 let g:indentLine_setConceal = 0
 let g:indentLine_fileTypeExclude = ['markdown', 'pandoc']
