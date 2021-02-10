@@ -173,6 +173,8 @@ function! s:new_colors()
   hi DiffAdd ctermfg=black ctermbg=2
   hi DiffDelete ctermfg=black ctermbg=1
   hi ColorColumn ctermbg=236
+  hi Pmenu ctermfg=white ctermbg=236
+  hi PmenuSel ctermfg=250 ctermbg=0
 endfunction
 autocmd! ColorScheme default call s:new_colors()
 
