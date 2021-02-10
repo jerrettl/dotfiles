@@ -77,6 +77,12 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 "   Markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
+" Javascript:
+"   Improved Javascript indentation and syntax support
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+"   JSX and TSX syntax highlighting
+Plug 'MaxMEllon/vim-jsx-pretty', { 'for': 'javascript' }
+
 " Autodetect tab settings in a file
 Plug 'tpope/vim-sleuth'
 
