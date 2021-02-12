@@ -175,10 +175,15 @@ function! s:new_colors()
   hi ColorColumn ctermbg=236
   hi Pmenu ctermfg=white ctermbg=236
   hi PmenuSel ctermfg=250 ctermbg=0
+  hi ExtraWhitespace ctermbg=88
 endfunction
 autocmd! ColorScheme default call s:new_colors()
 
 colorscheme default
+
+" Show whitespace at the ends on lines
+autocmd BufWinEnter,InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * call clearmatches()
 
 " ===================================
 " Mappings
