@@ -54,7 +54,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'Yggdroot/indentLine'
 
 " Asynchronous Lint Engine
-Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale', { 'for': ['cs', 'javascript'], 'on': 'ALEEnable' }
 
 " Conquer of Completion (autocomplete, etc.)
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': 'cs' }
