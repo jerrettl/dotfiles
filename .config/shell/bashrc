@@ -25,6 +25,7 @@ GREEN="\[$(tput setaf 2)\]"
 YELLOW="\[$(tput setaf 3)\]"
 MAGENTA="\[$(tput setaf 5)\]"
 CYAN="\[$(tput setaf 6)\]"
+WHITE="\[$(tput setaf 7)\]"
 RESET="\[$(tput sgr0)\]"
 BOLD="\[$(tput bold)\]"
 
@@ -46,6 +47,8 @@ function my_set_prompt() {
     else
       PS1+=" (@${VCS_STATUS_COMMIT//\\/\\\\})"       # escape backslash
     fi
+
+    (( "VCS_STATUS_STASHES" > 0         )) && PS1+="${GREEN}*$VCS_STATUS_STASHES${RESET}"
     (( "VCS_STATUS_COMMITS_BEHIND" > 0  )) && PS1+="${CYAN}⇣$VCS_STATUS_COMMITS_BEHIND${RESET}"
     (( "VCS_STATUS_COMMITS_AHEAD" > 0   )) && PS1+="${CYAN}⇡$VCS_STATUS_COMMITS_AHEAD${RESET}"
     (( "VCS_STATUS_HAS_STAGED"          )) && PS1+="${YELLOW}+$VCS_STATUS_NUM_STAGED${RESET}"
