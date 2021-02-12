@@ -247,6 +247,11 @@ vnoremap L dpgv
 nmap <C-t> 0/<++><cr>,/c4l
 imap <C-t> <esc>0/<++><cr>,/c4l
 
+" Do things when a :terminal is opened
+autocmd TermOpen * startinsert
+autocmd TermOpen * set nonumber
+autocmd TermOpen * echo "To exit insert mode, use <C-\\><C-n>"
+
 " C stuff
 autocmd FileType c nnoremap <leader>b !make %:r<cr>
 autocmd FileType c nnoremap <C-b> !make %:r<cr>
