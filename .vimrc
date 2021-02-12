@@ -253,8 +253,8 @@ autocmd TermOpen * set nonumber
 autocmd TermOpen * echo "To exit insert mode, use <C-\\><C-n>"
 
 " C stuff
-autocmd FileType c nnoremap <leader>b !make %:r<cr>
-autocmd FileType c nnoremap <C-b> !make %:r<cr>
+autocmd FileType c nnoremap <leader><leader>c :!gcc -o %:r %<CR>
+autocmd FileType c nnoremap <leader><leader>r :term ./%:r<CR>
 autocmd FileType c,java imap {<CR> {<CR>}<ESC>ka<CR>
 autocmd FileType c imap MAIN int main(void)<CR>{<CR><CR>return 0;<ESC>kO
 autocmd FileType c imap STDIO #include <stdio.h>
