@@ -356,6 +356,12 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
 let g:closetag_emptyTags_caseSensitive = 1
 
 
+" NERDCommenter
+let g:NERDCreateDefaultMappings = 0
+let g:NERDSpaceDelims = 1
+noremap <leader>c<space> :call NERDComment(1, 'toggle')<CR>
+
+
 " indentLine
 let g:indentLine_setConceal = 0
 let g:indentLine_fileTypeExclude = ['markdown', 'pandoc']
