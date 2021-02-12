@@ -113,11 +113,10 @@ bindsym Print exec "scrot ~/Pictures/%F-%H%M%S_\$wx\$h_scrot.png -e 'xclip -sele
 bindsym Shift+Print exec flameshot gui
 
 
-# ==== Scratchpad ====
-# Make the currently focused window a scratchpad
-bindsym $mod+Shift+minus move scratchpad
-# Show the first scratchpad window
-bindsym $mod+minus scratchpad show
+# ==== Calculator scratchpad ====
+for_window [instance="__scratchpad"] move scratchpad; scratchpad show; resize set 800px 700px; move position center; move scratchpad
+exec --no-startup-id exec urxvt -name __scratchpad -e ipython
+bindsym $mod+equal scratchpad show
 
 
 # ==== Arranging windows ====

@@ -8,5 +8,7 @@ export DOTFILES_SCRIPTS="$DOTFILES/scripts"
 
 [ -f "$DOTFILES/aliases/env-$(hostname)" ] && source "$DOTFILES/aliases/env-$(hostname)"
 
+export IPYTHONDIR="$DOTFILES/.config/ipython"
+
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export SDL_JOYSTICK_HIDAPI=0

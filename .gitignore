@@ -10,3 +10,6 @@ aliases/ranger_autoaliases
 *.pyc
 .config/autorandr/*
 !.config/autorandr/postswitch
+.config/ipython/profile_default/startup/*
+.config/ipython/profile_default/history*
+!.config/ipython/profile_default/startup/default.py
