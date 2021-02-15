@@ -60,6 +60,7 @@ mode "$mode_system" {
 	bindsym l exec --no-startup-id $lock, mode "default"
 	bindsym e exec --no-startup-id i3-msg exit, mode "default"
 	bindsym s exec --no-startup-id $lock && sleep 1 && systemctl suspend-then-hibernate, mode "default"
+	bindsym Ctrl+s mode "default", exec --no-startup-id systemctl suspend-then-hibernate
 	bindsym h exec --no-startup-id systemctl hibernate, mode "default"
 	bindsym r exec --no-startup-id systemctl reboot, mode "default"
 	bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
