@@ -191,6 +191,7 @@ install_all() {
   git config interactive.diffFilter 'delta --color-only'
   git config --global pull.rebase true
   git config --global fetch.prune true
+  git config --global commit.gpgsign true
 }
 
 
