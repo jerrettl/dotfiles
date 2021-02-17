@@ -45,9 +45,9 @@ install_basic() {
 
   # Set time
   echo "Setting timezone..."
-  timedatectl set-timezone America/New_York
-  timedatectl set-ntp true
-  timedatectl set-local-rtc false
+  sudo timedatectl set-timezone America/New_York
+  sudo timedatectl set-ntp true
+  sudo timedatectl set-local-rtc false
 
   # Set up vim plugins
   echo "Setting up vim..."
