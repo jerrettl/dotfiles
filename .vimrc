@@ -385,6 +385,8 @@ let g:pandoc#syntax#codeblocks#embeds#langs = ["c", "java"]
 
 " ALE
 nnoremap <F8> :ALEFix<CR>
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_line_on_insert_leave = 1
 let g:ale_linters = {
 \   'cs' : [],
 \}
