@@ -160,7 +160,7 @@ autocmd FileType xdefaults autocmd BufWritePost <buffer> !$DOTFILES_SCRIPTS/relo
 let &t_Co=256
 function! s:new_colors()
   hi search cterm=NONE ctermfg=black ctermbg=yellow
-  hi spellbad cterm=none ctermfg=white ctermbg=160 "dark red
+  hi spellbad cterm=none ctermfg=white ctermbg=88 "dark red
   hi folded cterm=none ctermfg=7 ctermbg=17 "blue
   hi LineNr cterm=none ctermfg=251 "grey
   hi Visual ctermfg=none ctermbg=239 guibg=Grey
