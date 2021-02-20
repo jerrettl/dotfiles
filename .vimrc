@@ -390,7 +390,9 @@ let g:ale_line_on_insert_leave = 1
 let g:ale_linters = {
 \   'cs' : [],
 \}
-
+let g:ale_linter_aliases = {
+\   'html': ['html', 'css', 'javascript'],
+\}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
