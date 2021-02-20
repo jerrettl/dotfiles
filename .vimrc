@@ -253,6 +253,9 @@ autocmd TermOpen * startinsert
 autocmd TermOpen * set nonumber
 autocmd TermOpen * echo "To exit insert mode, use <C-\\><C-n>"
 
+" Plain text
+autocmd FileType text set spell
+
 " C
 autocmd FileType c nnoremap <leader><leader>c :!gcc -o %:r % -lm<CR>
 autocmd FileType c nnoremap <leader><leader>r :term ./%:r<CR>
