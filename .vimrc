@@ -395,6 +395,7 @@ let g:ale_linter_aliases = {
 \}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'c': ['astyle'],
 \   'javascript': ['eslint'],
 \   'python': ['black'],
 \}
