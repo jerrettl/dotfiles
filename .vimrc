@@ -396,6 +396,7 @@ let g:ale_linter_aliases = {
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'c': ['astyle'],
+\   'java': ['google_java_format'],
 \   'javascript': ['eslint'],
 \   'python': ['black'],
 \}
