@@ -276,6 +276,9 @@ autocmd FileType java set colorcolumn=100
 " CSS autocmds
 autocmd FileType css,javascript imap {<CR> {<CR>}<ESC>O
 
+" Markdown
+autocmd FileType markdown nnoremap <leader><leader>r :MarkdownPreview<CR>
+
 autocmd FileType json set conceallevel=0
 
 " ===================================
