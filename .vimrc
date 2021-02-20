@@ -56,9 +56,6 @@ Plug 'Yggdroot/indentLine'
 " Asynchronous Lint Engine
 Plug 'dense-analysis/ale', { 'for': ['cs', 'javascript'], 'on': 'ALEEnable' }
 
-" Conquer of Completion (autocomplete, etc.)
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': 'cs' }
-
 " Python specific:
 "   indentpython: auto intent after : and in multiline statements
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
