@@ -255,7 +255,7 @@ autocmd TermOpen * set nonumber
 autocmd TermOpen * echo "To exit insert mode, use <C-\\><C-n>"
 
 " Plain text
-autocmd FileType text set spell
+autocmd FileType text,markdown,pandoc set spell
 
 " C
 autocmd FileType c nnoremap <leader><leader>c :!gcc -o %:r % -lm<CR>
@@ -380,7 +380,6 @@ set conceallevel=2
 " Pandoc
 let g:pandoc#folding#level = 1
 let g:pandoc#folding#mode = "relative"
-let g:pandoc#spell#enabled = 0
 let g:pandoc#syntax#codeblocks#embeds#langs = ["c", "java"]
 
 
