@@ -278,6 +278,7 @@ autocmd FileType java set colorcolumn=100
 autocmd FileType css,javascript imap {<CR> {<CR>}<ESC>O
 
 " Markdown
+autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 autocmd FileType markdown,pandoc nnoremap <leader><leader>r :MarkdownPreview<CR>
 
 autocmd FileType json set conceallevel=0
