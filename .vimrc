@@ -278,7 +278,7 @@ autocmd FileType java set colorcolumn=100
 autocmd FileType css,javascript imap {<CR> {<CR>}<ESC>O
 
 " Markdown
-autocmd FileType markdown nnoremap <leader><leader>r :MarkdownPreview<CR>
+autocmd FileType markdown,pandoc nnoremap <leader><leader>r :MarkdownPreview<CR>
 
 autocmd FileType json set conceallevel=0
 
@@ -381,6 +381,10 @@ set conceallevel=2
 let g:pandoc#folding#level = 1
 let g:pandoc#folding#mode = "relative"
 let g:pandoc#syntax#codeblocks#embeds#langs = ["c", "java"]
+
+
+" markdown-preview
+let g:mkdp_filetypes = ['markdown', 'pandoc']
 
 
 " ALE
