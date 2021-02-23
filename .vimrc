@@ -64,6 +64,7 @@ Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 Plug 'hrother/offlineimaprc.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'kevinoid/vim-jsonc'
+Plug 'adamclerk/vim-razor'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
