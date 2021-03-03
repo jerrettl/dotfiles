@@ -260,6 +260,7 @@ autocmd FileType text,markdown,pandoc set spell
 " C
 autocmd FileType c nnoremap <leader><leader>c :!gcc -o %:r % -lm<CR>
 autocmd FileType c nnoremap <leader><leader>r :term ./%:r<CR>
+autocmd FileType c nnoremap <leader><leader>R :term ./%:r<space>
 autocmd FileType c,java imap {<CR> {<CR>}<ESC>ka<CR>
 autocmd FileType c imap MAIN int main(void)<CR>{<CR><CR>return 0;<ESC>kO
 autocmd FileType c imap STDIO #include <stdio.h>
