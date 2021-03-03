@@ -407,3 +407,8 @@ let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \   'python': ['black'],
 \}
+
+
+" OmniSharp
+let g:OmniSharp_selector_ui = 'ctrlp'
+let g:OmniSharp_popup = 1
