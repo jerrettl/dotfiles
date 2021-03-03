@@ -113,6 +113,8 @@ install_link() {
   mkdir -pv ~/.config/dunst
   ln -sfv ~/dotfiles/.config/dunst/dunstrc ~/.config/dunst/dunstrc
   ln -sfv ~/dotfiles/.config/flake8 ~/.config/flake8
+  mkdir -pv ~/.gnupg
+  ln -sfv $DOTFILES/.config/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
   mkdir -pv ~/.config/i3
   ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
   mkdir -pv ~/.config/i3blocks
