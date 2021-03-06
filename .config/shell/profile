@@ -10,5 +10,9 @@ export DOTFILES_SCRIPTS="$DOTFILES/scripts"
 
 export IPYTHONDIR="$DOTFILES/.config/ipython"
 
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export SDL_JOYSTICK_HIDAPI=0
