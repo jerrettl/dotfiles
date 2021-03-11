@@ -182,7 +182,8 @@ install_all() {
 
   # Start services
   sudo systemctl enable --now bluetooth.service
-  sudo systemctl enable --now redshift-gtk.service
+  sudo systemctl --user disable --now redshift.service
+  sudo systemctl --user disable --now redshift-gtk.service
   sudo systemctl enable --now cronie.service
   systemctl --user enable --now emacs
 
