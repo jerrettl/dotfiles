@@ -27,7 +27,7 @@ new_window pixel $default_border_width
 
 
 # ==== Startup ====
-exec_always --no-startup-id feh --bg-fill ~/dotfiles/wallpaper.jpg
+exec_always --no-startup-id $DOTFILES_SCRIPTS/set-wallpaper.sh
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id system-config-printer-applet
 exec_always --no-startup-id xdotool mousemove_relative -- -10000 10000
