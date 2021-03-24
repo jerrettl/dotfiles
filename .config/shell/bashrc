@@ -109,7 +109,7 @@ bind '"\t":menu-complete'
 bind -x '"\C-f":"xdotool type $(find . | sed '"'"'s/^..//'"'"' | grep --invert-match -E '"'.*\\.git/'"' | fzf)"'
 
 
-if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ]; then
+if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ] || [ "$(hostname)" == "DESKTOP-82K6OI6" ]; then
   export LIBGL_ALWAYS_INDIRECT=1
   export DISPLAY=:0
   cd ~
