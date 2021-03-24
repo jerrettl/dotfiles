@@ -1,5 +1,13 @@
 #!/bin/bash
 
-temp=$(sensors | grep -i "package id 0" | awk '{print $4}' | cut -c 2-)
+column="4"
+sensor=$(sensors | grep -i "package id 0")
+if [ $? -ne 0 ]; then
+	column="2"
+	sensor=$(sensors k10temp-pci-* | grep -i "Tccd1")
+fi
+[ $? -ne 0 ] && exit
+
+temp=$(echo $sensor | awk "{print \$$column}" | cut -c 2-)
 echo "TEMP $temp"
 echo "$temp"
