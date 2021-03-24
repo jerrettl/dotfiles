@@ -1,0 +1,4 @@
+#!/bin/bash
+# vim: syntax=sh
+
+export DIR_SCHOOL="/mnt/c/Users/Jerre/Documents/School"
