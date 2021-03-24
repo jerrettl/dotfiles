@@ -14,6 +14,7 @@ keychain
 man
 man-pages
 neovim
+net-tools
 p7zip
 pacman-contrib
 sshfs
