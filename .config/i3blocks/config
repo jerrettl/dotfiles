@@ -62,11 +62,6 @@ interval=10
 interval=10
 separator=true
 
-[wifi]
-#instance=wlp3s0
-interval=10
-separator=true
-
 # CPU usage
 #
 # The script may be called with -w and -c switches to specify thresholds,
