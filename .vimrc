@@ -250,9 +250,11 @@ nmap <C-t> 0/<++><cr>,/c4l
 imap <C-t> <esc>0/<++><cr>,/c4l
 
 " Do things when a :terminal is opened
-autocmd TermOpen * startinsert
-autocmd TermOpen * set nonumber
-autocmd TermOpen * echo "To exit insert mode, use <C-\\><C-n>"
+if has('nvim')
+  autocmd TermOpen * startinsert
+  autocmd TermOpen * set nonumber
+  autocmd TermOpen * echo "To exit insert mode, use <C-\\><C-n>"
+endif
 
 " Plain text
 autocmd FileType text,markdown,pandoc set spell
