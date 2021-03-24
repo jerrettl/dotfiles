@@ -8,6 +8,7 @@ alias free='free -m'                      # show sizes in MB
 alias l='ls -alh --color=auto -F'
 alias la='ls -alh --color=auto -F'
 alias ll='ls -lh --color=auto -F'
+alias less='less --QUIET'
 alias more=less
 
 alias su='sudo -Es'
