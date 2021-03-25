@@ -37,4 +37,7 @@ elif [ "$hostname" == "inspiron3537" ]; then
 	property=$(xinput list-props "$id" | grep -i 'libinput Accel Speed (' | cut -d "(" -f2 | cut -d ")" -f1)
 	accel="0.4"
 	xinput set-prop "$id" "$property" "$accel"
+
+elif [ "$hostname" == "tower" ]; then
+	autorandr --load default
 fi

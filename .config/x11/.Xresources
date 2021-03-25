@@ -11,8 +11,8 @@
   *font: xft:Iosevka Term:pixelsize=16:antialias=true
 #endif
 #ifdef SRVR_tower
-  Xft.dpi: 120
-  *font: xft:Iosevka Term:pixelsize=20:antialias=true
+  Xft.dpi: 110
+  *font: xft:Iosevka Term:pixelsize=18:antialias=true
 #endif
 
 ! Fix for emacs
