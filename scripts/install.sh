@@ -189,9 +189,9 @@ install_all() {
 
   # Configure git
   #git config --global credential.helper 'cache --timeout=1500'
-  git config credential.helper store # Big brain move
-  git config core.pager delta
-  git config interactive.diffFilter 'delta --color-only'
+  git config --global credential.helper store # Big brain move
+  git config --global core.pager delta
+  git config --global interactive.diffFilter 'delta --color-only'
   git config --global pull.rebase true
   git config --global fetch.prune true
   git config --global commit.gpgsign true
