@@ -112,7 +112,6 @@ bind -x '"\C-f":"xdotool type $(find . | sed '"'"'s/^..//'"'"' | grep --invert-m
 if [ "$(hostname)" == "DESKTOP-DNH8H8Q" ] || [ "$(hostname)" == "DESKTOP-82K6OI6" ]; then
   export LIBGL_ALWAYS_INDIRECT=1
   export DISPLAY=:0
-  cd ~
 fi
 
 export GPG_TTY=$(tty)
