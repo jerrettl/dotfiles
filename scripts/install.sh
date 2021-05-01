@@ -10,6 +10,7 @@ if [ -z "$1" ]; then
   echo "    - Setup vim plugins"
   echo "    - Run shortcuts.sh"
   echo "    - Install all symlinks"
+  echo "    - Configures git"
   echo
   echo "  - package-group: Install one specific package group, as defined in packages file"
   echo
@@ -19,7 +20,6 @@ if [ -z "$1" ]; then
   echo "    - Everything in the base option"
   echo "    - Install the all package group"
   echo "    - Starts services"
-  echo "    - Configures git"
   exit
 fi
 
