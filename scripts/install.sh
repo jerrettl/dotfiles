@@ -61,6 +61,8 @@ install_basic() {
   ~/dotfiles/scripts/shortcuts.sh
   
   install_link
+
+  configure_git
 }
 
 
@@ -189,8 +191,10 @@ install_all() {
   sudo systemctl --user disable --now redshift-gtk.service
   sudo systemctl enable --now cronie.service
   systemctl --user enable --now emacs
+}
 
-  # Configure git
+
+configure_git() {
   #git config --global credential.helper 'cache --timeout=1500'
   git config --global credential.helper store # Big brain move
   git config --global core.pager delta
