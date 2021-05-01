@@ -34,6 +34,9 @@ install_basic() {
   if [ "$(pacman -Qi yay)" ]; then
     echo "yay installed, skipping..."
   else
+    # Install required packages
+    sudo pacman -S --noconfirm make patch gcc autoconf automake binutils bison fakeroot
+
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si
