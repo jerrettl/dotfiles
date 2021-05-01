@@ -16,6 +16,8 @@ if [ -z "$1" ]; then
   echo
   echo "  - link: Install all symlinks"
   echo
+  echo "  - git: Configure git"
+  echo
   echo "  - all:"
   echo "    - Everything in the base option"
   echo "    - Install the all package group"
@@ -219,6 +221,8 @@ elif [ "$1" == "package-group" ]; then
   install_package_group "$2"
 elif [ "$1" == "link" ]; then
   install_link
+elif [ "$1" == "git" ]; then
+  configure_git
 elif [ "$1" == "all" ]; then
   install_all
 fi
