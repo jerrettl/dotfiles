@@ -13,3 +13,4 @@ aliases/ranger_autoaliases
 .config/ipython/profile_default/startup/*
 .config/ipython/profile_default/history*
 !.config/ipython/profile_default/startup/default.py
+.nvimlog
