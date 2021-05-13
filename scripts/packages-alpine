@@ -9,8 +9,8 @@ chrony
 git
 htop
 keychain
-man-db
 man-pages
+mandoc
 neovim
 net-tools
 p7zip
