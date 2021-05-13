@@ -6,6 +6,7 @@
 # Anything beginning with a # will be completely ignored
 [base]
 chrony
+curl
 git
 htop
 keychain
