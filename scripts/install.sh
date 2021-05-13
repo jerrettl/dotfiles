@@ -4,7 +4,7 @@ if [ -z "$1" ]; then
   echo "Please select an option to choose the install scope:"
   echo "  - basic:"
   echo "    - Update all packages"
-  echo "    - Install yay"
+  echo "    - Install yay (Arch Linux only)"
   echo "    - Install the basic and extra package groups"
   echo "    - Set time zone"
   echo "    - Setup vim plugins"
@@ -21,38 +21,50 @@ if [ -z "$1" ]; then
   echo "  - all:"
   echo "    - Everything in the base option"
   echo "    - Install the all package group"
-  echo "    - Starts services"
+  echo "    - Starts services (systemd only)"
   exit
 fi
 
-
-
+# Get Linux distribution
+export OS=$(grep -E '^ID' /etc/os-release | cut -f2 -d'=')
+echo "[INFO] Distro detected: $OS"
 
 install_basic() {
   # Update packages
-  sudo pacman -Syyu --noconfirm
+  if [ "$OS" == "arch" ]; then
+    sudo pacman -Syyu --noconfirm
 
-  # Install yay
-  if [ "$(pacman -Qi yay)" ]; then
-    echo "yay installed, skipping..."
-  else
-    # Install required packages
-    sudo pacman -S --noconfirm make patch gcc autoconf automake binutils bison fakeroot
+    # Install yay
+    if [ "$(pacman -Qi yay)" ]; then
+      echo "yay installed, skipping..."
+    else
+      # Install required packages
+      sudo pacman -S --noconfirm make patch gcc autoconf automake binutils bison fakeroot
 
-    git clone https://aur.archlinux.org/yay.git
-    cd yay
-    makepkg -si
-    cd ..
-    rm -rf yay
+      git clone https://aur.archlinux.org/yay.git
+      cd yay
+      makepkg -si
+      cd ..
+      rm -rf yay
+    fi
+  elif [ "$OS" == "alpine" ]; then
+    if [ -z "$(apk info --installed sudo)" ]; then
+      echo "sudo is not installed. Please install first before continuing."
+      exit
+    fi
+    sudo apk update
+    sudo apk upgrade
   fi
 
   install_package_group extra
 
   # Set time
-  echo "Setting timezone..."
-  sudo timedatectl set-timezone America/New_York
-  sudo timedatectl set-ntp true
-  sudo timedatectl set-local-rtc false
+  if [ "$(which timedatectl)" ]; then
+    echo "Setting timezone..."
+    sudo timedatectl set-timezone America/New_York
+    sudo timedatectl set-ntp true
+    sudo timedatectl set-local-rtc false
+  fi
 
   # Set up vim plugins
   echo "Setting up vim..."
@@ -61,7 +73,7 @@ install_basic() {
   # Generate autoconfig files
   echo "Generating alias shortcuts..."
   ~/dotfiles/scripts/shortcuts.sh
-  
+
   install_link
 
   configure_git
@@ -74,7 +86,7 @@ install_package_group() {
     exit
   fi
 
-  selection=$(sed --quiet --expression="/\\[$1\\]/,/=====/ p" packages | head --lines=-1 | sed 1d | sed '/^#/d')
+  selection=$(sed --quiet --expression="/\\[$1\\]/,/=====/ p" "packages-$OS" | head --lines=-1 | sed 1d | sed '/^#/d')
 
   if [ -z "$selection" ]; then
     echo "There are no packages in this group."
@@ -101,8 +113,14 @@ install_package_group() {
       tput bold
       echo "($i/$total) $line"
       tput sgr0
-      yay -S --needed --noconfirm --norebuild "$line"
+
+      if [ "$OS" == "arch" ]; then
+	yay -S --needed --noconfirm --norebuild "$line"
+      elif [ "$OS" == "alpine" ]; then
+      	sudo apk add "$line"
       fi
+
+    fi
   done
 
   echo "Finished installing packages in $1."
@@ -188,11 +206,13 @@ install_all() {
   install_package_group all
 
   # Start services
-  sudo systemctl enable --now bluetooth.service
-  sudo systemctl --user disable --now redshift.service
-  sudo systemctl --user disable --now redshift-gtk.service
-  sudo systemctl enable --now cronie.service
-  systemctl --user enable --now emacs
+  if [ "$(which systemctl)" ]; then
+    sudo systemctl enable --now bluetooth.service
+    sudo systemctl --user disable --now redshift.service
+    sudo systemctl --user disable --now redshift-gtk.service
+    sudo systemctl enable --now cronie.service
+    systemctl --user enable --now emacs
+  fi
 }
 
 
@@ -207,12 +227,14 @@ configure_git() {
 }
 
 
-if [ -z "$DOTFILES" ] || [ -z "$DOTFILES_SCRIPTS" ]; then
+if [ -z "$DOTFILES" ]; then
 	echo "You appear to be missing some environment variables."
 	echo "Please set the following variables with the proper locations:"
 	echo "\$DOTFILES: $DOTFILES"
-	echo "\$DOTFILES_SCRIPTS: $DOTFILES_SCRIPTS"
 	exit
+fi
+if [ -z "$DOTFILES_SCRIPTS" ]; then
+  export DOTFILES_SCRIPTS="$DOTFILES/scripts"
 fi
 
 if [ "$1" == "basic" ]; then

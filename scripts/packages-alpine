@@ -1,0 +1,31 @@
+# Key:
+# A word in square brackets represents a package group
+# An item beginning with > represents a dependency to a package group
+# A package just there is a package within that group
+# ===== represents the end of a package group
+# Anything beginning with a # will be completely ignored
+[base]
+chrony
+git
+htop
+keychain
+man-db
+man-pages
+neovim
+net-tools
+p7zip
+sshfs
+tmux
+tree
+unzip
+wget
+which
+zip
+=====
+[extra]
+>base
+fzf
+#git-delta
+github-cli
+ntfs-3g
+ranger
