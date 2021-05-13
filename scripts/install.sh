@@ -55,6 +55,9 @@ install_basic() {
     fi
     sudo apk update
     sudo apk upgrade
+
+    # Install basic packages
+    sudo apk add util-linux pciutils usbutils coreutils binutils findutils grep bash bash-completion
   fi
 
   install_package_group extra
@@ -86,6 +89,11 @@ install_basic() {
     git clone --depth=1 https://github.com/romkatv/gitstatus.git ~/.local/gitstatus
   else
     echo "Already configured."
+  fi
+
+  if [ "$OS" == "alpine" ]; then
+    echo "Installing docs..."
+    sudo apk add docs
   fi
 }
 
