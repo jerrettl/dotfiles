@@ -57,7 +57,7 @@ install_basic() {
     sudo apk upgrade
 
     # Install basic packages
-    sudo apk add util-linux pciutils usbutils coreutils binutils findutils grep bash bash-completion
+    sudo apk add util-linux pciutils usbutils coreutils binutils findutils grep bash bash-completion ncurses
   fi
 
   install_package_group extra
