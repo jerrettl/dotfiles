@@ -10,7 +10,8 @@ if [ -z "$1" ]; then
   echo "    - Setup vim plugins"
   echo "    - Run shortcuts.sh"
   echo "    - Install all symlinks"
-  echo "    - Configures git"
+  echo "    - Configure git"
+  echo "    - Configure git shell status"
   echo
   echo "  - package-group: Install one specific package group, as defined in packages file"
   echo
@@ -77,6 +78,15 @@ install_basic() {
   install_link
 
   configure_git
+
+  echo "Configuring git shell status..."
+  if [ ! -d ~/.local/gitstatus ]; then
+    echo "Cloning..."
+    [ ! -d ~/.local] && mkdir -p ~/.local
+    git clone --depth=1 https://github.com/romkatv/gitstatus.git ~/.local/gitstatus
+  else
+    echo "Already configured."
+  fi
 }
 
 
