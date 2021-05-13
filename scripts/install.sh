@@ -70,15 +70,15 @@ install_basic() {
     sudo timedatectl set-local-rtc false
   fi
 
-  # Set up vim plugins
-  echo "Setting up vim..."
-  nvim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
-
   # Generate autoconfig files
   echo "Generating alias shortcuts..."
   ~/dotfiles/scripts/shortcuts.sh
 
   install_link
+
+  # Set up vim plugins
+  echo "Setting up vim..."
+  nvim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
 
   configure_git
 
