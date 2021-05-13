@@ -162,8 +162,9 @@ install_link() {
   ln -sfv ~/dotfiles/.config/i3/config ~/.config/i3/config
   mkdir -pv ~/.config/i3blocks
   ln -sfv ~/dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
-  mkdir ~/.config/kitty
+  mkdir -pv ~/.config/kitty
   ln -sfv ~/dotfiles/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
+  mkdir -pv ~/.config/mpv
   ln -sfv ~/dotfiles/.config/mpv/mpv.conf ~/.config/mpv/mpv.conf
   rm -rf ~/.config/networkmanager-dmenu
   ln -sfv ~/dotfiles/.config/networkmanager-dmenu/ ~/.config/networkmanager-dmenu
