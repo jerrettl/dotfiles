@@ -4,16 +4,21 @@ set nocompatible
 
 " Plug
 " If plug is not installed, fetch and install it automatically.
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if has("unix")
+  let data_dir = has('nvim') ? stdpath('data') . '/site' : $HOME.'/.vim'
+elseif has("win32")
+  let data_dir = has('nvim') ? stdpath('data') . '/site' : $HOME.'\vimfiles'
+endif
+
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 if has("unix")
-  call plug#begin('~/.vim/plugged')
+  call plug#begin(data_dir.'/plugged')
 elseif has("win32")
-  call plug#begin('~/vimfiles/plugged')
+  call plug#begin(data_dir.'\plugged')
 endif
 
 " vim-latex: ease-of-life shortcuts for latex
@@ -124,13 +129,22 @@ set noerrorbells    " Do not beep or flash during errors
 set nobackup        " Do not backup files before overwriting them
 set noswapfile      " Do not use swap files
 set wildmenu        " Command line completion is enhanced (suggestions)
-set clipboard+=unnamedplus  " Use the clipboard for all operations
+if has("win32")     " Use the clipboard for all operations
+  set clipboard=unnamed
+else
+  set clipboard+=unnamedplus
+endif
 set linebreak       " Wrap long lines at characters that make sense (breakat)
 set noshowmode      " Don't show the mode on the last line (this is done with lightline)
 set laststatus=2    " Enable status line for all windows
-set shell=/bin/bash
+if has("unix")
+  set shell=/bin/bash
+elseif has("win32")
+  set shell=cmd.exe
+endif
 set scrolloff=3     " Set a minimum amount of lines above and below the cursor
 set undofile        " Persistent undo tree between sessions
+set undodir=$HOME.'/tmp'
 
 " Do not auto-insert comments on new lines
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -139,13 +153,44 @@ if !has('nvim')
   set noesckeys     " Function keys that start with <ESC> are recognised in insert mode (only necessary in vim, not neovim)
 endif
 
+
 " Set GUI font
-if has("win32")
-  set guifont=PragmataProMono_Nerd_Font_Mono:h10:w5
-else
-  if has("unix")
-    set guifont=PragmataProMono\ Nerd\ Font\ Mono\ 11
+function! SetFont()
+	if has("gui_running")
+		if has("win32")
+			exe ':set guifont='.g:font.':h'.string(g:font_size).':w'.string(g:font_size / 2.0)
+		elseif has("unix")
+			exe ':set guifont='.g:font.'\ '.string(g:font_size)
+		endif
+	endif
+endfunction
+
+function! DefaultFont()
+	let g:font = 'Iosevka'
+	let g:font_size = 11
+	call SetFont()
+endfunction
+call DefaultFont()
+
+function! FontSizePlus()
+	let g:font_size = g:font_size + 0.5
+	call SetFont()
+endfunction
+
+function! FontSizeMinus()
+	let g:font_size = g:font_size - 0.5
+	call SetFont()
+endfunction
+
+if has("gui_running")
+  if has("win32")
+    set guioptions-=T
+    set guioptions-=t
   endif
+
+  nnoremap + :call FontSizePlus()<cr>
+  nnoremap _ :call FontSizeMinus()<cr>
+  nnoremap ) :call DefaultFont()<cr>
 endif
 
 " Advanced
@@ -156,14 +201,13 @@ autocmd BufWritePost ~/dotfiles/aliases/folders*,~/dotfiles/aliases/configs*,~/d
 autocmd FileType xdefaults autocmd BufWritePost <buffer> !$DOTFILES_SCRIPTS/reload-xresources.sh
 
 " ===================================
-
 " Theming
 let &t_Co=256
 function! s:new_colors()
-  hi search cterm=NONE ctermfg=black ctermbg=yellow
+  hi search cterm=none ctermfg=black ctermbg=yellow guifg=Black guibg=#ffd557
   hi spellbad cterm=none ctermfg=white ctermbg=88 "dark red
   hi folded cterm=none ctermfg=7 ctermbg=17 "blue
-  hi LineNr cterm=none ctermfg=251 "grey
+  hi LineNr cterm=none ctermfg=251 guifg=#444444
   hi Visual ctermfg=none ctermbg=239 guibg=Grey
   hi EndOfBuffer ctermfg=12 gui=bold guifg=Blue
   hi DiffChange ctermfg=white ctermbg=8
@@ -172,11 +216,10 @@ function! s:new_colors()
   hi ColorColumn ctermbg=236
   hi Pmenu ctermfg=white ctermbg=236
   hi PmenuSel ctermfg=250 ctermbg=0
-  hi ExtraWhitespace ctermbg=88
+  hi ExtraWhitespace ctermbg=88 guibg=#870000
 endfunction
 autocmd! ColorScheme default call s:new_colors()
-
-colorscheme default
+call s:new_colors()
 
 " Show whitespace at the ends on lines
 autocmd BufWinEnter,InsertLeave * match ExtraWhitespace /\s\+$/
@@ -414,3 +457,7 @@ let g:ale_fixers = {
 " OmniSharp
 let g:OmniSharp_selector_ui = 'ctrlp'
 let g:OmniSharp_popup = 1
+
+if has('win32')
+  source $VIMRUNTIME/mswin.vim
+endif
