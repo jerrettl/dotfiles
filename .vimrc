@@ -17,9 +17,9 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 if has("unix")
-	call plug#begin(data_dir.'/plugged')
+	call plug#begin($HOME.'/.vim/plugged')
 elseif has("win32")
-	call plug#begin(data_dir.'\plugged')
+	call plug#begin($HOME.'\vimfiles\plugged')
 endif
 
 " vim-latex: ease-of-life shortcuts for latex
