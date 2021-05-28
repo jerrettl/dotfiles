@@ -6,20 +6,20 @@ set nocompatible
 " Plug
 " If plug is not installed, fetch and install it automatically.
 if has("unix")
-  let data_dir = has('nvim') ? stdpath('data') . '/site' : $HOME.'/.vim'
+	let data_dir = has('nvim') ? stdpath('data') . '/site' : $HOME.'/.vim'
 elseif has("win32")
-  let data_dir = has('nvim') ? stdpath('data') . '/site' : $HOME.'\vimfiles'
+	let data_dir = has('nvim') ? stdpath('data') . '/site' : $HOME.'\vimfiles'
 endif
 
 if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+	silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 if has("unix")
-  call plug#begin(data_dir.'/plugged')
+	call plug#begin(data_dir.'/plugged')
 elseif has("win32")
-  call plug#begin(data_dir.'\plugged')
+	call plug#begin(data_dir.'\plugged')
 endif
 
 " vim-latex: ease-of-life shortcuts for latex
@@ -131,17 +131,17 @@ set nobackup        " Do not backup files before overwriting them
 set noswapfile      " Do not use swap files
 set wildmenu        " Command line completion is enhanced (suggestions)
 if has("win32")     " Use the clipboard for all operations
-  set clipboard=unnamed
+	set clipboard=unnamed
 else
-  set clipboard+=unnamedplus
+	set clipboard+=unnamedplus
 endif
 set linebreak       " Wrap long lines at characters that make sense (breakat)
 set noshowmode      " Don't show the mode on the last line (this is done with lightline)
 set laststatus=2    " Enable status line for all windows
 if has("unix")
-  set shell=/bin/bash
+	set shell=/bin/bash
 elseif has("win32")
-  set shell=cmd.exe
+	set shell=cmd.exe
 endif
 set scrolloff=3     " Set a minimum amount of lines above and below the cursor
 set undofile        " Persistent undo tree between sessions
@@ -152,7 +152,7 @@ set fileformats=unix,dos " Set default line endings
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 if !has('nvim')
-  set noesckeys     " Function keys that start with <ESC> are recognised in insert mode (only necessary in vim, not neovim)
+	set noesckeys     " Function keys that start with <ESC> are recognised in insert mode (only necessary in vim, not neovim)
 endif
 
 
@@ -185,14 +185,14 @@ function! FontSizeMinus()
 endfunction
 
 if has("gui_running")
-  if has("win32")
-    set guioptions-=T
-    set guioptions-=t
-  endif
+	if has("win32")
+		set guioptions-=T
+		set guioptions-=t
+	endif
 
-  nnoremap + :call FontSizePlus()<cr>
-  nnoremap _ :call FontSizeMinus()<cr>
-  nnoremap ) :call DefaultFont()<cr>
+	nnoremap + :call FontSizePlus()<cr>
+	nnoremap _ :call FontSizeMinus()<cr>
+	nnoremap ) :call DefaultFont()<cr>
 endif
 
 " Advanced
@@ -363,9 +363,9 @@ imap <C-t> <esc>0/<++><cr>,/c4l
 
 " Do things when a :terminal is opened
 if has('nvim')
-  autocmd TermOpen * startinsert
-  autocmd TermOpen * set nonumber
-  autocmd TermOpen * echo "To exit insert mode, use <C-\\><C-n>"
+	autocmd TermOpen * startinsert
+	autocmd TermOpen * set nonumber
+	autocmd TermOpen * echo "To exit insert mode, use <C-\\><C-n>"
 endif
 
 " Plain text
@@ -384,8 +384,8 @@ autocmd FileType c imap STRING #include <string.h>
 autocmd FileType c,java nnoremap <leader>ta :CtrlPTag<CR>
 autocmd FileType c,java nnoremap <leader>p :CtrlPTag<CR>
 if executable("ctags")
-  autocmd FileType c,java
-	\ autocmd BufWritePost <buffer> silent! !ctags %
+	autocmd FileType c,java
+		\ autocmd BufWritePost <buffer> silent! !ctags %
 endif
 
 " Java
@@ -410,25 +410,25 @@ let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_CompileRule_pdf='pdflatex -interaction=nonstopmode $*'
 let g:Tex_ViewRule_pdf='zathura'
 let g:Tex_IgnoredWarnings='"Underfull\n".
-    \"Overfull\n".
-    \"specifier changed to\n".
-    \"You have requested\n".
-    \"Missing number, treated as zero.\n".
-    \"There were undefined references\n"
-    \"Citation %.%# undefined"
-    \"Package gensymb Warning: Not defining\n".'
+			\"Overfull\n".
+			\"specifier changed to\n".
+			\"You have requested\n".
+			\"Missing number, treated as zero.\n".
+			\"There were undefined references\n"
+			\"Citation %.%# undefined"
+			\"Package gensymb Warning: Not defining\n".'
 let g:Tex_IgnoreLevel=8
 autocmd FileType tex map <f3> <esc>:w<cr><leader>ll<CR>
 
 
 " Goyo
 function! s:goyo_enter()
-  highlight EndOfBuffer ctermfg=234
+	highlight EndOfBuffer ctermfg=234
 endfunction
 
 function! s:goyo_leave()
-  colorscheme default
-  syntax on
+	colorscheme default
+	syntax on
 endfunction
 
 nnoremap <F12> :Goyo<cr>
@@ -441,26 +441,26 @@ autocmd! user GoyoLeave nested call <SID>goyo_leave()
 " NERDTree
 " This function closes NERDTree automatically if it detects that it is the last window.
 function! NERDTreeQuit()
-  redir => buffersoutput
-  silent buffers
-  redir END
-  "                     1BufNo  2Mods.     3File           4LineNo
-  let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
-  let windowfound = 0
+	redir => buffersoutput
+	silent buffers
+	redir END
+	"                     1BufNo  2Mods.     3File           4LineNo
+	let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
+	let windowfound = 0
 
-  for bline in split(buffersoutput, "\n")
-    let m = matchlist(bline, pattern)
+	for bline in split(buffersoutput, "\n")
+		let m = matchlist(bline, pattern)
 
-    if (len(m) > 0)
-      if (m[2] =~ '..a..')
-        let windowfound = 1
-      endif
-    endif
-  endfor
+		if (len(m) > 0)
+			if (m[2] =~ '..a..')
+				let windowfound = 1
+			endif
+		endif
+	endfor
 
-  if (!windowfound)
-    quitall
-  endif
+	if (!windowfound)
+		quitall
+	endif
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
 
@@ -510,19 +510,19 @@ nnoremap <F8> :ALEFix<CR>
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_line_on_insert_leave = 1
 let g:ale_linters = {
-\   'cs' : [],
-\}
+			\   'cs' : [],
+			\}
 let g:ale_linter_aliases = {
-\   'html': ['html', 'css', 'javascript'],
-\}
+			\   'html': ['html', 'css', 'javascript'],
+			\}
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'c': ['astyle'],
-\   'cs': ['uncrustify'],
-\   'java': ['google_java_format'],
-\   'javascript': ['eslint'],
-\   'python': ['black'],
-\}
+			\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+			\   'c': ['astyle'],
+			\   'cs': ['uncrustify'],
+			\   'java': ['google_java_format'],
+			\   'javascript': ['eslint'],
+			\   'python': ['black'],
+			\}
 
 
 " OmniSharp
@@ -530,5 +530,6 @@ let g:OmniSharp_selector_ui = 'ctrlp'
 let g:OmniSharp_popup = 1
 
 if has('win32')
-  source $VIMRUNTIME/mswin.vim
+	source $VIMRUNTIME/mswin.vim
 endif
+
