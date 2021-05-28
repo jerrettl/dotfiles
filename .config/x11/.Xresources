@@ -124,7 +124,7 @@ URxvt.iso14755_52: false
 *color12: #3465a4
 ! darkmagenta + magenta
 *color5:  #d81b60
-*color13: #f57900
+*color13: #ff6482
 !darkcyan + cyan (both not tango)
 *color6:  #00acc1
 *color14: #46a4ff
