@@ -206,19 +206,86 @@ autocmd FileType xdefaults autocmd BufWritePost <buffer> !$DOTFILES_SCRIPTS/relo
 " Theming
 let &t_Co=256
 function! s:new_colors()
-  hi search cterm=none ctermfg=black ctermbg=yellow guifg=Black guibg=#ffd557
-  hi spellbad cterm=none ctermfg=white ctermbg=88 "dark red
-  hi folded cterm=none ctermfg=7 ctermbg=17 "blue
-  hi LineNr cterm=none ctermfg=251 guifg=#444444
-  hi Visual ctermfg=none ctermbg=239 guibg=Grey
-  hi EndOfBuffer ctermfg=12 gui=bold guifg=Blue
-  hi DiffChange ctermfg=white ctermbg=8
-  hi DiffAdd ctermfg=black ctermbg=2
-  hi DiffDelete ctermfg=black ctermbg=1
-  hi ColorColumn ctermbg=236
-  hi Pmenu ctermfg=white ctermbg=236
-  hi PmenuSel ctermfg=250 ctermbg=0
-  hi ExtraWhitespace ctermbg=88 guibg=#870000
+	let s:foreground='#f5f5f5'
+	let s:background='#1d1d1d'
+	let s:black='#090909'			" 0
+	let s:dark_red='#ff443e'		" 1
+	let s:dark_green='#6dd82c'		" 2
+	let s:dark_yellow='#ffd740'		" 3
+	let s:dark_blue='#42a5f5'		" 4
+	let s:dark_magenta='#d81b60'	" 5
+	let s:dark_cyan='#00acc1'		" 6
+	let s:light_grey='#f5f5f5'		" 7
+	let s:dark_grey='#555753'		" 8
+	let s:red='#ff8d8d'				" 9
+	let s:green='#c8e7a8'			" 10
+	let s:yellow='#ffc135'			" 11
+	let s:blue='#3465a4'			" 12
+	let s:magenta='#ff6482'			" 13
+	let s:cyan='#46a4ff'			" 14
+	let s:white='#ffffff'			" 15
+
+	let s:navy_blue='#00005f'		" 17
+	let s:steel_blue1='#5fd7ff'		" 81
+	let s:dark_red1='#870000'		" 88
+	let s:pale_green1='#87ffaf'		" 121
+	let s:misty_rose1='#ffd7d7'		" 224
+	let s:thistle='#ffd7ff'			" 225
+	let s:grey19='#303030'			" 236
+	let s:grey30='#4e4e4e'			" 239
+	let s:grey42='#6c6c6c'			" 242
+	let s:grey74='#bcbcbc'			" 250
+	let s:grey78='#c6c6c6'			" 251
+
+	set background=dark
+	"	highlight name		cterm					ctermfg				ctermbg				gui					guifg					guibg
+	exe 'hi Normal'.																							' guifg='.s:foreground.	' guibg='.s:background
+	exe 'hi NonText'.								' ctermfg=12'.							' gui=bold'.		' guifg='.s:blue
+	exe 'hi Comment'.								' ctermfg=14'.												' guifg='.s:cyan
+	exe 'hi Constant'.								' ctermfg=13'.												' guifg='.s:magenta
+	exe 'hi Identifier'.	' cterm=bold'.			' ctermfg=14'.												' guifg='.s:cyan
+	exe 'hi Statement'.								' ctermfg=11'.							' gui=bold'.		' guifg='.s:yellow
+	exe 'hi PreProc'.								' ctermfg=81'.												' guifg='.s:steel_blue1
+	exe 'hi Type'.									' ctermfg=121'.							' gui=bold'.		' guifg='.s:pale_green1
+	exe 'hi Special'.								' ctermfg=224'.												' guifg='.s:misty_rose1
+	exe 'hi Underlined'.	' cterm=underline'.		' ctermfg=81'.							' gui=underline'.	' guifg='.s:steel_blue1
+	hi link Label Statement
+	hi link Operator Statement
+
+	exe 'hi ErrorMsg'.								' ctermfg=15'.		' ctermbg=1'.							' guifg='.s:white.		' guibg='.s:dark_red
+	exe 'hi WarningMsg'.							' ctermfg=224'.												' guifg='.s:misty_rose1
+	exe 'hi ModeMsg'.		' cterm=bold'.													' gui=bold'
+	exe 'hi MoreMsg'.								' ctermfg=121'.							' gui=bold'.		' guifg='.s:pale_green1
+	exe 'hi Error'.									' ctermfg=15'.		' ctermbg=9'.							' guifg='.s:white.		' guibg='.s:red
+
+	exe 'hi Todo'.									' ctermfg=0'.		' ctermbg=11'.							' guifg='.s:black.		' guibg='.s:yellow
+	exe 'hi Cursor'.																							' guifg=bg'.			' guibg=fg'
+	exe 'hi Search'. 		' cterm=none'. 			' ctermfg=black'.	' ctermbg=yellow'. 						' guifg='.s:black. 		' guibg='.s:yellow
+	exe 'hi IncSearch'.		' cterm=reverse'.												' gui=reverse'
+	exe 'hi LineNr'.		' cterm=none'.			' ctermfg=251'.												' guifg='.s:grey78
+	exe 'hi Title'.									' ctermfg=225'.							' gui=bold'.		' guifg='.s:thistle
+
+	exe 'hi StatusLineNC'.	' cterm=reverse'.												' gui=reverse'
+	exe 'hi StatusLine'.	' cterm=bold,reverse'.											' gui=bold,reverse'
+	exe 'hi VertSplit'.		' cterm=reverse'.												' gui=reverse'
+
+	exe 'hi Visual'.								' ctermfg=none'. 	' ctermbg=239'.													' guibg='.s:grey30
+
+	exe 'hi DiffChange'.							' ctermfg=white'.	' ctermbg=8'.							' guifg='.s:white.		' guibg='.s:dark_grey
+	exe 'hi DiffText'.		' cterm=bold'.								' ctermbg=9'.		' gui=bold'.								' guibg='.s:red
+	exe 'hi DiffAdd'.								' ctermfg=black'.	' ctermbg=2'.							' guifg='.s:black.		' guibg='.s:dark_green
+	exe 'hi DiffDelete'.							' ctermfg=black'.	' ctermbg=1'.							' guifg='.s:black.		' guibg='.s:dark_red
+
+	exe 'hi Folded'.		' cterm=none'.			' ctermfg=7'.		' ctermbg=17'.							' guifg='.s:light_grey.	' guibg='.s:navy_blue
+	exe 'hi FoldColumn'.							' ctermfg=14'.		' ctermbg=242'.							' guifg='.s:cyan.		' guibg='.s:grey42
+
+	exe 'hi SpellBad'.		' cterm=none'.			' ctermfg=white'.	' ctermbg=88'.							' guifg='.s:white.		' guibg='.s:dark_red1
+	exe 'hi EndOfBuffer'.							' ctermfg=12'.							' gui=bold'.		' guifg='.s:blue
+	exe 'hi ColorColumn'.												' ctermbg=236'.													' guibg='.s:grey19
+
+	exe 'hi Pmenu'.									' ctermfg=white'.	' ctermbg=236'.							' guifg='.s:white.		' guibg='.s:grey19
+	exe 'hi PmenuSel'.								' ctermfg=250'.		' ctermbg=0'.							' guifg='.s:grey74.		' guibg='.s:black
+	exe 'hi ExtraWhitespace'.											' ctermbg=88'.													' guibg='.s:dark_red1
 endfunction
 autocmd! ColorScheme default call s:new_colors()
 call s:new_colors()
