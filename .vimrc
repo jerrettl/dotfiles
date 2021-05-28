@@ -281,7 +281,7 @@ function! s:new_colors()
 	exe 'hi Folded'.		' cterm=none'.			' ctermfg=7'.		' ctermbg=17'.							' guifg='.s:light_grey.	' guibg='.s:navy_blue
 	exe 'hi FoldColumn'.							' ctermfg=14'.		' ctermbg=242'.							' guifg='.s:cyan.		' guibg='.s:grey42
 
-	exe 'hi SpellBad'.		' cterm=none'.			' ctermfg=white'.	' ctermbg=88'.							' guifg='.s:white.		' guibg='.s:dark_red1
+	exe 'hi SpellBad'.		' cterm=none'.			' ctermfg=white'.	' ctermbg=88'.		' gui=undercurl'
 	exe 'hi EndOfBuffer'.							' ctermfg=12'.							' gui=bold'.		' guifg='.s:blue
 	exe 'hi ColorColumn'.												' ctermbg=236'.													' guibg='.s:grey19
 
