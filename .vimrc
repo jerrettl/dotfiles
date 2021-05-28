@@ -145,6 +145,7 @@ endif
 set scrolloff=3     " Set a minimum amount of lines above and below the cursor
 set undofile        " Persistent undo tree between sessions
 set undodir=$HOME.'/tmp'
+set fileformats=unix,dos " Set default line endings
 
 " Do not auto-insert comments on new lines
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
