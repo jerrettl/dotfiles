@@ -22,6 +22,8 @@ elseif has("win32")
 	call plug#begin($HOME.'\vimfiles\plugged')
 endif
 
+" vimtex: ease-of-life shortcuts for latex
+Plug 'lervag/vimtex', { 'for': 'tex' }
 
 " nerdtree: file exploring side bar
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
