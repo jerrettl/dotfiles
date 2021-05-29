@@ -22,8 +22,6 @@ elseif has("win32")
 	call plug#begin($HOME.'\vimfiles\plugged')
 endif
 
-" vim-latex: ease-of-life shortcuts for latex
-Plug 'vim-latex/vim-latex', { 'for': 'tex' }
 
 " nerdtree: file exploring side bar
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -404,24 +402,6 @@ autocmd FileType json set conceallevel=0
 
 " ===================================
 " Plugin Configurations
-
-" latex-suite / vim-latex
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_CompileRule_pdf='pdflatex -interaction=nonstopmode $*'
-let g:Tex_ViewRule_pdf='zathura'
-let g:Tex_IgnoredWarnings='"Underfull\n".
-			\"Overfull\n".
-			\"specifier changed to\n".
-			\"You have requested\n".
-			\"Missing number, treated as zero.\n".
-			\"There were undefined references\n"
-			\"Citation %.%# undefined"
-			\"Package gensymb Warning: Not defining\n".'
-let g:Tex_IgnoreLevel=8
-autocmd FileType tex map <f3> <esc>:w<cr><leader>ll<CR>
-
 
 " Goyo
 function! s:goyo_enter()
