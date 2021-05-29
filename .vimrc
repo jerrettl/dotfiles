@@ -236,6 +236,7 @@ function! s:new_colors()
 	let s:grey19='#303030'			" 236
 	let s:grey30='#4e4e4e'			" 239
 	let s:grey42='#6c6c6c'			" 242
+	let s:grey58='#949494'			" 246
 	let s:grey74='#bcbcbc'			" 250
 	let s:grey78='#c6c6c6'			" 251
 
@@ -245,6 +246,7 @@ function! s:new_colors()
 	exe 'hi NonText'.								' ctermfg=12'.							' gui=bold'.		' guifg='.s:blue
 	exe 'hi Comment'.								' ctermfg=14'.												' guifg='.s:cyan
 	exe 'hi Constant'.								' ctermfg=13'.												' guifg='.s:magenta
+	exe 'hi Conceal'.								' ctermfg=246'.												' guifg='.s:grey58
 	exe 'hi Identifier'.	' cterm=bold'.			' ctermfg=14'.												' guifg='.s:cyan
 	exe 'hi Statement'.								' ctermfg=11'.							' gui=bold'.		' guifg='.s:yellow
 	exe 'hi PreProc'.								' ctermfg=81'.												' guifg='.s:steel_blue1
