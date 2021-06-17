@@ -408,6 +408,14 @@ autocmd FileType json set conceallevel=0
 " ===================================
 " Plugin Configurations
 
+" vimtex
+let g:vimtex_fold_enabled = 1
+let g:vimtex_fold_types = {
+	\ 'envs' : {
+	\	'whitelist' : ['tikzpicture'],
+	\ },
+	\}
+
 " Goyo
 function! s:goyo_enter()
 	highlight EndOfBuffer ctermfg=234
