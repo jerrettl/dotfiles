@@ -42,7 +42,7 @@ Plug 'alvan/vim-closetag', { 'for': ['html', 'javascript'] }
 Plug 'junegunn/goyo.vim'
 
 " nerdcommenter: shortcuts to comment code
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 
 " vim-surround: surrounding text
 Plug 'tpope/vim-surround'
