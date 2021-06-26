@@ -198,6 +198,10 @@ if has("gui_running")
 	nnoremap ) :call DefaultFont()<cr>
 endif
 
+" Concealing
+set concealcursor=""
+set conceallevel=2
+
 " Advanced
 set omnifunc=htmlcomplete#CompleteTags
 
@@ -486,8 +490,6 @@ noremap <leader>c<space> :call NERDComment(1, 'toggle')<CR>
 " indentLine
 let g:indentLine_setConceal = 0
 let g:indentLine_fileTypeExclude = ['markdown', 'pandoc']
-set concealcursor=nc
-set conceallevel=2
 
 
 " Pandoc
