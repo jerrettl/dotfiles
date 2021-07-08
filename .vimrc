@@ -510,6 +510,7 @@ let g:ale_line_on_insert_leave = 1
 let g:ale_linters = {
 			\   'cs': [],
 			\   'html': ['tidy'],
+			\   'javascript': ['eslint'],
 			\}
 let g:ale_linter_aliases = {
 			\   'html': ['html', 'css', 'javascript'],
