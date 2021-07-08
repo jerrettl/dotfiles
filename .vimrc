@@ -60,7 +60,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'Yggdroot/indentLine'
 
 " Asynchronous Lint Engine
-Plug 'dense-analysis/ale', { 'for': ['cs', 'javascript'], 'on': 'ALEEnable' }
+Plug 'dense-analysis/ale', { 'for': ['cs', 'html', 'javascript'], 'on': 'ALEEnable' }
 
 " Python specific:
 "   indentpython: auto intent after : and in multiline statements
