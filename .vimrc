@@ -508,7 +508,7 @@ nnoremap <F8> :ALEFix<CR>
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_line_on_insert_leave = 1
 let g:ale_linters = {
-			\   'cs' : [],
+			\   'cs': [],
 			\}
 let g:ale_linter_aliases = {
 			\   'html': ['html', 'css', 'javascript'],
