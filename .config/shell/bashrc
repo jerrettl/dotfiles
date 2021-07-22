@@ -1,7 +1,7 @@
 # Stop early if the shell is non-interactive
 if [[ $- != *i* ]]; then return; fi
 
-export PATH="$PATH:/opt/cisco/anyconnect/bin/:/opt/fah/:/usr/NX/bin/:$HOME/gems/bin:$HOME/.gem/ruby/2.7.0/bin:$HOME/.dotnet/tools"
+export PATH="$PATH:/opt/cisco/anyconnect/bin/:/opt/fah/:/usr/NX/bin/:$HOME/gems/bin:$HOME/.gem/ruby/2.7.0/bin:$HOME/.dotnet/tools:$HOME/.cargo/bin"
 export GEM_HOME="$HOME/gems"
 
 # ==== Sourcing external files ====
