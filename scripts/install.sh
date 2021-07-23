@@ -192,6 +192,7 @@ install_link() {
   ln -sfv $DOTFILES/.config/shell/profile ~/.profile
   ln -sfv $DOTFILES/.config/x11/.xinitrc ~/.xinitrc
   ln -sfv $DOTFILES/.config/x11/.xprofile ~/.xprofile
+  ln -sfv $DOTFILES/.config/x11/.Xresources ~/.Xresources
   mkdir -pv ~/.config/zathura
   ln -sfv ~/dotfiles/.config/zathura/gui/zathurarc ~/.config/zathura/zathurarc
   ln -sfv ~/dotfiles/.emacs ~/.emacs
