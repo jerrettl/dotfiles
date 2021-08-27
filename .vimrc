@@ -60,7 +60,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'Yggdroot/indentLine'
 
 " Asynchronous Lint Engine
-Plug 'dense-analysis/ale', { 'for': ['cs', 'html', 'javascript'], 'on': 'ALEEnable' }
+Plug 'dense-analysis/ale', { 'for': ['cs', 'haskell', 'html', 'javascript'], 'on': 'ALEEnable' }
 
 " Python specific:
 "   indentpython: auto intent after : and in multiline statements
@@ -523,6 +523,7 @@ let g:ale_fixers = {
 			\   'javascript': ['eslint'],
 			\   'python': ['black'],
 			\}
+let g:ale_haskell_ghc_options = '-dynamic -fno-code -v0'
 
 
 " OmniSharp
