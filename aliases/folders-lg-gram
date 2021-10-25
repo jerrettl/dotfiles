@@ -1,8 +1,6 @@
 sha $DIR_SHARED
 tv $DIR_SHARED/Saved\ TV
 ula $DIR_SHARED/ULA
-sch $DIR_SCHOOL
-txt $DIR_SCHOOL/Textbooks
 sshtv /mnt/sshfs/Documents/tv
 vssh /mnt/sshfs
 lssh /mnt/sshfs

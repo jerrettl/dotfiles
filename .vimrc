@@ -206,7 +206,7 @@ set conceallevel=2
 set omnifunc=htmlcomplete#CompleteTags
 
 " Auto refresh databases on saving
-autocmd BufWritePost ~/dotfiles/aliases/folders*,~/dotfiles/aliases/configs*,~/dotfiles/scripts/shortcuts.sh !bash ~/dotfiles/scripts/shortcuts.sh
+autocmd BufWritePost ~/dotfiles/aliases/folders*,~/dotfiles/aliases/configs*,~/dotfiles/aliases/groups,~/dotfiles/scripts/shortcuts.sh !bash ~/dotfiles/scripts/shortcuts.sh
 autocmd FileType xdefaults autocmd BufWritePost <buffer> !$DOTFILES_SCRIPTS/reload-xresources.sh
 
 " ===================================

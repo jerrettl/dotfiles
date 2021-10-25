@@ -24,10 +24,12 @@ qute_folder_bind() {
 }
 
 # Input locations
-folders="$DOTFILES/aliases/folders"
-folders_custom="$DOTFILES/aliases/folders-$(hostname)"
-configs="$DOTFILES/aliases/configs"
-configs_custom="$DOTFILES/aliases/configs-$(hostname)"
+aliases_location="$DOTFILES/aliases"
+folders="$aliases_location/folders"
+folders_custom="$aliases_location/folders-$(hostname)"
+configs="$aliases_location/configs"
+configs_custom="$aliases_location/configs-$(hostname)"
+group_list="$aliases_location/groups"
 
 # Output locations
 bash_shortcuts="$DOTFILES/aliases/bash_autoaliases"
@@ -39,10 +41,27 @@ qute_shortcuts="$HOME/.config/qutebrowser/qute_autoaliases"
 rm -f "$bash_shortcuts" "$ranger_shortcuts" "$qute_shortcuts"
 
 
+# Parse group list file
+if [ -f "$group_list" ]; then
+  groups=$(sed --quiet '/^'$(hostname)'/p' "$group_list" | cut -d' ' -f2- | sed 's/ /\n/g')
+else
+  groups=""
+fi
+
+
 # Folder bindings
 bash_folder_bind "$folders"
 ranger_folder_bind "$folders"
 qute_folder_bind "$folders"
+
+for group in $groups; do
+  group_folders="$aliases_location/folders--$group"
+  if [ -f "$group_folders" ]; then
+    bash_folder_bind "$group_folders"
+    ranger_folder_bind "$group_folders"
+    qute_folder_bind "$group_folders"
+  fi
+done
 
 if [ -f "$folders_custom" ]; then
   bash_folder_bind "$folders_custom"
@@ -51,13 +70,24 @@ if [ -f "$folders_custom" ]; then
 fi
 
 
+
+
 # Config bindings
 bash_config_bind "$configs"
 ranger_config_bind "$configs"
+
+for group in $groups; do
+  group_aliases="$aliases_location/aliases--$group"
+  if [ -f "$group_aliases" ]; then
+    bash_config_bind "$group_aliases"
+    ranger_config_bind "$group_aliases"
+  fi
+done
 
 if [ -f "$configs_custom" ]; then
   bash_config_bind "$configs_custom"
   ranger_config_bind "$configs_custom"
 fi
+
 
 source $DOTFILES/.config/shell/bashrc
