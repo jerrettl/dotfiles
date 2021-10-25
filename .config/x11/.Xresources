@@ -11,7 +11,6 @@
   *font: xft:Iosevka Fixed:pixelsize=16:antialias=true
 #endif
 #ifdef SRVR_tower
-  Xft.dpi: 110
   *font: xft:Iosevka Fixed:pixelsize=18:antialias=true
 #endif
 
