@@ -485,6 +485,14 @@ let g:NERDSpaceDelims = 1
 noremap <leader>c<space> :call nerdcommenter#Comment(1, 'toggle')<CR>
 
 
+" vim-sandwich
+" runtime macros/sandwich/keymap/surround.vim
+xmap is <Plug>(textobj-sandwich-query-i)
+xmap as <Plug>(textobj-sandwich-query-a)
+omap is <Plug>(textobj-sandwich-query-i)
+omap as <Plug>(textobj-sandwich-query-a)
+
+
 " indentLine
 let g:indentLine_setConceal = 0
 let g:indentLine_fileTypeExclude = ['markdown', 'pandoc']
