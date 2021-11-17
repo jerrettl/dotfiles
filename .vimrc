@@ -44,11 +44,8 @@ Plug 'junegunn/goyo.vim'
 " nerdcommenter: shortcuts to comment code
 Plug 'preservim/nerdcommenter'
 
-" vim-surround: surrounding text
-Plug 'tpope/vim-surround'
-
-" vim-repeat: repeat commands mostly for vim-surround
-Plug 'tpope/vim-repeat'
+" vim-sandwich: surrounding text
+Plug 'machakann/vim-sandwich'
 
 " lightline: status line
 Plug 'itchyny/lightline.vim'
