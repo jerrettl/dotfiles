@@ -15,7 +15,7 @@ fi
 
 if [ "$selection" == "School" ]; then
   # i3-msg "layout default"
-  firefox https://keep.google.com/u/0 https://gmail.com https://outlook.office.com/mail/inbox https://webcourses.ucf.edu &
+  MOZ_USE_XINPUT2=1 MOZ_WEBRENDER=1 firefox https://keep.google.com/u/0 https://gmail.com https://outlook.office.com/mail/inbox https://webcourses.ucf.edu &
 elif [ "$selection" == "Watch TV" ]; then
   i3-msg "layout tabbed"
   firefox http://trakt.tv/dashboard &

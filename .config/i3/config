@@ -73,7 +73,7 @@ mode "$mode_system" {
 
 
 # ==== Function key applications ====
-bindsym $mod+F1 exec firefox
+bindsym $mod+F1 exec MOZ_USE_XINPUT2=1 MOZ_WEBRENDER=1 firefox
 bindsym $mod+F2 exec $terminal -e ranger
 bindsym $mod+F3 exec emacsclient -c --alternate-editor emacs
 bindsym $mod+F6 exec --no-startup-id ~/dotfiles/scripts/airplane_mode.sh
