@@ -56,6 +56,9 @@ Plug 'easymotion/vim-easymotion'
 " indentLine: indent guides
 Plug 'Yggdroot/indentLine'
 
+" splitjoin.vim: Switch between single-line and multi-line forms of code
+Plug 'AndrewRadev/splitjoin.vim'
+
 " Asynchronous Lint Engine
 Plug 'dense-analysis/ale', { 'for': ['cs', 'haskell', 'html', 'javascript'], 'on': 'ALEEnable' }
 
