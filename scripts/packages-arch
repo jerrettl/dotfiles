@@ -46,6 +46,7 @@ jq
 networkmanager
 pulseaudio
 pulseaudio-alsa
+syncthing
 udiskie
 veracrypt
 youtube-dl
