@@ -15,6 +15,7 @@ if [ "$hostname" == "lg-gram" ]; then
 	property=$(xinput list-props "$id" | grep -i 'libinput Accel Speed (' | cut -d "(" -f2 | cut -d ")" -f1)
 	accel="0.4"
 	xinput set-prop "$id" "$property" "$accel"
+	xinput set-prop "$id" 'libinput Scrolling Pixel Distance' 40
 
 	# Wireless mouse sensitivity
 	id=$(xinput list | grep -i "MOSART Semi. 2.4G Wireless Mouse Mouse" | grep -oP 'id=[0-9]*' | sed 's/id=//')
