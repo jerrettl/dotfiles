@@ -227,7 +227,7 @@ bindsym Mod1+Tab workspace back_and_forth
 
 
 # ==== Theming ====
-font pango:SF Pro Display 10
+font pango:Helvetica Neue, Medium 10
 
 set $bg-color 	         #969696
 set $inactive-bg-color   #2d2d2d
