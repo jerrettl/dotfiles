@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export TERMINAL="/usr/bin/urxvt"
-export BROWSER="/usr/bin/firefox"
+export BROWSER="MOZ_USE_XINPUT2=1 MOZ_WEBRENDER=1 /usr/bin/firefox"
 export EDITOR="/usr/bin/nvim"
 export DOTFILES="$HOME/dotfiles"
 export DOTFILES_SCRIPTS="$DOTFILES/scripts"
