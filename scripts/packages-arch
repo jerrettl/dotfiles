@@ -67,6 +67,7 @@ urlscan
 powertop
 =====
 [graphical]
+apple-fonts
 arandr
 autorandr
 bdf-unifont
@@ -97,7 +98,6 @@ network-manager-applet
 noto-fonts-cjk
 noto-fonts-emoji
 numlockx
-otf-san-francisco
 pango
 pavucontrol
 pcmanfm
