@@ -190,6 +190,7 @@ install_link() {
   ln -sfv $DOTFILES/.config/shell/bash_profile ~/.bash_profile
   ln -sfv $DOTFILES/.config/shell/bashrc ~/.bashrc
   ln -sfv $DOTFILES/.config/shell/profile ~/.profile
+  ln -sfv $DOTFILES/.config/x11/.XCompose ~/.XCompose
   ln -sfv $DOTFILES/.config/x11/.xinitrc ~/.xinitrc
   ln -sfv $DOTFILES/.config/x11/.xprofile ~/.xprofile
   ln -sfv $DOTFILES/.config/x11/.Xresources ~/.Xresources
