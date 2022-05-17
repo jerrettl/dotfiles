@@ -1,6 +1,5 @@
 sha $DIR_SHARED
 tv $DIR_SHARED/Saved\ TV
-ula $DIR_SHARED/ULA
 sshtv /mnt/sshfs/Documents/tv
 vssh /mnt/sshfs
 lssh /mnt/sshfs
