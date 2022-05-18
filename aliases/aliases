@@ -39,6 +39,9 @@ alias rr='ranger'
 alias pu='sudo pacman -Syyu'
 alias yayu='yay -Syyu -a'
 
+alias gcc-strict="gcc -Wall -Wstrict-prototypes -Wmissing-prototypes -Wshadow -Wconversion -Wextra -Wformat-nonliteral -Wformat-security -Wformat-y2k"
+alias clang-strict="clang -Weverything"
+
 # ==== Common Directories
 alias dotf='cd $DOTFILES && gstu'
 
