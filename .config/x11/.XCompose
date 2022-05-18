@@ -6115,8 +6115,27 @@ include "%L"
 
 
 # Custom additions
-<Multi_key> <l> <a>               			: "λ"  U03bb  # lowercase greek lambda
-<Multi_key> <asciicircum> <asciicircum> : "∧"  U2227  # logical and
-<Multi_key> <v> <v> 										: "∨"  U2228  # logical or
-<Multi_key> <O> <plus>									: "⊕"  U2295  # logical exclusive or
-<Multi_key> <less> <greater>						: "↔"  U2194  # logical iff
+<Multi_key> <l> <a> : "λ"  U03bb  # Lowercase Greek Lambda
+<Multi_key> <p> <i> : "π"         # Pi
+
+<Multi_key> <n> <o> <t>                          : "¬"          # Logical NOT
+<Multi_key> <asciicircum> <asciicircum>          : "∧"  U2227   # Logical AND
+<Multi_key> <^> <^>                              : "∧"          # Logical AND
+<Multi_key> <a> <n> <d>                          : "∧"          # Logical AND
+<Multi_key> <v> <v>                              : "∨"  U2228   # Logical OR
+<Multi_key> <V> <V>                              : "∨"          # Logical OR
+<Multi_key> <o> <r>                              : "∨"          # Logical OR
+<Multi_key> <O> <plus>                           : "⊕"  U2295   # Logical XOR
+<Multi_key> <o> <plus>                           : "⊕"          # Logical XOR
+<Multi_key> <(> <+> <)>                          : "⊕"          # Logical XOR
+<Multi_key> <x> <o> <r>                          : "⊕"          # Logical XOR
+<Multi_key> <less> <greater>                     : "↔"  U2194   # logical XNOR
+<Multi_key> <Multi_key> <less> <minus> <greater> : "↔"          # Logical XNOR
+
+<Multi_key> <e> <e> : "∈"   # In the set of
+<Multi_key> <e> </> : "∉"   # Not in the set of
+<Multi_key> <E> <E> : "∃"   # There exists
+<Multi_key> <A> <A> : "∀"   # For all
+
+<Multi_key> <R> <R> : "ℝ"   # Real numbers
+
