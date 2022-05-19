@@ -1,2 +1,4 @@
 sch $DIR_SCHOOL
 txt $DIR_SCHOOL/Textbooks
+chm $DIR_SCHOOL/chm-2045
+mac $DIR_SCHOOL/mac-2313
