@@ -4,6 +4,9 @@ if [[ $- != *i* ]]; then return; fi
 export PATH="$PATH:/opt/cisco/anyconnect/bin/:/opt/fah/:/usr/NX/bin/:$HOME/gems/bin:$HOME/.gem/ruby/2.7.0/bin:$HOME/.dotnet/tools:$HOME/.cargo/bin"
 export GEM_HOME="$HOME/gems"
 
+# Change the color of "other writable" files in ls
+export LS_COLORS=$LS_COLORS:"ow=48;5;22;38;5;51"
+
 # ==== Sourcing external files ====
 bind -f "$DOTFILES"/.config/shell/inputrc
 
