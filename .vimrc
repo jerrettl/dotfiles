@@ -54,7 +54,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'easymotion/vim-easymotion'
 
 " indentLine: indent guides
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 
 " splitjoin.vim: Switch between single-line and multi-line forms of code
 Plug 'AndrewRadev/splitjoin.vim'
