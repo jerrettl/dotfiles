@@ -173,7 +173,7 @@ function! SetFont()
 endfunction
 
 function! DefaultFont()
-	let g:font = 'Iosevka'
+	let g:font = 'Iosevka_Term'
 	let g:font_size = 11
 	call SetFont()
 endfunction
