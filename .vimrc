@@ -252,7 +252,7 @@ function! s:new_colors()
 	exe 'hi NonText'.								' ctermfg=12'.							' gui=bold'.		' guifg='.s:blue
 	exe 'hi Comment'.								' ctermfg=14'.												' guifg='.s:cyan
 	exe 'hi Constant'.								' ctermfg=13'.												' guifg='.s:magenta
-	exe 'hi Conceal'.								' ctermfg=246'.												' guifg='.s:grey58
+	exe 'hi Conceal'.								' ctermfg=246'.		' ctermbg=NONE'.						' guifg='.s:grey58.		' guibg=NONE'
 	exe 'hi Identifier'.	' cterm=bold'.			' ctermfg=14'.												' guifg='.s:cyan
 	exe 'hi Statement'.								' ctermfg=11'.							' gui=bold'.		' guifg='.s:yellow
 	exe 'hi PreProc'.								' ctermfg=81'.												' guifg='.s:steel_blue1
