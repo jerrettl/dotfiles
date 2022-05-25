@@ -131,6 +131,7 @@ set noerrorbells    " Do not beep or flash during errors
 set nobackup        " Do not backup files before overwriting them
 set noswapfile      " Do not use swap files
 set wildmenu        " Command line completion is enhanced (suggestions)
+set cursorline      " Highlight the currently selected line
 if has("win32")     " Use the clipboard for all operations
 	set clipboard=unnamed
 else
@@ -273,7 +274,9 @@ function! s:new_colors()
 	exe 'hi Search'. 		' cterm=none'. 			' ctermfg=black'.	' ctermbg=yellow'. 						' guifg='.s:black. 		' guibg='.s:yellow
 	exe 'hi IncSearch'.		' cterm=reverse'.												' gui=reverse'
 	exe 'hi LineNr'.		' cterm=none'.			' ctermfg=251'.												' guifg='.s:grey78
+	exe 'hi CursorLineNr'.	' cterm=bold'.													' gui=bold'
 	exe 'hi Title'.									' ctermfg=225'.							' gui=bold'.		' guifg='.s:thistle
+	exe 'hi CursorLine'.	' cterm=none'.								' ctermbg=236'.		' gui=none'.								' guibg='.s:grey19
 
 	exe 'hi StatusLineNC'.	' cterm=reverse'.												' gui=reverse'
 	exe 'hi StatusLine'.	' cterm=bold,reverse'.											' gui=bold,reverse'
