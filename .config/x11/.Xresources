@@ -89,6 +89,9 @@ URxvt.keysym.M-C-S-Down       : \033[1;8B
 URxvt.keysym.M-C-S-Right      : \033[1;8C
 URxvt.keysym.M-C-S-Left       : \033[1;8D
 
+URxvt.keysym.Control-Shift-V  : eval:paste_clipboard
+URxvt.keysym.Control-Shift-C  : eval:selection_to_clipboard
+
 ! URL, text selection, changing font
 URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,font-size
 URxvt.url-select.launcher:  browser
