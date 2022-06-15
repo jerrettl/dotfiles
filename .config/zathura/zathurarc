@@ -1,3 +1,4 @@
 set guioptions "s"
 
 set font "Iosevka normal 10"
+set selection-clipboard clipboard
