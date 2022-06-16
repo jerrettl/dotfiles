@@ -185,8 +185,8 @@ install_link() {
   ln -sfv ~/dotfiles/.config/ranger/rifle.conf ~/.config/ranger/rifle.conf
   ln -sfv ~/dotfiles/.config/ranger/scope.sh ~/.config/ranger/scope.sh
   mkdir -pv ~/.config/rofi
-  ln -sfv ~/dotfiles/.config/rofi/config ~/.config/rofi/config
-  ln -sfv ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi.bak
+  ln -sfv $DOTFILES/.config/rofi/config.rasi ~/.config/rofi/config.rasi
+  ln -sfv $DOTFILES/.config/rofi/Arc-Dark.rasi ~/.config/rofi/Arc-Dark.rasi
   ln -sfv $DOTFILES/.config/shell/bash_profile ~/.bash_profile
   ln -sfv $DOTFILES/.config/shell/bashrc ~/.bashrc
   ln -sfv $DOTFILES/.config/shell/profile ~/.profile

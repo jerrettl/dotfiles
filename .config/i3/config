@@ -51,7 +51,7 @@ exec --no-startup-id syncthingtray
 bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+Return exec $terminal -cd "`xcwd`"
 bindsym $mod+q kill
-bindsym $mod+d exec --no-startup-id rofi -theme Arc-Dark -show run -font 'SF Pro Display 13' -hide-scrollbar -matching fuzzy
+bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+Shift+r exec --no-startup-id bash ~/dotfiles/scripts/restart-i3.sh
 bindsym $mod+Shift+c reload
 

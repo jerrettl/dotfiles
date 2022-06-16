@@ -1,13 +1,15 @@
+@theme "Arc-Dark"
+
+configuration {
+	matching: "fuzzy";
+	case-sensitive: false;
+}
+
+/* Theme overrides */
 * {
-	background-color: white;
-	text-color: black;
-	border-color: black;
+	font: "SF Pro Display 13";
 }
 
-window {
-	padding: 4px;
-}
-
-element selected {
-	background-color: #72a8ff;
+listview {
+	scrollbar: false;
 }
