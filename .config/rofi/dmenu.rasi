@@ -1,16 +1,13 @@
+@theme "config"
+
 /**
  * ROFI Color theme
  * User: Qball
  * Copyright: Dave Davenport
  */
-* {
-    background-color:      Black;
-    border-color:          White;
-    text-color:           White;
-    font:            "Times New Roman 12";
-}
 
 configuration {
+	matching: "fuzzy";
 }
 
 #window {
@@ -30,6 +27,7 @@ configuration {
     layout:     horizontal;
     spacing:    5px;
     lines:      100;
+    border: 		0;
 }
 
 #entry {
@@ -37,9 +35,15 @@ configuration {
     width:      10em;
 }
 
-#element {
-    padding: 0px 2px;
+element.alternate.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
 }
-#element selected {
-    background-color: SteelBlue;
+element.alternate.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+element.alternate.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
 }
