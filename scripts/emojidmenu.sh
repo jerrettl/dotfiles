@@ -3,7 +3,7 @@
 # Adapted from Luke Smith.
 
 # Get user selection via dmenu from emoji file.
-chosen=$(cut -d ';' -f1 $DOTFILES/notes/emoji.txt | dmenu -i -l 30 -nb "#303030" -nf "#ffffff" -sb "#ffffff" -sf "#303030" -fn "Symbola-16" | sed "s/ .*//")
+chosen=$(cut -d ';' -f1 $DOTFILES/notes/emoji.txt | rofi -dmenu -l 20 -theme-str '* {font: "SF Pro Display 22";}' -p '' | sed "s/ .*//")
 
 # Exit if none chosen.
 [ -z "$chosen" ] && exit

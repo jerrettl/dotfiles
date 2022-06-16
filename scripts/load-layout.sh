@@ -2,10 +2,10 @@
 
 . ~/dotfiles/aliases/aliases
 
-selection=$(cat ~/dotfiles/scripts/layout-list | dmenu -nb "#303030" -nf "#ffffff" -sb "#ffffff" -sf "#303030" -fn "HelveticaNeue-11" -p "Select a layout:" -l 15 -i)
+selection=$(cat ~/dotfiles/scripts/layout-list | rofi -dmenu -theme dmenu -p "Select a layout:" -l 15 -i)
 if [ "$?" == "1" ]; then exit; fi
 
-workspace=$(echo "this" | dmenu -nb "#303030" -nf "#ffffff" -sb "#ffffff" -sf "#303030" -fn "HelveticaNeue-11" -p "What workspace would you like to place it on?")
+workspace=$(echo "this" | rofi -dmenu -theme dmenu -p "What workspace would you like to place it on?")
 if [ "$?" == "1" ]; then exit; fi
 
 

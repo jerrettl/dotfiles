@@ -23,7 +23,7 @@ if [ "$arg" == "list" ]; then
   exit
 elif [ "$arg" == "" ]; then
   id=$(i3-msg -t get_tree | jq '.. | .id?, .focused?' | grep -B1 true | head -1)
-  selection=$(cat /sys/devices/system/cpu/cpufreq/policy?/energy_performance_available_preferences | tail -n 1 | sed "s/\ /\\n/g" | sed "/^$/d" | dmenu)
+  selection=$(cat /sys/devices/system/cpu/cpufreq/policy?/energy_performance_available_preferences | tail -n 1 | sed "s/\ /\\n/g" | sed "/^$/d" | rofi -dmenu -theme dmenu -p "")
   if [ "$?" == "0" ]; then
     apply_to_conf $selection
   else
