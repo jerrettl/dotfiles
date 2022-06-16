@@ -798,7 +798,7 @@ include "%L"
 <Multi_key> <y> <acute> 		: "ý"   yacute # LATIN SMALL LETTER Y WITH ACUTE
 <Multi_key> <apostrophe> <y>     	: "ý"   yacute # LATIN SMALL LETTER Y WITH ACUTE
 <Multi_key> <y> <apostrophe> 		: "ý"   yacute # LATIN SMALL LETTER Y WITH ACUTE
-<dead_key> <t> <h>              	: "þ"   thorn # LATIN SMALL LETTER THORN
+# <dead_key> <t> <h>              	: "þ"   thorn # LATIN SMALL LETTER THORN
 <dead_diaeresis> <y>             	: "ÿ"   ydiaeresis # LATIN SMALL LETTER Y WITH DIAERESIS
 <Multi_key> <quotedbl> <y>       	: "ÿ"   ydiaeresis # LATIN SMALL LETTER Y WITH DIAERESIS
 <Multi_key> <y> <quotedbl> 		: "ÿ"   ydiaeresis # LATIN SMALL LETTER Y WITH DIAERESIS
@@ -5494,7 +5494,7 @@ include "%L"
 <dead_tilde> <Uacute> 		      : "Ṹ"   U1E78               # LATIN CAPITAL LETTER U WITH TILDE AND ACUTE
 <dead_tilde> <uacute> 		      : "ṹ"   U1E79               # LATIN SMALL LETTER U WITH TILDE AND ACUTE
 <dead_tilde> <equal> 		      : "≃"   similarequal        # ASYMPTOTICALLY EQUAL TO
-<Multi_key> <tilde> <equal>               : "≈"   U2248               # ALMOST EQUAL TO
+<Multi_key> <dead_tilde> <equal>               : "≈"   U2248               # ALMOST EQUAL TO
 <dead_tilde> <less> 		      : "≲"   U2272               # LESS-THAN OR EQUIVALENT TO
 <dead_tilde> <greater> 		      : "≳"   U2273               # GREATER-THAN OR EQUIVALENT TO
 <dead_tilde> <nobreakspace> 	      : "̃"   U0303      # COMBINING TILDE
@@ -6121,20 +6121,20 @@ include "%L"
 
 <Multi_key> <n> <o> <t>                          : "¬"          # Logical NOT
 <Multi_key> <asciicircum> <asciicircum>          : "∧"  U2227   # Logical AND
-<Multi_key> <^> <^>                              : "∧"          # Logical AND
+# <Multi_key> <^> <^>                            : "∧"          # Logical AND
 <Multi_key> <a> <n> <d>                          : "∧"          # Logical AND
 <Multi_key> <v> <v>                              : "∨"  U2228   # Logical OR
 <Multi_key> <V> <V>                              : "∨"          # Logical OR
 <Multi_key> <o> <r>                              : "∨"          # Logical OR
 <Multi_key> <O> <plus>                           : "⊕"  U2295   # Logical XOR
 <Multi_key> <o> <plus>                           : "⊕"          # Logical XOR
-<Multi_key> <(> <+> <)>                          : "⊕"          # Logical XOR
+<Multi_key> <parenleft> <plus> <parenright>      : "⊕"          # Logical XOR
 <Multi_key> <x> <o> <r>                          : "⊕"          # Logical XOR
 <Multi_key> <less> <greater>                     : "↔"  U2194   # logical XNOR
 <Multi_key> <Multi_key> <less> <minus> <greater> : "↔"          # Logical XNOR
 
 <Multi_key> <e> <e>         : "∈"   # In the set of
-<Multi_key> <e> </>         : "∉"   # Not in the set of
+<Multi_key> <e> <slash>         : "∉"   # Not in the set of
 <Multi_key> <e> <Left>      : "∋"   # A member of
 <Multi_key> <e> <backslash> : "∌"   # Not a member of
 <Multi_key> <E> <E>         : "∃"   # There exists
