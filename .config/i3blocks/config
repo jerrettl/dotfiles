@@ -33,6 +33,12 @@ markup=none
 markup=pango
 signal=2
 
+# Currently playing music in Firefox
+[firefox-music]
+markup=pango
+interval=5
+signal=10
+
 # Disk usage
 #
 # The directory defaults to $HOME if the instance is not specified.

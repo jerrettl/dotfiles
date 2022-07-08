@@ -40,7 +40,10 @@ elif [ "$MODE" = "chrome" ]; then
 
 elif [ "$MODE" = "firefox" ]; then
 	player=$(playerctl -l | grep -i firefox)
-	if [ "$COMMAND" = "playpause" ]; then
+	if [ "$COMMAND" = "getinfo" ]; then
+		echo "$player"
+
+	elif [ "$COMMAND" = "playpause" ]; then
 		dbus-send --print-reply --dest=org.mpris.MediaPlayer2."$player" /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
 	elif [ "$COMMAND" = "next" ]; then
