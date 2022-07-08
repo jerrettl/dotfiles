@@ -15,8 +15,13 @@ try:
 	firefox_iface = dbus.Interface(firefox, 'org.freedesktop.DBus.Properties')
 	props = firefox_iface.Get('org.mpris.MediaPlayer2.Player', 'Metadata')
 
-	output = "<span background='#005ab3' color='#ffffff'>" + "  ♫  " +  str(props['xesam:artist'][0]) + " - " + str(props['xesam:title']) + "  </span>"
+	span_start = "<span background='#005ab3' color='#ffffff'>"
+	span_end = "  </span>"
+	output = span_start + "  ♫  " + str(props['xesam:artist'][0]) + " - " + str(props['xesam:title']) + span_end
+	short_output = span_start + "  " + str(props['xesam:title']) + span_end
+
 	print(output.replace("&", "&amp;"))
+	print(short_output.replace("&", "&amp;"))
 	exit
 except dbus.exceptions.DBusException:
 	exit
