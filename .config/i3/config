@@ -44,7 +44,7 @@ exec --no-startup-id sudo rfkill block bluetooth
 exec --no-startup-id redshift-gtk
 exec --no-startup-id veracrypt --background-task
 exec --no-startup-id syncthingtray
-#exec --no-startup-id blueman-tray
+exec --no-startup-id blueman-tray
 
 
 # ==== The basics ====
