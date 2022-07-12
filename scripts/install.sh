@@ -91,6 +91,9 @@ install_basic() {
     echo "Already configured."
   fi
 
+  echo "Disabling blueman auto-power-on..."
+  gsettings set org.blueman.plugins.powermanager auto-power-on false
+
   if [ "$OS" == "alpine" ]; then
     echo "Installing docs..."
     sudo apk add docs
