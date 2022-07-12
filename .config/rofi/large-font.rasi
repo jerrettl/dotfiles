@@ -1,0 +1,10 @@
+@theme "config"
+
+/* Theme overrides */
+* {
+	font: "SF Pro Display 22";
+}
+
+window {
+	height: 90%;
+}

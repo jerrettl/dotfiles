@@ -188,6 +188,7 @@ install_link() {
   ln -sfv $DOTFILES/.config/rofi/config.rasi ~/.config/rofi/config.rasi
   ln -sfv $DOTFILES/.config/rofi/Arc-Dark.rasi ~/.config/rofi/Arc-Dark.rasi
   ln -sfv $DOTFILES/.config/rofi/dmenu.rasi ~/.config/rofi/dmenu.rasi
+  ln -sfv $DOTFILES/.config/rofi/large-font.rasi ~/.config/rofi/large-font.rasi
   ln -sfv $DOTFILES/.config/shell/bash_profile ~/.bash_profile
   ln -sfv $DOTFILES/.config/shell/bashrc ~/.bashrc
   ln -sfv $DOTFILES/.config/shell/profile ~/.profile
