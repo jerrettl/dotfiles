@@ -343,8 +343,8 @@ mode "$brightness_mode" {
 }
 
 # Mount
-bindsym $mod+period exec "udiskie-mount $(udiskie-info --all --output '{device_presentation} ({id_label})' --filter is_filesystem | dmenu -p 'Mount a device:' | awk '{print $1}')"
-bindsym $mod+Shift+period exec "udiskie-umount -d $(udiskie-info --all --output '{device_presentation} ({id_label}) - {device_size}' --filter is_mounted | dmenu -p 'Unmount a device:' | awk '{print $1}')"
+bindsym $mod+comma exec "udiskie-mount $(udiskie-info --all --output '{device_presentation} ({id_label})' --filter is_filesystem | dmenu -p 'Mount a device:' | awk '{print $1}')"
+bindsym $mod+Shift+comma exec "udiskie-umount -d $(udiskie-info --all --output '{device_presentation} ({id_label}) - {device_size}' --filter is_mounted | dmenu -p 'Unmount a device:' | awk '{print $1}')"
 
 # Emoji insertion
-bindsym $mod+comma exec "$DOTFILES_SCRIPTS/emojidmenu.sh"
+bindsym $mod+period exec "$DOTFILES_SCRIPTS/emojidmenu.sh"
