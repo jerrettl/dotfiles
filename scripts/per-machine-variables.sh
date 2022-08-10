@@ -45,4 +45,5 @@ elif [ "$hostname" == "inspiron3537" ]; then
 
 elif [ "$hostname" == "tower" ]; then
 	autorandr --load default
+	nvidia-settings --load-config-only
 fi
