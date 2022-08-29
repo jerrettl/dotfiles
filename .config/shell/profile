@@ -10,6 +10,8 @@ export DOTFILES_SCRIPTS="$DOTFILES/scripts"
 
 export IPYTHONDIR="$DOTFILES/.config/ipython"
 
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
