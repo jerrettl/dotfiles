@@ -424,6 +424,13 @@ let g:vimtex_fold_types = {
 	\	'whitelist' : ['tikzpicture'],
 	\ },
 	\}
+let g:vimtex_compiler_latexrun_engines = {
+	\ '_'            : 'xelatex',
+	\ 'pdflatex'     : 'pdflatex',
+	\ 'lualatex'     : 'lualatex',
+	\ 'xelatex'      : 'xelatex',
+	\ 'latex'        : 'latex',
+	\}
 
 " Goyo
 function! s:goyo_enter()
