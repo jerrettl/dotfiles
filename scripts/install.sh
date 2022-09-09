@@ -151,6 +151,8 @@ install_package_group() {
 install_link() {
   # Symlinks (disgusting)
   echo "Creating symlinks..."
+  mkdir -pv ~/.config/alacritty
+  ln -sfv ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
   rm -rf ~/.config/autorandr
   ln -sfv $DOTFILES/.config/autorandr/ ~/.config/autorandr
   ln -sfv ~/dotfiles/.config/chromium-flags.conf ~/.config/chromium-flags.conf
