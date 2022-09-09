@@ -120,7 +120,7 @@ bindsym Shift+Print exec flameshot gui
 
 # ==== Calculator scratchpad ====
 for_window [instance="__scratchpad"] move scratchpad; scratchpad show; resize set 800px 700px; move position center; move scratchpad
-exec --no-startup-id exec urxvt -name __scratchpad -e ipython
+exec --no-startup-id exec $terminal -name __scratchpad -e ipython
 bindsym $mod+equal scratchpad show
 
 
