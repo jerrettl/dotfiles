@@ -5,7 +5,7 @@
 | Category            | Application                                 |
 | ------------------- | ------------------------------------------- |
 | Desktop Environment | `i3-gaps` + `i3blocks`                      |
-| Terminal Emulator   | `rxvt-unicode-pixbuf`                       |
+| Terminal Emulator   | `alacritty`                                 |
 | Shell               | `bash`                                      |
 | Web Browser         | `firefox`                                   |
 | E-Mail              | `neomutt` + `offlineimap` + `msmtp`         |

@@ -7,7 +7,7 @@ exec --no-startup-id hsetroot -solid "#000000"
 
 
 # Variables
-set $terminal urxvt
+set $terminal alacritty
 set $lock i3lock -B 10 --ring-color=ccccccff --inside-color=ffffff00 --keyhl-color=3333ccff --bshl-color=cc3333ff --ringver-color=ccccccff --insidever-color=00000000 --verif-color=ffffffff --wrong-color=ffffffff --line-color=00000000 --separator-color=00000000 --time-color=ffffffff --date-color=ffffffff --time-font="Helvetica Neue" --date-font="Helvetica Neue" --layout-font="Helvetica Neue" --verif-font="Helvetica Neue" --wrong-font="Helvetica Neue" --pass-screen-keys
 # Mod1=<Alt> Mod4=<Super>
 set $mod Mod4
