@@ -342,6 +342,9 @@ mode "$brightness_mode" {
 	bindsym Escape mode "default"
 }
 
+# Move mouse to bottom left corner of screen
+bindsym $mod+Ctrl+0 exec --no-startup-id xdotool mousemove_relative -- -10000 10000
+
 # Mount
 bindsym $mod+comma exec "udiskie-mount $(udiskie-info --all --output '{device_presentation} ({id_label})' --filter is_filesystem | dmenu -p 'Mount a device:' | awk '{print $1}')"
 bindsym $mod+Shift+comma exec "udiskie-umount -d $(udiskie-info --all --output '{device_presentation} ({id_label}) - {device_size}' --filter is_mounted | dmenu -p 'Unmount a device:' | awk '{print $1}')"
