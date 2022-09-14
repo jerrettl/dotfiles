@@ -62,7 +62,7 @@ c.zoom.default = "125%"
 # The page to open if :open -t/-b/-w is used without URL. Use
 # `about:blank` for a blank page.
 # Type: FuzzyUrl
-c.url.default_page = 'https://duckduckgo.com/?kak=-1&kax=-1&kaq=-1&kap=-1&kao=-1&kau=-1&kp=-2&kae=d'
+c.url.default_page = 'https://searx.badabingbadaboom.xyz'
 
 # Definitions of search engines which can be used via the address bar.
 # Maps a searchengine name (such as `DEFAULT`, or `ddg`) to a URL with a
@@ -73,7 +73,7 @@ c.url.default_page = 'https://duckduckgo.com/?kak=-1&kax=-1&kaq=-1&kap=-1&kao=-1
 # used by prepending the search engine name to the search term, e.g.
 # `:open google qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?kak=-1&kax=-1&kaq=-1&kap=-1&kao=-1&kau=-1&kp=-2&kae=d&q={}',
+c.url.searchengines = {'DEFAULT': 'https://searx.badabingbadaboom.xyz/search?q={}',
         'g': 'https://google.com/search?q={}',
         'aur': 'https://aur.archlinux.org/packages/?O=0&SeB=nd&K={}&outdated=&SB=n&SO=a&PP=50&do_Search=Go',
         'arch': 'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&go=Go',
