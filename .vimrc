@@ -173,7 +173,11 @@ function! SetFont()
 endfunction
 
 function! DefaultFont()
-	let g:font = 'Iosevka_Term'
+	if has("win32")
+		let g:font = 'Iosevka_Term'
+	else
+		let g:font = 'Iosevka\ Term'
+	endif
 	let g:font_size = 11
 	call SetFont()
 endfunction
