@@ -24,6 +24,9 @@ floating_modifier $mod
 # i3-gaps fixes
 set $default_border_width 1
 new_window pixel $default_border_width
+for_window [all] default_border pixel $default_border_width
+for_window [class=Alacritty] border pixel $default_border_width
+for_window [class=discord] border pixel $default_border_width
 
 
 # ==== Startup ====
