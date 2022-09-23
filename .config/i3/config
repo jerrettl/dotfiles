@@ -274,8 +274,9 @@ gaps outer 0
 
 bindsym $mod+U gaps outer current minus 8
 bindsym $mod+I gaps outer current plus 8
-bindsym $mod+O gaps inner current set 0; gaps outer current set 0; [floating] border pixel $default_border_width; [tiling] border pixel $default_border_width
-bindsym $mod+P gaps inner current set 8; gaps outer current set 8; [floating] border pixel 0; [tiling] border pixel 0
+bindsym $mod+O gaps inner current minus 8
+bindsym $mod+P gaps inner current plus 8
+bindsym $mod+Shift+O gaps inner current set 0; gaps outer current set 0
 
 
 # Floating window exceptions
