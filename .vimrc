@@ -91,6 +91,9 @@ Plug 'MaxMEllon/vim-jsx-pretty', { 'for': 'javascript' }
 " C#:
 Plug 'OmniSharp/omnisharp-vim', { 'for': 'cs' }
 
+" Rust:
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+
 " Autodetect tab settings in a file
 Plug 'tpope/vim-sleuth'
 
