@@ -27,6 +27,7 @@ alias gp='git push'
 alias gst='git status -uno'
 alias gstu='git status -uall'
 alias gpls='git stash && git pull && git stash pop'
+alias gpus='git stash && git push && git stash pop'
 
 alias pacman='pacman --color=auto'
 alias dmenu='dmenu -nb "#303030" -nf "#ffffff" -sb "#ffffff" -sf "#303030" -fn "HelveticaNeue-11"'
