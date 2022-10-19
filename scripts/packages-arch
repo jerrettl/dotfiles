@@ -27,6 +27,7 @@ zip
 =====
 [extra]
 >base
+exa
 fzf
 git-delta
 github-cli
