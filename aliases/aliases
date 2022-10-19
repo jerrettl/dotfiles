@@ -1,13 +1,13 @@
-# vim: syntax=sh
+#!/bin/bash
 
 # ==== Commands
 alias cls='clear'
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias l='ls -alh --color=auto -F'
-alias la='ls -alh --color=auto -F'
-alias ll='ls -lh --color=auto -F'
+alias l='exa -al --icons || ls -alh --color=auto -F'
+alias la='exa -al --icons || ls -alh --color=auto -F'
+alias ll='exa -l --icons || ls -lh --color=auto -F'
 alias less='less --QUIET'
 alias more=less
 
