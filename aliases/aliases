@@ -8,6 +8,7 @@ alias free='free -m'                      # show sizes in MB
 alias l='exa -al --icons || ls -alh --color=auto -F'
 alias la='exa -al --icons || ls -alh --color=auto -F'
 alias ll='exa -l --icons || ls -lh --color=auto -F'
+alias ls='exa --icons || ls'
 alias less='less --QUIET'
 alias more=less
 
