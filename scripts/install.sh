@@ -160,6 +160,8 @@ install_link() {
   ln -sfv ~/dotfiles/.config/clight.conf ~/.config/clight.conf
   mkdir -pv ~/.config/dunst
   ln -sfv ~/dotfiles/.config/dunst/dunstrc ~/.config/dunst/dunstrc
+  mkdir -pv ~/.config/fontconfig
+  ln -sfv ~/dotfiles/.config/fontconfig/fonts.conf ~/.config/fontconfig/fonts.conf
   ln -sfv ~/dotfiles/.config/flake8 ~/.config/flake8
   mkdir -pv ~/.gnupg
   ln -sfv $DOTFILES/.config/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
