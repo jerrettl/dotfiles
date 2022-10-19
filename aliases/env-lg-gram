@@ -1,5 +1,4 @@
 #!/bin/bash
-# vim: syntax=sh
 
 export DIR_SHARED="/mnt/shared"
 export DIR_SCHOOL="$DIR_SHARED/School"
