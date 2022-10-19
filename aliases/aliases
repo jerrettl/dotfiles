@@ -5,10 +5,18 @@ alias cls='clear'
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias l='exa -al --icons || ls -alh --color=auto -F'
-alias la='exa -al --icons || ls -alh --color=auto -F'
-alias ll='exa -l --icons || ls -lh --color=auto -F'
-alias ls='exa --icons || ls'
+function l() {
+	exa -al --icons "$@" || ls -alh --color=auto -F "$@"
+}
+function la() {
+	exa -al --icons "$@" || ls -alh --color=auto -F "$@"
+}
+function ll() {
+	exa -l --icons "$@" || ls -lh --color=auto -F "$@"
+}
+function ls() {
+	exa --icons "$@" || ls "$@"
+}
 alias less='less --QUIET'
 alias more=less
 
