@@ -6,16 +6,32 @@ alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 function l() {
-	command exa -al --icons "$@" || command ls -alh --color=auto -F "$@"
+	if [ -x "$(command -v exa)" ]; then
+		command exa -al --icons "$@"
+	else
+		command ls -alh --color=auto -F "$@"
+	fi
 }
 function la() {
-	command exa -al --icons "$@" || command ls -alh --color=auto -F "$@"
+	if [ -x "$(command -v exa)" ]; then
+		command exa -al --icons "$@"
+	else
+		command ls -alh --color=auto -F "$@"
+	fi
 }
 function ll() {
-	command exa -l --icons "$@" || command ls -lh --color=auto -F "$@"
+	if [ -x "$(command -v exa)" ]; then
+		command exa -l --icons "$@"
+	else
+		command ls -lh --color=auto -F "$@"
+	fi
 }
 function ls() {
-	command exa --icons "$@" || command ls "$@"
+	if [ -x "$(command -v exa)" ]; then
+		command exa --icons "$@"
+	else
+		command ls "$@"
+	fi
 }
 alias less='less --QUIET'
 alias more=less
