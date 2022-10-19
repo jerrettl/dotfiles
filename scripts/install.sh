@@ -251,6 +251,7 @@ configure_git() {
   git config --global credential.helper store # Big brain move
   git config --global core.pager delta
   git config --global interactive.diffFilter 'delta --color-only'
+  git config --global init.defaultBranch main
   git config --global pull.rebase true
   git config --global fetch.prune true
   git config --global commit.gpgsign true
