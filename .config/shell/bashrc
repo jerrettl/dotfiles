@@ -7,6 +7,13 @@ export GEM_HOME="$HOME/gems"
 # Change the color of "other writable" files in ls
 export LS_COLORS=$LS_COLORS:"ow=48;5;22;38;5;51"
 
+
+# ==== fzf ====
+# Import fzf bindings
+[ -f "/usr/share/fzf/key-bindings.bash" ] && . "/usr/share/fzf/key-bindings.bash"
+[ -f "/usr/share/fzf/completion.bash" ] && . "/usr/share/fzf/completion.bash"
+
+
 # ==== Sourcing external files ====
 bind -f "$DOTFILES"/.config/shell/inputrc
 
