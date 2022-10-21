@@ -28,6 +28,7 @@ zip
 [extra]
 >base
 exa
+fd
 fzf
 git-delta
 github-cli
