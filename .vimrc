@@ -139,6 +139,7 @@ set nobackup        " Do not backup files before overwriting them
 set noswapfile      " Do not use swap files
 set wildmenu        " Command line completion is enhanced (suggestions)
 set cursorline      " Highlight the currently selected line
+set listchars+=space:␣,tab:>- " Show spaces
 if has("win32")     " Use the clipboard for all operations
 	set clipboard=unnamed
 else
