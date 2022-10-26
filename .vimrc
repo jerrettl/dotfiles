@@ -60,6 +60,9 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 " splitjoin.vim: Switch between single-line and multi-line forms of code
 Plug 'AndrewRadev/splitjoin.vim'
 
+" Intellisence
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Asynchronous Lint Engine
 Plug 'dense-analysis/ale', { 'for': ['cs', 'haskell', 'html', 'javascript'], 'on': 'ALEEnable' }
 
