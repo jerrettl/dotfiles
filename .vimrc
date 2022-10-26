@@ -383,6 +383,10 @@ autocmd CmdlineLeave : echo ''
 " Moving v-blocks
 vnoremap L dpgv
 
+" Split line into 3 lines and place cursor in the center
+nnoremap <leader>o i<cr><esc>O
+inoremap <C-o> <cr><esc>O
+
 " Jump to the next edit marker and edit
 nmap <C-t> 0/<++><cr>,/c4l
 imap <C-t> <esc>0/<++><cr>,/c4l
