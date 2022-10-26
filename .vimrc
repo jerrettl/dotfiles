@@ -55,6 +55,7 @@ Plug 'easymotion/vim-easymotion'
 
 " indentLine: indent guides
 " Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " splitjoin.vim: Switch between single-line and multi-line forms of code
 Plug 'AndrewRadev/splitjoin.vim'
@@ -517,7 +518,7 @@ omap as <Plug>(textobj-sandwich-query-a)
 
 " indentLine
 let g:indentLine_setConceal = 0
-let g:indentLine_fileTypeExclude = ['markdown', 'pandoc']
+" let g:indentLine_fileTypeExclude = ['markdown', 'pandoc']
 
 
 " Pandoc
