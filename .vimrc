@@ -357,6 +357,7 @@ noremap <leader>d "_d
 noremap <leader>c "_c
 vnoremap p "_dp
 vnoremap P "_dP
+vnoremap <leader>x "_x
 vnoremap <leader>p p
 vnoremap <leader>P P
 
