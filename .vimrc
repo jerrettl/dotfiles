@@ -28,6 +28,9 @@ Plug 'lervag/vimtex', { 'for': 'tex' }
 " vim-fugitive: git control within vim
 Plug 'tpope/vim-fugitive'
 
+" git-gutter: View changes relative to version control in the side
+Plug 'airblade/vim-gitgutter', { 'for': ['rust'] }
+
 " emmet-vim: quick html writing
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 
