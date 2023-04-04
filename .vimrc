@@ -25,9 +25,6 @@ endif
 " vimtex: ease-of-life shortcuts for latex
 Plug 'lervag/vimtex', { 'for': 'tex' }
 
-" nerdtree: file exploring side bar
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-
 " vim-fugitive: git control within vim
 Plug 'tpope/vim-fugitive'
 
@@ -61,7 +58,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'AndrewRadev/splitjoin.vim'
 
 " Intellisence
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['cs', 'rust'], 'on': ['CocEnable', 'CocCommand']}
 
 " Asynchronous Lint Engine
 Plug 'dense-analysis/ale', { 'for': ['cs', 'haskell', 'html', 'javascript'], 'on': 'ALEEnable' }
@@ -334,7 +331,7 @@ nnoremap J gj
 nnoremap K gk
 nnoremap <C-g> :%s/\s\+$//<cr>
 nnoremap <C-n> :set relativenumber!<CR>
-nnoremap <F10> :NERDTreeToggle<CR>
+nnoremap <F10> <cmd>CocCommand explorer<CR>
 nnoremap <silent> <leader>sp :set spell!<cr>
 nnoremap <leader><C-l> :loadview<cr>
 nnoremap ! :!
@@ -510,6 +507,12 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
 
 " This will make the list of non closing tags case sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
 let g:closetag_emptyTags_caseSensitive = 1
+
+
+" Coc
+let g:coc_global_extensions = [
+	\'coc-explorer',
+	\]
 
 
 " NERDCommenter
