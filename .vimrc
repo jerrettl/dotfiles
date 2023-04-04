@@ -381,6 +381,10 @@ inoremap <C-S> <C-O>:update<CR>
 " Auto clear when a command is entered
 autocmd CmdlineLeave : echo ''
 
+" Saving session options
+" Don't save color highlighting, etc as part of a session
+set sessionoptions-=options
+
 " Moving v-blocks
 vnoremap L dpgv
 
