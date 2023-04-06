@@ -182,7 +182,7 @@ endfunction
 
 function! DefaultFont()
 	if has("win32")
-		let g:font = 'Iosevka_Term'
+		let g:font = 'Iosevka_NFM'
 	else
 		let g:font = 'Iosevka\ Term'
 	endif
