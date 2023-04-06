@@ -311,7 +311,7 @@ function! s:new_colors()
 	exe 'hi Pmenu'.									' ctermfg=white'.	' ctermbg=236'.							' guifg='.s:white.		' guibg='.s:grey19
 	exe 'hi PmenuSel'.								' ctermfg=250'.		' ctermbg=0'.							' guifg='.s:grey74.		' guibg='.s:black
 	exe 'hi ExtraWhitespace'.											' ctermbg=88'.													' guibg='.s:dark_red1
-	exe 'hi IndentBlanklineChar'.					' ctermfg=242'.												' guifg='.s:grey42
+	exe 'hi IndentBlanklineChar'.					' ctermfg=242'.							' gui=nocombine'.	' guifg='.s:grey42
 endfunction
 autocmd! ColorScheme default call s:new_colors()
 call s:new_colors()
