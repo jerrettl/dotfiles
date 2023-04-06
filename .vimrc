@@ -22,6 +22,9 @@ elseif has("win32")
 	call plug#begin($HOME.'\vimfiles\plugged')
 endif
 
+" nerdtree: file exploring side bar
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
 " vimtex: ease-of-life shortcuts for latex
 Plug 'lervag/vimtex', { 'for': 'tex' }
 
@@ -334,7 +337,12 @@ nnoremap J gj
 nnoremap K gk
 nnoremap <C-g> :%s/\s\+$//<cr>
 nnoremap <C-n> :set relativenumber!<CR>
-nnoremap <F10> <cmd>CocCommand explorer<CR>
+if has("win32")
+	" coc-explorer is currently giving issues with Windows
+	nnoremap <F10> <cmd>NERDTreeToggle<CR>
+else
+	nnoremap <F10> <cmd>CocCommand explorer<CR>
+endif
 nnoremap <silent> <leader>sp :set spell!<cr>
 nnoremap <leader><C-l> :loadview<cr>
 nnoremap ! :!
