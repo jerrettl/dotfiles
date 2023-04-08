@@ -17,7 +17,12 @@ try:
 
 	span_start = "<span background='#005ab3' color='#ffffff'>"
 	span_end = "  </span>"
-	output = span_start + "  ♫  " + str(props['xesam:artist'][0]) + " - " + str(props['xesam:title']) + span_end
+
+	if len(str(props['xesam:artist'][0])) < 1:
+		output = span_start + "  ♫  " + str(props['xesam:title']) + span_end
+	else:
+		output = span_start + "  ♫  " + str(props['xesam:artist'][0]) + " - " + str(props['xesam:title']) + span_end
+
 	short_output = span_start + "  " + str(props['xesam:title']) + span_end
 
 	print(output.replace("&", "&amp;"))
