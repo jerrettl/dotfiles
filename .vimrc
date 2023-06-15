@@ -159,7 +159,9 @@ endif
 set scrolloff=3     " Set a minimum amount of lines above and below the cursor
 set undofile        " Persistent undo tree between sessions
 if has("win32")
-	call system('mkdir '.$HOME.'\tmp')
+	if !isdirectory($HOME.'\tmp')
+		call mkdir($HOME.'\tmp', 'p')
+	endif
 	set undodir=$HOME\tmp
 endif
 set fileformats=unix,dos " Set default line endings
