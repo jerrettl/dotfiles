@@ -2,4 +2,4 @@
 
 export DIR_SHARED="/mnt/d"
 export DIR_SCHOOL="$DIR_SHARED/School"
-export DIR_ULA="$DIR_SHARED/ULA"
+export DIR_TA="$DIR_SHARED/TA"

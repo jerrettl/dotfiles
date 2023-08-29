@@ -1,4 +1,4 @@
 #!/bin/bash
 
 export DIR_SCHOOL="/mnt/c/Users/Jerre/Documents/School"
-export DIR_ULA="/mnt/c/Users/Jerre/Documents/ULA"
+export DIR_TA="/mnt/c/Users/Jerre/Documents/TA"
