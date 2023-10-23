@@ -316,12 +316,13 @@ bindsym $mod+B exec "~/dotfiles/scripts/music-control.sh back"
 bindsym XF86AudioPrev exec "~/dotfiles/scripts/music-control.sh back"
 
 # Music mode
-set $music_mode Select a music player: (F)irefox, (N)one
+set $music_mode Select a music player: (F)irefox, Free(T)ube, (N)one
 bindsym $mod+Shift+m mode "$music_mode"
 bindsym $mod+Shift+p mode "$music_mode"
 
 mode "$music_mode" {
 	bindsym f exec --no-startup-id echo -n "firefox" > ~/.musicmode, mode "default"
+	bindsym t exec --no-startup-id echo -n "freetube" > ~/.musicmode, mode "default"
 	bindsym n exec --no-startup-id echo -n "none" > ~/.musicmode, mode "default"
 
 	bindsym Return mode "default"

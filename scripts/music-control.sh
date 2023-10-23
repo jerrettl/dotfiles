@@ -52,4 +52,19 @@ elif [ "$MODE" = "firefox" ]; then
 	elif [ "$COMMAND" = "back" ]; then
 		dbus-send --print-reply --dest=org.mpris.MediaPlayer2."$player" /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 	fi
+
+elif [ "$MODE" = "freetube" ]; then
+	player=$(playerctl -l | grep -i chromium)
+	if [ "$COMMAND" = "getinfo" ]; then
+		echo "$player"
+
+	elif [ "$COMMAND" = "playpause" ]; then
+		dbus-send --print-reply --dest=org.mpris.MediaPlayer2."$player" /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+	elif [ "$COMMAND" = "next" ]; then
+		dbus-send --print-reply --dest=org.mpris.MediaPlayer2."$player" /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+
+	elif [ "$COMMAND" = "back" ]; then
+		dbus-send --print-reply --dest=org.mpris.MediaPlayer2."$player" /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+	fi
 fi

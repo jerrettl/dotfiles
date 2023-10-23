@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+
+import dbus
+import os
+import subprocess
+
+try:
+	# Get the freetube instance name
+	script_location = os.environ["DOTFILES_SCRIPTS"] + "/music-control.sh"
+	result = subprocess.run([script_location, 'getinfo'], stdout=subprocess.PIPE)
+	instance_name = result.stdout.decode("utf-8").strip()
+
+	bus = dbus.SessionBus()
+	freetube = bus.get_object("org.mpris.MediaPlayer2." + instance_name, "/org/mpris/MediaPlayer2")
+	freetube_iface = dbus.Interface(freetube, 'org.freedesktop.DBus.Properties')
+	props = freetube_iface.Get('org.mpris.MediaPlayer2.Player', 'Metadata')
+
+	span_start = "<span background='#005ab3' color='#ffffff'>"
+	span_end = "  </span>"
+
+	if len(str(props['xesam:artist'][0])) < 1:
+		output = span_start + "  ♫  " + str(props['xesam:title']) + span_end
+	else:
+		output = span_start + "  ♫  " + str(props['xesam:artist'][0]) + " - " + str(props['xesam:title']) + span_end
+
+	short_output = span_start + "  " + str(props['xesam:title']) + span_end
+
+	print(output.replace("&", "&amp;"))
+	print(short_output.replace("&", "&amp;"))
+	exit
+except dbus.exceptions.DBusException:
+	exit
+except KeyError:
+	exit
+
+
+
