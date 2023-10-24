@@ -217,6 +217,9 @@ if has("gui_running")
 	nnoremap ) :call DefaultFont()<cr>
 endif
 
+" Allow 24-bit RGB in the terminal interface. Requires a compatible terminal.
+set termguicolors
+
 " Concealing
 set concealcursor=""
 set conceallevel=2
