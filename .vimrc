@@ -109,6 +109,9 @@ Plug 'mbbill/undotree'
 " Multiple cursors
 Plug 'mg979/vim-visual-multi'
 
+" Automatic bulleting
+Plug 'dkarter/bullets.vim', { 'for': ['markdown', 'pandoc'] }
+
 call plug#end()
 
 
@@ -603,3 +606,10 @@ function! SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+
+" Bullets.vim
+let g:bullets_enabled_file_types = [
+    \ 'markdown',
+	\ 'pandoc',
+    \]
