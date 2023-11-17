@@ -421,6 +421,7 @@ endif
 
 " Plain text
 autocmd FileType text,markdown,pandoc set spell
+autocmd FileType markdown,pandoc inoremap <C-e> TODO
 
 " C
 autocmd FileType c nnoremap <leader><leader>c :!gcc -o %:r % -lm<CR>
