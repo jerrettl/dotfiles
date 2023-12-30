@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH="$PATH:/opt/cisco/anyconnect/bin/:/opt/fah/:/usr/NX/bin/:$HOME/gems/bin:$HOME/.gem/ruby/2.7.0/bin:$HOME/.dotnet/tools:$HOME/.cargo/bin:$HOME/perl5"
+export PATH="$PATH:/opt/cisco/anyconnect/bin/:/opt/fah/:/usr/NX/bin/:$HOME/gems/bin:$HOME/.gem/ruby/2.7.0/bin:$HOME/.dotnet/tools:$HOME/.cargo/bin:$HOME/perl5:$HOME/.local/bin"
 
 export TERMINAL="/usr/bin/alacritty"
 export BROWSER="MOZ_USE_XINPUT2=1 MOZ_WEBRENDER=1 /usr/bin/firefox"
