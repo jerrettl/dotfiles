@@ -614,3 +614,4 @@ let g:bullets_enabled_file_types = [
     \ 'markdown',
 	\ 'pandoc',
     \]
+let g:bullets_outline_levels = ['ROM', 'ABC', 'num', 'abc', 'rom', 'std-']
