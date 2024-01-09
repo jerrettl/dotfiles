@@ -1,5 +1,5 @@
 sch $DIR_SCHOOL
 txt $DIR_SCHOOL/Textbooks
-cda $DIR_SCHOOL/cda-6107
-cnt $DIR_SCHOOL/cnt-6519
-cop $DIR_SCHOOL/cop-5711
+cap $DIR_SCHOOL/cap-6135
+cop $DIR_SCHOOL/cop-6731
+cot $DIR_SCHOOL/cot-6410
