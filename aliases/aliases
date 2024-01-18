@@ -60,7 +60,7 @@ alias pacman='pacman --color=auto'
 alias dmenu='dmenu -nb "#303030" -nf "#ffffff" -sb "#ffffff" -sf "#303030" -fn "HelveticaNeue-11"'
 alias e="emacsclient -c --alternate-editor emacs"
 alias cpum='~/dotfiles/scripts/change-cpu-mode.sh'
-alias smpv='i3-swallow mpv'
+alias smpv='swallow mpv'
 
 alias ranger='RANGER_TMP_LOCATION=$(mktemp); ranger --choosedir="$RANGER_TMP_LOCATION"; cd "$(cat "$RANGER_TMP_LOCATION")"; rm "$RANGER_TMP_LOCATION"; unset RANGER_TMP_LOCATION'
 alias rr='ranger'

@@ -85,7 +85,7 @@ flameshot
 gtk3
 hsetroot
 i3-gaps
-i3-swallow
+i3-swallow-git
 i3blocks
 i3lock-color-git
 ipython
