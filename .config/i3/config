@@ -84,6 +84,7 @@ bindsym $mod+F3 exec emacsclient -c --alternate-editor emacs
 bindsym $mod+F6 exec --no-startup-id ~/dotfiles/scripts/airplane_mode.sh
 bindsym $mod+F7 exec autorandr --load default
 bindsym $mod+Shift+F7 exec --no-startup-id ~/dotfiles/scripts/display-mode.sh
+bindsym $mod+Ctrl+F7 exec --no-startup-id ~/dotfiles/scripts/autorandr-profile.sh
 bindsym $mod+F8 exec --no-startup-id ~/dotfiles/scripts/picom.sh kill
 bindsym $mod+F9 exec --no-startup-id ~/dotfiles/scripts/picom.sh start
 
