@@ -110,10 +110,8 @@ LABEL="power_usb_rules_end"
 
 # Plymouth boot logo (optional)
 - install plymouth (yay)
-- install plymouth-theme-monoarch (yay)
-- install ttf-dejavu
+- install plymouth-theme-arch-logo (yay)
 - add 'plymouth' to HOOKS in /etc/mkinitcpio.conf after base and udev.
-- replace 'encrypt' with 'plymouth-encrypt' in HOOKS
-- plymouth-set-default-theme -R monoarch
+- plymouth-set-default-theme -R arch-logo
 - add 'quiet splash' to GRUB_CMDLINE_LINUX_DEFAULT in /etc/default/grub
 - grub-mkconfig -o /boot/grub/grub.cfg
