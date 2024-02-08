@@ -62,6 +62,7 @@ alias dmenu='dmenu -nb "#303030" -nf "#ffffff" -sb "#ffffff" -sf "#303030" -fn "
 alias e="emacsclient -c --alternate-editor emacs"
 alias cpum='~/dotfiles/scripts/change-cpu-mode.sh'
 alias smpv='swallow mpv'
+alias dmesg='dmesg --color=always'
 
 alias ranger='RANGER_TMP_LOCATION=$(mktemp); ranger --choosedir="$RANGER_TMP_LOCATION"; cd "$(cat "$RANGER_TMP_LOCATION")"; rm "$RANGER_TMP_LOCATION"; unset RANGER_TMP_LOCATION'
 alias rr='ranger'
