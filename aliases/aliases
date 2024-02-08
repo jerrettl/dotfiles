@@ -33,7 +33,8 @@ function ls() {
 		command ls "$@"
 	fi
 }
-alias less='less --QUIET'
+# The --RAW-CONTROL-CHARS flag allows color to be displayed.
+alias less='less --QUIET --RAW-CONTROL-CHARS'
 alias more=less
 
 alias su='sudo --preserve-env --shell'
