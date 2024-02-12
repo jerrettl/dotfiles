@@ -1,4 +1,4 @@
 #!/bin/bash
 
-alias cssh='sshfs jerrett@192.168.1.25:/media/ExternalUSB /mnt/sshfs -p 21999 -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3'
+alias cssh='sshfs jerrett@192.168.0.25:/media/ExternalUSB /mnt/sshfs -p 21999 -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3'
 alias dssh='fusermount -u /mnt/sshfs'
