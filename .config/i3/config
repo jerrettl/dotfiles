@@ -127,7 +127,7 @@ bindsym Shift+Print exec flameshot gui
 # ==== Calculator scratchpad ====
 for_window [title="__scratchpad"] move scratchpad; scratchpad show; resize set 800px 700px; move position center; move scratchpad
 exec --no-startup-id exec $terminal --title __scratchpad -e ipython
-bindsym $mod+equal scratchpad show
+bindsym $mod+equal [title="__scratchpad"] scratchpad show
 
 
 # ==== Arranging windows ====
@@ -359,3 +359,6 @@ bindsym $mod+Shift+comma exec "udiskie-umount -d $(udiskie-info --all --output '
 
 # Emoji insertion
 bindsym $mod+period exec "$DOTFILES_SCRIPTS/emojidmenu.sh"
+
+# Dunst
+bindsym Ctrl+comma exec "dunstctl context"
