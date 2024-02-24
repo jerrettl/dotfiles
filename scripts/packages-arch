@@ -136,7 +136,6 @@ xorg-xrdb
 [all]
 >extra2
 >bluetooth
->mail
 >laptop
 >graphical
 =====
