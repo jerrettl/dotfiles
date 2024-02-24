@@ -333,18 +333,18 @@ mode "$music_mode" {
 
 # ==== Misc. ====
 # Brightness
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
-bindsym Shift+XF86MonBrightnessDown exec "xbacklight -dec 2"
-bindsym Shift+XF86MonBrightnessUp exec "xbacklight -inc 2"
+bindsym XF86MonBrightnessDown exec "$DOTFILES_SCRIPTS/brightness.sh downmore"
+bindsym XF86MonBrightnessUp exec "$DOTFILES_SCRIPTS/brightness.sh upmore"
+bindsym Shift+XF86MonBrightnessDown exec "$DOTFILES_SCRIPTS/brightness.sh down"
+bindsym Shift+XF86MonBrightnessUp exec "$DOTFILES_SCRIPTS/brightness.sh up"
 bindsym $mod+Shift+F4 mode "$brightness_mode"
 
 set $brightness_mode Change brightness
 mode "$brightness_mode" {
-	bindsym Up exec "xbacklight -inc 10"
-	bindsym Down exec "xbacklight -dec 10"
-	bindsym Right exec "xbacklight -inc 2"
-	bindsym Left exec "xbacklight -dec 2"
+	bindsym Up exec "$DOTFILES_SCRIPTS/brightness.sh upmore"
+	bindsym Down exec "$DOTFILES_SCRIPTS/brightness.sh downmore"
+	bindsym Right exec "$DOTFILES_SCRIPTS/brightness.sh up"
+	bindsym Left exec "$DOTFILES_SCRIPTS/brightness.sh down"
 
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
