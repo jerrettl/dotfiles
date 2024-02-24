@@ -85,7 +85,7 @@ install_basic() {
   echo "Configuring git shell status..."
   if [ ! -d ~/.local/gitstatus ]; then
     echo "Cloning..."
-    [ ! -d ~/.local] && mkdir -p ~/.local
+    [ ! -d ~/.local ] && mkdir -p ~/.local
     git clone --depth=1 https://github.com/romkatv/gitstatus.git ~/.local/gitstatus
   else
     echo "Already configured."
