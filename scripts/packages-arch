@@ -67,6 +67,8 @@ urlscan
 =====
 [laptop]
 powertop
+tlp
+tlpui
 =====
 [graphical]
 alacritty
