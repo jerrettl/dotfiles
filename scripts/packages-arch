@@ -85,6 +85,8 @@ feh
 firefox
 flameshot
 gtk3
+gvfs
+gvfs-smb
 hsetroot
 i3-gaps
 i3-swallow-git
