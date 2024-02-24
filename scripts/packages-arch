@@ -51,7 +51,7 @@ pulseaudio-alsa
 syncthing
 udiskie
 veracrypt
-youtube-dl
+yt-dlp
 =====
 [bluetooth]
 blueman
