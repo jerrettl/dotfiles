@@ -32,6 +32,12 @@ if [ "$hostname" == "lg-gram" ]; then
 	# Fix for audio devices not being fully loaded at first start
 	sleep 2
 	$DOTFILES_SCRIPTS/volume.sh
+elif [ "$hostname" == "thinkpad" ]; then
+	# Display scaling
+	export GDK_SCALE=2
+
+	# Fix for audio devices not being fully loaded at first start
+	sleep 2
 
 elif [ "$hostname" == "inspiron3537" ]; then
 	# Display scaling
