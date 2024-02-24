@@ -9,7 +9,7 @@ arg="$1"
 update="pkill -RTMIN+3 i3blocks"
 
 apply_to_conf () {
-  if [ "$1" == "power" ]; then
+  if [ "$1" == "power" ] && [ -f /sys/devices/platform/lg-laptop/fan_mode ]; then
     echo 0 | \sudo tee /sys/devices/platform/lg-laptop/fan_mode
   else
     echo 1 | \sudo tee /sys/devices/platform/lg-laptop/fan_mode
