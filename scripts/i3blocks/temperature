@@ -6,6 +6,11 @@ if [ $? -ne 0 ]; then
 	column="2"
 	sensor=$(sensors k10temp-pci-* | grep -i "Tccd1")
 fi
+if [ $? -ne 0 ]; then
+	# Attempt alternative approach
+	column="2"
+	sensor=$(sensors thinkpad-isa-* | grep -i "CPU")
+fi
 [ $? -ne 0 ] && exit
 
 temp=$(echo $sensor | awk "{print \$$column}" | cut -c 2-)
