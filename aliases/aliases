@@ -64,8 +64,22 @@ alias cpum='~/dotfiles/scripts/change-cpu-mode.sh'
 alias smpv='swallow mpv'
 alias dmesg='dmesg --color=always'
 
-alias ranger='RANGER_TMP_LOCATION=$(mktemp); ranger --choosedir="$RANGER_TMP_LOCATION"; cd "$(cat "$RANGER_TMP_LOCATION")"; rm "$RANGER_TMP_LOCATION"; unset RANGER_TMP_LOCATION'
-alias rr='ranger'
+function ranger() {
+	# Set inital starting location of ranger
+	if [ ! -z "$1" ]; then
+		location="$1"
+	else
+		location="."
+	fi
+
+	RANGER_TMP_LOCATION=$(mktemp)
+	command ranger --choosedir="$RANGER_TMP_LOCATION" "$location"
+	# Move to the directory that ranger exits in
+	cd "$(cat "$RANGER_TMP_LOCATION")"
+	rm "$RANGER_TMP_LOCATION"
+	unset RANGER_TMP_LOCATION
+}
+alias rr='ranger '
 
 alias pu='sudo pacman -Syyu'
 alias yayu='yay -Syyu -a'
