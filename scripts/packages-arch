@@ -57,6 +57,7 @@ yt-dlp
 blueman
 bluez
 bluez-utils
+pulseaudio-bluetooth
 =====
 [mail]
 lynx
