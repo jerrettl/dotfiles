@@ -204,6 +204,7 @@ install_link() {
   ln -sfv $DOTFILES/.config/x11/.xinitrc ~/.xinitrc
   ln -sfv $DOTFILES/.config/x11/.xprofile ~/.xprofile
   ln -sfv $DOTFILES/.config/x11/.Xresources ~/.Xresources
+  ln -sfv $DOTFILES/.config/xdg-terminals.list ~/.config/xdg-terminals.list
   mkdir -pv ~/.config/zathura
   ln -sfv ~/dotfiles/.config/zathura/zathurarc ~/.config/zathura/zathurarc
   ln -sfv ~/dotfiles/.emacs ~/.emacs
