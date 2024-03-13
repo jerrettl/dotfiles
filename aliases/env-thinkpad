@@ -3,3 +3,5 @@
 export DIR_SHARED="/mnt/shared"
 export DIR_SCHOOL="$DIR_SHARED/School"
 export DIR_TA="$DIR_SHARED/TA"
+
+export QT_FONT_DPI=100
