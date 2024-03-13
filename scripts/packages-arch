@@ -131,6 +131,7 @@ ueberzug
 unclutter
 xclip
 xcwd-git
+xdg-terminal-exec-git
 xdotool
 xorg-server
 xorg-xbacklight
