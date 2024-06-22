@@ -13,6 +13,8 @@ if [ -z "$1" ]; then
   echo "    - Configure git"
   echo "    - Configure git shell status"
   echo
+  echo "  - yay: Install yay"
+  echo
   echo "  - package-group: Install one specific package group, as defined in packages file"
   echo
   echo "  - link: Install all symlinks"
@@ -39,14 +41,7 @@ install_basic() {
     if [ "$(pacman -Qi yay)" ]; then
       echo "yay installed, skipping..."
     else
-      # Install required packages
-      sudo pacman -S --noconfirm make patch gcc autoconf automake binutils bison fakeroot
-
-      git clone https://aur.archlinux.org/yay.git
-      cd yay
-      makepkg -si
-      cd ..
-      rm -rf yay
+      install_yay
     fi
   elif [ "$OS" == "alpine" ]; then
     if [ -z "$(apk info --installed sudo)" ]; then
@@ -98,6 +93,18 @@ install_basic() {
     echo "Installing docs..."
     sudo apk add docs
   fi
+}
+
+
+install_yay() {
+  # Install required packages
+  sudo pacman -S --noconfirm make patch gcc autoconf automake binutils bison fakeroot debugedit
+
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  makepkg -si
+  cd ..
+  rm -rf yay
 }
 
 
@@ -271,6 +278,8 @@ fi
 
 if [ "$1" == "basic" ]; then
   install_basic
+elif [ "$1" == "yay" ]; then
+  install_yay
 elif [ "$1" == "package-group" ]; then
   install_package_group "$2"
 elif [ "$1" == "link" ]; then
