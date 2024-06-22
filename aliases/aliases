@@ -56,6 +56,8 @@ alias gpls='git stash && git pull && git stash pop'
 alias gspl='git stash && git pull && git stash pop'
 alias gpus='git stash && git push && git stash pop'
 alias gspu='git stash && git push && git stash pop'
+alias gl='git log'
+alias glo='git log --oneline'
 
 alias pacman='pacman --color=auto'
 alias dmenu='dmenu -nb "#303030" -nf "#ffffff" -sb "#ffffff" -sf "#303030" -fn "HelveticaNeue-11"'
