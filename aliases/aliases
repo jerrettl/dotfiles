@@ -92,4 +92,4 @@ alias clang-strict="clang -Weverything"
 # ==== Common Directories
 alias dotf='cd $DOTFILES && gstu'
 
-alias download-playlist='youtube-dl --extract-audio --audio-format mp3 --embed-thumbnail --no-post-overwrites -o "%(playlist_index)03d - %(title)s.%(ext)s"'
+alias download-playlist='yt-dlp --extract-audio --audio-format mp3 --embed-thumbnail --no-post-overwrites -o "%(playlist_index)03d - %(title)s.%(ext)s"'
