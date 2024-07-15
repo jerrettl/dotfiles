@@ -56,9 +56,15 @@ Plug 'itchyny/lightline.vim'
 " vim-easymotion: jumping thoughout text easily
 Plug 'easymotion/vim-easymotion'
 
-" indentLine: indent guides
-" Plug 'Yggdroot/indentLine'
-Plug 'lukas-reineke/indent-blankline.nvim'
+" Indent guides
+if has('nvim')
+	" Neovim only
+	Plug 'lukas-reineke/indent-blankline.nvim'
+else
+	" indentLine: indent guides
+	" Fallback if neovim is not available
+	Plug 'Yggdroot/indentLine'
+endif
 
 " splitjoin.vim: Switch between single-line and multi-line forms of code
 Plug 'AndrewRadev/splitjoin.vim'
