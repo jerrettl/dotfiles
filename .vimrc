@@ -107,6 +107,10 @@ Plug 'OmniSharp/omnisharp-vim', { 'for': 'cs' }
 " Rust:
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
+" YAML:
+"   Better folding
+Plug 'pedrohdz/vim-yaml-folds', { 'for': 'yaml' }
+
 " Autodetect tab settings in a file
 Plug 'tpope/vim-sleuth'
 
