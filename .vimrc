@@ -70,7 +70,7 @@ endif
 Plug 'AndrewRadev/splitjoin.vim'
 
 " Intellisence
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['cs', 'rust'], 'on': ['CocEnable', 'CocCommand']}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['cs', 'rust', 'yaml'], 'on': ['CocEnable', 'CocCommand']}
 
 " Asynchronous Lint Engine
 Plug 'dense-analysis/ale', { 'for': ['cs', 'haskell', 'html', 'javascript'], 'on': 'ALEEnable' }
