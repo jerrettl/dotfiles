@@ -462,6 +462,7 @@ autocmd FileType markdown,pandoc nnoremap <leader><leader>r :MarkdownPreview<CR>
 autocmd FileType markdown,pandoc set tabstop=4
 autocmd FileType markdown,pandoc set shiftwidth=4
 
+" JSON
 autocmd FileType json set conceallevel=0
 let g:vim_json_warnings=0
 
