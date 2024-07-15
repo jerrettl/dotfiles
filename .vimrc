@@ -466,6 +466,9 @@ autocmd FileType markdown,pandoc set shiftwidth=4
 autocmd FileType json set conceallevel=0
 let g:vim_json_warnings=0
 
+" YAML / YML
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 " ===================================
 " Plugin Configurations
 
