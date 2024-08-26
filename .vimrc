@@ -491,7 +491,11 @@ autocmd FileType java set colorcolumn=100
 " CSS autocmds
 autocmd FileType css,javascript imap {<CR> {<CR>}<ESC>O
 
-" Markdown
+" Text and Markdown
+autocmd FileType markdown,pandoc,text setlocal list
+autocmd FileType markdown,pandoc,text setlocal listchars=trail:·,tab:┆\ ,multispace:┆
+autocmd FileType markdown,pandoc,text 2match Todo /TODO/
+
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 autocmd FileType markdown,pandoc nnoremap <leader><leader>r :MarkdownPreview<CR>
 autocmd FileType markdown,pandoc set tabstop=4
