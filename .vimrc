@@ -342,7 +342,7 @@ call s:new_colors()
 
 " Show trailing whitespace at the ends on lines
 autocmd BufWinEnter,InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * call clearmatches()
+autocmd InsertEnter * match none
 
 " ===================================
 " Mappings
