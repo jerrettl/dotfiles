@@ -116,6 +116,9 @@ Plug 'tpope/vim-sleuth'
 
 Plug 'mbbill/undotree'
 
+" Define text objects based on indent levels
+Plug 'michaeljsmith/vim-indent-object'
+
 " Multiple cursors
 Plug 'mg979/vim-visual-multi'
 
@@ -428,6 +431,29 @@ if has('nvim')
 	autocmd TermOpen * set nonumber
 	autocmd TermOpen * echo "To exit insert mode, use <C-\\><C-n>"
 endif
+
+" Move by text of the same indent level
+" https://vi.stackexchange.com/questions/12835/how-do-i-jump-to-the-next-line-with-the-same-indent-level
+function! GoToNextIndent(inc)
+    " Get the cursor current position
+    let currentPos = getpos('.')
+    let currentLine = currentPos[1]
+    let matchIndent = 0
+
+    " Look for a line with the same indent level whithout going out of the buffer
+    while !matchIndent && currentLine != line('$') + 1 && currentLine != -1
+        let currentLine += a:inc
+        let matchIndent = indent(currentLine) == indent('.')
+    endwhile
+
+    " If a line is found go to this line
+    if (matchIndent)
+        let currentPos[1] = currentLine
+        call setpos('.', currentPos)
+    endif
+endfunction
+nnoremap ]t :call GoToNextIndent(1)<CR>
+nnoremap [t :call GoToNextIndent(-1)<CR>
 
 " Plain text
 autocmd FileType text,markdown,pandoc set spell
