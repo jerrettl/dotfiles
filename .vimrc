@@ -425,6 +425,15 @@ inoremap <C-o> <cr><esc>O
 nmap <C-t> 0/<++><cr>,/c4l
 imap <C-t> <esc>0/<++><cr>,/c4l
 
+" Shortcut to insert current date in YYYY-MM-DD format.
+if exists("*strftime")
+	inoremap <C-d> <C-r>=strftime('%F')<CR>
+	inoremap <C-e> <C-r>=strftime('%a %F %T')<CR>
+else
+	inoremap <C-d> <esc>:echo "Unable to retrieve date. strftime is not installed on this system."<CR>a
+	inoremap <C-e> <esc>:echo "Unable to retrieve date. strftime is not installed on this system."<CR>a
+endif
+
 " Do things when a :terminal is opened
 if has('nvim')
 	autocmd TermOpen * startinsert
