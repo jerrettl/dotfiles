@@ -76,7 +76,7 @@ Plug 'Yggdroot/indentLine', LoadIfTrue(!has('nvim'))
 Plug 'AndrewRadev/splitjoin.vim'
 
 " Intellisence
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['cs', 'rust', 'yaml'], 'on': ['CocEnable', 'CocCommand']}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['cs', 'rust', 'yaml'], 'on': ['CocEnable', 'CocCommand', 'CocInstall']}
 
 " Asynchronous Lint Engine
 Plug 'dense-analysis/ale', { 'for': ['cs', 'haskell', 'html', 'javascript'], 'on': 'ALEEnable' }
