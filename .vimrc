@@ -302,61 +302,61 @@ function! s:new_colors()
 	let s:grey78='#c6c6c6'			" 251
 
 	set background=dark
-	"	highlight name		cterm					ctermfg				ctermbg				gui					guifg					guibg
-	exe 'hi Normal'.																							' guifg='.s:foreground.	' guibg='.s:background
-	exe 'hi NonText'.								' ctermfg=12'.							' gui=bold'.		' guifg='.s:blue
-	exe 'hi Comment'.								' ctermfg=14'.												' guifg='.s:cyan
-	exe 'hi Constant'.								' ctermfg=13'.												' guifg='.s:magenta
-	exe 'hi Conceal'.								' ctermfg=246'.		' ctermbg=NONE'.						' guifg='.s:grey58.		' guibg=NONE'
-	exe 'hi Identifier'.	' cterm=bold'.			' ctermfg=14'.												' guifg='.s:cyan
-	exe 'hi Statement'.								' ctermfg=11'.							' gui=bold'.		' guifg='.s:yellow
-	exe 'hi PreProc'.								' ctermfg=81'.												' guifg='.s:steel_blue1
-	exe 'hi Type'.									' ctermfg=121'.							' gui=bold'.		' guifg='.s:pale_green1
-	exe 'hi Special'.								' ctermfg=224'.												' guifg='.s:misty_rose1
-	exe 'hi Underlined'.	' cterm=underline'.		' ctermfg=81'.							' gui=underline'.	' guifg='.s:steel_blue1
+	"	highlight name			cterm					ctermfg				ctermbg				gui					guifg					guibg
+	exe 'hi Normal'.																								' guifg='.s:foreground.	' guibg='.s:background
+	exe 'hi NonText'.									' ctermfg=12'.							' gui=bold'.		' guifg='.s:blue
+	exe 'hi Comment'.									' ctermfg=14'.												' guifg='.s:cyan
+	exe 'hi Constant'.									' ctermfg=13'.												' guifg='.s:magenta
+	exe 'hi Conceal'.									' ctermfg=246'.		' ctermbg=NONE'.						' guifg='.s:grey58.		' guibg=NONE'
+	exe 'hi Identifier'.		' cterm=bold'.			' ctermfg=14'.												' guifg='.s:cyan
+	exe 'hi Statement'.									' ctermfg=11'.							' gui=bold'.		' guifg='.s:yellow
+	exe 'hi PreProc'.									' ctermfg=81'.												' guifg='.s:steel_blue1
+	exe 'hi Type'.										' ctermfg=121'.							' gui=bold'.		' guifg='.s:pale_green1
+	exe 'hi Special'.									' ctermfg=224'.												' guifg='.s:misty_rose1
+	exe 'hi Underlined'.		' cterm=underline'.		' ctermfg=81'.							' gui=underline'.	' guifg='.s:steel_blue1
 	hi link Label Statement
 	hi link Operator Statement
 
-	exe 'hi ErrorMsg'.								' ctermfg=15'.		' ctermbg=1'.							' guifg='.s:white.		' guibg='.s:dark_red
-	exe 'hi WarningMsg'.							' ctermfg=224'.												' guifg='.s:misty_rose1
-	exe 'hi ModeMsg'.		' cterm=bold'.													' gui=bold'
-	exe 'hi MoreMsg'.								' ctermfg=121'.							' gui=bold'.		' guifg='.s:pale_green1
-	exe 'hi Error'.									' ctermfg=15'.		' ctermbg=9'.							' guifg='.s:white.		' guibg='.s:red
+	exe 'hi ErrorMsg'.									' ctermfg=15'.		' ctermbg=1'.							' guifg='.s:white.		' guibg='.s:dark_red
+	exe 'hi WarningMsg'.								' ctermfg=224'.												' guifg='.s:misty_rose1
+	exe 'hi ModeMsg'.			' cterm=bold'.													' gui=bold'
+	exe 'hi MoreMsg'.									' ctermfg=121'.							' gui=bold'.		' guifg='.s:pale_green1
+	exe 'hi Error'.										' ctermfg=15'.		' ctermbg=9'.							' guifg='.s:white.		' guibg='.s:red
 
-	exe 'hi Cursor'.																							' guifg=bg'.			' guibg=fg'
-	exe 'hi Search'. 		' cterm=none'. 			' ctermfg=black'.	' ctermbg=yellow'. 						' guifg='.s:black. 		' guibg='.s:yellow
-	exe 'hi IncSearch'.		' cterm=reverse'.												' gui=reverse'
-	exe 'hi LineNr'.		' cterm=none'.			' ctermfg=251'.												' guifg='.s:grey78
-	exe 'hi CursorLineNr'.	' cterm=bold'.													' gui=bold'
-	exe 'hi Title'.									' ctermfg=225'.							' gui=bold'.		' guifg='.s:thistle
-	exe 'hi CursorLine'.	' cterm=none'.								' ctermbg=236'.		' gui=none'.								' guibg='.s:grey19
-
-	exe 'hi StatusLineNC'.	' cterm=reverse'.												' gui=reverse'
-	exe 'hi StatusLine'.	' cterm=bold,reverse'.											' gui=bold,reverse'
-	exe 'hi VertSplit'.		' cterm=reverse'.												' gui=reverse'
-
-	exe 'hi Visual'.								' ctermfg=none'. 	' ctermbg=239'.													' guibg='.s:grey30
-
-	exe 'hi DiffChange'.							' ctermfg=white'.	' ctermbg=8'.							' guifg='.s:white.		' guibg='.s:dark_grey
-	exe 'hi DiffText'.		' cterm=bold'.								' ctermbg=9'.		' gui=bold'.								' guibg='.s:red
-	exe 'hi DiffAdd'.								' ctermfg=black'.	' ctermbg=2'.							' guifg='.s:black.		' guibg='.s:dark_green
-	exe 'hi DiffDelete'.							' ctermfg=black'.	' ctermbg=1'.							' guifg='.s:black.		' guibg='.s:dark_red
-
-	exe 'hi Folded'.		' cterm=none'.			' ctermfg=7'.		' ctermbg=17'.							' guifg='.s:light_grey.	' guibg='.s:navy_blue
-	exe 'hi FoldColumn'.							' ctermfg=14'.		' ctermbg=242'.							' guifg='.s:cyan.		' guibg='.s:grey42
-
-	exe 'hi SpellBad'.		' cterm=none'.			' ctermfg=white'.	' ctermbg=88'.		' gui=undercurl'
-	exe 'hi EndOfBuffer'.							' ctermfg=12'.							' gui=bold'.		' guifg='.s:blue
-	exe 'hi ColorColumn'.												' ctermbg=236'.													' guibg='.s:grey19
-
-	exe 'hi Pmenu'.									' ctermfg=white'.	' ctermbg=236'.							' guifg='.s:white.		' guibg='.s:grey19
-	exe 'hi PmenuSel'.								' ctermfg=250'.		' ctermbg=0'.							' guifg='.s:grey74.		' guibg='.s:black
-	exe 'hi ExtraWhitespace'.											' ctermbg=88'.													' guibg='.s:dark_red1
-	exe 'hi Todo'.									' ctermfg=white'.	' ctermbg=9'.							' guifg='.s:white.		' guibg='.s:red
-	exe 'hi IndentBlanklineChar'.					' ctermfg=242'.							' gui=nocombine'.	' guifg='.s:grey42
-	exe 'hi SpecialKey'.							' ctermfg=242'.												' guifg='.s:grey42
+	exe 'hi Cursor'.																								' guifg=bg'.			' guibg=fg'
+	exe 'hi Search'.			' cterm=none'. 			' ctermfg=black'.	' ctermbg=yellow'. 						' guifg='.s:black. 		' guibg='.s:yellow
 	" Used for nvim-scrollview
 	exe 'hi ScrollViewSearch'.							' ctermfg=yellow'.											' guifg='.s:yellow
+	exe 'hi IncSearch'.			' cterm=reverse'.												' gui=reverse'
+	exe 'hi LineNr'.			' cterm=none'.			' ctermfg=251'.												' guifg='.s:grey78
+	exe 'hi CursorLineNr'.		' cterm=bold'.													' gui=bold'
+	exe 'hi Title'.										' ctermfg=225'.							' gui=bold'.		' guifg='.s:thistle
+	exe 'hi CursorLine'.		' cterm=none'.								' ctermbg=236'.		' gui=none'.								' guibg='.s:grey19
+
+	exe 'hi StatusLineNC'.		' cterm=reverse'.												' gui=reverse'
+	exe 'hi StatusLine'.		' cterm=bold,reverse'.											' gui=bold,reverse'
+	exe 'hi VertSplit'.			' cterm=reverse'.												' gui=reverse'
+
+	exe 'hi Visual'.									' ctermfg=none'. 	' ctermbg=239'.													' guibg='.s:grey30
+
+	exe 'hi DiffChange'.								' ctermfg=white'.	' ctermbg=8'.							' guifg='.s:white.		' guibg='.s:dark_grey
+	exe 'hi DiffText'.			' cterm=bold'.								' ctermbg=9'.		' gui=bold'.								' guibg='.s:red
+	exe 'hi DiffAdd'.									' ctermfg=black'.	' ctermbg=2'.							' guifg='.s:black.		' guibg='.s:dark_green
+	exe 'hi DiffDelete'.								' ctermfg=black'.	' ctermbg=1'.							' guifg='.s:black.		' guibg='.s:dark_red
+
+	exe 'hi Folded'.			' cterm=none'.			' ctermfg=7'.		' ctermbg=17'.							' guifg='.s:light_grey.	' guibg='.s:navy_blue
+	exe 'hi FoldColumn'.								' ctermfg=14'.		' ctermbg=242'.							' guifg='.s:cyan.		' guibg='.s:grey42
+
+	exe 'hi SpellBad'.			' cterm=none'.			' ctermfg=white'.	' ctermbg=88'.		' gui=undercurl'
+	exe 'hi EndOfBuffer'.								' ctermfg=12'.							' gui=bold'.		' guifg='.s:blue
+	exe 'hi ColorColumn'.													' ctermbg=236'.													' guibg='.s:grey19
+
+	exe 'hi Pmenu'.										' ctermfg=white'.	' ctermbg=236'.							' guifg='.s:white.		' guibg='.s:grey19
+	exe 'hi PmenuSel'.									' ctermfg=250'.		' ctermbg=0'.							' guifg='.s:grey74.		' guibg='.s:black
+	exe 'hi ExtraWhitespace'.												' ctermbg=88'.													' guibg='.s:dark_red1
+	exe 'hi Todo'.										' ctermfg=black'.	' ctermbg=9'.							' guifg='.s:black.		' guibg='.s:red
+	exe 'hi IndentBlanklineChar'.						' ctermfg=242'.							' gui=nocombine'.	' guifg='.s:grey42
+	exe 'hi SpecialKey'.								' ctermfg=242'.												' guifg='.s:grey42
 endfunction
 autocmd! ColorScheme default call s:new_colors()
 call s:new_colors()
