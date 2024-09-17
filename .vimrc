@@ -497,8 +497,11 @@ autocmd FileType java set colorcolumn=100
 autocmd FileType css,javascript imap {<CR> {<CR>}<ESC>O
 
 " Text and Markdown
-autocmd FileType markdown,pandoc,text setlocal list
-autocmd FileType markdown,pandoc,text setlocal listchars=trail:·,tab:┆\ ,multispace:┆
+if !has('nvim')
+	" Only show indent guides if indent-blankline is not being used
+	autocmd FileType markdown,pandoc,text setlocal list
+	autocmd FileType markdown,pandoc,text setlocal listchars=trail:·,tab:┆\ ,multispace:┆
+endif
 autocmd FileType markdown,pandoc,text 2match Todo /TODO/
 
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
