@@ -355,6 +355,8 @@ function! s:new_colors()
 	exe 'hi Todo'.									' ctermfg=white'.	' ctermbg=9'.							' guifg='.s:white.		' guibg='.s:red
 	exe 'hi IndentBlanklineChar'.					' ctermfg=242'.							' gui=nocombine'.	' guifg='.s:grey42
 	exe 'hi SpecialKey'.							' ctermfg=242'.												' guifg='.s:grey42
+	" Used for nvim-scrollview
+	exe 'hi ScrollViewSearch'.							' ctermfg=yellow'.											' guifg='.s:yellow
 endfunction
 autocmd! ColorScheme default call s:new_colors()
 call s:new_colors()
