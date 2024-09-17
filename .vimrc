@@ -123,9 +123,6 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 "   JSX and TSX syntax highlighting
 Plug 'MaxMEllon/vim-jsx-pretty', { 'for': 'javascript' }
 
-" C#:
-Plug 'OmniSharp/omnisharp-vim', { 'for': 'cs' }
-
 " Rust:
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
@@ -761,10 +758,6 @@ let g:ale_fixers = {
 			\}
 let g:ale_haskell_ghc_options = '-dynamic -fno-code -v0'
 
-
-" OmniSharp
-let g:OmniSharp_selector_ui = 'ctrlp'
-let g:OmniSharp_popup = 1
 
 " rust.vim
 " Braced blocks are folded. All folds are open by default.
