@@ -48,7 +48,10 @@ Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'tpope/vim-fugitive'
 
 " git-gutter: View changes relative to version control in the side
-Plug 'airblade/vim-gitgutter', { 'for': ['rust'] }
+Plug 'airblade/vim-gitgutter', LoadIfTrue(!has('nvim'), { 'for': ['rust'] })
+
+" gitsigns: View changes relative to version control, works with nvim-scrollbar and barbar.nvim
+Plug 'lewis6991/gitsigns.nvim', LoadIfTrue(has('nvim'))
 
 " emmet-vim: quick html writing
 Plug 'mattn/emmet-vim', { 'for': 'html' }
@@ -593,6 +596,17 @@ function! NERDTreeQuit()
 	endif
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
+
+
+" gitsigns.nvim
+if has('nvim') && has_key(plugs, 'gitsigns.nvim')
+	autocmd VimEnter * call s:setup_gitsigns()
+	function! s:setup_gitsigns() abort
+		lua << EOF
+		require('gitsigns').setup()
+EOF
+	endfunction
+endif
 
 
 " Closetag
