@@ -30,7 +30,8 @@ function! LoadIfTrue(cond, ...)
 endfunction
 
 " nerdtree: file exploring side bar
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" coc-explorer should be used if not on Windows
+Plug 'scrooloose/nerdtree', LoadIfTrue(has('win32'), { 'on': 'NERDTreeToggle' })
 
 " vimtex: ease-of-life shortcuts for latex
 Plug 'lervag/vimtex', { 'for': 'tex' }
@@ -365,7 +366,7 @@ nnoremap J gj
 nnoremap K gk
 nnoremap <C-g> :%s/\s\+$//<cr>
 nnoremap <C-n> :set relativenumber!<CR>
-if has("win32")
+if has("win32") && !has("nvim")
 	" coc-explorer is currently giving issues with Windows
 	nnoremap <F10> <cmd>NERDTreeToggle<CR>
 else
