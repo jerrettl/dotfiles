@@ -64,14 +64,11 @@ Plug 'itchyny/lightline.vim'
 Plug 'easymotion/vim-easymotion'
 
 " Indent guides
-if has('nvim')
-	" Neovim only
-	Plug 'lukas-reineke/indent-blankline.nvim'
-else
-	" indentLine: indent guides
-	" Fallback if neovim is not available
-	Plug 'Yggdroot/indentLine'
-endif
+"   Neovim only
+Plug 'lukas-reineke/indent-blankline.nvim', LoadIfTrue(has('nvim'))
+"   indentLine: indent guides
+"   Fallback if neovim is not available
+Plug 'Yggdroot/indentLine', LoadIfTrue(!has('nvim'))
 
 " splitjoin.vim: Switch between single-line and multi-line forms of code
 Plug 'AndrewRadev/splitjoin.vim'
