@@ -34,6 +34,10 @@ function! LoadIfTrue(cond, ...)
   return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
 endfunction
 
+" Tab bar - Neovim only
+Plug 'nvim-tree/nvim-web-devicons', LoadIfTrue(has('nvim')) " For file icons
+Plug 'romgrk/barbar.nvim', LoadIfTrue(has('nvim'))
+
 " Scrollbars - Neovim only
 Plug 'dstein64/nvim-scrollview', LoadIfTrue(has('nvim'))
 
@@ -535,6 +539,24 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 " ===================================
 " Plugin Configurations
 
+" barbar.nvim
+if has('nvim') && has_key(plugs, 'barbar.nvim')
+	autocmd VimEnter * call s:setup_barbar()
+	function! s:setup_barbar() abort
+		lua << EOF
+		require('barbar').setup {
+			auto_hide = true,
+		}
+EOF
+	endfunction
+endif
+" Tab navigation
+nnoremap <silent> tn <Cmd>BufferNext<cr>
+nnoremap <silent> tN <Cmd>BufferPrevious<cr>
+nnoremap <silent> tp <Cmd>BufferPin<cr>
+nnoremap <silent> tt <Cmd>BufferPick<cr>
+nnoremap <silent> tx <Cmd>BufferClose<cr>
+nnoremap <silent> tX <Cmd>BufferRestore<cr>
 
 
 " Scrollbars with nvim-scrollview
