@@ -3,6 +3,11 @@
 
 set nocompatible
 
+" Add Windows-like bindings if on Windows
+if has('win32')
+	source $VIMRUNTIME/mswin.vim
+endif
+
 " Plug
 " If plug is not installed, fetch and install it automatically.
 if has("unix")
@@ -710,9 +715,6 @@ let g:ale_haskell_ghc_options = '-dynamic -fno-code -v0'
 let g:OmniSharp_selector_ui = 'ctrlp'
 let g:OmniSharp_popup = 1
 
-if has('win32')
-	source $VIMRUNTIME/mswin.vim
-endif
 
 " View syntax highlighting stack
 function! SynStack()
