@@ -34,6 +34,9 @@ function! LoadIfTrue(cond, ...)
   return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
 endfunction
 
+" Scrollbars - Neovim only
+Plug 'dstein64/nvim-scrollview', LoadIfTrue(has('nvim'))
+
 " nerdtree: file exploring side bar
 " coc-explorer should be used if not on Windows
 Plug 'scrooloose/nerdtree', LoadIfTrue(has('win32'), { 'on': 'NERDTreeToggle' })
@@ -526,6 +529,12 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " ===================================
 " Plugin Configurations
+
+
+
+" Scrollbars with nvim-scrollview
+let g:scrollview_signs_on_startup = ['diagnostics', 'search', 'gitsigns']
+
 
 " vimtex
 let g:vimtex_fold_enabled = 1
