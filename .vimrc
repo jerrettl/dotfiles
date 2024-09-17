@@ -765,6 +765,10 @@ let g:ale_haskell_ghc_options = '-dynamic -fno-code -v0'
 let g:OmniSharp_selector_ui = 'ctrlp'
 let g:OmniSharp_popup = 1
 
+" rust.vim
+" Braced blocks are folded. All folds are open by default.
+let g:rust_fold = 1
+
 
 " View syntax highlighting stack
 function! SynStack()
