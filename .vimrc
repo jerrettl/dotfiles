@@ -654,6 +654,9 @@ let g:closetag_emptyTags_caseSensitive = 1
 let g:coc_global_extensions = [
 	\'coc-explorer',
 	\'coc-marketplace',
+	\'coc-omnisharp',
+	\'coc-rust-analyzer',
+	\'coc-yaml',
 	\]
 " Go to definition
 nnoremap gd <Plug>(coc-definition)
