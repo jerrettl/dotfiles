@@ -22,6 +22,13 @@ elseif has("win32")
 	call plug#begin($HOME.'\vimfiles\plugged')
 endif
 
+" Function to help plugin loading for only neovim
+" https://github.com/junegunn/vim-plug/wiki/tips
+function! LoadIfTrue(cond, ...)
+  let opts = get(a:000, 0, {})
+  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+
 " nerdtree: file exploring side bar
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
