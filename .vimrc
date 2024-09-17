@@ -612,6 +612,22 @@ omap is <Plug>(textobj-sandwich-query-i)
 omap as <Plug>(textobj-sandwich-query-a)
 
 
+" indent-blankline
+if has('nvim') && has_key(plugs, 'indent-blankline.nvim')
+	autocmd VimEnter * call s:setup_indentline()
+	function! s:setup_indentline() abort
+		lua << EOF
+		require('ibl').setup {
+			indent = {
+				char = "┆",
+				highlight = "IndentBlanklineChar"
+			}
+		}
+EOF
+	endfunction
+endif
+
+
 " indentLine
 let g:indentLine_setConceal = 0
 " let g:indentLine_fileTypeExclude = ['markdown', 'pandoc']
