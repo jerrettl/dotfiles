@@ -65,6 +65,8 @@ Plug 'easymotion/vim-easymotion'
 
 " Indent guides
 "   Neovim only
+"   nvim-treesitter is for additional scope interpretation
+Plug 'nvim-treesitter/nvim-treesitter', LoadIfTrue(has('nvim'), {'do': ':TSUpdate'})
 Plug 'lukas-reineke/indent-blankline.nvim', LoadIfTrue(has('nvim'))
 "   indentLine: indent guides
 "   Fallback if neovim is not available
@@ -613,6 +615,19 @@ xmap is <Plug>(textobj-sandwich-query-i)
 xmap as <Plug>(textobj-sandwich-query-a)
 omap is <Plug>(textobj-sandwich-query-i)
 omap as <Plug>(textobj-sandwich-query-a)
+
+
+" nvim-treesitter
+if has('nvim') && has_key(plugs, 'nvim-treesitter')
+	autocmd VimEnter * call s:setup_treesitter()
+	function! s:setup_treesitter() abort
+		lua << EOF
+		require('nvim-treesitter.configs').setup {
+			ensure_installed = { "markdown", "markdown_inline", "rust", "vim" }
+		}
+EOF
+	endfunction
+endif
 
 
 " indent-blankline
