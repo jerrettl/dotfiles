@@ -601,6 +601,7 @@ let g:closetag_emptyTags_caseSensitive = 1
 " Coc
 let g:coc_global_extensions = [
 	\'coc-explorer',
+	\'coc-marketplace',
 	\]
 
 
