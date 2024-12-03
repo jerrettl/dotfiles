@@ -112,7 +112,14 @@ Plug 'udalov/kotlin-vim'
 Plug 'kevinoid/vim-jsonc'
 Plug 'adamclerk/vim-razor'
 
-Plug 'ctrlpvim/ctrlp.vim'
+" Fuzzy search
+"   For vim
+Plug 'ctrlpvim/ctrlp.vim', LoadIfTrue(!has('nvim'))
+"   For neovim
+"     Dependency for telescope
+Plug 'nvim-lua/plenary.nvim', LoadIfTrue(has('nvim'))
+Plug 'nvim-telescope/telescope.nvim', LoadIfTrue(has('nvim'), { 'tag': '0.1.8' })
+
 
 " Markdown:
 "   Pandoc markdown editing
