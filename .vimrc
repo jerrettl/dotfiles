@@ -83,6 +83,8 @@ Plug 'easymotion/vim-easymotion'
 "   Neovim only
 "   nvim-treesitter is for additional scope interpretation
 Plug 'nvim-treesitter/nvim-treesitter', LoadIfTrue(has('nvim'), {'do': ':TSUpdate'})
+"   nvim-treesitter-context is used to see the current context at the top
+Plug 'nvim-treesitter/nvim-treesitter-context', LoadIfTrue(has('nvim'))
 Plug 'lukas-reineke/indent-blankline.nvim', LoadIfTrue(has('nvim'))
 "   indentLine: indent guides
 "   Fallback if neovim is not available
