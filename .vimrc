@@ -552,7 +552,7 @@ if !has('nvim')
 	autocmd FileType markdown,pandoc,text setlocal list
 	autocmd FileType markdown,pandoc,text setlocal listchars=trail:·,tab:┆\ ,multispace:┆
 endif
-autocmd FileType markdown,pandoc,text 2match Todo /TODO/
+autocmd WinEnter,BufEnter *.md,*.txt 2match Todo /TODO/
 
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 autocmd FileType markdown,pandoc nnoremap <leader><leader>r :MarkdownPreview<CR>
