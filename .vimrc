@@ -637,6 +637,7 @@ endif
 
 " Scrollbars with nvim-scrollview
 let g:scrollview_signs_on_startup = ['diagnostics', 'search', 'gitsigns']
+let g:scrollview_winblend_gui = 50
 
 
 " vimtex
