@@ -223,12 +223,21 @@ if !has('nvim')
 	set noesckeys     " Function keys that start with <ESC> are recognised in insert mode (only necessary in vim, not neovim)
 endif
 
+if exists("g:neovide")
+	let g:neovide_cursor_animation_length = 0.08
+	let g:neovide_cursor_unfocused_outline_width = 0.08
+	let g:neovide_cursor_trail_size = 0.2
+	let g:neovide_scroll_animation_length = 0.1
+endif
+
 
 " Set GUI font
 function! SetFont()
 	if has("gui_running")
-		if has("win32")
+		if has("win32") && !exists("g:neovide")
 			exe ':set guifont='.g:font.':h'.string(g:font_size).':w'.string(g:font_size / 2.0)
+		elseif has("win32") && exists("g:neovide")
+			exe ':set guifont='.g:font.':h'.string(g:font_size)
 		elseif has("unix")
 			exe ':set guifont='.g:font.'\ '.string(g:font_size)
 		endif
@@ -236,12 +245,16 @@ function! SetFont()
 endfunction
 
 function! DefaultFont()
-	if has("win32")
+	if has("win32") && !exists("g:neovide")
 		let g:font = 'Iosevka_NFM'
+		let g:font_size = 11
+	elseif has("win32") && !exists("g:neovide")
+		let g:font = 'Iosevka\ Term'
+		let g:font_size = 12
 	else
 		let g:font = 'Iosevka\ Term'
+		let g:font_size = 11
 	endif
-	let g:font_size = 11
 	call SetFont()
 endfunction
 call DefaultFont()
