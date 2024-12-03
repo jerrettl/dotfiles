@@ -99,7 +99,8 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['cs', 'rust', 'yaml'], 'on': ['CocEnable', 'CocCommand', 'CocInstall']}
 
 " Asynchronous Lint Engine
-Plug 'dense-analysis/ale', { 'for': ['cs', 'haskell', 'html', 'javascript'], 'on': 'ALEEnable' }
+" May not be needed in favor of coc
+" Plug 'dense-analysis/ale', { 'for': ['cs', 'haskell', 'html', 'javascript'], 'on': 'ALEEnable' }
 
 " Python specific:
 "   indentpython: auto intent after : and in multiline statements
