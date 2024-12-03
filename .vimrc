@@ -65,7 +65,9 @@ Plug 'alvan/vim-closetag', { 'for': ['html', 'javascript'] }
 
 " goyo: distraction-free editing
 " Toggle shortcut: F12
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim', LoadIfTrue(!has('nvim'))
+" zen-mode: Distraction-free editing, but a little better for neovim
+Plug 'folke/zen-mode.nvim', LoadIfTrue(has('nvim'))
 
 " nerdcommenter: shortcuts to comment code
 Plug 'preservim/nerdcommenter'
@@ -639,11 +641,45 @@ function! s:goyo_leave()
 	syntax on
 endfunction
 
-nnoremap <F12> :Goyo<cr>
-imap <F12> <C-o>:Goyo<cr>
+if !has('nvim')
+	nnoremap <F12> :Goyo<cr>
+	imap <F12> <C-o>:Goyo<cr>
+endif
 
 autocmd! user GoyoEnter nested call <SID>goyo_enter()
 autocmd! user GoyoLeave nested call <SID>goyo_leave()
+
+
+" zen-mode
+if has('nvim') && has_key(plugs, 'zen-mode.nvim')
+	autocmd VimEnter * call s:setup_zen_mode()
+	function! s:setup_zen_mode() abort
+		lua << EOF
+		require('zen-mode').setup {
+			window = {
+				backdrop = 1,
+				width = 80,
+				height = 0.85,
+				options = {
+					signcolumn = "no",
+					foldcolumn = "0",
+					number = false,
+				}
+			},
+			on_open = function(win)
+				vim.cmd("ScrollViewDisable")
+			end,
+			on_close = function()
+				vim.cmd("ScrollViewEnable")
+			end,
+		}
+EOF
+	endfunction
+endif
+if has('nvim')
+	nnoremap <silent> <F12> :ZenMode<cr>
+	inoremap <silent> <F12> <C-o>:ZenMode<cr>
+endif
 
 
 " NERDTree
