@@ -120,6 +120,8 @@ Plug 'ctrlpvim/ctrlp.vim', LoadIfTrue(!has('nvim'))
 Plug 'nvim-lua/plenary.nvim', LoadIfTrue(has('nvim'))
 Plug 'nvim-telescope/telescope.nvim', LoadIfTrue(has('nvim'), { 'tag': '0.1.8' })
 
+" Table of contents
+Plug 'stevearc/aerial.nvim', LoadIfTrue(has('nvim'))
 
 " Markdown:
 "   Pandoc markdown editing
@@ -820,6 +822,17 @@ endif
 " indentLine
 let g:indentLine_setConceal = 0
 " let g:indentLine_fileTypeExclude = ['markdown', 'pandoc']
+
+
+" aerial.nvim: Table of contents
+if has('nvim') && has_key(plugs, 'aerial.nvim')
+	autocmd VimEnter * call s:setup_aerial()
+	function! s:setup_aerial() abort
+		lua << EOF
+		require('aerial').setup()
+EOF
+	endfunction
+endif
 
 
 " Pandoc
