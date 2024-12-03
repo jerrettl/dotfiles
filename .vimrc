@@ -36,7 +36,7 @@ endfunction
 
 " Tab bar - Neovim only
 Plug 'nvim-tree/nvim-web-devicons', LoadIfTrue(has('nvim')) " For file icons
-Plug 'romgrk/barbar.nvim', LoadIfTrue(has('nvim'))
+Plug 'nanozuki/tabby.nvim', LoadIfTrue(has('nvim'))
 
 " Scrollbars - Neovim only
 Plug 'dstein64/nvim-scrollview', LoadIfTrue(has('nvim'))
@@ -54,7 +54,7 @@ Plug 'tpope/vim-fugitive'
 " git-gutter: View changes relative to version control in the side
 Plug 'airblade/vim-gitgutter', LoadIfTrue(!has('nvim'), { 'for': ['rust'] })
 
-" gitsigns: View changes relative to version control, works with nvim-scrollbar and barbar.nvim
+" gitsigns: View changes relative to version control, works with nvim-scrollbar
 Plug 'lewis6991/gitsigns.nvim', LoadIfTrue(has('nvim'))
 
 " emmet-vim: quick html writing
@@ -335,9 +335,14 @@ function! s:new_colors()
 	exe 'hi Title'.										' ctermfg=225'.							' gui=bold'.		' guifg='.s:thistle
 	exe 'hi CursorLine'.		' cterm=none'.								' ctermbg=236'.		' gui=none'.								' guibg='.s:grey19
 
-	exe 'hi StatusLineNC'.		' cterm=reverse'.												' gui=reverse'
-	exe 'hi StatusLine'.		' cterm=bold,reverse'.											' gui=bold,reverse'
 	exe 'hi VertSplit'.			' cterm=reverse'.												' gui=reverse'
+
+	" Inactive tab
+	exe 'hi TabLine'.									' ctermfg=231'.		' ctermbg=240'.							' guifg=#ffffff'.		' guibg=#585858'
+	" Active tab
+	exe 'hi TabLineSel'.								' ctermfg=241'.		' ctermbg=252'.							' guifg=#606060'.		' guibg=#d0d0d0'
+	" The rest of the line
+	exe 'hi TabLineFill'.								' ctermfg=247'.		' ctermbg=236'.							' guifg=#9e9e9e'.		' guibg=#303030'
 
 	exe 'hi Visual'.									' ctermfg=none'. 	' ctermbg=239'.													' guibg='.s:grey30
 
@@ -537,24 +542,70 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 " ===================================
 " Plugin Configurations
 
-" barbar.nvim
-if has('nvim') && has_key(plugs, 'barbar.nvim')
-	autocmd VimEnter * call s:setup_barbar()
-	function! s:setup_barbar() abort
+" tabby.nvim
+if has('nvim') && has_key(plugs, 'tabby.nvim')
+	autocmd VimEnter * call s:setup_tabby()
+	function! s:setup_tabby() abort
 		lua << EOF
-		require('barbar').setup {
-			auto_hide = true,
+		local theme = {
+			fill = 'TabLineFill',
+			-- Also you can do this: fill = { fg='#f2e9de', bg='#907aa9', style='italic' }
+			head = 'TabLine',
+			current_tab = 'TabLineSel',
+			tab = 'TabLine',
+			win = 'TabLine',
+			tail = 'TabLine',
 		}
+		require('tabby').setup({
+			preset = 'active_wins_at_tail',
+			option = {
+				-- nerdfont = true,
+			},
+			line = function(line) return {
+				-- {
+				-- 	{ '  ', hl = theme.head },
+				-- 	line.sep('', theme.head, theme.fill),
+				-- },
+				line.tabs().foreach(function(tab)
+					local hl = tab.is_current() and theme.current_tab or theme.tab
+					return {
+						-- line.sep('', hl, theme.fill),
+						line.sep(' ', hl, theme.fill),
+						-- tab.is_current() and '' or '󰆣',
+						tab.is_current() and '' or '',
+						tab.number(),
+						tab.name(),
+						tab.close_btn(''),
+						-- line.sep('', hl, theme.fill),
+						line.sep('', hl, hl),
+						hl = hl,
+						margin = ' ',
+					}
+				end),
+				line.spacer(),
+				line.wins_in_tab(line.api.get_current_tab()).foreach(function(win)
+					return {
+						-- line.sep('', theme.win, theme.fill),
+						line.sep('', theme.win, theme.win),
+						win.is_current() and '' or '',
+						win.buf_name(),
+						-- line.sep('', theme.win, theme.fill),
+						line.sep(' ', theme.win, theme.fill),
+						hl = theme.win,
+						margin = ' ',
+					}
+				end),
+				-- {
+				-- 	line.sep('', theme.tail, theme.fill),
+				-- 	{ '  ', hl = theme.tail },
+				-- },
+				hl = theme.fill,
+			} end,
+			-- option = {}, -- setup modules' option,
+		})
 EOF
 	endfunction
 endif
-" Tab navigation
-nnoremap <silent> tn <Cmd>BufferNext<cr>
-nnoremap <silent> tN <Cmd>BufferPrevious<cr>
-nnoremap <silent> tp <Cmd>BufferPin<cr>
-nnoremap <silent> tt <Cmd>BufferPick<cr>
-nnoremap <silent> tx <Cmd>BufferClose<cr>
-nnoremap <silent> tX <Cmd>BufferRestore<cr>
 
 
 " Scrollbars with nvim-scrollview
