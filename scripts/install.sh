@@ -98,7 +98,7 @@ install_basic() {
 
 install_yay() {
   # Install required packages
-  sudo pacman -S --noconfirm git base-devel
+  sudo pacman -S --noconfirm --needed git base-devel
 
   git clone https://aur.archlinux.org/yay.git
   cd yay
