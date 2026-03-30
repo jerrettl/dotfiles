@@ -5,7 +5,14 @@ set nocompatible
 
 " Add Windows-like bindings if on Windows
 if has('win32')
-	source $VIMRUNTIME/mswin.vim
+	" This might be in different places if using vim or neovim
+	if !empty(glob($VIMRUNTIME.'/scripts/mswin.vim'))
+		" Neovim
+		source $VIMRUNTIME/scripts/mswin.vim
+	else
+		" Vim
+		source $VIMRUNTIME/mswin.vim
+	endif
 endif
 
 " Plug
