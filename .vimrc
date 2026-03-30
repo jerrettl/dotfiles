@@ -819,8 +819,8 @@ if has('nvim') && has_key(plugs, 'nvim-treesitter')
 	autocmd VimEnter * call s:setup_treesitter()
 	function! s:setup_treesitter() abort
 		lua << EOF
-		require('nvim-treesitter.configs').setup {
-			ensure_installed = { "markdown", "markdown_inline", "rust", "vim" }
+		require('nvim-treesitter').install {
+			"markdown", "markdown_inline", "rust", "vim"
 		}
 EOF
 	endfunction
