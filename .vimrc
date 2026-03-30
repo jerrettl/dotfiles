@@ -52,9 +52,6 @@ Plug 'dstein64/nvim-scrollview', LoadIfTrue(has('nvim'))
 " coc-explorer should be used if not on Windows
 Plug 'scrooloose/nerdtree', LoadIfTrue(has('win32'), { 'on': 'NERDTreeToggle' })
 
-" vimtex: ease-of-life shortcuts for latex
-Plug 'lervag/vimtex', { 'for': 'tex' }
-
 " vim-fugitive: git control within vim
 Plug 'tpope/vim-fugitive'
 
@@ -134,9 +131,10 @@ Plug 'stevearc/aerial.nvim', LoadIfTrue(has('nvim'))
 " Markdown:
 "   Pandoc markdown editing
 Plug 'vim-pandoc/vim-pandoc', { 'for': ['markdown', 'pandoc'] }
-Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': ['markdown', 'pandoc'] }
-"   Markdown preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug', 'pandoc'] }
+"   Tables
+Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown', 'pandoc'] }
+"   Automatic bulleting
+Plug 'dkarter/bullets.vim', { 'for': ['markdown', 'pandoc'] }
 
 " Javascript:
 "   Improved Javascript indentation and syntax support
@@ -162,8 +160,6 @@ Plug 'michaeljsmith/vim-indent-object'
 " Multiple cursors
 Plug 'mg979/vim-visual-multi'
 
-" Automatic bulleting
-Plug 'dkarter/bullets.vim', { 'for': ['markdown', 'pandoc'] }
 
 call plug#end()
 
@@ -863,6 +859,7 @@ endif
 let g:pandoc#folding#level = 1
 let g:pandoc#folding#mode = "relative"
 let g:pandoc#syntax#codeblocks#embeds#langs = ["c", "java"]
+let g:pandoc#modules#enabled = ["folding", "keyboard"]
 
 
 " markdown-preview
