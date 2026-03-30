@@ -780,14 +780,14 @@ let g:coc_global_extensions = [
 nnoremap gd <Plug>(coc-definition)
 
 " Show documentation
-nnoremap <silent> D <Cmd>call ShowDocumentation()<cr>
-function! ShowDocumentation()
-	if CocAction('hasProvider', 'hover')
-		call CocActionAsync('doHover')
-	else
-		call feedkeys('K', 'in')
-	endif
-endfunction
+" nnoremap <silent> D <Cmd>call ShowDocumentation()<cr>
+" function! ShowDocumentation()
+	" if CocAction('hasProvider', 'hover')
+		" call CocActionAsync('doHover')
+	" else
+		" call feedkeys('K', 'in')
+	" endif
+" endfunction
 
 " Autocomplete suggestions
 if exists("*coc#pum#visible")
